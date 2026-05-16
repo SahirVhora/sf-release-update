@@ -19,14 +19,18 @@ MAX_PAGES = 50
 
 # --- Impact Classification ---
 # Impact = f(Action, Enablement)
-def classify_impact(action: str, enablement: str) -> dict:
-    """Return impact level and label based on SAP's Action + Enablement columns."""
+def classify_impact(action: str, enablement: str, ref_number: str = "") -> dict:
+    """Return impact level and label based on SAP's Action + Enablement columns.
+    SAP quirk: deprecated items often have action='Changed' with refNumber='Deprecated'."""
     action = (action or "").strip().lower()
     enablement = (enablement or "").strip().lower()
+    ref_number = (ref_number or "").strip().lower()
     
-    # Critical: Deprecated/Deleted and forced on you
-    if action in ("deprecated", "deleted"):
-        if enablement in ("required", "automatically on"):
+    # Detect deprecation from either the action field or the reference number
+    is_deprecated = action in ("deprecated", "deleted") or ref_number == "deprecated"
+    
+    if is_deprecated:
+        if enablement in ("required", "automatically on", ""):
             return {"level": "critical", "label": "Critical", "color": "#ef4444"}
         return {"level": "high", "label": "High", "color": "#f97316"}
     
@@ -115,6 +119,31 @@ def scrape_with_playwright():
             print(f"Initial load warning: {e}. Trying load event...")
             page.goto(BASE_URL, wait_until="load", timeout=120000)
         
+        # Dismiss cookie consent banner if present (TrustArc)
+        print("Checking for cookie consent banner...")
+        try:
+            consent_btn = page.wait_for_selector(
+                'button:has-text("Accept All"), button:has-text("Accept Cookies"), '
+                'button:has-text("OK"), button#truste-consent-button, '
+                'a:has-text("Accept All"), .trustarc-agree-btn',
+                timeout=15000
+            )
+            if consent_btn:
+                print("Dismissing cookie consent banner...")
+                consent_btn.click()
+                page.wait_for_timeout(2000)
+        except:
+            print("No cookie consent banner found (or already accepted).")
+        
+        # Also try clicking away any overlay
+        try:
+            page.evaluate("""
+                const banners = document.querySelectorAll('#truste-consent-track, .trustarc-banner, [id*="consent_blackbar"]');
+                banners.forEach(b => b.style.display = 'none');
+            """)
+        except:
+            pass
+        
         # Wait for Vue to render — look for the table or filters
         print("Waiting for page to render...")
         try:
@@ -158,7 +187,7 @@ def scrape_with_playwright():
                 if see_more_el:
                     see_more_link = see_more_el.get_attribute("href") or ""
                 
-                impact = classify_impact(action, enablement)
+                impact = classify_impact(action, enablement, ref_number)
                 plain_english = generate_plain_english(action, enablement, title, description)
                 
                 all_items.append({
