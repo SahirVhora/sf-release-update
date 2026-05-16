@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SF Update Pulse — SAP SuccessFactors Release Tracker</title>
+<style>
+/* =========== RESET & BASE =========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0f; --bg2:#12121a; --bg3:#1a1a26; --bg4:#22223a;
+  --text:#e2e2ea; --text2:#9898b0; --text3:#686888;
+  --accent:#6c5ce7; --accent2:#a78bfa;
+  --critical:#ef4444; --high:#f97316; --medium:#eab308; --low:#22c55e;
+  --border:#22223a; --radius:6px; --radius-lg:10px;
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono','Fira Code',monospace;
+  --transition:150ms ease;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;min-height:100vh}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* =========== HEADER =========== */
+.header{
+  background:var(--bg2);border-bottom:1px solid var(--border);
+  padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);
+}
+.header-logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px}
+.header-logo .pulse{width:10px;height:10px;border-radius:50%;background:var(--low);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.header-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--text2)}
+.header-meta strong{color:var(--text);font-family:var(--mono)}
+.version-tag{background:var(--bg3);padding:4px 10px;border-radius:var(--radius);font-size:12px;font-family:var(--mono)}
+
+/* =========== LAYOUT =========== */
+.app{display:flex;height:calc(100vh - 64px)}
+.sidebar{width:280px;background:var(--bg2);border-right:1px solid var(--border);
+  overflow-y:auto;flex-shrink:0;padding:8px 0}
+.main{flex:1;overflow-y:auto;padding:24px 32px}
+
+/* =========== SIDEBAR =========== */
+.sidebar-section{padding:4px 0}
+.sidebar-section-title{
+  padding:8px 24px;font-size:11px;text-transform:uppercase;letter-spacing:0.8px;
+  color:var(--text3);font-weight:600
+}
+.module-item{
+  display:flex;align-items:center;gap:10px;padding:8px 24px;cursor:pointer;transition:var(--transition);
+  border-left:3px solid transparent;font-size:13px;color:var(--text2)
+}
+.module-item:hover{background:var(--bg3);color:var(--text)}
+.module-item.active{background:var(--bg3);color:var(--text);border-left-color:var(--accent)}
+.module-item .count{font-size:11px;color:var(--text3);margin-left:auto;font-family:var(--mono)}
+.module-item .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.module-item .dot.critical{background:var(--critical)}
+.module-item .dot.high{background:var(--high)}
+.module-item .dot.medium{background:var(--medium)}
+.module-item .dot.low{background:var(--low)}
+
+/* =========== SEARCH & FILTER =========== */
+.toolbar{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap;align-items:center}
+.search-box{
+  flex:1;min-width:240px;background:var(--bg3);border:1px solid var(--border);
+  border-radius:var(--radius);padding:10px 16px;color:var(--text);font-size:14px;outline:none;
+  font-family:var(--font);transition:var(--transition)
+}
+.search-box:focus{border-color:var(--accent)}
+.search-box::placeholder{color:var(--text3)}
+.filter-group{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{
+  padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:var(--bg2);
+  color:var(--text2);cursor:pointer;font-size:12px;transition:var(--transition);white-space:nowrap;
+  font-family:var(--font)
+}
+.filter-btn:hover{background:var(--bg3);color:var(--text)}
+.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.filter-btn.active.critical{background:var(--critical);border-color:var(--critical)}
+.filter-btn.active.high{background:var(--high);border-color:var(--high)}
+.filter-btn.active.medium{background:var(--medium);border-color:var(--medium)}
+.filter-btn.active.low{background:var(--low);border-color:var(--low)}
+
+/* =========== STATS BAR =========== */
+.stats-bar{display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.stat{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:12px 20px;display:flex;align-items:center;gap:12px;font-size:13px
+}
+.stat-count{font-size:24px;font-weight:700;font-family:var(--mono)}
+.stat-label{color:var(--text2);font-size:11px}
+
+/* =========== ACCORDION =========== */
+.module-group{margin-bottom:8px}
+.module-group-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 20px;background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);
+  user-select:none
+}
+.module-group-header:hover{background:var(--bg3)}
+.module-group-header .title{font-weight:600;font-size:15px}
+.module-group-header .badges{display:flex;gap:8px}
+.module-group-header .chevron{transition:transform var(--transition);color:var(--text3);font-size:18px}
+.module-group-header .chevron.open{transform:rotate(90deg)}
+.module-group-body{display:none;padding-top:4px}
+.module-group-body.open{display:block}
+
+/* =========== UPDATE CARDS =========== */
+.update-card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
+  padding:18px 20px;margin-bottom:6px;transition:var(--transition);
+  border-left:4px solid transparent
+}
+.update-card:hover{background:var(--bg3)}
+.update-card.critical{border-left-color:var(--critical)}
+.update-card.high{border-left-color:var(--high)}
+.update-card.medium{border-left-color:var(--medium)}
+.update-card.low{border-left-color:var(--low)}
+
+.update-card .card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
+.update-card .card-title{font-weight:600;font-size:14px;line-height:1.4;flex:1}
+.update-card .impact-badge{
+  padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap;
+  text-transform:uppercase;letter-spacing:0.5px;flex-shrink:0
+}
+.impact-badge.critical{background:var(--critical);color:#fff}
+.impact-badge.high{background:var(--high);color:#000}
+.impact-badge.medium{background:var(--medium);color:#000}
+.impact-badge.low{background:var(--low);color:#000}
+
+.update-card .card-meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px;font-size:12px}
+.meta-tag{
+  padding:2px 8px;border-radius:4px;font-size:11px;font-family:var(--mono);
+  background:var(--bg4);color:var(--text2)
+}
+.meta-tag.action-new{background:#064e3b;color:#6ee7b7}
+.meta-tag.action-changed{background:#1e3a5f;color:#93c5fd}
+.meta-tag.action-deprecated{background:#7f1d1d;color:#fca5a5}
+.meta-tag.action-deleted{background:#7f1d1d;color:#fca5a5}
+
+.update-card .card-desc{color:var(--text2);font-size:13px;line-height:1.5;margin-bottom:10px}
+
+/* Plain English section */
+.update-card .plain-english{
+  background:var(--bg4);border-radius:var(--radius);padding:10px 14px;
+  font-size:12px;line-height:1.5;color:var(--text);border-left:3px solid var(--accent)
+}
+.plain-english-label{font-weight:600;color:var(--accent2);margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:0.5px}
+
+.update-card .card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:11px;color:var(--text3)}
+.sap-link{padding:4px 10px;border-radius:4px;background:var(--bg4);color:var(--accent2);font-size:11px;transition:var(--transition)}
+.sap-link:hover{background:var(--accent);color:#fff;text-decoration:none}
+
+/* =========== RESPONSIVE =========== */
+@media(max-width:768px){
+  .app{flex-direction:column}
+  .sidebar{width:100%;max-height:200px;border-right:none;border-bottom:1px solid var(--border)}
+  .main{padding:16px}
+  .header{padding:0 16px}
+  .toolbar{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-logo">
+    <span class="pulse"></span>
+    SF Update Pulse
+  </div>
+  <div class="header-meta">
+    <span>Last updated: <strong id="last-updated">—</strong></span>
+    <span class="version-tag" id="version-tag">1H 2026</span>
+  </div>
+</header>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar"></nav>
+
+  <main class="main">
+    <div class="toolbar">
+      <input type="text" class="search-box" id="search" placeholder="Search updates, modules, features…" autofocus>
+      <div class="filter-group" id="impact-filters">
+        <button class="filter-btn active" data-impact="all">All</button>
+        <button class="filter-btn critical" data-impact="critical">Critical</button>
+        <button class="filter-btn high" data-impact="high">High</button>
+        <button class="filter-btn medium" data-impact="medium">Medium</button>
+        <button class="filter-btn low" data-impact="low">Low</button>
+      </div>
+      <div class="filter-group" id="action-filters">
+        <button class="filter-btn active" data-action="all">All Actions</button>
+        <button class="filter-btn" data-action="new">New</button>
+        <button class="filter-btn" data-action="changed">Changed</button>
+        <button class="filter-btn" data-action="deprecated">Deprecated</button>
+        <button class="filter-btn" data-action="deleted">Deleted</button>
+      </div>
+    </div>
+
+    <div class="stats-bar" id="stats-bar"></div>
+    <div id="content"></div>
+  </main>
+</div>
+
+<script>
+// ── Data layer ──
+let allItems = [];
+let activeModule = null;
+let activeImpacts = new Set(['all']);
+let activeActions = new Set(['all']);
+let searchQuery = '';
+
+// ── Load data ──
+async function loadData() {
+  try {
+    const resp = await fetch('data/updates.json');
+    if (!resp.ok) throw new Error('Data file not found');
+    const data = await resp.json();
+    allItems = data.items || [];
+    document.getElementById('last-updated').textContent = data.metadata?.lastScraped || '—';
+    render();
+  } catch(e) {
+    // Use embedded sample data for demo
+    allItems = getSampleData();
+    document.getElementById('last-updated').textContent = 'Demo data';
+    render();
+  }
+}
+
+// ── Filtering ──
+function getFilteredItems() {
+  return allItems.filter(item => {
+    // Impact filter
+    if (!activeImpacts.has('all') && !activeImpacts.has(item.impact.level)) return false;
+    // Action filter
+    if (!activeActions.has('all') && !activeActions.has(item.action.toLowerCase())) return false;
+    // Search
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      const haystack = [item.title, item.description, item.module, item.product, item.feature, item.lifecycle].join(' ').toLowerCase();
+      if (!haystack.includes(q)) return false;
+    }
+    // Module filter
+    if (activeModule && item.module !== activeModule) return false;
+    return true;
+  });
+}
+
+// ── Group by module ──
+function groupByModule(items) {
+  const groups = {};
+  for (const item of items) {
+    const mod = item.module || 'Other';
+    if (!groups[mod]) groups[mod] = [];
+    groups[mod].push(item);
+  }
+  // Sort groups alphabetically
+  return Object.entries(groups).sort((a, b) => a[0].localeCompare(b[0]));
+}
+
+// ── Render ──
+function render() {
+  renderSidebar();
+  renderStats();
+  renderContent();
+}
+
+function renderSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const groups = groupByModule(allItems);
+  
+  // Build impact counts per module
+  const modImpacts = {};
+  for (const item of allItems) {
+    if (!modImpacts[item.module]) modImpacts[item.module] = {critical:0, high:0, medium:0, low:0};
+    modImpacts[item.module][item.impact.level]++;
+  }
+
+  let html = '<div class="sidebar-section"><div class="sidebar-section-title">Modules</div>';
+  
+  html += `<div class="module-item${!activeModule ? ' active' : ''}" data-module="">
+    <span style="color:var(--text2)">📋</span> All Modules
+    <span class="count">${allItems.length}</span>
+  </div>`;
+  
+  for (const [mod, items] of groups) {
+    const m = modImpacts[mod] || {};
+    const worstImpact = m.critical > 0 ? 'critical' : m.high > 0 ? 'high' : m.medium > 0 ? 'medium' : 'low';
+    html += `<div class="module-item${activeModule === mod ? ' active' : ''}" data-module="${escHtml(mod)}">
+      <span class="dot ${worstImpact}"></span>
+      ${escHtml(mod)}
+      <span class="count">${items.length}</span>
+    </div>`;
+  }
+  html += '</div>';
+  sidebar.innerHTML = html;
+
+  // Click handlers
+  sidebar.querySelectorAll('.module-item').forEach(el => {
+    el.addEventListener('click', () => {
+      activeModule = el.dataset.module || null;
+      render();
+    });
+  });
+}
+
+function renderStats() {
+  const filtered = getFilteredItems();
+  const crit = filtered.filter(i => i.impact.level === 'critical').length;
+  const high = filtered.filter(i => i.impact.level === 'high').length;
+  const med = filtered.filter(i => i.impact.level === 'medium').length;
+  const low = filtered.filter(i => i.impact.level === 'low').length;
+  
+  document.getElementById('stats-bar').innerHTML = `
+    <div class="stat"><span class="stat-count">${filtered.length}</span><span class="stat-label">Updates</span></div>
+    <div class="stat"><span class="stat-count" style="color:var(--critical)">${crit}</span><span class="stat-label">Critical</span></div>
+    <div class="stat"><span class="stat-count" style="color:var(--high)">${high}</span><span class="stat-label">High</span></div>
+    <div class="stat"><span class="stat-count" style="color:var(--medium)">${med}</span><span class="stat-label">Medium</span></div>
+    <div class="stat"><span class="stat-count" style="color:var(--low)">${low}</span><span class="stat-label">Low</span></div>
+  `;
+}
+
+function renderContent() {
+  const container = document.getElementById('content');
+  const filtered = getFilteredItems();
+  const groups = groupByModule(filtered);
+
+  if (!filtered.length) {
+    container.innerHTML = `<div style="text-align:center;padding:60px;color:var(--text3)">
+      <div style="font-size:48px;margin-bottom:16px">🔍</div>
+      <div style="font-size:16px">No updates match your filters</div>
+      <div style="font-size:13px;margin-top:8px">Try adjusting your search or filter criteria</div>
+    </div>`;
+    return;
+  }
+
+  let html = '';
+  for (const [mod, items] of groups) {
+    const id = 'mod-' + mod.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+    
+    // Count impacts
+    const crit = items.filter(i => i.impact.level === 'critical').length;
+    const high = items.filter(i => i.impact.level === 'high').length;
+    
+    let badgesHtml = '';
+    if (crit) badgesHtml += `<span style="background:var(--critical);color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600">${crit} critical</span>`;
+    if (high) badgesHtml += `<span style="background:var(--high);color:#000;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600">${high} high</span>`;
+
+    html += `<div class="module-group">
+      <div class="module-group-header" data-target="${id}">
+        <span class="title">${escHtml(mod)}</span>
+        <div style="display:flex;align-items:center;gap:12px">
+          <span class="badges">${badgesHtml}</span>
+          <span style="color:var(--text3);font-size:12px;font-family:var(--mono)">${items.length} updates</span>
+          <span class="chevron" data-target="${id}">▶</span>
+        </div>
+      </div>
+      <div class="module-group-body open" id="${id}">`;
+
+    for (const item of items) {
+      const actionClass = 'action-' + item.action.toLowerCase();
+      html += `
+      <div class="update-card ${item.impact.level}">
+        <div class="card-header">
+          <span class="card-title">${escHtml(item.title)}</span>
+          <span class="impact-badge ${item.impact.level}">${item.impact.label}</span>
+        </div>
+        <div class="card-meta">
+          <span class="meta-tag ${actionClass}">${item.action}</span>
+          <span class="meta-tag">${escHtml(item.enablement)}</span>
+          ${item.product ? `<span class="meta-tag">${escHtml(item.product)}</span>` : ''}
+          ${item.lifecycle ? `<span class="meta-tag">${escHtml(item.lifecycle)}</span>` : ''}
+          ${item.version ? `<span class="meta-tag">${escHtml(item.version)}</span>` : ''}
+        </div>
+        <div class="card-desc">${item.description.replace(/See More.*$/i, '')}</div>
+        ${item.plainEnglish ? `
+        <div class="plain-english">
+          <div class="plain-english-label">💡 What this means for you</div>
+          ${escHtml(item.plainEnglish)}
+        </div>` : ''}
+        <div class="card-footer">
+          <span>${item.refNumber ? 'Ref: ' + escHtml(item.refNumber) : ''}</span>
+          ${item.sapLink ? `<a href="${escHtml(item.sapLink)}" target="_blank" rel="noopener" class="sap-link">View on SAP →</a>` : ''}
+        </div>
+      </div>`;
+    }
+
+    html += `</div></div>`;
+  }
+  
+  container.innerHTML = html;
+  
+  // Accordion toggle
+  container.querySelectorAll('.module-group-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const target = header.dataset.target;
+      const body = document.getElementById(target);
+      const chevron = header.querySelector('.chevron');
+      if (body) {
+        body.classList.toggle('open');
+        chevron?.classList.toggle('open');
+      }
+    });
+  });
+}
+
+// ── Event listeners ──
+document.getElementById('search').addEventListener('input', (e) => {
+  searchQuery = e.target.value;
+  render();
+});
+
+document.getElementById('impact-filters').addEventListener('click', (e) => {
+  if (!e.target.dataset.impact) return;
+  const impact = e.target.dataset.impact;
+  
+  if (impact === 'all') {
+    activeImpacts = new Set(['all']);
+  } else {
+    activeImpacts.delete('all');
+    if (activeImpacts.has(impact)) {
+      activeImpacts.delete(impact);
+    } else {
+      activeImpacts.add(impact);
+    }
+    if (!activeImpacts.size) activeImpacts = new Set(['all']);
+  }
+  
+  // Update button states
+  document.querySelectorAll('#impact-filters .filter-btn').forEach(btn => {
+    btn.classList.toggle('active', activeImpacts.has(btn.dataset.impact));
+  });
+  
+  render();
+});
+
+document.getElementById('action-filters').addEventListener('click', (e) => {
+  if (!e.target.dataset.action) return;
+  const action = e.target.dataset.action;
+  
+  if (action === 'all') {
+    activeActions = new Set(['all']);
+  } else {
+    activeActions.delete('all');
+    if (activeActions.has(action)) {
+      activeActions.delete(action);
+    } else {
+      activeActions.add(action);
+    }
+    if (!activeActions.size) activeActions = new Set(['all']);
+  }
+  
+  document.querySelectorAll('#action-filters .filter-btn').forEach(btn => {
+    btn.classList.toggle('active', activeActions.has(btn.dataset.action));
+  });
+  
+  render();
+});
+
+// ── Utilities ──
+function escHtml(s) {
+  if (!s) return '';
+  const div = document.createElement('div');
+  div.textContent = s;
+  return div.innerHTML;
+}
+
+// ── Sample data (used when data/updates.json is unavailable) ──
+function getSampleData() {
+  return [
+    {
+      "title": "Automated Deletion of Future-Dated Job and Compensation Information Records After Employment Termination",
+      "description": "As an administrator, you can now let the system automatically remove any existing future-dated Job Information and Compensation Information records dated after an employment is terminated.",
+      "product": "Employee Central",
+      "module": "Employee Data",
+      "feature": "Not Applicable",
+      "lifecycle": "Employee Central Compensation, Hire, Rehire, and Termination, Job Information",
+      "action": "New",
+      "enablement": "Customer configured",
+      "refNumber": "ECT-260432",
+      "demo": "Info only",
+      "version": "1H 2026",
+      "validAsOf": "General Availability",
+      "latestRevision": "Automated Deletion of Future-Dated Job and Compensation Information Records After Employment Termination (1H 2026)",
+      "sapLink": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
+      "impact": {"level": "medium", "label": "Medium", "color": "#eab308"},
+      "plainEnglish": "New feature available — you can enable it when ready. This automates a manual cleanup task that often gets forgotten. Worth enabling to keep employee records tidy, especially for organisations with high turnover."
+    },
+    {
+      "title": "Deprecation of People Profile in the Employee Central Employee History Field Mapping Tool",
+      "description": "The capability to map from People Profile as an Employee Central Category when using the Employee Central Employee History Field Mapping tool will reach the end of maintenance on May 15, 2026 and will be deleted on May 14, 2027.",
+      "product": "Compensation",
+      "module": "Variable Pay",
+      "feature": "Not Applicable",
+      "lifecycle": "History Processor",
+      "action": "Deprecated",
+      "enablement": "Automatically on",
+      "refNumber": "VRP-16091",
+      "demo": "Required",
+      "version": "1H 2026",
+      "validAsOf": "Deprecated",
+      "latestRevision": "Not Applicable",
+      "sapLink": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
+      "impact": {"level": "critical", "label": "Critical", "color": "#ef4444"},
+      "plainEnglish": "⚠️ Urgent: If you use People Profile mapping in the Employee History Field Mapping Tool, this will stop working May 2027. You have approximately one year to migrate to the replacement approach. Start planning now — identify all integrations and reports that depend on this mapping."
+    },
+    {
+      "title": "Introducing Country/Region-Specific Dependent Configuration",
+      "description": "We're introducing the Country/Region-Specific Dependent Configuration feature as an enhancement to the existing Dependents Management solution. You can now customize the data collection and management for employees' dependents based on different countries/regions and dependent types.",
+      "product": "Employee Central",
+      "module": "Employee Data",
+      "feature": "Hire to Retire",
+      "lifecycle": "Employee Master Data Replication, Global Benefits, People Profile, Personal Information, Story Reports",
+      "action": "New",
+      "enablement": "Major",
+      "refNumber": "ECT-257360",
+      "demo": "Recommended",
+      "version": "1H 2026",
+      "validAsOf": "Restricted Availability",
+      "latestRevision": "Configuring Country/Region-Specific Dependent Information",
+      "sapLink": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
+      "impact": {"level": "high", "label": "High", "color": "#f97316"},
+      "plainEnglish": "🆕 Major enhancement for multi-country organisations. If you operate across regions with different dependent eligibility rules (e.g., different ages for child coverage), this gives you granular control. Note: currently restricted to systems without existing dependent data. Test thoroughly in your sandbox before enabling."
+    },
+    {
+      "title": "Job Information Record ID Available in OData API EmpJob",
+      "description": "As an administrator, you can now access Job Information record IDs through the newly added property objectId in OData v2 API EmpJob for more reliable change tracking and integration.",
+      "product": "Employee Central",
+      "module": "Employee Data",
+      "feature": "Not Applicable",
+      "lifecycle": "API, Job Information",
+      "action": "Changed",
+      "enablement": "Automatically on",
+      "refNumber": "ECT-267111",
+      "demo": "Info only",
+      "version": "1H 2026",
+      "validAsOf": "General Availability",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
+      "impact": {"level": "low", "label": "Low", "color": "#22c55e"},
+      "plainEnglish": "Small but useful API improvement. If you have integrations reading Job Information via OData, you can now track individual record IDs. This is automatically available — no config needed. Useful for audit trails and integration reconciliation."
+    },
+    {
+      "title": "Deprecation of variablePayUpdateForms Job",
+      "description": "variablePayUpdateForms job will reach end of maintenance on May 15, 2026 and will be deleted on May 14, 2027.",
+      "product": "Compensation",
+      "module": "Variable Pay",
+      "feature": "Not Applicable",
+      "lifecycle": "Variable Pay",
+      "action": "Deprecated",
+      "enablement": "Automatically on",
+      "refNumber": "VRP-16090",
+      "demo": "Required",
+      "version": "1H 2026",
+      "validAsOf": "Deprecated",
+      "latestRevision": "Not Applicable",
+      "sapLink": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
+      "impact": {"level": "critical", "label": "Critical", "color": "#ef4444"},
+      "plainEnglish": "⚠️ If you're using the variablePayUpdateForms job in your compensation cycle, this is urgent. The job will be deleted May 2027. You need to switch to the new Variable Pay data update approach before your next compensation cycle. Contact your SAP partner if you need migration support."
+    }
+  ];
+}
+
+// ── Init ──
+loadData();
+</script>
+</body>
+</html>
