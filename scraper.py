@@ -168,7 +168,7 @@ def scrape_with_playwright():
                     continue
                 
                 title = (cells[0].inner_text() or "").strip().removeprefix("Preview ")
-                description = (cells[1].inner_text() or "").strip()
+                description = (cells[1].inner_text() or "").strip().removesuffix("See More").strip()
                 product = (cells[2].inner_text() or "").strip()
                 module = (cells[3].inner_text() or "").strip()
                 feature = (cells[4].inner_text() or "").strip()
