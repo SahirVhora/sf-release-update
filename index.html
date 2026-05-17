@@ -346,17 +346,28 @@ function renderSidebar() {
     let icon = '📦';
     if (mod.includes('Employee')) icon = '👤';
     else if (mod.includes('Compensation') || mod.includes('Variable')) icon = '💰';
-    else if (mod.includes('Recruit')) icon = '🎯';
+    else if (mod.includes('Recruit') || mod.includes('Applicant') || mod.includes('Candidate') || mod.includes('Job Requisition')) icon = '🎯';
     else if (mod.includes('Onboard')) icon = '🚀';
-    else if (mod.includes('Perform')) icon = '📊';
+    else if (mod.includes('Perform') || mod.includes('Goal') || mod.includes('Continuous')) icon = '📊';
     else if (mod.includes('Learn')) icon = '📚';
-    else if (mod.includes('Succession')) icon = '🔄';
-    else if (mod.includes('Platform') || mod.includes('System')) icon = '⚙️';
+    else if (mod.includes('Succession') || mod.includes('Career') || mod.includes('Talent')) icon = '🔄';
+    else if (mod.includes('Platform') || mod.includes('System') || mod.includes('Foundation')) icon = '⚙️';
     else if (mod.includes('Integration')) icon = '🔌';
-    else if (mod.includes('Report')) icon = '📈';
+    else if (mod.includes('Report') || mod.includes('Analytics')) icon = '📈';
     else if (mod.includes('Time')) icon = '⏰';
     else if (mod.includes('Payroll')) icon = '💵';
-    else if (mod.includes('Identity')) icon = '🔐';
+    else if (mod.includes('Identity') || mod.includes('Security')) icon = '🔐';
+    else if (mod.includes('Mobile')) icon = '📱';
+    else if (mod.includes('User Experience')) icon = '🎨';
+    else if (mod.includes('Localization') || mod.includes('Global')) icon = '🌍';
+    else if (mod.includes('Opportunity') || mod.includes('Marketplace')) icon = '🛒';
+    else if (mod.includes('Content') || mod.includes('Document')) icon = '📄';
+    else if (mod.includes('Benefit')) icon = '🎁';
+    else if (mod.includes('Calibration')) icon = '⚖️';
+    else if (mod.includes('360')) icon = '🔄';
+    else if (mod.includes('Process') || mod.includes('Automation')) icon = '🤖';
+    else if (mod.includes('Reward') || mod.includes('Recognition')) icon = '🏆';
+    else if (mod.includes('Presentation')) icon = '📽️';
     
     // Count critical & high for color indicator
     const critCount = items.filter(i => i.impact.level === 'critical').length;
