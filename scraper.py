@@ -181,11 +181,14 @@ def scrape_with_playwright():
                 valid_as_of = (cells[11].inner_text() or "").strip() if len(cells) > 11 else ""
                 latest_revision = (cells[12].inner_text() or "").strip() if len(cells) > 12 else ""
                 
-                # Get the "See More" link if available
+                # Get the "See More" link if available and make it absolute
                 see_more_link = ""
                 see_more_el = cells[1].query_selector("a")
                 if see_more_el:
-                    see_more_link = see_more_el.get_attribute("href") or ""
+                    href = see_more_el.get_attribute("href") or ""
+                    if href.startswith("/"):
+                        href = "https://help.sap.com" + href
+                    see_more_link = href
                 
                 impact = classify_impact(action, enablement, ref_number)
                 plain_english = generate_plain_english(action, enablement, title, description)

@@ -380,7 +380,7 @@ function renderContent() {
         </div>` : ''}
         <div class="card-footer">
           <span>${item.refNumber ? 'Ref: ' + escHtml(item.refNumber) : ''}</span>
-          ${item.sapLink ? `<a href="${escHtml(item.sapLink)}" target="_blank" rel="noopener" class="sap-link">View on SAP →</a>` : ''}
+          ${item.sapLink ? `<a href="${escHtml(fixSapLink(item.sapLink))}" target="_blank" rel="noopener" class="sap-link">View on SAP →</a>` : ''}
         </div>
       </div>`;
     }
@@ -456,6 +456,12 @@ document.getElementById('action-filters').addEventListener('click', (e) => {
   
   render();
 });
+
+function fixSapLink(link) {
+  if (!link) return '';
+  if (link.startsWith('/')) return 'https://help.sap.com' + link;
+  return link;
+}
 
 // ── Utilities ──
 function escHtml(s) {
