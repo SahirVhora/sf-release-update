@@ -77,7 +77,7 @@ def generate_plain_english(action: str, enablement: str, title: str, description
     
     if action == "deprecated" or (action == "changed" and "deprecated" in description.lower()):
         if is_urgent:
-            return f"Will stop working — you need a replacement.{date_str} Check the linked SAP Note for migration steps."
+            return f"Will stop working - you need a replacement.{date_str} Check the linked SAP Note for migration steps."
         return f"Being phased out. Start planning your move to the replacement now.{date_str}"
     
     if action == "deleted":
@@ -85,18 +85,18 @@ def generate_plain_english(action: str, enablement: str, title: str, description
     
     if action == "new":
         if enablement == "major":
-            return f"Significant new capability — could change how you work. {first_sentence} Review config steps and test in sandbox first."
+            return f"Significant new capability - could change how you work. {first_sentence} Review config steps and test in sandbox first."
         if enablement in ("minor", "customer configured"):
             return f"Available when you're ready. {first_sentence} Test in non-production before enabling broadly."
-        return f"Active automatically — no setup needed. {first_sentence}"
+        return f"Active automatically - no setup needed. {first_sentence}"
     
     if action == "changed":
         if is_urgent:
-            return f"Important change you need to act on.{date_str} Review the details — this affects your system automatically."
+            return f"Important change you need to act on.{date_str} Review the details - this affects your system automatically."
         if enablement == "major":
             return f"Significant update. {first_sentence} Plan configuration changes and communicate to users."
         if enablement in ("minor", "customer configured"):
-            return f"Minor update — configure if useful. {first_sentence}"
+            return f"Minor update - configure if useful. {first_sentence}"
         return f"Updated automatically. {first_sentence}"
     
     # Fallback with context

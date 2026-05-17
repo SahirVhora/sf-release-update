@@ -26,7 +26,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of variablePayUpdateForms Job",
@@ -48,7 +48,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Automated Deletion of Future-Dated Job and Compensation Information Records After Employment Termination",
@@ -92,7 +92,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. We're introducing the Country/Region-Specific Dependent Configuration feature as an enhancement to the existing Dependents Management solution Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. We're introducing the Country/Region-Specific Dependent Configuration feature as an enhancement to the existing Dependents Management solution Review config steps and test in sandbox first."
     },
     {
       "title": "Job Information Record ID Available in OData API EmpJob",
@@ -114,7 +114,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now access Job Information record IDs through the newly added property objectId in OData v2 API EmpJob for more reliable change tracking and integration"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now access Job Information record IDs through the newly added property objectId in OData v2 API EmpJob for more reliable change tracking and integration"
     },
     {
       "title": "Enhancements in Employment",
@@ -136,7 +136,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've introduced several enhancements this release to improve implementation and management of the employment lifecycle"
+      "plainEnglish": "Minor update - configure if useful. We've introduced several enhancements this release to improve implementation and management of the employment lifecycle"
     },
     {
       "title": "Deprecation of Basic Authentication for SAP SuccessFactors Employee Central Integrations",
@@ -158,7 +158,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhancements to AI-Assisted Explain My Pay Statement for Employee Central Payroll Based on SAP Human Capital Management for SAP S/4HANA",
@@ -180,7 +180,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can use Joule to get an explanation of your most recent pay statement or to compare it with the previous pay statement"
+      "plainEnglish": "Minor update - configure if useful. You can use Joule to get an explanation of your most recent pay statement or to compare it with the previous pay statement"
     },
     {
       "title": "Replication of Public Sector Cost Objects in Time Sheet to Employee Remuneration Info (2010) Infotype",
@@ -224,7 +224,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now use a consolidated timesheet in the cloud that integrates SAP S/4HANA MyTimesheet with SAP SuccessFactors Time Tracking for regulated industries Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now use a consolidated timesheet in the cloud that integrates SAP S/4HANA MyTimesheet with SAP SuccessFactors Time Tracking for regulated industries Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancements to Business Process Engine",
@@ -268,7 +268,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now configure 360 Review templates to hide the rater category when a rater recalls and edits their feedback Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now configure 360 Review templates to hide the rater category when a rater recalls and edits their feedback Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancements to Performance Preparation Agent - April 2026",
@@ -312,7 +312,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you benefit from improved system performance through enforced weekly job thresholds in Integration Center"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you benefit from improved system performance through enforced weekly job thresholds in Integration Center"
     },
     {
       "title": "Deprecation of User Login Using Employment Username",
@@ -356,7 +356,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Data Export in View Mode for Story Reports",
@@ -378,7 +378,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. This feature is no longer available for 1H 2026 Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. This feature is no longer available for 1H 2026 Review config steps and test in sandbox first."
     },
     {
       "title": "Release Center Adds What's New to Admin Center",
@@ -444,7 +444,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. SAP SuccessFactors Work Zone now uses the enhanced feedback dialogs for requesting and giving feedback, offering improved layout and guided input"
+      "plainEnglish": "Minor update - configure if useful. SAP SuccessFactors Work Zone now uses the enhanced feedback dialogs for requesting and giving feedback, offering improved layout and guided input"
     },
     {
       "title": "Enhancements to Data Viewing in Full Profile",
@@ -488,7 +488,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. SAP SuccessFactors made numerous minor visual enhancements in 1H 2026"
+      "plainEnglish": "Minor update - configure if useful. SAP SuccessFactors made numerous minor visual enhancements in 1H 2026"
     },
     {
       "title": "Permission Changes for Reward Statements on Latest People Profile",
@@ -532,7 +532,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2027. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2027. Review the details - this affects your system automatically."
     },
     {
       "title": "Employee Central Payroll User ID Provisioning from Identity Authentication Service",
@@ -598,7 +598,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. A new guardrail message, in Form I-9, Section 2, prevents the selection of receipt documents, which E-Verify doesn't accept"
+      "plainEnglish": "Minor update - configure if useful. A new guardrail message, in Form I-9, Section 2, prevents the selection of receipt documents, which E-Verify doesn't accept"
     },
     {
       "title": "Latest Experience of Team Overview in Performance Management",
@@ -620,7 +620,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. The latest Team Overview provides a cleaner, more accessible user interface with a template-based view and enhanced navigation, while retaining functionalities of the legacy experience Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. The latest Team Overview provides a cleaner, more accessible user interface with a template-based view and enhanced navigation, while retaining functionalities of the legacy experience Review config steps and test in sandbox first."
     },
     {
       "title": "Basic Authentication Removed from the Configure Document Management Page",
@@ -642,7 +642,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can no longer select Basic Authentication during OpenText configuration"
+      "plainEnglish": "Minor update - configure if useful. You can no longer select Basic Authentication during OpenText configuration"
     },
     {
       "title": "Deprecation of Basic Authentication for Integration with Document Management and OpenText",
@@ -664,7 +664,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Canvas Report Usage Reporting in Story Reports",
@@ -686,7 +686,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now analyze usage statistics for Canvas reports directly in Story reports Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now analyze usage statistics for Canvas reports directly in Story reports Review config steps and test in sandbox first."
     },
     {
       "title": "Support for Scheduling Data Source Exports in Story Reports",
@@ -708,7 +708,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now schedule multiple data source exports in Story reports through SFTP (Secure File Transfer Protocol) Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now schedule multiple data source exports in Story reports through SFTP (Secure File Transfer Protocol) Review config steps and test in sandbox first."
     },
     {
       "title": "Enhanced Feature Enablement Change Audit Records",
@@ -730,7 +730,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've updated the feature enablement audit records in the Other Configuration Changes audit report so that the Changed By User fields now correctly reflect the user who made the current change to a..."
+      "plainEnglish": "Minor update - configure if useful. We've updated the feature enablement audit records in the Other Configuration Changes audit report so that the Changed By User fields now correctly reflect the user who made the current change to a..."
     },
     {
       "title": "Layout Improvements for Goal Management Pages",
@@ -774,7 +774,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. We've introduced several enhancements this release to improve the Data Replication Monitor Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. We've introduced several enhancements this release to improve the Data Replication Monitor Review config steps and test in sandbox first."
     },
     {
       "title": "Role-Based Permissions Available for Full Profile Categories",
@@ -818,7 +818,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As part of a security infrastructure upgrade, GnuPG (gpg2) is being upgraded from version 2 Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As part of a security infrastructure upgrade, GnuPG (gpg2) is being upgraded from version 2 Review config steps and test in sandbox first."
     },
     {
       "title": "Enhanced Continuous Feedback Experience",
@@ -862,7 +862,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Administrators can now configure the Internal to External Deconversion job based on a specific field condition, ensuring smoother profile management in the deconversion process"
+      "plainEnglish": "Minor update - configure if useful. Administrators can now configure the Internal to External Deconversion job based on a specific field condition, ensuring smoother profile management in the deconversion process"
     },
     {
       "title": "Hide Recruiting Link in the Main Navigation Menu",
@@ -884,7 +884,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now use a role-based permission to hide SAP SuccessFactors Recruiting in the main navigation menu of the HCM suite"
+      "plainEnglish": "Minor update - configure if useful. You can now use a role-based permission to hide SAP SuccessFactors Recruiting in the main navigation menu of the HCM suite"
     },
     {
       "title": "SmartRecruiters Winston Integration with Interview Scheduling",
@@ -906,7 +906,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. We've enhanced the integration with SmartRecruiters Winston, so that interview coordinators can invite candidates to self-schedule their interviews using Winston Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. We've enhanced the integration with SmartRecruiters Winston, so that interview coordinators can invite candidates to self-schedule their interviews using Winston Review config steps and test in sandbox first."
     },
     {
       "title": "Prevent Replication of Rehired Employee Being Onboarded on Existing Employment",
@@ -950,7 +950,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now replicate the KiwiSaver onboarding form fields Savings Suspension End Date and Temporary Rate Reduction End Date from SAP SuccessFactors Employee Central to SAP SuccessFactors Employee ..."
+      "plainEnglish": "Minor update - configure if useful. You can now replicate the KiwiSaver onboarding form fields Savings Suspension End Date and Temporary Rate Reduction End Date from SAP SuccessFactors Employee Central to SAP SuccessFactors Employee ..."
     },
     {
       "title": "Arrow-Based Pay Statement Integration Is Deleted",
@@ -972,7 +972,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details - this affects your system automatically."
     },
     {
       "title": "Pay Statement (Fiori-like) Integration Is Deleted",
@@ -994,7 +994,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: April 1, 2022. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: April 1, 2022. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhanced Hiring Status Indicator on Latest People Profile",
@@ -1060,7 +1060,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Learners can securely reset their e-signature PIN using Forgot My PIN from the Learning home page when needed"
+      "plainEnglish": "Minor update - configure if useful. Learners can securely reset their e-signature PIN using Forgot My PIN from the Learning home page when needed"
     },
     {
       "title": "Cancel Form I-9 Process from the New Hire Details page",
@@ -1082,7 +1082,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Hiring managers and onboarding participants can now cancel the Form I-9 process using the Compliance Processes Details button on the New Hire Details page Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Hiring managers and onboarding participants can now cancel the Form I-9 process using the Compliance Processes Details button on the New Hire Details page Review config steps and test in sandbox first."
     },
     {
       "title": "Initiate the U.S Form I-9 Correction or Reverification Processes from the New Hire Details Page",
@@ -1148,7 +1148,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The Proxy Now user search now excludes proxy assignments that haven't started yet or are in the past, improving search performance and user experience"
+      "plainEnglish": "Minor update - configure if useful. The Proxy Now user search now excludes proxy assignments that haven't started yet or are in the past, improving search performance and user experience"
     },
     {
       "title": "Support for Growth Portfolio Inbound API",
@@ -1214,7 +1214,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As a recruiter, you can now identify candidates awaiting interviewer feedback and send timely reminders to interviewers in the new Applicant Workbench"
+      "plainEnglish": "Minor update - configure if useful. As a recruiter, you can now identify candidates awaiting interviewer feedback and send timely reminders to interviewers in the new Applicant Workbench"
     },
     {
       "title": "Attendance Quota",
@@ -1236,7 +1236,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Employees can now use an attendance quota to work additional hours when required with prior approval Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Employees can now use an attendance quota to work additional hours when required with prior approval Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancements in Business Configuration UI",
@@ -1258,7 +1258,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've have enhanced new validations and general enhancements to avoid misconfigurations in Business Configuration UI (BCUI)"
+      "plainEnglish": "Minor update - configure if useful. We've have enhanced new validations and general enhancements to avoid misconfigurations in Business Configuration UI (BCUI)"
     },
     {
       "title": "Deprecation of Fields in Job Information",
@@ -1280,7 +1280,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhancements to History UI of Full Profile",
@@ -1324,7 +1324,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now add custom UI Integration cards to the People Profile Spotlight section on the SAP SuccessFactors Mobile applications Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now add custom UI Integration cards to the People Profile Spotlight section on the SAP SuccessFactors Mobile applications Review config steps and test in sandbox first."
     },
     {
       "title": "Restart e-Signature Step for Document Flows",
@@ -1368,7 +1368,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now use AI-assisted Bulk Translate for category name, card title, and card help configurations in the Configure Latest People Profile admin tool Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now use AI-assisted Bulk Translate for category name, card title, and card help configurations in the Configure Latest People Profile admin tool Review config steps and test in sandbox first."
     },
     {
       "title": "The Demo Mode Feature in SAP SuccessFactors Mobile App for iOS is Deleted",
@@ -1390,7 +1390,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Warnings for Large Data Exports in Table Reports",
@@ -1434,7 +1434,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now configure and manage certificates in Talent Intelligence Hub Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now configure and manage certificates in Talent Intelligence Hub Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancements to On Change Handling of Field Updates for Mobile Time Off",
@@ -1500,7 +1500,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now create direct joins from Legal Entity to Location Group in Story reports, eliminating the need to join through the Location object"
+      "plainEnglish": "Minor update - configure if useful. You can now create direct joins from Legal Entity to Location Group in Story reports, eliminating the need to join through the Location object"
     },
     {
       "title": "Deprecation of Accrual Posting Method \"Classic\"",
@@ -1522,7 +1522,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 12, 2027. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 12, 2027. Review the details - this affects your system automatically."
     },
     {
       "title": "Benefit Access for Alumni Users",
@@ -1566,7 +1566,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. HR administrators can now manage permission roles, role assignments, and permission groups through a new set of REST APIs"
+      "plainEnglish": "Minor update - configure if useful. HR administrators can now manage permission roles, role assignments, and permission groups through a new set of REST APIs"
     },
     {
       "title": "Proxy Management REST API",
@@ -1588,7 +1588,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. A new REST API enables you to create, retrieve, update, and delete proxy assignments for user management Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. A new REST API enables you to create, retrieve, update, and delete proxy assignments for user management Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancements to the Latest Home Page on iOS and Android Mobile Apps",
@@ -1610,7 +1610,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We made several enhancements to the latest home page on iOS and Android mobile apps"
+      "plainEnglish": "Minor update - configure if useful. We made several enhancements to the latest home page on iOS and Android mobile apps"
     },
     {
       "title": "New Enhancements from SAP Analytics Cloud for Story Reports - April 2026",
@@ -1654,7 +1654,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Administrators can now add skills partner data sources and configure users to manage the data sources Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Administrators can now add skills partner data sources and configure users to manage the data sources Review config steps and test in sandbox first."
     },
     {
       "title": "Manage Growth Portfolio Ratings",
@@ -1676,7 +1676,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now set which internal and external sources are allowed to change or lower proficiency levels for attributes in the Growth Portfolio Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now set which internal and external sources are allowed to change or lower proficiency levels for attributes in the Growth Portfolio Review config steps and test in sandbox first."
     },
     {
       "title": "Deprecation of Legacy Home Page Experience",
@@ -1698,7 +1698,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 25, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 25, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Survey Cards on the Latest Home Page Are Deleted",
@@ -1720,7 +1720,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Spell Check Feature Is Deleted",
@@ -1742,7 +1742,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Assignment Recommendations Consider Target Roles",
@@ -1852,7 +1852,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now hide the Attributes section for Opportunity Marketplace assignments"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now hide the Attributes section for Opportunity Marketplace assignments"
     },
     {
       "title": "Update Start Date for Started Assignment Applications",
@@ -1874,7 +1874,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Assignment owners and co-owners can now edit the start date of assignment applications even after the assignment has started"
+      "plainEnglish": "Minor update - configure if useful. Assignment owners and co-owners can now edit the start date of assignment applications even after the assignment has started"
     },
     {
       "title": "Additional Filters for Open Job Recommendations in Opportunity Marketplace",
@@ -1896,7 +1896,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Administrators can now add a geographic filter and a custom job level filter on open job recommendations Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Administrators can now add a geographic filter and a custom job level filter on open job recommendations Review config steps and test in sandbox first."
     },
     {
       "title": "Target Criteria for Attribute Types and Tags",
@@ -1918,7 +1918,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now define a target criteria to restrict the attributes visibility across different modules in SAP SuccessFactors Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now define a target criteria to restrict the attributes visibility across different modules in SAP SuccessFactors Review config steps and test in sandbox first."
     },
     {
       "title": "Search for Job Roles by Custom Attributes in Opportunity Marketplace",
@@ -2006,7 +2006,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Assignment owners and co-owners can now add users as candidates and invite them to apply for assignments Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Assignment owners and co-owners can now add users as candidates and invite them to apply for assignments Review config steps and test in sandbox first."
     },
     {
       "title": "Opportunity Recommendations as Featured Cards on the Latest Home Page",
@@ -2072,7 +2072,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Learning recommendations based on user's skills and attributes are now available in the Learn New Skills section in Opportunity Marketplace, and in the Opportunities to Grow sections in Growth Port..."
+      "plainEnglish": "Minor update - configure if useful. Learning recommendations based on user's skills and attributes are now available in the Learn New Skills section in Opportunity Marketplace, and in the Opportunities to Grow sections in Growth Port..."
     },
     {
       "title": "Exclude Lower-Level Roles from Recommendations Using a Custom Field",
@@ -2094,7 +2094,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now use a number-type custom field to define role levels, ensuring employees receive recommendations for roles at or above their current level Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now use a number-type custom field to define role levels, ensuring employees receive recommendations for roles at or above their current level Review config steps and test in sandbox first."
     },
     {
       "title": "Search for and Link Assignments to Development Goals",
@@ -2138,7 +2138,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now edit the section details of a talent card in the latest People Profile dialog"
+      "plainEnglish": "Minor update - configure if useful. You can now edit the section details of a talent card in the latest People Profile dialog"
     },
     {
       "title": "AI-Assisted Writing Now Available in Mobile Apps",
@@ -2160,7 +2160,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. AI-assisted writing is now available in the mobile apps Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. AI-assisted writing is now available in the mobile apps Review config steps and test in sandbox first."
     },
     {
       "title": "Configure Goal Statuses That Don't Generate Home Page Cards",
@@ -2182,7 +2182,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. In Admin Center  Manage Templates, we introduced a new configuration setting named Do Not Generate Cards on Home Page for Goal Management Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. In Admin Center  Manage Templates, we introduced a new configuration setting named Do Not Generate Cards on Home Page for Goal Management Review config steps and test in sandbox first."
     },
     {
       "title": "Improved People Selector Experience in Goal Management",
@@ -2270,7 +2270,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Generic Object and Foundation Object filters are now supported in Position Tile live slides within Presentations"
+      "plainEnglish": "Minor update - configure if useful. Generic Object and Foundation Object filters are now supported in Position Tile live slides within Presentations"
     },
     {
       "title": "Use Custom Attributes in Talent Search",
@@ -2292,7 +2292,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Users can now add custom attributes as search options in Talent Search, in addition to skills and competencies"
+      "plainEnglish": "Minor update - configure if useful. Users can now add custom attributes as search options in Talent Search, in addition to skills and competencies"
     },
     {
       "title": "Inactive Job Roles Removed from UI",
@@ -2314,7 +2314,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Inactive job roles are now not shown on several Career Development user interfaces (UI), including both the legacy and latest Career Worksheet and Career Path"
+      "plainEnglish": "Minor update - configure if useful. Inactive job roles are now not shown on several Career Development user interfaces (UI), including both the legacy and latest Career Worksheet and Career Path"
     },
     {
       "title": "Upcoming Role Available in Career Worksheet for Internal Hires",
@@ -2358,7 +2358,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Managers can now view role details of employees' current and target roles in the latest Career Worksheet Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Managers can now view role details of employees' current and target roles in the latest Career Worksheet Review config steps and test in sandbox first."
     },
     {
       "title": "View Full Job Profile for Job Roles",
@@ -2424,7 +2424,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now configure whether the current role or target role is expanded by default in the Roles and Aspirations section on the Growth Portfolio landing page"
+      "plainEnglish": "Minor update - configure if useful. You can now configure whether the current role or target role is expanded by default in the Roles and Aspirations section on the Growth Portfolio landing page"
     },
     {
       "title": "Minor Enhancements to Career Development",
@@ -2446,7 +2446,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've made several enhancements to Career Development features, including Development Goals, Career Worksheet, and Mentoring"
+      "plainEnglish": "Minor update - configure if useful. We've made several enhancements to Career Development features, including Development Goals, Career Worksheet, and Mentoring"
     },
     {
       "title": "Admin Switches for Disabling AI-Assisted Goal Creation Options",
@@ -2490,7 +2490,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now configure completed development goals to be automatically moved to a specified category, streamlining goal management for users Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now configure completed development goals to be automatically moved to a specified category, streamlining goal management for users Review config steps and test in sandbox first."
     },
     {
       "title": "Manage Learning Without Write Permission for Development Goals",
@@ -2512,7 +2512,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now allow users to manage learning items in the latest Development Goals even when they have only read access to the development goal fields"
+      "plainEnglish": "Minor update - configure if useful. You can now allow users to manage learning items in the latest Development Goals even when they have only read access to the development goal fields"
     },
     {
       "title": "Option to Exclude Linked Learning When Copying Development Goals",
@@ -2534,7 +2534,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. When users create a development goal by copying an existing goal, they can choose not to copy linked learning by deselecting the option Include Linked Learning"
+      "plainEnglish": "Minor update - configure if useful. When users create a development goal by copying an existing goal, they can choose not to copy linked learning by deselecting the option Include Linked Learning"
     },
     {
       "title": "Change Mentor Approval Method for In-Progress Programs",
@@ -2556,7 +2556,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Mentoring administrators and program owners can now change the mentor approval method for open enrollment programs after launching the programs"
+      "plainEnglish": "Minor update - configure if useful. Mentoring administrators and program owners can now change the mentor approval method for open enrollment programs after launching the programs"
     },
     {
       "title": "Permission-Based Visibility of Performance Ratings in AI-Assisted Successor Insights",
@@ -2578,7 +2578,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now use role-based permissions to control the visibility of overall performance ratings in AI-assisted successor insights, preventing sensitive information from being e..."
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now use role-based permissions to control the visibility of overall performance ratings in AI-assisted successor insights, preventing sensitive information from being e..."
     },
     {
       "title": "New Permission Control over Successor Nominations",
@@ -2600,7 +2600,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can use role-based permissions to control who can manage successor nominations and who can be nominated as successors for positions or incumbents Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can use role-based permissions to control who can manage successor nominations and who can be nominated as successors for positions or incumbents Review config steps and test in sandbox first."
     },
     {
       "title": "Advanced Worksheet Filters Now Enabled by Default",
@@ -2622,7 +2622,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Advanced Mass Actions for Compensation Executive Review",
@@ -2710,7 +2710,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. When users hover over the  question mark icon for help text that is available by the fields on a compensation worksheet, the cursor is now a hand cursor"
+      "plainEnglish": "Minor update - configure if useful. When users hover over the  question mark icon for help text that is available by the fields on a compensation worksheet, the cursor is now a hand cursor"
     },
     {
       "title": "Consistent Colors and Messages for Errors and Warnings",
@@ -2732,7 +2732,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've ensured consistent colors and style for validations on Executive Review, worksheet, and Compensation Profile for Compensation, Variable Pay, and Total Compensation plans"
+      "plainEnglish": "Minor update - configure if useful. We've ensured consistent colors and style for validations on Executive Review, worksheet, and Compensation Profile for Compensation, Variable Pay, and Total Compensation plans"
     },
     {
       "title": "New Expand/Collapse Icon for Column Grouping",
@@ -2754,7 +2754,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've introduced a new button ( Expand All, and  Collapse All) to the Compensation worksheets so you're able to expand and collapse all column groups at once when working with a worksheet"
+      "plainEnglish": "Minor update - configure if useful. We've introduced a new button ( Expand All, and  Collapse All) to the Compensation worksheets so you're able to expand and collapse all column groups at once when working with a worksheet"
     },
     {
       "title": "Budget Rule Validation in Executive Review",
@@ -2798,7 +2798,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Email Notifications for Direct Managers on Statement Generation",
@@ -2820,7 +2820,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now set up email notifications for managers when Personal Reward statements are generated for their direct reports"
+      "plainEnglish": "Minor update - configure if useful. You can now set up email notifications for managers when Personal Reward statements are generated for their direct reports"
     },
     {
       "title": "Mass Recall Statements by File Upload",
@@ -2842,7 +2842,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Milestone Awards Based on Service Date",
@@ -2930,7 +2930,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now generate a report that includes detailed information to track the status of bonus assignment statements for users"
+      "plainEnglish": "Minor update - configure if useful. You can now generate a report that includes detailed information to track the status of bonus assignment statements for users"
     },
     {
       "title": "Template-Level Permission Control for the Route Form Tool",
@@ -2952,7 +2952,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As a Role-Based Permissions (RBP) administrator, you can now control which forms are accessible in the Route Form admin tool by applying the Route Document permission to specific form templates"
+      "plainEnglish": "Minor update - configure if useful. As a Role-Based Permissions (RBP) administrator, you can now control which forms are accessible in the Route Form admin tool by applying the Route Document permission to specific form templates"
     },
     {
       "title": "Enhanced Work Order Processing on Centralized Services",
@@ -2974,7 +2974,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've moved the processing for work orders to Centralized services for instances where the New Work Order Requires New Employment setting is not enabled"
+      "plainEnglish": "Minor update - configure if useful. We've moved the processing for work orders to Centralized services for instances where the New Work Order Requires New Employment setting is not enabled"
     },
     {
       "title": "Adding Contingent Workers to Future-Inactive Positions",
@@ -2996,7 +2996,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now specify a termination date when adding a contingent worker or a contingent assignment, allowing assignment of the contingent worker to positions scheduled to become inactive after the w..."
+      "plainEnglish": "Minor update - configure if useful. You can now specify a termination date when adding a contingent worker or a contingent assignment, allowing assignment of the contingent worker to positions scheduled to become inactive after the w..."
     },
     {
       "title": "Optimized Attachment Retrieval in EmpJob OData API",
@@ -3018,7 +3018,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Attachment blob data is now only retrieved when explicitly requested in the $select parameter for EmpJob OData API requests"
+      "plainEnglish": "Minor update - configure if useful. Attachment blob data is now only retrieved when explicitly requested in the $select parameter for EmpJob OData API requests"
     },
     {
       "title": "Centralized Services for Global Assignment in Job Information",
@@ -3062,7 +3062,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Enabling Country/Region-Specific Settings on Alternative Address Fields",
@@ -3106,7 +3106,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Pay Scale Picklist Fields",
@@ -3128,7 +3128,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhanced Visibility Control for Dependents When Adding a Global Assignment",
@@ -3150,7 +3150,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've updated the logic that controls the visibility of the Dependents section in Add Global Assignment"
+      "plainEnglish": "Minor update - configure if useful. We've updated the logic that controls the visibility of the Dependents section in Add Global Assignment"
     },
     {
       "title": "Restrict Period-Based Access Settings Moved to Manage Employee Central Settings",
@@ -3194,7 +3194,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now purge specific fields in the Personal Information and Global Information entities for active employees while retaining the employee record Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now purge specific fields in the Personal Information and Global Information entities for active employees while retaining the employee record Review config steps and test in sandbox first."
     },
     {
       "title": "Employment-Based Purge for Work Permit Information",
@@ -3238,7 +3238,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now use the attachmentNav navigation property in the EmpCompensation, EmpPayCompRecurring, and EmpPayCompNonRecurring OData entities"
+      "plainEnglish": "Minor update - configure if useful. You can now use the attachmentNav navigation property in the EmpCompensation, EmpPayCompRecurring, and EmpPayCompNonRecurring OData entities"
     },
     {
       "title": "Auto-Reassigning Primary Phone and Email Records",
@@ -3260,7 +3260,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've introduced an option that allows the system to automatically change the existing primary records to non-primary when a new primary record is added"
+      "plainEnglish": "Minor update - configure if useful. We've introduced an option that allows the system to automatically change the existing primary records to non-primary when a new primary record is added"
     },
     {
       "title": "Populating Person OID Based on UUID",
@@ -3326,7 +3326,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhanced Compensation Insights",
@@ -3348,7 +3348,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We have changed the configuration setting name for the Compensation Insights feature as well as enhanced which data the system uses for the insight generation"
+      "plainEnglish": "Minor update - configure if useful. We have changed the configuration setting name for the Compensation Insights feature as well as enhanced which data the system uses for the insight generation"
     },
     {
       "title": "Enhancements to Employee Central Quick Actions",
@@ -3370,7 +3370,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've introduced a few enhancements to improve Employee Central Quick Actions"
+      "plainEnglish": "Minor update - configure if useful. We've introduced a few enhancements to improve Employee Central Quick Actions"
     },
     {
       "title": "Expand Depth Limit for FODepartment OData API",
@@ -3392,7 +3392,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We added an entity-level expand depth limit of 5 for the FODepartment OData v2 API"
+      "plainEnglish": "Minor update - configure if useful. We added an entity-level expand depth limit of 5 for the FODepartment OData v2 API"
     },
     {
       "title": "Attachments in the Latest Benefits Enrollment Experience",
@@ -3480,7 +3480,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an employee, you can now access approved benefits in an enrollment window even if some benefits are still pending approval"
+      "plainEnglish": "Minor update - configure if useful. As an employee, you can now access approved benefits in an enrollment window even if some benefits are still pending approval"
     },
     {
       "title": "Benefits Statement Support in Multiple Languages",
@@ -3502,7 +3502,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Employees can now view their Benefits Statement in their preferred language"
+      "plainEnglish": "Minor update - configure if useful. Employees can now view their Benefits Statement in their preferred language"
     },
     {
       "title": "Support Multiple Benefit Enrollment Processes For A Legal Entity",
@@ -3524,7 +3524,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now create multiple Benefit Enrollment processes for the same Legal Entity"
+      "plainEnglish": "Minor update - configure if useful. You can now create multiple Benefit Enrollment processes for the same Legal Entity"
     },
     {
       "title": "Deprecation of Allowance Related Fields",
@@ -3546,7 +3546,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Insurance Related Fields",
@@ -3568,7 +3568,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Reimbursement Related Fields",
@@ -3590,7 +3590,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Pension Related Fields",
@@ -3612,7 +3612,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhanced Permission Requirements for Employee Central OData API Access in Proxy Mode",
@@ -3634,7 +3634,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Pay Scale Group API",
@@ -3656,7 +3656,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details - this affects your system automatically."
     },
     {
       "title": "Job Information Record ID Available in Employee Central Compound Employee API",
@@ -3678,7 +3678,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now access Job Information records ID using the newly added job_info_id field in job_information segment of Employee Central Compound Employee API for more reliable cha..."
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now access Job Information records ID using the newly added job_info_id field in job_information segment of Employee Central Compound Employee API for more reliable cha..."
     },
     {
       "title": "BAdI for Organizational Data Replication",
@@ -3700,7 +3700,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now use the SFIOM_ORG_OBJECT_REPLICATION BAdI to modify or add values to infotype fields not covered by standard mapping during organizational data replication Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now use the SFIOM_ORG_OBJECT_REPLICATION BAdI to modify or add values to infotype fields not covered by standard mapping during organizational data replication Review config steps and test in sandbox first."
     },
     {
       "title": "Business Integration Builder Inspection Tool to Validate Configuration",
@@ -3722,7 +3722,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now use the Business Integration Builder Inspection Tool (BIB tool) helps you proactively detect and resolve Business Integration Builder (BIB) configuration issues during the integration o... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now use the Business Integration Builder Inspection Tool (BIB tool) helps you proactively detect and resolve Business Integration Builder (BIB) configuration issues during the integration o... Review config steps and test in sandbox first."
     },
     {
       "title": "Compare Employee Records in Employee Central and SAP S/4HANA During Replication",
@@ -3744,7 +3744,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now compare data sent from Employee Central with data saved in the corresponding infotype database during ongoing replication to SAP S/4HANA Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now compare data sent from Employee Central with data saved in the corresponding infotype database during ongoing replication to SAP S/4HANA Review config steps and test in sandbox first."
     },
     {
       "title": "Enable Payload Download for Organizational Data Migration",
@@ -3766,7 +3766,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Administrators can now download payload data in CSV format during test runs of web-service-based organizational data migration Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Administrators can now download payload data in CSV format during test runs of web-service-based organizational data migration Review config steps and test in sandbox first."
     },
     {
       "title": "Increased Scope for Infotype-Specific Full Transmission Start Date",
@@ -3788,7 +3788,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. The infotype-Specific Full Transmission Start Date now supports the 0021 (Dependents), 0041 (Date Specifications), and 0185 (Personal IDs) infotypes Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. The infotype-Specific Full Transmission Start Date now supports the 0021 (Dependents), 0041 (Date Specifications), and 0185 (Personal IDs) infotypes Review config steps and test in sandbox first."
     },
     {
       "title": "Support for Migration and Replication of the Classification Group for Canada Job Classification",
@@ -3810,7 +3810,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now migrate Classification Groups in the T5KWB table to the Job Classification Canada object of Employee Central and replicate the Classification Groups of the Job Classification Canada obj... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now migrate Classification Groups in the T5KWB table to the Job Classification Canada object of Employee Central and replicate the Classification Groups of the Job Classification Canada obj... Review config steps and test in sandbox first."
     },
     {
       "title": "Country/Region-Based Filtering Enhancement for Employee Replication",
@@ -3920,7 +3920,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can replicate Higher Duty assignments in Workforce Person integration using the SAP Master Data Integration service Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can replicate Higher Duty assignments in Workforce Person integration using the SAP Master Data Integration service Review config steps and test in sandbox first."
     },
     {
       "title": "Deprecation of Cross-System Workflow for SAP SuccessFactors Solutions",
@@ -3942,7 +3942,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhanced EFFECTIVE_END_DATE Filter in Employee Central Compound Employee API",
@@ -3964,7 +3964,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now apply the EFFECTTIVE_END_DATE filter to the following key-date-based segments in the Employee Central Compound Employee API: paycompensation_non_recurring, deduction_non_recurring, and ..."
+      "plainEnglish": "Minor update - configure if useful. You can now apply the EFFECTTIVE_END_DATE filter to the following key-date-based segments in the Employee Central Compound Employee API: paycompensation_non_recurring, deduction_non_recurring, and ..."
     },
     {
       "title": "Permission Changes for getWorkflowPendingData OData Function Import",
@@ -3986,7 +3986,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now allow users to view pending workflow requests through the getWorkflowPendingData OData function import without the Employee Central HRIS OData API (read-only) permi..."
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now allow users to view pending workflow requests through the getWorkflowPendingData OData function import without the Employee Central HRIS OData API (read-only) permi..."
     },
     {
       "title": "Enhanced APIs for TimeAccountPayout and TimeAccountSummary",
@@ -4030,7 +4030,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Users now receive a notification card in Microsoft Teams when an absence is updated, rejected, or deleted in the SAP SuccessFactors system Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Users now receive a notification card in Microsoft Teams when an absence is updated, rejected, or deleted in the SAP SuccessFactors system Review config steps and test in sandbox first."
     },
     {
       "title": "Employee Pay Transparency Information",
@@ -4052,7 +4052,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Standardized employee information documents with comparator data can now be configured by admins and generated by both employees and admins, supporting compliance with the Employee Pay Transparency... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Standardized employee information documents with comparator data can now be configured by admins and generated by both employees and admins, supporting compliance with the Employee Pay Transparency... Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancements to Address Validation and Typeahead Service",
@@ -4118,7 +4118,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Previously for users from different countries or regions, the system only supported 2 configuration options for genders: binary values (Male or Female), and quinary values (Male, Female, Unknown, U..."
+      "plainEnglish": "Minor update - configure if useful. Previously for users from different countries or regions, the system only supported 2 configuration options for genders: binary values (Male or Female), and quinary values (Male, Female, Unknown, U..."
     },
     {
       "title": "Income Tax Declaration Enhancements",
@@ -4140,7 +4140,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Income Tax Declaration in Employee Central now complies with India's Income-tax Bill 2025, which restructures provisions of the Income-tax Act, 1961"
+      "plainEnglish": "Minor update - configure if useful. Income Tax Declaration in Employee Central now complies with India's Income-tax Bill 2025, which restructures provisions of the Income-tax Act, 1961"
     },
     {
       "title": "Localized Enhancements for Multiple Countries/Regions",
@@ -4162,7 +4162,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. In this overview, you get information about the country/region-specific enhancements in Employee Central for the countries/regions: Argentina, Bulgaria, the Czech Republic, Egypt, Greece, Japan, Po..."
+      "plainEnglish": "Minor update - configure if useful. In this overview, you get information about the country/region-specific enhancements in Employee Central for the countries/regions: Argentina, Bulgaria, the Czech Republic, Egypt, Greece, Japan, Po..."
     },
     {
       "title": "Enhancements to Payment Information in Full Profile",
@@ -4228,7 +4228,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2027. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2027. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhancements to Custom Workflow Notifications",
@@ -4250,7 +4250,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. We improved custom workflow notifications to include richer contextual details that facilitate handling of workflow requests Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. We improved custom workflow notifications to include richer contextual details that facilitate handling of workflow requests Review config steps and test in sandbox first."
     },
     {
       "title": "Deprecation of Manage Workflow Requests with Invalid Approvers",
@@ -4272,7 +4272,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Last Modified Source Reporting Column added to Multiple HRIS Schemas in Story Reports",
@@ -4316,7 +4316,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now report on the Sequence Number field in Compensation Recurring for improved reporting and usability"
+      "plainEnglish": "Minor update - configure if useful. You can now report on the Sequence Number field in Compensation Recurring for improved reporting and usability"
     },
     {
       "title": "New Work Capacity and Incapacity Percentage Fields for Norway",
@@ -4338,7 +4338,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. We've added new Work Capacity Percentage and Work Incapacity Percentage fields for Norway Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. We've added new Work Capacity Percentage and Work Incapacity Percentage fields for Norway Review config steps and test in sandbox first."
     },
     {
       "title": "New Work Incapacity Percentage Field for Sweden",
@@ -4360,7 +4360,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. We've added a new Work Incapacity Percentage field for Sweden Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. We've added a new Work Incapacity Percentage field for Sweden Review config steps and test in sandbox first."
     },
     {
       "title": "FMLA: Half-Day Absences Based on Clock Time Now Supported",
@@ -4382,7 +4382,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The Family Medical Leave Act (FMLA) is a labor law that allows covered employers to provide employees with unpaid leave for certain medical and family reasons"
+      "plainEnglish": "Minor update - configure if useful. The Family Medical Leave Act (FMLA) is a labor law that allows covered employers to provide employees with unpaid leave for certain medical and family reasons"
     },
     {
       "title": "New Sickness Certificate Identifier Field for Italy",
@@ -4404,7 +4404,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've added a new Sickness Certificate Identifier field for Italy"
+      "plainEnglish": "Minor update - configure if useful. We've added a new Sickness Certificate Identifier field for Italy"
     },
     {
       "title": "Automated Update of Labels for Temporary Time Information To-Do Cards",
@@ -4426,7 +4426,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. When you modify the standard SAP SuccessFactors labels using the Manage Languages feature, the labels are now automatically updated for the Temporary Time Information To-Do cards on the Home Page"
+      "plainEnglish": "Minor update - configure if useful. When you modify the standard SAP SuccessFactors labels using the Manage Languages feature, the labels are now automatically updated for the Temporary Time Information To-Do cards on the Home Page"
     },
     {
       "title": "Changes to the Work Schedule Finder",
@@ -4448,7 +4448,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The Work Schedule Finder now uses a wizard-style process for creation and assignment of a work schedule in the latest People Profile"
+      "plainEnglish": "Minor update - configure if useful. The Work Schedule Finder now uses a wizard-style process for creation and assignment of a work schedule in the latest People Profile"
     },
     {
       "title": "Handling No-Show Employees in Time Management",
@@ -4470,7 +4470,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've enhanced the termination end handling process in Time Off to include automatic handling of employees reported as No Show"
+      "plainEnglish": "Minor update - configure if useful. We've enhanced the termination end handling process in Time Off to include automatic handling of employees reported as No Show"
     },
     {
       "title": "New Parameter for Absence Counting Rules",
@@ -4492,7 +4492,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now create absence counting rules that differentiate between holidays that fall on scheduled working days and holidays on non-working days"
+      "plainEnglish": "Minor update - configure if useful. You can now create absence counting rules that differentiate between holidays that fall on scheduled working days and holidays on non-working days"
     },
     {
       "title": "Processing of Time Account Type Based Accruals on Recorded Time Calendar",
@@ -4514,7 +4514,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Accruals on Recorded Time Calendar now supports time account type-specific calendar creation and processing, enabling parallel runs, improved performance, and clearer processing control"
+      "plainEnglish": "Minor update - configure if useful. Accruals on Recorded Time Calendar now supports time account type-specific calendar creation and processing, enabling parallel runs, improved performance, and clearer processing control"
     },
     {
       "title": "Enhancements to Proxy Management",
@@ -4602,7 +4602,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. This is an overview of the most important legal changes in Employee Central Payroll Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. This is an overview of the most important legal changes in Employee Central Payroll Review config steps and test in sandbox first."
     },
     {
       "title": "Available Work Capacity Percentage Replication for Norway",
@@ -4690,7 +4690,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Payroll administrators can now replicate the new field Student Loan Plan Type 5 from the Starter Checklist onboarding form for the United Kingdom to SAP SuccessFactors Employee Central Payroll"
+      "plainEnglish": "Minor update - configure if useful. Payroll administrators can now replicate the new field Student Loan Plan Type 5 from the Starter Checklist onboarding form for the United Kingdom to SAP SuccessFactors Employee Central Payroll"
     },
     {
       "title": "Basic Extensibility for Infotype Actions (0000)",
@@ -4734,7 +4734,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Employee Central Payroll now supports replication of the values Male and Female from the country/region-specific gender field in SAP SuccessFactors Employee Central Global Information section for a..."
+      "plainEnglish": "Minor update - configure if useful. Employee Central Payroll now supports replication of the values Male and Female from the country/region-specific gender field in SAP SuccessFactors Employee Central Global Information section for a..."
     },
     {
       "title": "Enhancements to Payroll Control Center: Manage Payroll Activities",
@@ -4800,7 +4800,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The new Sickness Certificate Identifier field for Italy was introduced in SAP SuccessFactors Employee Central to comply with the legal requirement to track and validate sickness certificates provid..."
+      "plainEnglish": "Minor update - configure if useful. The new Sickness Certificate Identifier field for Italy was introduced in SAP SuccessFactors Employee Central to comply with the legal requirement to track and validate sickness certificates provid..."
     },
     {
       "title": "Deprecation of PersonTypeUsage OData API",
@@ -4822,7 +4822,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Change In Availability of Dependents Information",
@@ -4844,7 +4844,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Enabling the Country/Region-Specific Dependent Relationship Information setting in the latest People Profile removes the Dependents section from the SAP SuccessFactors Onboarding application"
+      "plainEnglish": "Minor update - configure if useful. Enabling the Country/Region-Specific Dependent Relationship Information setting in the latest People Profile removes the Dependents section from the SAP SuccessFactors Onboarding application"
     },
     {
       "title": "Enhancements to Proxy Modules and Sub-Modules",
@@ -4910,7 +4910,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've made some enhancements to the integration with SmartRecruiters"
+      "plainEnglish": "Minor update - configure if useful. We've made some enhancements to the integration with SmartRecruiters"
     },
     {
       "title": "Replacement of Provisioning Settings with Admin Center Settings: 2H 2026 Batch",
@@ -4932,7 +4932,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Default User Preference Settings for Org Chart",
@@ -5042,7 +5042,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now manage data retention policies in the new admin center tool Manage Data Retention Policies Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now manage data retention policies in the new admin center tool Manage Data Retention Policies Review config steps and test in sandbox first."
     },
     {
       "title": "Support for HRIS Field in Configuration Transport Center",
@@ -5108,7 +5108,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Support for UI Integration Cards in Spotlight View on the Latest People Profile",
@@ -5130,7 +5130,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now create custom UI Integration cards for the Spotlight view on the latest People Profile Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now create custom UI Integration cards for the Spotlight view on the latest People Profile Review config steps and test in sandbox first."
     },
     {
       "title": "Additional SAP SuccessFactors Events Available in Event Hub",
@@ -5174,7 +5174,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now create custom UI Integration cards and custom process extensions on the latest People Profile to display data from SAP Build Application or other SAP Business Techn... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now create custom UI Integration cards and custom process extensions on the latest People Profile to display data from SAP Build Application or other SAP Business Techn... Review config steps and test in sandbox first."
     },
     {
       "title": "Updated Default Settings for MDF Objects",
@@ -5196,7 +5196,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've updated the default settings of certain MDF objects"
+      "plainEnglish": "Minor update - configure if useful. We've updated the default settings of certain MDF objects"
     },
     {
       "title": "Support for Custom UI Integration Cards in SAP SuccessFactors Mobile",
@@ -5218,7 +5218,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. SAP SuccessFactors Mobile application now supports SAP Business Technology Platform (BTP) extension cards in the Full Profile of the latest People Profile Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. SAP SuccessFactors Mobile application now supports SAP Business Technology Platform (BTP) extension cards in the Full Profile of the latest People Profile Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancements to Bulk Translate",
@@ -5240,7 +5240,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Bulk Translate now supports content in rich text editors, and a new Manage Translations tab on the Manage Languages page provides a central place to manage translation tasks or navigate to Bulk Tra... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Bulk Translate now supports content in rich text editors, and a new Manage Translations tab on the Manage Languages page provides a central place to manage translation tasks or navigate to Bulk Tra... Review config steps and test in sandbox first."
     },
     {
       "title": "Workflow Participant Information Available in Mobile Apps",
@@ -5262,7 +5262,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Users can now view all workflow participants and current approval statuses directly in their mobile app Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Users can now view all workflow participants and current approval statuses directly in their mobile app Review config steps and test in sandbox first."
     },
     {
       "title": "Get Completed Months of Time for Time Types",
@@ -5284,7 +5284,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. A new rule function, Get Completed Months of Time for a Time Type, is now available in SAP SuccessFactors Employee Central Time Off Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. A new rule function, Get Completed Months of Time for a Time Type, is now available in SAP SuccessFactors Employee Central Time Off Review config steps and test in sandbox first."
     },
     {
       "title": "Integration with SmartRecruiters",
@@ -5306,7 +5306,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now integrate SmartRecruiters with the SAP SuccessFactors HCM suite Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now integrate SmartRecruiters with the SAP SuccessFactors HCM suite Review config steps and test in sandbox first."
     },
     {
       "title": "Attestation Support in Mobile Time Sheet",
@@ -5328,7 +5328,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Employees can now view and confirm attestation agreements in Mobile Time Sheet during time sheet submission, with content based on time recording profiles Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Employees can now view and confirm attestation agreements in Mobile Time Sheet during time sheet submission, with content based on time recording profiles Review config steps and test in sandbox first."
     },
     {
       "title": "Manage HR Service Cases from Microsoft Teams",
@@ -5350,7 +5350,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Users can now create, view, and manage HR cases directly from the SAP SuccessFactors app in Microsoft Teams Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Users can now create, view, and manage HR cases directly from the SAP SuccessFactors app in Microsoft Teams Review config steps and test in sandbox first."
     },
     {
       "title": "Redesigned Experience for Program and Curricula Pages",
@@ -5416,7 +5416,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now enforce item-level prerequisites and approvals for courses within programs"
+      "plainEnglish": "Minor update - configure if useful. You can now enforce item-level prerequisites and approvals for courses within programs"
     },
     {
       "title": "Deprecation of Free-of-Charge Subscriptions",
@@ -5438,7 +5438,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details - this affects your system automatically."
     },
     {
       "title": "Keyword Search on View All Pages in the Learning Home Page",
@@ -5482,7 +5482,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We’ve enhanced the retraining experience for a curriculum requirement and a curriculum requirement group on the Learning home page to provide clear compliance visibility and make it easier for lear..."
+      "plainEnglish": "Minor update - configure if useful. We’ve enhanced the retraining experience for a curriculum requirement and a curriculum requirement group on the Learning home page to provide clear compliance visibility and make it easier for lear..."
     },
     {
       "title": "Enhancements to Multiple Employments REST API",
@@ -5504,7 +5504,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The Multiple Employments REST API provides a structured response, supports $select to retrieve specific fields, and introduces the actingAs parameter"
+      "plainEnglish": "Minor update - configure if useful. The Multiple Employments REST API provides a structured response, supports $select to retrieve specific fields, and introduces the actingAs parameter"
     },
     {
       "title": "Set Duration for Online Items in Bulk Through Item Connector",
@@ -5526,7 +5526,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can add or update Duration for multiple online learning items at once through the Item Connector"
+      "plainEnglish": "Minor update - configure if useful. You can add or update Duration for multiple online learning items at once through the Item Connector"
     },
     {
       "title": "Retain Item Details in Curricula During Item Revisions",
@@ -5548,7 +5548,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can retain initial and retraining assignment data for items in a curriculum during revisions through the Item Connector"
+      "plainEnglish": "Minor update - configure if useful. You can retain initial and retraining assignment data for items in a curriculum during revisions through the Item Connector"
     },
     {
       "title": "Enhancements to External Learning Events",
@@ -5592,7 +5592,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can configure a default library for each Open Content Network (OCN) provider to automatically assign imported OCN items to a specific library"
+      "plainEnglish": "Minor update - configure if useful. You can configure a default library for each Open Content Network (OCN) provider to automatically assign imported OCN items to a specific library"
     },
     {
       "title": "Credit Hours Supported in Open Content Network OData API",
@@ -5614,7 +5614,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've enhanced the Open Content Network (OCN) OData API to support creditHours when posting OCN items to SAP SuccessFactors Learning"
+      "plainEnglish": "Minor update - configure if useful. We've enhanced the Open Content Network (OCN) OData API to support creditHours when posting OCN items to SAP SuccessFactors Learning"
     },
     {
       "title": "Curricula Status in Learning for Mobile Apps",
@@ -5636,7 +5636,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Learners can now view curricula assignments and track compliance status in the SAP SuccessFactors Mobile iOS and Android apps Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Learners can now view curricula assignments and track compliance status in the SAP SuccessFactors Mobile iOS and Android apps Review config steps and test in sandbox first."
     },
     {
       "title": "AI-Assisted Ratings for Inferred Skills",
@@ -5658,7 +5658,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Leveraging generative AI capabilities, you can extract ratings for skills inferred through the \"AI-assisted skills inference for Learning\" feature Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Leveraging generative AI capabilities, you can extract ratings for skills inferred through the \"AI-assisted skills inference for Learning\" feature Review config steps and test in sandbox first."
     },
     {
       "title": "Review AI-Inferred Skills and Ratings Before Associating With Learning",
@@ -5702,7 +5702,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. We previously released the \"AI-assisted skills association with Open Content Network Items\" feature as early adoption Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. We previously released the \"AI-assisted skills association with Open Content Network Items\" feature as early adoption Review config steps and test in sandbox first."
     },
     {
       "title": "Person-Centric Experience in Learning for Multiple Employments",
@@ -5724,7 +5724,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Learning administrators can now manage assignments, completions, history, and employment data at the person level for learners with multiple employments in Employee Central Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Learning administrators can now manage assignments, completions, history, and employment data at the person level for learners with multiple employments in Employee Central Review config steps and test in sandbox first."
     },
     {
       "title": "Deprecation of SuccessFactors Learning Token Server",
@@ -5746,7 +5746,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details - this affects your system automatically."
     },
     {
       "title": "Removal of New Learning Experience Banner and Switch in Mobile Apps",
@@ -5768,7 +5768,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Mobile App Support for Observer Search in Learning",
@@ -5812,7 +5812,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. The SAP Validated Learning and SAP Validated Learning Preview apps are now available for Android mobile devices Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. The SAP Validated Learning and SAP Validated Learning Preview apps are now available for Android mobile devices Review config steps and test in sandbox first."
     },
     {
       "title": "Manager Actions and SF-182 Access in Team View",
@@ -5834,7 +5834,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As a manager, you can now register subordinates for learning items and view or perform withdrawal and remove actions directly from the Team View page Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As a manager, you can now register subordinates for learning items and view or perform withdrawal and remove actions directly from the Team View page Review config steps and test in sandbox first."
     },
     {
       "title": "Pre-Calculated Program Completion Data in Reports",
@@ -5856,7 +5856,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now access pre-calculated program completion percentages in Data Extract Services for faster and more reliable program status reporting Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now access pre-calculated program completion percentages in Data Extract Services for faster and more reliable program status reporting Review config steps and test in sandbox first."
     },
     {
       "title": "Opt-In Setting to Horizon Visual Theme for Learning is Deleted",
@@ -5878,7 +5878,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Active automatically — no setup needed. The Horizon visual theme opt-in setting for Learning is Deleted as of May 15, 2026"
+      "plainEnglish": "Active automatically - no setup needed. The Horizon visual theme opt-in setting for Learning is Deleted as of May 15, 2026"
     },
     {
       "title": "Team View Role Selection Changes",
@@ -5900,7 +5900,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As a manager using the Team View page, you can now change available roles to view team members as an Alternate Manager or HR Business Partner using the new, tab-based interface Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As a manager using the Team View page, you can now change available roles to view team members as an Alternate Manager or HR Business Partner using the new, tab-based interface Review config steps and test in sandbox first."
     },
     {
       "title": "New Manage Super Admin Access Tool",
@@ -5922,7 +5922,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now manage super admins for Learning and Platform from a unified access management page using the new Manage Super Admin Access admin tool Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now manage super admins for Learning and Platform from a unified access management page using the new Manage Super Admin Access admin tool Review config steps and test in sandbox first."
     },
     {
       "title": "Updates to Extended AI Locales",
@@ -5944,7 +5944,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Generative AI now supports additional locales for translation, and AI-translated locales can be used in more areas across the SAP SuccessFactors suite Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Generative AI now supports additional locales for translation, and AI-translated locales can be used in more areas across the SAP SuccessFactors suite Review config steps and test in sandbox first."
     },
     {
       "title": "Data Anonymization Support for External Learners in Instance Refresh Tool",
@@ -5966,7 +5966,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now anonymize SAP SuccessFactors Learning data for an external Learner during instance refresh operations to protect personally identifiable information in non-producti... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now anonymize SAP SuccessFactors Learning data for an external Learner during instance refresh operations to protect personally identifiable information in non-producti... Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancements to Analytic Cards on the Latest Home Page",
@@ -5988,7 +5988,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've made some enhancements to analytic cards on the latest home page, including a new Total Learning Hours card and some new administration options"
+      "plainEnglish": "Minor update - configure if useful. We've made some enhancements to analytic cards on the latest home page, including a new Total Learning Hours card and some new administration options"
     },
     {
       "title": "Citizenship Status Change During Form I-9 Reverification",
@@ -6010,7 +6010,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now handle changes in an employee's citizenship or immigration status during Form I-9 Reverification"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now handle changes in an employee's citizenship or immigration status during Form I-9 Reverification"
     },
     {
       "title": "Configurable Trigger for U.S Form I-9 Reverification",
@@ -6076,7 +6076,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. HR participants and managers can now use the enhanced Complete Your e-Signature page, which provides improved accessibility and a consistent experience"
+      "plainEnglish": "Minor update - configure if useful. HR participants and managers can now use the enhanced Complete Your e-Signature page, which provides improved accessibility and a consistent experience"
     },
     {
       "title": "Onboarding Notification Cards Available in Microsoft Teams",
@@ -6098,7 +6098,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. The SAP SuccessFactors app in Microsoft Teams now supports four Onboarding notifications cards, allowing users to receive important onboarding updates directly in Microsoft Teams Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. The SAP SuccessFactors app in Microsoft Teams now supports four Onboarding notifications cards, allowing users to receive important onboarding updates directly in Microsoft Teams Review config steps and test in sandbox first."
     },
     {
       "title": "Automatic Enablement of Enhanced Offboarding Dashboard",
@@ -6208,7 +6208,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now access all available responsible groups in the Manage Onboarding and Offboarding Programs page"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now access all available responsible groups in the Manage Onboarding and Offboarding Programs page"
     },
     {
       "title": "Responsible Group Limit Increased to 500 Users",
@@ -6230,7 +6230,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The Onboarding Responsible Group limit is now 500 users"
+      "plainEnglish": "Minor update - configure if useful. The Onboarding Responsible Group limit is now 500 users"
     },
     {
       "title": "Target Population Enforcement for Rehire Inactive Employee",
@@ -6274,7 +6274,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now use pre-delivered custom task template objects to create custom tasks for Onboarding and Offboarding scenarios Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now use pre-delivered custom task template objects to create custom tasks for Onboarding and Offboarding scenarios Review config steps and test in sandbox first."
     },
     {
       "title": "Document Center Migration Job Enhancements",
@@ -6296,7 +6296,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Improvements to the Onboarding 1"
+      "plainEnglish": "Minor update - configure if useful. Improvements to the Onboarding 1"
     },
     {
       "title": "Additional Onboarding Home Page Card",
@@ -6340,7 +6340,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Raters in the rater list are now grouped by predefined categories by default, with the number of raters displayed for each category Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Raters in the rater list are now grouped by predefined categories by default, with the number of raters displayed for each category Review config steps and test in sandbox first."
     },
     {
       "title": "Enhanced Mass Routing Functionality in Performance and 360 Form Inbox",
@@ -6384,7 +6384,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Matrix managers can now create sessions directly on the Calibration page using the Create New button Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Matrix managers can now create sessions directly on the Calibration page using the Create New button Review config steps and test in sandbox first."
     },
     {
       "title": "Enhanced Filters in Calibration Sessions",
@@ -6406,7 +6406,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've made enhancements to the filter settings in calibration sessions"
+      "plainEnglish": "Minor update - configure if useful. We've made enhancements to the filter settings in calibration sessions"
     },
     {
       "title": "Expanded Subject Capacity per Session",
@@ -6472,7 +6472,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. When users hide bins in bin view, the remaining bins are now automatically resized to equal widths for a consistent layout"
+      "plainEnglish": "Minor update - configure if useful. When users hide bins in bin view, the remaining bins are now automatically resized to equal widths for a consistent layout"
     },
     {
       "title": "Enable Managers to View All Feedback for Direct Reports",
@@ -6560,7 +6560,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The meeting page (including the meeting history page) introduces a more organized layout and several other user experience enhancements"
+      "plainEnglish": "Minor update - configure if useful. The meeting page (including the meeting history page) introduces a more organized layout and several other user experience enhancements"
     },
     {
       "title": "Topic Description Field Available for Continuous Feedback in Mobile Apps",
@@ -6604,7 +6604,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "New Admin Tool for Mass Changing Goal Plan States",
@@ -6626,7 +6626,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. A new admin tool, Mass Change Goal Plan States, is now available for you to change performance goal plan states for multiple employees at once, without needing to open each employee's goal plan ind... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. A new admin tool, Mass Change Goal Plan States, is now available for you to change performance goal plan states for multiple employees at once, without needing to open each employee's goal plan ind... Review config steps and test in sandbox first."
     },
     {
       "title": "Evaluate Next Role Skills and Competencies in Latest Performance Management Forms",
@@ -6648,7 +6648,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. With the latest Performance Management form experience, you can now configure a new type of section that allows users to evaluate the skills or competencies required for an employee's next job role... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. With the latest Performance Management form experience, you can now configure a new type of section that allows users to evaluate the skills or competencies required for an employee's next job role... Review config steps and test in sandbox first."
     },
     {
       "title": "Default Expanded or Collapsed State for Section Descriptions on Latest Performance Management Forms",
@@ -6670,7 +6670,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. With the latest experience of Performance Management forms, you can now set section descriptions to be expanded or collapsed by default"
+      "plainEnglish": "Minor update - configure if useful. With the latest experience of Performance Management forms, you can now set section descriptions to be expanded or collapsed by default"
     },
     {
       "title": "Hide Extra Overall Score Displays on Latest Performance Management Forms",
@@ -6692,7 +6692,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Latest Experience of Performance Management Forms Automatically On by Default",
@@ -6758,7 +6758,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Goal-Competency Matrix Filter Configuration Available for Latest Performance Management Forms",
@@ -6780,7 +6780,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. With the latest experience of Performance Management forms, you can now hide the Include Other Employees dropdown field in the goal competency summary section and decide who are displayed on the go..."
+      "plainEnglish": "Minor update - configure if useful. With the latest experience of Performance Management forms, you can now hide the Include Other Employees dropdown field in the goal competency summary section and decide who are displayed on the go..."
     },
     {
       "title": "Manual Competency Ratings Supported Along with Behavior Ratings in Latest Performance Management Forms",
@@ -6802,7 +6802,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now allow users to manually rate competencies, in addition to rating behaviors, in the latest experience of Performance Management forms"
+      "plainEnglish": "Minor update - configure if useful. You can now allow users to manually rate competencies, in addition to rating behaviors, in the latest experience of Performance Management forms"
     },
     {
       "title": "Writing Assistant and Legal Scan Available in Latest Performance Management Forms",
@@ -6824,7 +6824,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Writing Assistant and Legal Scan, two existing features in the legacy experience of Performance Management forms, are now available in the latest experience as well"
+      "plainEnglish": "Minor update - configure if useful. Writing Assistant and Legal Scan, two existing features in the legacy experience of Performance Management forms, are now available in the latest experience as well"
     },
     {
       "title": "AI-Assisted Performance Insights Available in All Step Types",
@@ -6846,7 +6846,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Managers can now gain insights into employees' performance when they're involved in iterative or collaborative steps"
+      "plainEnglish": "Minor update - configure if useful. Managers can now gain insights into employees' performance when they're involved in iterative or collaborative steps"
     },
     {
       "title": "Deprecation of \"Review Team Calibration Summary\" and \"Review Team Summary For New Manager\" To-Do Tasks",
@@ -6868,7 +6868,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Disable Calibration Home Page Card by Role",
@@ -6890,7 +6890,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now disable the generation of “Complete Calibration” home page cards for selected roles Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now disable the generation of “Complete Calibration” home page cards for selected roles Review config steps and test in sandbox first."
     },
     {
       "title": "New Tokens for Continuous Feedback Email Notifications",
@@ -6956,7 +6956,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Previously, there were permission descriptions that duplicated permission names"
+      "plainEnglish": "Minor update - configure if useful. Previously, there were permission descriptions that duplicated permission names"
     },
     {
       "title": "New Rule Scenario: Add Custom Validations to Form Fields",
@@ -6978,7 +6978,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. When the latest experience of Performance Management forms is enabled, you can configure business rules that display warning or error messages on forms when certain fields meet the conditions you d... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. When the latest experience of Performance Management forms is enabled, you can configure business rules that display warning or error messages on forms when certain fields meet the conditions you d... Review config steps and test in sandbox first."
     },
     {
       "title": "New Rule Scenario: Launch Form Based on Assessment Outcome",
@@ -7000,7 +7000,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. When the latest experience of Performance Management forms is enabled, you can configure business rules to automatically launch follow-up forms, such as performance improvement plans, when initial ... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. When the latest experience of Performance Management forms is enabled, you can configure business rules to automatically launch follow-up forms, such as performance improvement plans, when initial ... Review config steps and test in sandbox first."
     },
     {
       "title": "Business Rule Enhancements on Configuring Dynamic Content for Latest Performance Management Forms",
@@ -7022,7 +7022,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Navigate to a Specified URL After Exiting a Performance Management Form",
@@ -7044,7 +7044,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Previously, when users opened a performance form through a deep link and then exited the form, they were always directed to the Performance  My Forms page in SAP SuccessFactors"
+      "plainEnglish": "Minor update - configure if useful. Previously, when users opened a performance form through a deep link and then exited the form, they were always directed to the Performance  My Forms page in SAP SuccessFactors"
     },
     {
       "title": "New Property referenceId Visible for Trend API Entities",
@@ -7088,7 +7088,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "View Owner Information Columns in Manage Documents",
@@ -7110,7 +7110,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Administrators can now view document owner details and description information directly in the document list on the Manage Documents page, making it easier to identify documents and review addition..."
+      "plainEnglish": "Minor update - configure if useful. Administrators can now view document owner details and description information directly in the document list on the Manage Documents page, making it easier to identify documents and review addition..."
     },
     {
       "title": "New Document Category for Japan Compliance Forms in Document Management",
@@ -7264,7 +7264,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now schedule a job to refresh the general display name for your employees who had name changes within the last 7 days Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now schedule a job to refresh the general display name for your employees who had name changes within the last 7 days Review config steps and test in sandbox first."
     },
     {
       "title": "Direct Workflow Approval Link in Manage Data Page",
@@ -7308,7 +7308,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Workflows in Metadata Framework (MDF) now use a prioritized approach to determine the workflow subject user, ensuring correct user context for both user-based and non-user-based entities"
+      "plainEnglish": "Minor update - configure if useful. Workflows in Metadata Framework (MDF) now use a prioritized approach to determine the workflow subject user, ensuring correct user context for both user-based and non-user-based entities"
     },
     {
       "title": "Enhancements to People Profile Experience for Custom MDF Objects",
@@ -7330,7 +7330,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've improved the user experience for managing custom MDF objects within the Full Profile of the latest People Profile"
+      "plainEnglish": "Minor update - configure if useful. We've improved the user experience for managing custom MDF objects within the Full Profile of the latest People Profile"
     },
     {
       "title": "Manage Support Access Restriction for Secondary Login",
@@ -7352,7 +7352,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Secondary login sessions now block access to Manage Support Access for support users and implementation partners"
+      "plainEnglish": "Minor update - configure if useful. Secondary login sessions now block access to Manage Support Access for support users and implementation partners"
     },
     {
       "title": "New Manage RBP Admin Access Tool",
@@ -7374,7 +7374,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. The previous Manage RBP Admin and Super Admin Access tool is now divided into two separate tools: Manage Super Admin Access and Manage RBP Admin Access Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. The previous Manage RBP Admin and Super Admin Access tool is now divided into two separate tools: Manage Super Admin Access and Manage RBP Admin Access Review config steps and test in sandbox first."
     },
     {
       "title": "Replacement of User Role Search with RBP Troubleshooting",
@@ -7396,7 +7396,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Admin Center Banner Now Links to Initiating Identity Authentication Integration",
@@ -7418,7 +7418,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. A banner on the Admin Center homepage now provides a direct link to upgrade to Identity Authentication for tenants that haven't migrated yet"
+      "plainEnglish": "Minor update - configure if useful. A banner on the Admin Center homepage now provides a direct link to upgrade to Identity Authentication for tenants that haven't migrated yet"
     },
     {
       "title": "Full Management of Authorized Service Provider ACS Records in Admin Center",
@@ -7440,7 +7440,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now fully manage Authorized Service Provider ACS records in Admin Center, including creating new records and editing all fields, making setup and management faster and more convenient"
+      "plainEnglish": "Minor update - configure if useful. You can now fully manage Authorized Service Provider ACS records in Admin Center, including creating new records and editing all fields, making setup and management faster and more convenient"
     },
     {
       "title": "Identity Authentication Admin Account Setup Link Displayed in Monitoring Tool",
@@ -7462,7 +7462,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Administrators can now view a link to set up an Identity Authentication administrator account on the Monitoring Tool for SAP Cloud Identity Services Integration page when no known user is available..."
+      "plainEnglish": "Minor update - configure if useful. Administrators can now view a link to set up an Identity Authentication administrator account on the Monitoring Tool for SAP Cloud Identity Services Integration page when no known user is available..."
     },
     {
       "title": "New Visibility for SSO and Partial SSO Settings on the Manage SAML SSO Settings Page",
@@ -7506,7 +7506,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "SSO Check Tool Enhancements for Identity Authentication Integration",
@@ -7528,7 +7528,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The SSO Check Tool now includes enhanced checks and support to help administrators review and correct SAML single sign-on settings with Identity Authentication"
+      "plainEnglish": "Minor update - configure if useful. The SSO Check Tool now includes enhanced checks and support to help administrators review and correct SAML single sign-on settings with Identity Authentication"
     },
     {
       "title": "View Audit Logs for Authorized Service Provider Consumer Services Changes",
@@ -7550,7 +7550,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now view audit logs for updates and deletions made to Authorized Service Provider (SP) Consumer Services records in the Admin Center"
+      "plainEnglish": "Minor update - configure if useful. You can now view audit logs for updates and deletions made to Authorized Service Provider (SP) Consumer Services records in the Admin Center"
     },
     {
       "title": "Change Audit Available for More Admin Center Settings",
@@ -7616,7 +7616,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. When you export account data under Admin Center  Manage Login Accounts  Export Accounts, your download activity is included in Data Export audit report"
+      "plainEnglish": "Minor update - configure if useful. When you export account data under Admin Center  Manage Login Accounts  Export Accounts, your download activity is included in Data Export audit report"
     },
     {
       "title": "Enhanced PGP Key Management and PGP Keys Used in Scheduled Job Manager",
@@ -7660,7 +7660,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We’ve enhanced the OData v2 response handling with XML size validation that prevents out of memory errors"
+      "plainEnglish": "Minor update - configure if useful. We’ve enhanced the OData v2 response handling with XML size validation that prevents out of memory errors"
     },
     {
       "title": "HTTP Header X-SF-Correlation-Id is Deleted",
@@ -7682,7 +7682,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Legacy People Profile Configuration APIs",
@@ -7704,7 +7704,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "SAP-Managed Integration Monitoring with SAP Cloud ALM",
@@ -7726,7 +7726,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Integration Center monitoring with SAP Cloud Application Lifecycle Management (SAP Cloud ALM) is now automatically enabled for your SAP SuccessFactors instance"
+      "plainEnglish": "Minor update - configure if useful. Integration Center monitoring with SAP Cloud Application Lifecycle Management (SAP Cloud ALM) is now automatically enabled for your SAP SuccessFactors instance"
     },
     {
       "title": "Enhancements to Growth Portfolio Data Export",
@@ -7792,7 +7792,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Users can now use an AI-translated locale in their SAP SuccessFactors Mobile apps Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Users can now use an AI-translated locale in their SAP SuccessFactors Mobile apps Review config steps and test in sandbox first."
     },
     {
       "title": "Updates to the Manage Languages Page",
@@ -7814,7 +7814,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. The Manage Languages page has been redesigned to consolidate language-related settings and improve clarity in language management workflows Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. The Manage Languages page has been redesigned to consolidate language-related settings and improve clarity in language management workflows Review config steps and test in sandbox first."
     },
     {
       "title": "Bulk Translate Available in Job Profile Page",
@@ -7836,7 +7836,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now use the AI-assisted bulk translate feature to translate the short descriptions and long descriptions for the job profiles Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now use the AI-assisted bulk translate feature to translate the short descriptions and long descriptions for the job profiles Review config steps and test in sandbox first."
     },
     {
       "title": "Home Page Banner Cards on iOS and Android Mobile Apps",
@@ -7858,7 +7858,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Banner cards are now displayed on the latest home page for the iOS and Android mobile apps"
+      "plainEnglish": "Minor update - configure if useful. Banner cards are now displayed on the latest home page for the iOS and Android mobile apps"
     },
     {
       "title": "Self-Service Upgrade to Enable Authentication with BTP Mobile Services",
@@ -7902,7 +7902,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "AI-Generated Self-Descriptions for Mobile Profiles",
@@ -7924,7 +7924,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. In the mobile app, you can now generate your self-description for you profile using AI Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. In the mobile app, you can now generate your self-description for you profile using AI Review config steps and test in sandbox first."
     },
     {
       "title": "Growth Portfolio Available in Mobile Apps",
@@ -7946,7 +7946,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Employees can now view and manage the Growth Portfolio on Android and iOS devices Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Employees can now view and manage the Growth Portfolio on Android and iOS devices Review config steps and test in sandbox first."
     },
     {
       "title": "Mobile App Promotion Card on the Latest Home Page",
@@ -8012,7 +8012,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. The enhanced People Search is now available in iOS and Android, aligning its capabilities with the web platform while maintaining the existing user interface on mobile devices Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. The enhanced People Search is now available in iOS and Android, aligning its capabilities with the web platform while maintaining the existing user interface on mobile devices Review config steps and test in sandbox first."
     },
     {
       "title": "Enhancement to Business Rules",
@@ -8056,7 +8056,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now delete scheduled jobs for all report types, including Canvas reports, directly from the My Jobs page"
+      "plainEnglish": "Minor update - configure if useful. You can now delete scheduled jobs for all report types, including Canvas reports, directly from the My Jobs page"
     },
     {
       "title": "Auto-Joined Tables in Advanced Filters in Story Reports",
@@ -8078,7 +8078,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Advanced Filters now support selection of fields from the Auto-Joined tables, providing users with more flexibility when building filters in Query Designer"
+      "plainEnglish": "Minor update - configure if useful. Advanced Filters now support selection of fields from the Auto-Joined tables, providing users with more flexibility when building filters in Query Designer"
     },
     {
       "title": "Column Order and Sorting for Data Export in Query Designer",
@@ -8100,7 +8100,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now define both the order and sorting of columns for data export"
+      "plainEnglish": "Minor update - configure if useful. You can now define both the order and sorting of columns for data export"
     },
     {
       "title": "Updated Default Limits for Self Join and Nested If Guardrails in Story Reports",
@@ -8144,7 +8144,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now include geofence information in Story reports when analyzing employee time events recorded through the Clock In Clock Out feature"
+      "plainEnglish": "Minor update - configure if useful. You can now include geofence information in Story reports when analyzing employee time events recorded through the Clock In Clock Out feature"
     },
     {
       "title": "Enhanced Metadata Support for HR Policy Documents in Google Drive",
@@ -8298,7 +8298,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now configure up to 16 standard fields and up to 30 custom fields as sensitive personal data fields in Read Audit"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now configure up to 16 standard fields and up to 30 custom fields as sensitive personal data fields in Read Audit"
     },
     {
       "title": "Content Security Policy Exception List Enhanced with Manageable Default URIs and CSP Check",
@@ -8342,7 +8342,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Will stop working — you need a replacement. Check the linked SAP Note for migration steps."
+      "plainEnglish": "Will stop working - you need a replacement. Check the linked SAP Note for migration steps."
     },
     {
       "title": "Separate Permissions for Creating and Transporting Configuration Bundles Permissions for Admin Roles",
@@ -8364,7 +8364,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhanced Data Anonymization Configuration for Instance Refresh",
@@ -8386,7 +8386,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. We've introduced a new option in Instance Management page that allows administrators to create and manage data-anonymization templates directly from the Data Anonymization page Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. We've introduced a new option in Instance Management page that allows administrators to create and manage data-anonymization templates directly from the Data Anonymization page Review config steps and test in sandbox first."
     },
     {
       "title": "User Sync Validation in Instance Refresh Tool for Integration Center Jobs",
@@ -8408,7 +8408,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The Instance Refresh Tool now includes validation for user data synchronization against the Employee Sync Through Integration Center Job"
+      "plainEnglish": "Minor update - configure if useful. The Instance Refresh Tool now includes validation for user data synchronization against the Employee Sync Through Integration Center Job"
     },
     {
       "title": "Localization of Job Execution Details in Scheduled Job Manager",
@@ -8430,7 +8430,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Scheduled Job Manager now localizes job execution details provided by the job framework and includes minor message enhancements to those details"
+      "plainEnglish": "Minor update - configure if useful. Scheduled Job Manager now localizes job execution details provided by the job framework and includes minor message enhancements to those details"
     },
     {
       "title": "Administrator Pages Revamp for 1H 2026",
@@ -8452,7 +8452,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We revamped pages in Admin Tools to align with current SAP user interface standards"
+      "plainEnglish": "Minor update - configure if useful. We revamped pages in Admin Tools to align with current SAP user interface standards"
     },
     {
       "title": "New Settings Page in Talent Intelligence Hub",
@@ -8496,7 +8496,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now manage, standardize, and govern skills using a dedicated governance process in the Talent Intelligence Hub Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now manage, standardize, and govern skills using a dedicated governance process in the Talent Intelligence Hub Review config steps and test in sandbox first."
     },
     {
       "title": "Migration of Role Descriptions from Job Description Manager to Job Profile Builder",
@@ -8540,7 +8540,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Active automatically — no setup needed. Job Description Manager (the framework for managing legacy job families and roles) will reach End of Development on May 15, 2026 and will be Deleted on November 12, 2027"
+      "plainEnglish": "Active automatically - no setup needed. Job Description Manager (the framework for managing legacy job families and roles) will reach End of Development on May 15, 2026 and will be Deleted on November 12, 2027"
     },
     {
       "title": "Multi-Level Job Architecture in Job Profile Builder",
@@ -8606,7 +8606,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. With Growth Portfolio enabled, you can now allow users to search for employees by skills, attributes, and proficiency levels in the enhanced People Search experience Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. With Growth Portfolio enabled, you can now allow users to search for employees by skills, attributes, and proficiency levels in the enhanced People Search experience Review config steps and test in sandbox first."
     },
     {
       "title": "Improvements to Enhanced People Search",
@@ -8628,7 +8628,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The enhanced People Search includes additional capabilities that improve the search experience"
+      "plainEnglish": "Minor update - configure if useful. The enhanced People Search includes additional capabilities that improve the search experience"
     },
     {
       "title": "Enhanced Consolidated Emails",
@@ -8650,7 +8650,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Consolidated emails include only the latest 1,000 notifications"
+      "plainEnglish": "Minor update - configure if useful. Consolidated emails include only the latest 1,000 notifications"
     },
     {
       "title": "Customizable Product Name in Shell Bar",
@@ -8672,7 +8672,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now customize or hide the product name that's displayed in the latest SAP shell bar (page header)"
+      "plainEnglish": "Minor update - configure if useful. You can now customize or hide the product name that's displayed in the latest SAP shell bar (page header)"
     },
     {
       "title": "Brand Image on the Latest Home Page",
@@ -8694,7 +8694,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now display a brand image in the Greeting section at the top of the latest home page Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now display a brand image in the Greeting section at the top of the latest home page Review config steps and test in sandbox first."
     },
     {
       "title": "Ability to Hide Featured Cards on the Latest Home Page",
@@ -8716,7 +8716,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now choose to hide featured cards on the latest home page"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now choose to hide featured cards on the latest home page"
     },
     {
       "title": "Features Removed from the Latest Home Page",
@@ -8738,7 +8738,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Latest Home Page Is Now Automatically On by Default",
@@ -8782,7 +8782,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As a home page user, you can now create up to 5 personal quick links to display on your home page"
+      "plainEnglish": "Minor update - configure if useful. As a home page user, you can now create up to 5 personal quick links to display on your home page"
     },
     {
       "title": "Separate Management of Quick Actions and Quick Links for the Latest Home Page",
@@ -8804,7 +8804,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Quick actions and quick links for the latest home page are now managed separately in the Manage Home Page tool"
+      "plainEnglish": "Minor update - configure if useful. Quick actions and quick links for the latest home page are now managed separately in the Manage Home Page tool"
     },
     {
       "title": "View All Cards on the Latest Home Page",
@@ -8826,7 +8826,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've added new ways for you to view all of your cards on the latest home page, for both Needs Attention and Organizational Updates sections"
+      "plainEnglish": "Minor update - configure if useful. We've added new ways for you to view all of your cards on the latest home page, for both Needs Attention and Organizational Updates sections"
     },
     {
       "title": "Background Image for the Latest Home Page",
@@ -8848,7 +8848,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now choose to configure a background image for the latest home page, instead of a background color"
+      "plainEnglish": "Minor update - configure if useful. You can now choose to configure a background image for the latest home page, instead of a background color"
     },
     {
       "title": "SAP User Experience Updates in 1H 2026",
@@ -8870,7 +8870,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We made several enhancements to the SAP user experience updates that are now available in all systems"
+      "plainEnglish": "Minor update - configure if useful. We made several enhancements to the SAP user experience updates that are now available in all systems"
     },
     {
       "title": "SAP User Experience Updates Now Available in All Systems",
@@ -8892,7 +8892,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. SAP user experience updates are now available in Production systems"
+      "plainEnglish": "Minor update - configure if useful. SAP user experience updates are now available in Production systems"
     },
     {
       "title": "Translation Hints for Predefined Category Names in People Profile Admin Tool",
@@ -8914,7 +8914,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. When you edit names for predefined categories in the Configure Latest People Profile tool, the translations popup now shows SAP-delivered localized titles as read-only hints for each language avail..."
+      "plainEnglish": "Minor update - configure if useful. When you edit names for predefined categories in the Configure Latest People Profile tool, the translations popup now shows SAP-delivered localized titles as read-only hints for each language avail..."
     },
     {
       "title": "Migration of Interview Scheduling using Microsoft Outlook Integration to Work Tech",
@@ -8936,7 +8936,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhancements to Home Page Quick Actions and Quick Links in SAP SuccessFactors Work Zone",
@@ -9002,7 +9002,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As a recruiter, you can now filter to view only active applicants in the new Applicant Workbench, making it easier to focus on applicants still in the pipeline"
+      "plainEnglish": "Minor update - configure if useful. As a recruiter, you can now filter to view only active applicants in the new Applicant Workbench, making it easier to focus on applicants still in the pipeline"
     },
     {
       "title": "Reportable Custom Fields for Recruiting Templates",
@@ -9024,7 +9024,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now configure custom fields as reportable for recruiting templates directly in Admin Center"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now configure custom fields as reportable for recruiting templates directly in Admin Center"
     },
     {
       "title": "Enhancements to the Redesigned Applicant Workbench",
@@ -9046,7 +9046,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now use OnChange business rules in the redesigned Applicant Management tool to trigger alerts and messages when recruiters change a candidate's status"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now use OnChange business rules in the redesigned Applicant Management tool to trigger alerts and messages when recruiters change a candidate's status"
     },
     {
       "title": "Help with Unresolved Tokens in Offer Letters",
@@ -9068,7 +9068,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As a recruiter, you 're now shown a warning message when there are unresolved tokens in a draft offer letter"
+      "plainEnglish": "Minor update - configure if useful. As a recruiter, you 're now shown a warning message when there are unresolved tokens in a draft offer letter"
     },
     {
       "title": "Candidate Purge for In-Progress Applications of Deleted Requisitions",
@@ -9090,7 +9090,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Custom Country Labels in SAP SuccessFactors Recruiting",
@@ -9112,7 +9112,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. As an administrator, you can now customize country labels in the standard country picklist to meet your organization's compliance and legal requirements"
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can now customize country labels in the standard country picklist to meet your organization's compliance and legal requirements"
     },
     {
       "title": "Enhancements to Career Site Builder and Career Sites",
@@ -9134,7 +9134,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We made several small enhancements to styles in Career Site Builder and on career sites"
+      "plainEnglish": "Minor update - configure if useful. We made several small enhancements to styles in Career Site Builder and on career sites"
     },
     {
       "title": "Deprecation of RSS Response for XML Endpoints on Career Sites",
@@ -9156,7 +9156,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Integration with SmartRecruiters Winston",
@@ -9178,7 +9178,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now integrate SmartRecruiters Winston with SAP SuccessFactors Recruiting and use Career Site Builder to embed Winston Chat on your career site Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now integrate SmartRecruiters Winston with SAP SuccessFactors Recruiting and use Career Site Builder to embed Winston Chat on your career site Review config steps and test in sandbox first."
     },
     {
       "title": "Change Marital Status Guided Experience Available in SAP SuccessFactors Work Zone",
@@ -9200,7 +9200,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an employee, you can now use a guided experience to update your marital status and related personal information in a single workflow Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an employee, you can now use a guided experience to update your marital status and related personal information in a single workflow Review config steps and test in sandbox first."
     },
     {
       "title": "Extended Availability of In-Tab Navigation Capability in SAP SuccessFactors Work Zone",
@@ -9244,7 +9244,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 18, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 18, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Geofence Enhancements for Manual Time Events on SAP SuccessFactors Mobile Application",
@@ -9266,7 +9266,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. When creating or reviewing manual time events on the SAP SuccessFactors mobile application, employees can now select and view geofence details based on the configuration Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. When creating or reviewing manual time events on the SAP SuccessFactors mobile application, employees can now select and view geofence details based on the configuration Review config steps and test in sandbox first."
     },
     {
       "title": "Geofence Enhancements With Reporting Capabilities",
@@ -9288,7 +9288,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now generate reports for the geofence data, configure geofence fields for manual time events, and configure larger numbers of geofences for Clock In Clock Out"
+      "plainEnglish": "Minor update - configure if useful. You can now generate reports for the geofence data, configure geofence fields for manual time events, and configure larger numbers of geofences for Clock In Clock Out"
     },
     {
       "title": "Single Request REST API for Clock In Clock Out",
@@ -9310,7 +9310,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. The Clock In Clock Out Time Event REST API for Clock In Clock Out now supports improved error handling, and validation Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. The Clock In Clock Out Time Event REST API for Clock In Clock Out now supports improved error handling, and validation Review config steps and test in sandbox first."
     },
     {
       "title": "Replication Activation Switch for Third-Party Payroll",
@@ -9354,7 +9354,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now configure how the system manages overlaps between absences and attendances, allowing accurate time tracking even when the records collide Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now configure how the system manages overlaps between absences and attendances, allowing accurate time tracking even when the records collide Review config steps and test in sandbox first."
     },
     {
       "title": "Dynamic Break Generation for Absence Time Types",
@@ -9376,7 +9376,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an administrator, you can now configure how partial day absences are treated in dynamic break deduction to prevent double deduction of breaks when an employee has both working time and a partial... Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now configure how partial day absences are treated in dynamic break deduction to prevent double deduction of breaks when an employee has both working time and a partial... Review config steps and test in sandbox first."
     },
     {
       "title": "Real-Time Attendance Replication from SAP S/4HANA to SAP SuccessFactors Time Sheet in Consolidated Time Recording",
@@ -9398,7 +9398,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now replicate attendance records in real time from SAP S/4HANA to SAP SuccessFactors Time Sheet to prevent data collisions and ensure consistency in Consolidated Time Recording Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now replicate attendance records in real time from SAP S/4HANA to SAP SuccessFactors Time Sheet to prevent data collisions and ensure consistency in Consolidated Time Recording Review config steps and test in sandbox first."
     },
     {
       "title": "Access Time Statement from Time Sheet and Time Sheet Approval Center",
@@ -9420,7 +9420,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an employee, manager, or administrator, you can now access the time statement generation page directly from the Time Sheet and Time Sheet Approval Center UI for selected time sheet periods Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an employee, manager, or administrator, you can now access the time statement generation page directly from the Time Sheet and Time Sheet Approval Center UI for selected time sheet periods Review config steps and test in sandbox first."
     },
     {
       "title": "Inclusion of Start and End Times and Dates in Time Valuation Results",
@@ -9442,7 +9442,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. In SAP SuccessFactors Time Tracking, you can now configure time valuation results to include start and end times, and a physical start date and physical end date Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. In SAP SuccessFactors Time Tracking, you can now configure time valuation results to include start and end times, and a physical start date and physical end date Review config steps and test in sandbox first."
     },
     {
       "title": "Source Behavior Selection for Scheduled Time Categories",
@@ -9508,7 +9508,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've introduced a few enhancements related to the Time Statement Generation feature to improve the usability"
+      "plainEnglish": "Minor update - configure if useful. We've introduced a few enhancements related to the Time Statement Generation feature to improve the usability"
     },
     {
       "title": "External Time Data Support for Day-Based Recording",
@@ -9530,7 +9530,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now use External Time Data to prefill time sheets for employees who record time in days"
+      "plainEnglish": "Minor update - configure if useful. You can now use External Time Data to prefill time sheets for employees who record time in days"
     },
     {
       "title": "Increased Limit for Periodic Time Containers",
@@ -9552,7 +9552,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now configure more periodic Time Containers in a Time Recording Profile"
+      "plainEnglish": "Minor update - configure if useful. You can now configure more periodic Time Containers in a Time Recording Profile"
     },
     {
       "title": "Time Valuations Search by Time Records Filter and Attendance Quota Type",
@@ -9574,7 +9574,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. You can now search for Time Valuations using Time Records Filter in the Time Management Configuration Search"
+      "plainEnglish": "Minor update - configure if useful. You can now search for Time Valuations using Time Records Filter in the Time Management Configuration Search"
     },
     {
       "title": "Deprecation of XML File (YouCalc Rules) Based Workflow Triggering",
@@ -9596,7 +9596,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details - this affects your system automatically."
     },
     {
       "title": "HR Service Cases Shown on the Home Page",
@@ -9618,7 +9618,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. HR service cases in SAP SuccessFactors Enterprise Service Management can now be displayed as cards on the home page, when an action is required by the employee Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. HR service cases in SAP SuccessFactors Enterprise Service Management can now be displayed as cards on the home page, when an action is required by the employee Review config steps and test in sandbox first."
     },
     {
       "title": "Configurable I-9 Document Upload Requirements",
@@ -9662,7 +9662,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. Email notifications now trigger for new hire tasks that are auto-completed"
+      "plainEnglish": "Minor update - configure if useful. Email notifications now trigger for new hire tasks that are auto-completed"
     },
     {
       "title": "Replacement of Onboarding 1.0 with Onboarding",
@@ -9684,7 +9684,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Accessing Audit Logs Through SAP Audit Log Service",
@@ -9728,7 +9728,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: February 23, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: February 23, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Enhancements to Use Cases - January 2026",
@@ -9750,7 +9750,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've made enhancements to the following use cases"
+      "plainEnglish": "Minor update - configure if useful. We've made enhancements to the following use cases"
     },
     {
       "title": "Boolean Field Options and Profile Enhancements in Mobile Apps",
@@ -9772,7 +9772,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Employee Views Section Permissions for Legacy People Profile Sections",
@@ -9794,7 +9794,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Create and Delete Temporary Holiday Calendars in Mobile",
@@ -9816,7 +9816,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As an employee, you can now create and delete temporary holiday calendars directly from the mobile app to align your work schedule with local holidays during temporary assignments or business travel Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As an employee, you can now create and delete temporary holiday calendars directly from the mobile app to align your work schedule with local holidays during temporary assignments or business travel Review config steps and test in sandbox first."
     },
     {
       "title": "Create and Delete Temporary Work Schedules in Mobile",
@@ -9860,7 +9860,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. You can now access HR support services from SAP SuccessFactors Enterprise Service Management within the SAP SuccessFactors Mobile apps for iOS and Android Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. You can now access HR support services from SAP SuccessFactors Enterprise Service Management within the SAP SuccessFactors Mobile apps for iOS and Android Review config steps and test in sandbox first."
     },
     {
       "title": "More Goal Creation Options Available on Forms in iOS and Android Mobile Apps",
@@ -9882,7 +9882,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. In mobile Performance Management and 360 Reviews, users can now add new goals to forms by creating goals from goal libraries or leveraging generative AI capabilities Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. In mobile Performance Management and 360 Reviews, users can now add new goals to forms by creating goals from goal libraries or leveraging generative AI capabilities Review config steps and test in sandbox first."
     },
     {
       "title": "User Experience Enhancements to Continuous Feedback in Mobile Apps",
@@ -9904,7 +9904,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. We've made visual and navigational changes to Continuous Feedback screens in SAP SuccessFactors Mobile apps"
+      "plainEnglish": "Minor update - configure if useful. We've made visual and navigational changes to Continuous Feedback screens in SAP SuccessFactors Mobile apps"
     },
     {
       "title": "User Information and Deactivation Option on Sign-In Screen for iOS and Android Mobile Apps",
@@ -9926,7 +9926,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The sign-in screen for the iOS and Android mobile apps now displays information about the previously signed-in user and a Deactivate option"
+      "plainEnglish": "Minor update - configure if useful. The sign-in screen for the iOS and Android mobile apps now displays information about the previously signed-in user and a Deactivate option"
     },
     {
       "title": "New Guardrails in Story Reports",
@@ -9948,7 +9948,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. As a report designer, you can now receive real-time feedback on performance-heavy query designs, helping you to avoid anti-patterns that impact report efficiency Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. As a report designer, you can now receive real-time feedback on performance-heavy query designs, helping you to avoid anti-patterns that impact report efficiency Review config steps and test in sandbox first."
     },
     {
       "title": "Deprecation of \"Top Jobs\" and \"View All Jobs\" Links on Career Sites",
@@ -9970,7 +9970,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 15, 2024. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 15, 2024. Review the details - this affects your system automatically."
     },
     {
       "title": "Story Report Card Available in SAP SuccessFactors Work Zone",
@@ -10014,7 +10014,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The Performance Goals and Development Goals cards now show overdue status based on due date and hide the Mark as Complete button for completed goals in SAP SuccessFactors Work Zone"
+      "plainEnglish": "Minor update - configure if useful. The Performance Goals and Development Goals cards now show overdue status based on due date and hide the Mark as Complete button for completed goals in SAP SuccessFactors Work Zone"
     },
     {
       "title": "Enhancements to Spot Awards Card",
@@ -10036,7 +10036,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. The Spot Awards card now introduces a refreshed user interface with multiple enhancements"
+      "plainEnglish": "Minor update - configure if useful. The Spot Awards card now introduces a refreshed user interface with multiple enhancements"
     },
     {
       "title": "Geofencing Support for Clock My Time Quick Action in Microsoft Teams",
@@ -10124,7 +10124,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Consistent User ID Generation for Manual Onboarding",
@@ -10168,7 +10168,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. People Intelligence delivers a set of new insights, data products and data packages that consolidate information from SAP SuccessFactors' Onboarding, Recruiting, Time, and Learning products Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. People Intelligence delivers a set of new insights, data products and data packages that consolidate information from SAP SuccessFactors' Onboarding, Recruiting, Time, and Learning products Review config steps and test in sandbox first."
     },
     {
       "title": "Deprecation of Microsoft Outlook Add-in for Providing Continuous Feedback",
@@ -10190,7 +10190,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Goal Alignment Section Enhanced and Available on the Latest Performance Management Form",
@@ -10212,7 +10212,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. On the goal details page, the Goal Alignment section now displays the parent goal name, including a link to its details"
+      "plainEnglish": "Minor update - configure if useful. On the goal details page, the Goal Alignment section now displays the parent goal name, including a link to its details"
     },
     {
       "title": "Enhancements to AI-Assisted Goal Creation",
@@ -10234,7 +10234,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. AI-assisted goal creation has been enhanced to produce more detailed and meaningful goal content"
+      "plainEnglish": "Minor update - configure if useful. AI-assisted goal creation has been enhanced to produce more detailed and meaningful goal content"
     },
     {
       "title": "Deprecation of getSFIDPCertType, updateSFIDPCertType, and getSSLCertificate APIs",
@@ -10256,7 +10256,7 @@
         "label": "Low",
         "color": "#22c55e"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "New Enhancements from SAP Analytics Cloud for Story Reports - January 2026",
@@ -10322,7 +10322,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. Recruiters can now add AI-extracted skills and skills from Talent Intelligence Hub to the job requisition, job profile, and in interview central using a unified skills picker Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. Recruiters can now add AI-extracted skills and skills from Talent Intelligence Hub to the job requisition, job profile, and in interview central using a unified skills picker Review config steps and test in sandbox first."
     },
     {
       "title": "New Use Case and Enhancements Available in Joule - December 2025",
@@ -10344,7 +10344,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability — could change how you work. A new use case and several enhancements to existing use cases are now available in Joule Review config steps and test in sandbox first."
+      "plainEnglish": "Significant new capability - could change how you work. A new use case and several enhancements to existing use cases are now available in Joule Review config steps and test in sandbox first."
     },
     {
       "title": "Deprecation of Basic Authentication for Point-to-Point Employee Central Payroll",
@@ -10366,7 +10366,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Legacy Offboarding Dashboard",
@@ -10388,7 +10388,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "WalkMe Solutions Gallery Contains Prebuilt Content",
@@ -10432,7 +10432,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Additional Prebuilt Walkthroughs and Shoutouts",
@@ -10454,7 +10454,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update — configure if useful. WalkMe prebuilt walkthroughs and shoutouts provide structured, step-by-step assistance for employees, managers, and administrators to complete common tasks"
+      "plainEnglish": "Minor update - configure if useful. WalkMe prebuilt walkthroughs and shoutouts provide structured, step-by-step assistance for employees, managers, and administrators to complete common tasks"
     },
     {
       "title": "Deprecation of Rehire Inactive Employee",
@@ -10476,7 +10476,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Deduction MDF Objects for Employee Central Compensation",
@@ -10498,7 +10498,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Editing UI of Legacy People Profile",
@@ -10520,7 +10520,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 15, 2027. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 15, 2027. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of History UI of Legacy People Profile",
@@ -10542,7 +10542,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 15, 2027. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 15, 2027. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Legacy Learning Search",
@@ -10564,7 +10564,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Manage Asserting Parties Page",
@@ -10586,7 +10586,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2026. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2026. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of OAuth IdP API /oauth/idp",
@@ -10608,7 +10608,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: December 9, 2022. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: December 9, 2022. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Employee Central Service Center",
@@ -10630,7 +10630,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Basic Authentication and Third-Party Corporate Identity Provider (IdP) Direct Integration with SAP SuccessFactors",
@@ -10652,7 +10652,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Basic Authentication for APIs",
@@ -10674,7 +10674,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Old MIME Type and Adoption of Mozilla/IANA MIME Type Standard in Document Management",
@@ -10718,7 +10718,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 20, 2022. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 20, 2022. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Support for Webex Training Center",
@@ -10740,7 +10740,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: November 14, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Is Position Below User's Position In Hierarchy (Old Version)",
@@ -10762,7 +10762,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Employee Central SFAPIs Except CompoundEmployee API",
@@ -10784,7 +10784,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Legacy Goal Management",
@@ -10806,7 +10806,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details - this affects your system automatically."
     },
     {
       "title": "Deprecation of Partial Organization SSO in SAP SuccessFactors HCM suite",
@@ -10828,7 +10828,7 @@
         "label": "Critical",
         "color": "#ef4444"
       },
-      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details — this affects your system automatically."
+      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details - this affects your system automatically."
     }
   ]
 }
