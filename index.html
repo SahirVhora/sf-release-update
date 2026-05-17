@@ -47,14 +47,15 @@ a:hover{text-decoration:underline}
   color:var(--text3);font-weight:600
 }
 
-/* Module header — accordion trigger */
+/* Module header — accordion trigger (SF Compass style) */
 .module-header{
-  display:flex;align-items:center;gap:8px;padding:12px 14px 8px;cursor:pointer;
-  font-size:11px;text-transform:uppercase;letter-spacing:0.8px;
-  color:var(--text3);font-weight:700;transition:all 0.2s ease;user-select:none;
+  font-size:11px;letter-spacing:0.8px;
+  color:var(--text3);padding:12px 14px 8px;font-weight:700;
+  cursor:pointer;display:flex;align-items:center;gap:8px;
+  transition:all 0.2s ease;user-select:none;
   border-radius:6px;margin:2px 6px
 }
-.module-header:hover{color:var(--text);background:var(--bg3)}
+.module-header:hover{color:var(--accent2);background:rgba(108,92,231,0.04)}
 .module-header.open{color:var(--accent2)}
 .module-header .mod-icon{font-size:15px;width:22px;text-align:center;flex-shrink:0}
 .module-header .mod-chevron{
@@ -63,23 +64,28 @@ a:hover{text-decoration:underline}
 .module-header.open .mod-chevron{transform:rotate(90deg);opacity:1}
 .module-header .mod-count{
   font-size:10px;background:var(--border);padding:2px 8px;border-radius:10px;
-  font-weight:500;color:var(--text2)
+  font-weight:500;color:var(--text3)
 }
 
-/* Sub-items under expanded module */
+/* Sub-items under expanded module (SF Compass cat-item style) */
 .module-subitems{
   overflow:hidden;max-height:0;transition:max-height 0.35s ease
 }
 .module-subitems.open{max-height:800px}
 .module-subitems .sub-item{
-  display:flex;align-items:center;gap:10px;padding:7px 14px 7px 36px;cursor:pointer;
-  font-size:12px;color:var(--text2);transition:all 0.15s ease;border-radius:4px;margin:1px 8px
+  display:flex;align-items:center;gap:10px;padding:9px 12px 9px 28px;cursor:pointer;
+  font-size:13px;border-radius:6px;margin-bottom:2px;margin-left:6px;margin-right:6px;
+  transition:all 0.2s ease;color:var(--text3);font-weight:450
 }
-.module-subitems .sub-item:hover{background:var(--bg3);color:var(--text)}
+.module-subitems .sub-item:hover{background:rgba(128,128,128,0.06);color:var(--text)}
 .module-subitems .sub-item.active{
-  background:rgba(108,92,231,0.10);color:var(--accent2);font-weight:550
+  background:rgba(108,92,231,0.08);color:var(--accent2);font-weight:550;
+  box-shadow:inset 1px 0 0 var(--accent)
 }
-.sub-item .sub-count{font-size:10px;color:var(--text3);margin-left:auto;font-family:var(--mono)}
+.sub-item .sub-count{
+  margin-left:auto;font-size:10px;background:var(--border);padding:3px 8px;
+  border-radius:10px;font-weight:500
+}
 .sub-item .sub-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .sub-item .sub-dot.critical{background:var(--critical)}
 .sub-item .sub-dot.high{background:var(--high)}
@@ -88,12 +94,15 @@ a:hover{text-decoration:underline}
 
 /* All Updates item */
 .sidebar-all{
-  display:flex;align-items:center;gap:10px;padding:10px 16px;cursor:pointer;
-  font-size:13px;font-weight:550;color:var(--text);transition:all 0.15s ease;
-  border-radius:6px;margin:4px 8px
+  display:flex;align-items:center;gap:10px;padding:9px 12px;cursor:pointer;
+  font-size:13px;border-radius:6px;margin:2px 8px 8px;
+  transition:all 0.2s ease;color:var(--text);font-weight:550
 }
 .sidebar-all:hover{background:var(--bg3)}
-.sidebar-all .all-count{font-size:10px;color:var(--text3);margin-left:auto;font-family:var(--mono)}
+.sidebar-all .all-count{
+  margin-left:auto;font-size:10px;background:var(--border);padding:3px 8px;
+  border-radius:10px;font-weight:500
+}
 
 /* =========== SEARCH & FILTER =========== */
 .toolbar{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap;align-items:center}
@@ -322,9 +331,9 @@ function renderSidebar() {
 
   let html = '';
   
-  // "All Updates" at top
+  // "All Updates" at top (SF Compass style)
   html += `<div class="sidebar-all" data-module="" data-action="" onclick="selectSidebarModule('', '', this)">
-    <span style="font-size:15px">📋</span> All Updates
+    <span style="font-size:15px;width:20px;text-align:center">🏠</span> All Updates
     <span class="all-count">${allItems.length}</span>
   </div>`;
   
