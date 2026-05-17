@@ -191,7 +191,7 @@ a:hover{text-decoration:underline}
   background:var(--bg4);border-radius:var(--radius);padding:10px 14px;
   font-size:12px;line-height:1.5;color:var(--text);border-left:3px solid var(--accent)
 }
-.plain-english-label{font-weight:600;color:var(--accent2);margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:0.5px}
+.plain-english-label{font-weight:600;color:var(--accent2);margin-bottom:4px;font-size:11px;letter-spacing:0.3px}
 
 .update-card .card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:11px;color:var(--text3)}
 .sap-link{padding:4px 10px;border-radius:4px;background:var(--bg4);color:var(--accent2);font-size:11px;transition:var(--transition)}
@@ -376,7 +376,7 @@ function renderSidebar() {
     if (critCount > 0) dotClass = 'critical';
     else if (highCount > 0) dotClass = 'high';
     
-    html += `<div class="module-header${isOpen ? ' open' : ''}" onclick="toggleSidebarModule(this)" data-module="${escHtml(mod)}">
+    html += `<div class="module-header${isOpen ? ' open' : ''}" onclick="selectSidebarModule('${escHtml(mod)}', '', this)" data-module="${escHtml(mod)}">
       <span class="mod-icon">${icon}</span>
       <span class="sub-dot ${dotClass}" style="width:7px;height:7px"></span>
       ${escHtml(mod)}
@@ -432,16 +432,20 @@ function selectSidebarModule(moduleName, actionName, el) {
   document.querySelectorAll('.sidebar-all, .sub-item').forEach(i => i.classList.remove('active'));
   if (el) el.classList.add('active');
   
-  // If "All" selected or just module header clicked (no action)
+  // If "All" selected
   if (!moduleName && !actionName) {
-    // Highlight "All Updates"
     document.querySelector('.sidebar-all')?.classList.add('active');
   }
   
-  // If module clicked without action, expand it and select it
+  // If module clicked without action: expand accordion + filter to module
   if (moduleName && !actionName) {
+    // Expand this module's sub-items
+    document.querySelectorAll('.module-subitems.open').forEach(c => c.classList.remove('open'));
+    document.querySelectorAll('.module-header.open').forEach(h => h.classList.remove('open'));
+    const subitems = document.querySelector(`.module-subitems[data-module="${CSS.escape(moduleName)}"]`);
     const header = document.querySelector(`.module-header[data-module="${CSS.escape(moduleName)}"]`);
-    if (header) toggleSidebarModule(header);
+    if (subitems) subitems.classList.add('open');
+    if (header) header.classList.add('open');
   }
   
   render();

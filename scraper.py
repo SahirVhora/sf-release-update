@@ -51,36 +51,56 @@ def classify_impact(action: str, enablement: str, ref_number: str = "") -> dict:
 
 
 def generate_plain_english(action: str, enablement: str, title: str, description: str) -> str:
-    """Generate a plain-English 'What this means for you' summary."""
+    """Generate a contextual plain-English summary incorporating title and description details."""
     action = (action or "").strip().lower()
     enablement = (enablement or "").strip().lower()
     
-    if action == "deprecated":
-        if enablement in ("required", "automatically on"):
-            return "⚠️ This feature is being retired and affects your system automatically. You need to plan a migration path before the deletion date. Check the timeline in the description and identify alternatives now."
-        return "This feature is being phased out. You should review your usage and prepare an alternative approach. While not yet forced, proactive migration is recommended."
+    # Extract first sentence for context
+    first_sentence = description.split(".")[0].strip() if description else ""
+    # Shorten very long sentences
+    if len(first_sentence) > 200:
+        first_sentence = first_sentence[:197] + "..."
+    
+    # Extract dates if present
+    import re
+    dates = re.findall(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}', description)
+    date_str = ""
+    if dates:
+        # Find full date match (not just captured month group)
+        full_match = re.search(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}', description)
+        if full_match:
+            date_str = f" Timeline: {full_match.group(0)}."
+    
+    # Detect urgency words
+    urgent_words = ["deleted", "removed", "no longer available", "end of", "must", "required"]
+    is_urgent = any(w in description.lower() for w in urgent_words)
+    
+    if action == "deprecated" or (action == "changed" and "deprecated" in description.lower()):
+        if is_urgent:
+            return f"Will stop working — you need a replacement.{date_str} Check the linked SAP Note for migration steps."
+        return f"Being phased out. Start planning your move to the replacement now.{date_str}"
     
     if action == "deleted":
-        return "🚨 This feature has been removed. If you were using it, you need to switch to the replacement immediately. Check the linked SAP Note for migration guidance."
+        return f"Already removed. If you relied on this, switch to the alternative immediately.{date_str}"
     
     if action == "new":
         if enablement == "major":
-            return "🆕 Major new capability available. This could significantly change how you work. Review the configuration steps and consider enabling it in your test environment first."
+            return f"Significant new capability — could change how you work. {first_sentence} Review config steps and test in sandbox first."
         if enablement in ("minor", "customer configured"):
-            return "New feature available — you can enable it when ready. Worth reviewing to see if it simplifies your current workflows. Test in a non-production environment first."
-        return "New capability added. It's available automatically with no configuration needed. Worth a quick review to understand what's changed."
+            return f"Available when you're ready. {first_sentence} Test in non-production before enabling broadly."
+        return f"Active automatically — no setup needed. {first_sentence}"
     
     if action == "changed":
-        if enablement in ("required", "automatically on"):
-            return "🔄 This change will affect your system automatically. Review the details to understand the impact on your users and processes. No action needed to enable it, but awareness is important."
+        if is_urgent:
+            return f"Important change you need to act on.{date_str} Review the details — this affects your system automatically."
         if enablement == "major":
-            return "Significant change that needs your attention. Plan configuration updates and communicate changes to affected users. Test thoroughly before deploying."
+            return f"Significant update. {first_sentence} Plan configuration changes and communicate to users."
         if enablement in ("minor", "customer configured"):
-            return "Minor update available. You can configure this if it benefits your organisation. Low urgency — review during your next release cycle."
-        return "An existing feature has been updated. The change is automatic — review to understand what's different for your users."
+            return f"Minor update — configure if useful. {first_sentence}"
+        return f"Updated automatically. {first_sentence}"
     
-    # Fallback
-    return "Review this update to understand how it affects your SAP SuccessFactors environment."
+    # Fallback with context
+    return f"Review this change. {first_sentence}"
 
 
 # --- Scraping ---
