@@ -62,6 +62,33 @@ a:hover{text-decoration:underline}
 }
 .theme-toggle-btn:active{transform:scale(0.92) rotate(0deg)}
 
+/* Version switcher */
+.version-switcher{display:flex;gap:4px;background:var(--bg3);padding:3px;border-radius:8px}
+.ver-btn{
+  padding:5px 12px;border-radius:6px;border:none;background:transparent;
+  color:var(--text3);font-size:11px;cursor:pointer;font-family:var(--font);
+  font-weight:500;transition:all 0.2s ease;white-space:nowrap
+}
+.ver-btn:hover{color:var(--text);background:var(--bg4)}
+.ver-btn.active{background:var(--accent);color:#fff;font-weight:600}
+.ver-btn.upcoming{position:relative}
+.ver-btn.upcoming::after{
+  content:'preview';position:absolute;top:-6px;right:-4px;
+  background:var(--medium);color:#000;font-size:8px;padding:1px 5px;
+  border-radius:6px;font-weight:600;letter-spacing:0.3px
+}
+
+/* Release timeline */
+.release-timeline{
+  display:flex;gap:24px;padding:8px 24px;background:var(--bg2);border-bottom:1px solid var(--border);
+  font-size:11px;color:var(--text3)
+}
+.release-timeline strong{color:var(--text2)}
+.release-timeline .phase{display:flex;align-items:center;gap:6px}
+.release-timeline .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.release-timeline .dot.preview{background:var(--medium)}
+.release-timeline .dot.production{background:var(--low)}
+
 /* =========== LAYOUT =========== */
 .app{display:flex;height:calc(100vh - 64px)}
 .sidebar{width:280px;background:var(--bg2);border-right:1px solid var(--border);
@@ -244,10 +271,19 @@ a:hover{text-decoration:underline}
   </div>
   <div class="header-meta">
     <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle light/dark theme" aria-label="Toggle theme">☀</button>
+    <div class="version-switcher" id="version-switcher">
+      <button class="ver-btn active" data-ver="all">All</button>
+      <button class="ver-btn" data-ver="1H 2026">1H 2026</button>
+      <button class="ver-btn upcoming" data-ver="2H 2026 (Preview)">2H 2026 ▸</button>
+    </div>
     <span>Last updated: <strong id="last-updated">-</strong></span>
-    <span class="version-tag" id="version-tag">1H 2026</span>
   </div>
 </header>
+
+<div class="release-timeline" id="release-timeline">
+  <div class="phase"><span class="dot preview"></span> <strong>1H 2026</strong> Preview: April 2026 · Production: May 15, 2026</div>
+  <div class="phase"><span class="dot preview"></span> <strong>2H 2026</strong> Preview: Oct 2026 (est.) · Production: Nov 2026 (est.)</div>
+</div>
 
 <div class="app">
   <nav class="sidebar" id="sidebar"></nav>
@@ -303,6 +339,7 @@ let activeModule = null;
 let activeImpacts = new Set(['all']);
 let activeActions = new Set(['all']);
 let searchQuery = '';
+let activeVersion = 'all';
 
 // ── Load data ──
 async function loadData() {
@@ -338,6 +375,8 @@ function getFilteredItems() {
     }
     // Module filter
     if (activeModule && item.module !== activeModule) return false;
+    // Version filter
+    if (activeVersion !== 'all' && item.releaseVersion !== activeVersion) return false;
     return true;
   });
 }
@@ -762,6 +801,15 @@ function getSampleData() {
     }
   ];
 }
+
+// ── Version switcher ──
+document.getElementById('version-switcher').addEventListener('click', (e) => {
+  if (!e.target.dataset.ver) return;
+  activeVersion = e.target.dataset.ver;
+  document.querySelectorAll('.ver-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  render();
+});
 
 // ── Init ──
 loadData();
