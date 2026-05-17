@@ -405,11 +405,13 @@ let activeAction = null;  // 'new', 'changed', 'deprecated', 'deleted', or null
 
 function renderSidebar() {
   const sidebar = document.getElementById('sidebar');
-  const groups = groupByModule(allItems);
+  // Use version-filtered items for sidebar counts
+  const versionItems = activeVersion === 'all' ? allItems : allItems.filter(i => i.releaseVersion === activeVersion);
+  const groups = groupByModule(versionItems);
   
-  // Count actions per module
+  // Count actions per module (from version-filtered items)
   const modStats = {};
-  for (const item of allItems) {
+  for (const item of versionItems) {
     const m = item.module || 'Other';
     if (!modStats[m]) modStats[m] = {total:0, new:0, changed:0, deprecated:0, deleted:0};
     modStats[m].total++;
@@ -422,7 +424,7 @@ function renderSidebar() {
   // "All Updates" at top (SF Compass style)
   html += `<div class="sidebar-all" data-module="" data-action="" onclick="selectSidebarModule('', '', this)">
     <span style="font-size:15px;width:20px;text-align:center">🏠</span> All Updates
-    <span class="all-count">${allItems.length}</span>
+    <span class="all-count">${versionItems.length}</span>
   </div>`;
   
   // Module headers with accordion
