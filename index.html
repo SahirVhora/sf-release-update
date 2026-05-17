@@ -276,10 +276,8 @@ a:hover{text-decoration:underline}
       <button class="ver-btn" data-ver="1H 2026">1H 2026</button>
       <button class="ver-btn upcoming" data-ver="2H 2026 (Preview)">2H 2026 ▸</button>
     </div>
-    <span>Last updated: <strong id="last-updated">-</strong></span>
   </div>
 </header>
-
 <div class="release-timeline" id="release-timeline">
   <div class="phase"><span class="dot preview"></span> <strong>1H 2026</strong> Preview: April 2026 · Production: May 15, 2026</div>
   <div class="phase"><span class="dot preview"></span> <strong>2H 2026</strong> Preview: Oct 2026 (est.) · Production: Nov 2026 (est.)</div>
@@ -348,12 +346,10 @@ async function loadData() {
     if (!resp.ok) throw new Error('Data file not found');
     const data = await resp.json();
     allItems = data.items || [];
-    document.getElementById('last-updated').textContent = data.metadata?.lastScraped || '-';
     render();
   } catch(e) {
     // Use embedded sample data for demo
     allItems = getSampleData();
-    document.getElementById('last-updated').textContent = 'Demo data';
     render();
   }
 }
