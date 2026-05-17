@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SF Update Pulse - SAP SuccessFactors Release Tracker</title>
+<title>SAP SF Release Updates - SAP SuccessFactors Release Tracker</title>
 <style>
 /* =========== RESET & BASE =========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -267,7 +267,7 @@ a:hover{text-decoration:underline}
 <header class="header">
   <div class="header-logo">
     <span class="pulse"></span>
-    SF Update Pulse
+    SAP SF Release Updates
   </div>
   <div class="header-meta">
     <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle light/dark theme" aria-label="Toggle theme">☀</button>
@@ -315,7 +315,7 @@ a:hover{text-decoration:underline}
 <script>
 // ── Theme ──
 (function initTheme() {
-  const saved = localStorage.getItem('sf-update-pulse-theme');
+  const saved = localStorage.getItem('sf-release-update-theme');
   if (saved) document.documentElement.setAttribute('data-theme', saved);
   updateThemeIcon();
 })();
@@ -324,7 +324,7 @@ function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'light' ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('sf-update-pulse-theme', next);
+  localStorage.setItem('sf-release-update-theme', next);
   updateThemeIcon();
 }
 

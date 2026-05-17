@@ -1,8 +1,8 @@
-# SF Update Pulse
+# SAP SF Release Updates
 
 Live tracker for SAP SuccessFactors release updates. Pulls the latest changes from the SAP What's New Viewer and presents them in a clean, filterable dashboard - categorized by module with plain-English impact summaries.
 
-**Live at: https://sahirvhora.github.io/sf-update-pulse**
+**Live at: https://sahirvhora.github.io/sf-release-update**
 
 ## Features
 
@@ -49,9 +49,9 @@ Runs weekly via Hermes cron (job ID: `3869df8f4724`):
 
 ```
 hermes cron create \
-  --name "SF Update Pulse" \
+  --name "SAP SF Release Updates" \
   --schedule "0 9 * * 0" \
-  --prompt "Run scraper.py in ~/projects/sapsf/sf-update-pulse, commit and push data/updates.json"
+  --prompt "Run scraper.py in ~/projects/sapsf/sf-release-update, commit and push data/updates.json"
 ```
 
 The scraper auto-discovers available versions from SAP, so when 2H 2026 data is published (~September), it will be picked up automatically.

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SF Update Pulse - Scraper
+SAP SF Release Updates - Scraper
 Fetches the latest SAP SuccessFactors What's New data and outputs structured JSON.
 Run: python3 scraper.py
 Output: data/updates.json
@@ -390,7 +390,7 @@ def scrape_via_csv_download():
 
 def main():
     print("=" * 60)
-    print("SF Update Pulse - Scraper")
+    print("SAP SF Release Updates - Scraper")
     print(f"Target: {BASE_URL}")
     print(f"Time: {datetime.now().isoformat()}")
     print("=" * 60)
