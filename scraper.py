@@ -105,7 +105,7 @@ def generate_plain_english(action: str, enablement: str, title: str, description
 
 # --- Scraping ---
 def scrape_with_playwright():
-    """Use Playwright to extract all rows from the What's New Viewer."""
+    """Use Playwright to extract all rows from the What's New Viewer, across all available versions."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -125,7 +125,6 @@ def scrape_with_playwright():
             viewport={"width": 1920, "height": 1080},
             locale="en-US"
         )
-        # Hide automation
         context.add_init_script("""
             Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
             Object.defineProperty(navigator, 'plugins', {get: () => [1,2,3,4,5]});
@@ -139,7 +138,7 @@ def scrape_with_playwright():
             print(f"Initial load warning: {e}. Trying load event...")
             page.goto(BASE_URL, wait_until="load", timeout=120000)
         
-        # Dismiss cookie consent banner if present (TrustArc)
+        # Dismiss cookie consent
         print("Checking for cookie consent banner...")
         try:
             consent_btn = page.wait_for_selector(
@@ -155,7 +154,6 @@ def scrape_with_playwright():
         except:
             print("No cookie consent banner found (or already accepted).")
         
-        # Also try clicking away any overlay
         try:
             page.evaluate("""
                 const banners = document.querySelectorAll('#truste-consent-track, .trustarc-banner, [id*="consent_blackbar"]');
@@ -164,105 +162,184 @@ def scrape_with_playwright():
         except:
             pass
         
-        # Wait for Vue to render - look for the table or filters
         print("Waiting for page to render...")
         try:
             page.wait_for_selector("table tbody tr, button:has-text('Product')", timeout=45000)
         except:
             print("WARNING: Selectors not found. Page might not have loaded fully.")
         
-        # Extra wait for Vue hydration
         page.wait_for_timeout(5000)
         
-        page_num = 1
-        while page_num <= MAX_PAGES:
-            # Extract rows from current page
-            rows = page.query_selector_all("table tbody tr")
-            if not rows:
-                print(f"No rows found on page {page_num}. Stopping.")
-                break
+        # --- Discover available versions ---
+        available_versions = []
+        try:
+            # Click the Software Version filter dropdown
+            ver_btn = page.query_selector('button:has-text("Software Version")')
+            if ver_btn:
+                ver_btn.click()
+                page.wait_for_timeout(2000)
+                # Get all version option elements
+                options = page.query_selector_all('[role="option"], .sapMSelectListItem, li[data-version]')
+                if not options:
+                    # Try finding checkboxes or list items in the dropdown
+                    options = page.query_selector_all('input[type="checkbox"]')
+                    # Get parent labels
+                    labels = page.query_selector_all('label')
+                    for label in labels:
+                        text = label.inner_text().strip()
+                        if text and 'H 20' in text:  # Matches "1H 2026", "2H 2026", etc.
+                            available_versions.append(text)
+                
+                if not available_versions:
+                    # Fallback: look for any version-like text in the dropdown area
+                    all_texts = page.evaluate("""
+                        () => {
+                            const dropdowns = document.querySelectorAll('[role="listbox"], .sapMPopup, .sapMMenu');
+                            if (!dropdowns.length) return [];
+                            const items = [];
+                            dropdowns.forEach(d => {
+                                d.querySelectorAll('[role="option"], li, .sapMText').forEach(el => {
+                                    const t = el.textContent.trim();
+                                    if (t && /\\d[Hh]\\s*20\\d\\d/.test(t)) items.push(t);
+                                });
+                            });
+                            return items;
+                        }
+                    """)
+                    available_versions = all_texts
+                
+                # Close dropdown by clicking elsewhere
+                page.click("body", position={"x": 0, "y": 0})
+                page.wait_for_timeout(1000)
+        except Exception as e:
+            print(f"Could not discover versions: {e}")
+        
+        # Always include the default version (what's currently showing)
+        if not available_versions:
+            available_versions = ["1H 2026"]  # default
+        else:
+            # Ensure we have clean version strings
+            available_versions = [v.strip() for v in available_versions if v.strip()]
+        
+        print(f"Available versions: {available_versions}")
+        
+        # --- Scrape each version ---
+        for ver_idx, version_name in enumerate(available_versions):
+            print(f"\n--- Scraping version: {version_name} ---")
             
-            for row in rows:
-                cells = row.query_selector_all("td")
-                if len(cells) < 8:
+            if ver_idx > 0:
+                # Switch to this version
+                try:
+                    ver_btn = page.query_selector('button:has-text("Software Version")')
+                    if ver_btn:
+                        ver_btn.click()
+                        page.wait_for_timeout(1500)
+                        # Find and click the option
+                        option = page.query_selector(f'text="{version_name}"')
+                        if not option:
+                            option = page.query_selector(f'[title="{version_name}"]')
+                        if not option:
+                            # Try checkbox label
+                            labels = page.query_selector_all('label')
+                            for lbl in labels:
+                                if lbl.inner_text().strip() == version_name:
+                                    option = lbl
+                                    break
+                        if option:
+                            option.click()
+                            page.wait_for_timeout(3000)  # Wait for data reload
+                        else:
+                            print(f"  Could not find option for {version_name}, skipping.")
+                            continue
+                except Exception as e:
+                    print(f"  Failed to switch version: {e}")
                     continue
+            
+            # Extract all pages for this version
+            page_num = 1
+            version_items = 0
+            while page_num <= MAX_PAGES:
+                rows = page.query_selector_all("table tbody tr")
+                if not rows:
+                    print(f"  No rows on page {page_num}. Done with {version_name}.")
+                    break
                 
-                title = (cells[0].inner_text() or "").strip().removeprefix("Preview ")
-                description = (cells[1].inner_text() or "").strip().removesuffix("See More").strip()
-                product = (cells[2].inner_text() or "").strip()
-                # Module may span multiple lines - take first line only (primary module)
-                module_raw = (cells[3].inner_text() or "").strip()
-                module = module_raw.split("\n")[0].strip()
-                feature = (cells[4].inner_text() or "").strip()
-                lifecycle = (cells[5].inner_text() or "").strip()
-                action = (cells[6].inner_text() or "").strip()
-                enablement = (cells[7].inner_text() or "").strip()
-                ref_number = (cells[8].inner_text() or "").strip() if len(cells) > 8 else ""
-                demo = (cells[9].inner_text() or "").strip() if len(cells) > 9 else ""
-                version = (cells[10].inner_text() or "").strip() if len(cells) > 10 else ""
-                valid_as_of = (cells[11].inner_text() or "").strip() if len(cells) > 11 else ""
-                latest_revision = (cells[12].inner_text() or "").strip() if len(cells) > 12 else ""
+                for row in rows:
+                    cells = row.query_selector_all("td")
+                    if len(cells) < 8:
+                        continue
+                    
+                    title = (cells[0].inner_text() or "").strip().removeprefix("Preview ")
+                    description = (cells[1].inner_text() or "").strip().removesuffix("See More").strip()
+                    product = (cells[2].inner_text() or "").strip()
+                    module_raw = (cells[3].inner_text() or "").strip()
+                    module = module_raw.split("\n")[0].strip()
+                    feature = (cells[4].inner_text() or "").strip()
+                    lifecycle = (cells[5].inner_text() or "").strip()
+                    action = (cells[6].inner_text() or "").strip()
+                    enablement = (cells[7].inner_text() or "").strip()
+                    ref_number = (cells[8].inner_text() or "").strip() if len(cells) > 8 else ""
+                    demo = (cells[9].inner_text() or "").strip() if len(cells) > 9 else ""
+                    version_field = (cells[10].inner_text() or "").strip() if len(cells) > 10 else ""
+                    valid_as_of = (cells[11].inner_text() or "").strip() if len(cells) > 11 else ""
+                    latest_revision = (cells[12].inner_text() or "").strip() if len(cells) > 12 else ""
+                    
+                    see_more_link = ""
+                    see_more_el = cells[1].query_selector("a")
+                    if see_more_el:
+                        href = see_more_el.get_attribute("href") or ""
+                        if href.startswith("/"):
+                            href = "https://help.sap.com" + href
+                        see_more_link = href
+                    
+                    impact = classify_impact(action, enablement, ref_number)
+                    plain_english = generate_plain_english(action, enablement, title, description)
+                    
+                    all_items.append({
+                        "title": title,
+                        "description": description,
+                        "product": product,
+                        "module": module,
+                        "feature": feature,
+                        "lifecycle": lifecycle,
+                        "action": action,
+                        "enablement": enablement,
+                        "refNumber": ref_number,
+                        "demo": demo,
+                        "version": version_field,
+                        "validAsOf": valid_as_of,
+                        "latestRevision": latest_revision,
+                        "sapLink": see_more_link,
+                        "impact": impact,
+                        "plainEnglish": plain_english,
+                        "releaseVersion": version_name
+                    })
+                    version_items += 1
                 
-                # Get the "See More" link if available and make it absolute
-                see_more_link = ""
-                see_more_el = cells[1].query_selector("a")
-                if see_more_el:
-                    href = see_more_el.get_attribute("href") or ""
-                    if href.startswith("/"):
-                        href = "https://help.sap.com" + href
-                    see_more_link = href
+                print(f"  Page {page_num}: {len(rows)} rows (total for {version_name}: {version_items})")
                 
-                impact = classify_impact(action, enablement, ref_number)
-                plain_english = generate_plain_english(action, enablement, title, description)
+                # Next page
+                next_btn = page.query_selector('button[title="Next page"]') or \
+                           page.query_selector('button:has-text("")')
+                if not next_btn:
+                    all_btns = page.query_selector_all("button")
+                    for btn in all_btns:
+                        text = btn.inner_text()
+                        if text == "" or "next" in text.lower():
+                            next_btn = btn
+                            break
                 
-                all_items.append({
-                    "title": title,
-                    "description": description,
-                    "product": product,
-                    "module": module,
-                    "feature": feature,
-                    "lifecycle": lifecycle,
-                    "action": action,
-                    "enablement": enablement,
-                    "refNumber": ref_number,
-                    "demo": demo,
-                    "version": version,
-                    "validAsOf": valid_as_of,
-                    "latestRevision": latest_revision,
-                    "sapLink": see_more_link,
-                    "impact": impact,
-                    "plainEnglish": plain_english
-                })
-            
-            print(f"Page {page_num}: extracted {len(rows)} rows (total: {len(all_items)})")
-            
-            # Try to click "Next" page button
-            next_btn = page.query_selector('button[title="Next page"]') or \
-                       page.query_selector('button:has-text("")')
-            
-            # Try various next-page selectors
-            if not next_btn:
-                # Look for pagination buttons
-                all_btns = page.query_selector_all("button")
-                for btn in all_btns:
-                    text = btn.inner_text()
-                    if text == "" or "next" in text.lower():
-                        next_btn = btn
-                        break
-            
-            if not next_btn:
-                print("No 'Next' button found. Assuming last page.")
-                break
-            
-            # Check if disabled
-            is_disabled = next_btn.get_attribute("disabled") is not None
-            if is_disabled:
-                print("Next button is disabled. Reached last page.")
-                break
-            
-            next_btn.click()
-            time.sleep(2)  # Wait for page transition
-            page_num += 1
+                if not next_btn:
+                    print(f"  No 'Next' button. Done with {version_name}.")
+                    break
+                
+                if next_btn.get_attribute("disabled") is not None:
+                    print(f"  Next disabled. Reached last page of {version_name}.")
+                    break
+                
+                next_btn.click()
+                page.wait_for_timeout(2000)
+                page_num += 1
         
         browser.close()
     
@@ -351,13 +428,27 @@ def main():
         module_counts[mod] = module_counts.get(mod, 0) + 1
     print(f"Top modules: {dict(sorted(module_counts.items(), key=lambda x: -x[1])[:10])}")
     
+    # Count by version
+    version_counts = {}
+    for item in unique:
+        ver = item.get("releaseVersion", "Unknown")
+        version_counts[ver] = version_counts.get(ver, 0) + 1
+    print(f"Version breakdown: {version_counts}")
+    
     # Build output
+    available_versions = sorted(set(item.get("releaseVersion", "Unknown") for item in unique))
     output = {
         "metadata": {
             "source": BASE_URL,
             "scrapedAt": datetime.now().isoformat(),
             "totalItems": len(unique),
-            "lastScraped": datetime.now().strftime("%Y-%m-%d %H:%M UTC")
+            "lastScraped": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+            "availableVersions": available_versions,
+            "versionCounts": version_counts,
+            "releaseDates": {
+                "1H 2026": {"preview": "April 2026", "production": "May 15, 2026"},
+                "2H 2026": {"preview": "October 2026 (est.)", "production": "November 2026 (est.)"}
+            }
         },
         "items": unique
     }
