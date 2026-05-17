@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SF Update Pulse — Scraper
+SF Update Pulse - Scraper
 Fetches the latest SAP SuccessFactors What's New data and outputs structured JSON.
 Run: python3 scraper.py
 Output: data/updates.json
@@ -164,7 +164,7 @@ def scrape_with_playwright():
         except:
             pass
         
-        # Wait for Vue to render — look for the table or filters
+        # Wait for Vue to render - look for the table or filters
         print("Waiting for page to render...")
         try:
             page.wait_for_selector("table tbody tr, button:has-text('Product')", timeout=45000)
@@ -190,7 +190,7 @@ def scrape_with_playwright():
                 title = (cells[0].inner_text() or "").strip().removeprefix("Preview ")
                 description = (cells[1].inner_text() or "").strip().removesuffix("See More").strip()
                 product = (cells[2].inner_text() or "").strip()
-                # Module may span multiple lines — take first line only (primary module)
+                # Module may span multiple lines - take first line only (primary module)
                 module_raw = (cells[3].inner_text() or "").strip()
                 module = module_raw.split("\n")[0].strip()
                 feature = (cells[4].inner_text() or "").strip()
@@ -313,7 +313,7 @@ def scrape_via_csv_download():
 
 def main():
     print("=" * 60)
-    print("SF Update Pulse — Scraper")
+    print("SF Update Pulse - Scraper")
     print(f"Target: {BASE_URL}")
     print(f"Time: {datetime.now().isoformat()}")
     print("=" * 60)

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SF Update Pulse — SAP SuccessFactors Release Tracker</title>
+<title>SF Update Pulse - SAP SuccessFactors Release Tracker</title>
 <style>
 /* =========== RESET & BASE =========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -47,7 +47,7 @@ a:hover{text-decoration:underline}
   color:var(--text3);font-weight:600
 }
 
-/* Module header — accordion trigger (SF Compass style) */
+/* Module header - accordion trigger (SF Compass style) */
 .module-header{
   font-size:11px;letter-spacing:0.8px;
   color:var(--text3);padding:12px 14px 8px;font-weight:700;
@@ -215,7 +215,7 @@ a:hover{text-decoration:underline}
     SF Update Pulse
   </div>
   <div class="header-meta">
-    <span>Last updated: <strong id="last-updated">—</strong></span>
+    <span>Last updated: <strong id="last-updated">-</strong></span>
     <span class="version-tag" id="version-tag">1H 2026</span>
   </div>
 </header>
@@ -262,7 +262,7 @@ async function loadData() {
     if (!resp.ok) throw new Error('Data file not found');
     const data = await resp.json();
     allItems = data.items || [];
-    document.getElementById('last-updated').textContent = data.metadata?.lastScraped || '—';
+    document.getElementById('last-updated').textContent = data.metadata?.lastScraped || '-';
     render();
   } catch(e) {
     // Use embedded sample data for demo
@@ -277,7 +277,7 @@ function getFilteredItems() {
   return allItems.filter(item => {
     // Impact filter (pill buttons)
     if (!activeImpacts.has('all') && !activeImpacts.has(item.impact.level)) return false;
-    // Action filter (pill buttons) — only if no sidebar sub-action selected
+    // Action filter (pill buttons) - only if no sidebar sub-action selected
     if (!activeAction && !activeActions.has('all') && !activeActions.has(item.action.toLowerCase())) return false;
     // Sidebar action filter (takes priority over pill buttons)
     if (activeAction && item.action.toLowerCase() !== activeAction) return false;
@@ -637,7 +637,7 @@ function getSampleData() {
       "latestRevision": "Automated Deletion of Future-Dated Job and Compensation Information Records After Employment Termination (1H 2026)",
       "sapLink": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
       "impact": {"level": "medium", "label": "Medium", "color": "#eab308"},
-      "plainEnglish": "New feature available — you can enable it when ready. This automates a manual cleanup task that often gets forgotten. Worth enabling to keep employee records tidy, especially for organisations with high turnover."
+      "plainEnglish": "New feature available - you can enable it when ready. This automates a manual cleanup task that often gets forgotten. Worth enabling to keep employee records tidy, especially for organisations with high turnover."
     },
     {
       "title": "Deprecation of People Profile in the Employee Central Employee History Field Mapping Tool",
@@ -655,7 +655,7 @@ function getSampleData() {
       "latestRevision": "Not Applicable",
       "sapLink": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
       "impact": {"level": "critical", "label": "Critical", "color": "#ef4444"},
-      "plainEnglish": "⚠️ Urgent: If you use People Profile mapping in the Employee History Field Mapping Tool, this will stop working May 2027. You have approximately one year to migrate to the replacement approach. Start planning now — identify all integrations and reports that depend on this mapping."
+      "plainEnglish": "⚠️ Urgent: If you use People Profile mapping in the Employee History Field Mapping Tool, this will stop working May 2027. You have approximately one year to migrate to the replacement approach. Start planning now - identify all integrations and reports that depend on this mapping."
     },
     {
       "title": "Introducing Country/Region-Specific Dependent Configuration",
@@ -691,7 +691,7 @@ function getSampleData() {
       "latestRevision": "",
       "sapLink": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
       "impact": {"level": "low", "label": "Low", "color": "#22c55e"},
-      "plainEnglish": "Small but useful API improvement. If you have integrations reading Job Information via OData, you can now track individual record IDs. This is automatically available — no config needed. Useful for audit trails and integration reconciliation."
+      "plainEnglish": "Small but useful API improvement. If you have integrations reading Job Information via OData, you can now track individual record IDs. This is automatically available - no config needed. Useful for audit trails and integration reconciliation."
     },
     {
       "title": "Deprecation of variablePayUpdateForms Job",
