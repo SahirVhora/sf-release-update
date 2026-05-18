@@ -354,6 +354,10 @@ a:hover{text-decoration:underline}
 .btn-secondary:hover{background:var(--bg4)}
 
 /* Checklist view */
+
+/* Hide original view when checklist is active */
+.main.checklist-active .original-view{display:none}
+
 .checklist-view{display:none}
 .checklist-view.active{display:block}
 .original-view.hidden{display:none}
@@ -476,6 +480,7 @@ a:hover{text-decoration:underline}
   <nav class="sidebar" id="sidebar"></nav>
 
   <main class="main">
+    <div class="original-view">
     <div class="toolbar">
       <input type="text" class="search-box" id="search" placeholder="Search updates, modules, features…" autofocus>
       <div class="filter-group" id="impact-filters">
@@ -496,6 +501,8 @@ a:hover{text-decoration:underline}
 
     <div class="stats-bar" id="stats-bar"></div>
     <div id="content"></div>
+    </div>
+
 
     <!-- Module Selector Modal -->
     <div class="modal-overlay" id="setup-modal" style="display:none" onclick="if(event.target===this)closeModal()">
@@ -1151,15 +1158,17 @@ function generateChecklist() {
   closeModal();
   renderChecklist();
   document.getElementById('checklist-view').classList.add('active');
+  document.querySelector('.main').classList.add('checklist-active');
   updateChecklistBadge();
 }
 
 function closeChecklist() {
   document.getElementById('checklist-view').classList.remove('active');
+  document.querySelector('.main').classList.remove('checklist-active');
 }
 
 function renderChecklist() {
-  var relevant = items.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
+  var relevant = allItems.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
   var categorized = { action_required: [], review_test: [], informational: [] };
   for (var i = 0; i < relevant.length; i++) {
     var cat = classifyItem(relevant[i]);
@@ -1270,7 +1279,7 @@ function toggleCat(header) {
 }
 
 function updateChecklistBadge() {
-  var relevant = items.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
+  var relevant = allItems.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
   var actionRequired = relevant.filter(function(i) { return classifyItem(i) === 'action_required'; }).length;
   var badge = document.getElementById('checklist-badge');
   if (badge) badge.textContent = actionRequired > 0 ? actionRequired : '0';
@@ -1286,7 +1295,7 @@ function resetChecklist() {
 
 function exportChecklist(format) {
   if (format === 'json') {
-    var relevant = items.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
+    var relevant = allItems.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
     var exportData = {
       generatedAt: new Date().toISOString(),
       modules: selectedModules,
