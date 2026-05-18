@@ -14,6 +14,7 @@ Live tracker for SAP SuccessFactors release updates. Pulls the latest changes fr
 - **Impact classification** - Critical / High / Medium / Low derived from SAP's Action + Enablement + Reference Number columns.
 - **Contextual plain-English summaries** - each update includes a unique "What this means for you" summary using the actual description text and timeline dates.
 - **Full search & filter** - by module, impact level, action type, version, and free text search.
+- **Release Readiness Checklist** - select your managed modules, generate a personalised checklist with Action Required / Review & Test / Informational categories, track progress with checkboxes (persisted in localStorage), export to JSON, and print.
 - **Direct SAP links** - every update links to the official SAP Help Portal documentation.
 - **Single-file HTML** - no dependencies, works offline with bundled data, deployed via GitHub Pages.
 - **42 SF modules** tracked across Employee Central, Compensation, Recruiting, Platform, and more.

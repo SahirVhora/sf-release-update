@@ -270,6 +270,183 @@ a:hover{text-decoration:underline}
   .header{padding:0 16px}
   .toolbar{flex-direction:column}
 }
+
+/* =========== CHECKLIST =========== */
+.checklist-btn{
+  padding:6px 14px;border-radius:20px;border:1.5px solid var(--accent);background:transparent;
+  color:var(--accent);cursor:pointer;font-size:12px;font-weight:600;transition:all 0.2s ease;
+  font-family:var(--font);white-space:nowrap;display:flex;align-items:center;gap:6px
+}
+.checklist-btn:hover{background:var(--accent);color:#fff}
+.checklist-btn .badge{
+  background:var(--critical);color:#fff;font-size:10px;padding:1px 6px;border-radius:10px;
+  font-weight:700;min-width:18px;text-align:center
+}
+
+/* Module selector modal */
+.modal-overlay{
+  position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:200;
+  display:flex;align-items:center;justify-content:center;
+  animation:fadeIn 0.2s ease
+}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+.modal-panel{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);
+  width:520px;max-height:80vh;display:flex;flex-direction:column;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4);animation:slideUp 0.25s ease
+}
+@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+.modal-header{
+  display:flex;align-items:center;justify-content:space-between;padding:20px 24px;
+  border-bottom:1px solid var(--border)
+}
+.modal-header h2{font-size:18px;font-weight:700}
+.modal-close{
+  width:28px;height:28px;border-radius:50%;border:none;background:var(--bg3);
+  color:var(--text2);cursor:pointer;font-size:16px;display:flex;align-items:center;
+  justify-content:center;transition:all 0.2s
+}
+.modal-close:hover{background:var(--critical);color:#fff}
+
+.modal-body{padding:16px 24px;overflow-y:auto;flex:1}
+.modal-footer{
+  padding:16px 24px;border-top:1px solid var(--border);display:flex;gap:12px;
+  justify-content:flex-end
+}
+
+/* Module selector */
+.mod-select-item{
+  display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;
+  cursor:pointer;transition:background 0.15s;font-size:13px
+}
+.mod-select-item:hover{background:var(--bg3)}
+.mod-select-item input[type="checkbox"]{
+  width:16px;height:16px;accent-color:var(--accent);flex-shrink:0
+}
+.mod-select-name{flex:1;color:var(--text)}
+.mod-select-count{
+  font-size:11px;background:var(--bg4);padding:2px 8px;border-radius:10px;
+  color:var(--text2);font-family:var(--mono);flex-shrink:0
+}
+
+/* Quick select buttons */
+.qs-row{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.qs-btn{
+  padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);
+  color:var(--text2);cursor:pointer;font-size:11px;transition:all 0.2s;font-family:var(--font)
+}
+.qs-btn:hover{background:var(--bg4);color:var(--text)}
+
+/* Primary/generate button */
+.btn-primary{
+  padding:10px 24px;border-radius:8px;border:none;background:var(--accent);color:#000;
+  cursor:pointer;font-size:14px;font-weight:600;transition:all 0.2s;font-family:var(--font)
+}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-1px)}
+.btn-primary:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+
+.btn-secondary{
+  padding:10px 24px;border-radius:8px;border:1px solid var(--border);background:var(--bg3);
+  color:var(--text);cursor:pointer;font-size:14px;transition:all 0.2s;font-family:var(--font)
+}
+.btn-secondary:hover{background:var(--bg4)}
+
+/* Checklist view */
+.checklist-view{display:none}
+.checklist-view.active{display:block}
+.original-view.hidden{display:none}
+
+.checklist-header{
+  display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap
+}
+.checklist-header h2{font-size:20px;font-weight:700;flex:1}
+.back-btn{
+  padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg2);
+  color:var(--text2);cursor:pointer;font-size:12px;transition:all 0.2s;font-family:var(--font)
+}
+.back-btn:hover{background:var(--bg3);color:var(--text)}
+
+/* Progress bar */
+.progress-section{margin-bottom:24px}
+.progress-bar-outer{
+  height:8px;background:var(--bg4);border-radius:4px;overflow:hidden;margin-bottom:8px
+}
+.progress-bar-inner{
+  height:100%;background:linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius:4px;transition:width 0.4s ease
+}
+.progress-text{
+  display:flex;justify-content:space-between;font-size:12px;color:var(--text3)
+}
+.progress-text strong{color:var(--text);font-family:var(--mono)}
+
+/* Checklist category sections */
+.checklist-category{margin-bottom:20px}
+.checklist-category-header{
+  display:flex;align-items:center;gap:10px;padding:12px 16px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);
+  cursor:pointer;user-select:none;margin-bottom:4px
+}
+.checklist-category-header:hover{background:var(--bg3)}
+.cat-icon{font-size:20px}
+.cat-title{font-weight:600;font-size:15px;flex:1}
+.cat-count{
+  font-size:12px;font-family:var(--mono);color:var(--text2);
+  padding:3px 10px;background:var(--bg4);border-radius:10px
+}
+.cat-chevron{transition:transform 0.2s;color:var(--text3);font-size:14px}
+.cat-chevron.open{transform:rotate(90deg)}
+
+/* Checklist items */
+.checklist-items{padding-left:16px}
+.checklist-item{
+  display:flex;align-items:flex-start;gap:12px;padding:12px 16px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
+  margin-bottom:4px;transition:all 0.2s
+}
+.checklist-item:hover{background:var(--bg3)}
+.checklist-item.done{opacity:0.5}
+.checklist-item.done .cl-title{text-decoration:line-through;color:var(--text3)}
+
+.cl-checkbox{
+  width:20px;height:20px;accent-color:var(--accent);flex-shrink:0;margin-top:2px;cursor:pointer
+}
+.cl-content{flex:1;min-width:0}
+.cl-title{font-weight:600;font-size:13px;margin-bottom:4px;line-height:1.4}
+.cl-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.cl-meta-tag{
+  font-size:10px;padding:2px 8px;border-radius:4px;font-family:var(--mono)
+}
+.cl-action-tag{background:#7f1d1d;color:#fca5a5}
+.cl-changed-tag{background:#1e3a5f;color:#93c5fd}
+.cl-new-tag{background:#064e3b;color:#6ee7b7}
+.cl-enablement-tag{background:var(--bg4);color:var(--text2)}
+.cl-desc{font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:6px}
+.cl-sap-link{font-size:11px;color:var(--accent2);text-decoration:none}
+.cl-sap-link:hover{text-decoration:underline}
+
+/* Export buttons */
+.export-row{display:flex;gap:8px;margin-top:16px}
+.export-btn{
+  padding:8px 16px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);
+  color:var(--text2);cursor:pointer;font-size:12px;transition:all 0.2s;font-family:var(--font)
+}
+.export-btn:hover{background:var(--bg4);color:var(--text)}
+
+/* Print styles */
+@media print{
+  .header,.sidebar,.toolbar,.stats-bar,.checklist-btn,.back-btn,.modal-overlay,
+  .export-row,.cl-checkbox{display:none !important}
+  .app{display:block !important}
+  .main{padding:0 !important;overflow:visible !important}
+  .checklist-view{display:block !important}
+  .checklist-item{break-inside:avoid;border:1px solid #ddd !important}
+  .checklist-category-header{break-inside:avoid}
+  body{background:#fff !important;color:#000 !important}
+}
+
 </style>
 </head>
 <body>
@@ -279,7 +456,9 @@ a:hover{text-decoration:underline}
     <span class="pulse"></span>
     SAP SF Release Updates
   </div>
-  <div class="header-meta">
+  <div class="header-meta"><button class="checklist-btn" onclick="openChecklistSetup()" title="Generate your release readiness checklist">
+    <span>📋</span> My Checklist <span class="badge" id="checklist-badge">0</span>
+  </button>
     <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle light/dark theme" aria-label="Toggle theme">☀</button>
     <div class="version-switcher" id="version-switcher">
       <button class="ver-btn active" data-ver="all">All</button>
@@ -317,6 +496,105 @@ a:hover{text-decoration:underline}
 
     <div class="stats-bar" id="stats-bar"></div>
     <div id="content"></div>
+
+    <!-- Module Selector Modal -->
+    <div class="modal-overlay" id="setup-modal" style="display:none" onclick="if(event.target===this)closeModal()">
+      <div class="modal-panel">
+        <div class="modal-header">
+          <h2>📋 Release Readiness Checklist</h2>
+          <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+        </div>
+        <div class="modal-body">
+          <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+            Select the SF modules you manage. The checklist will show only relevant updates with action items prioritised.
+          </p>
+          
+      <div class="qs-row">
+        <button class="qs-btn" onclick="quickSelect('action_required')">⚠️ Action Required only</button>
+        <button class="qs-btn" onclick="quickSelect('high_impact')">🔥 High Impact modules</button>
+        <button class="qs-btn" onclick="quickSelect('all')">☑️ Select All</button>
+        <button class="qs-btn" onclick="quickSelect('none')">⬜ Clear All</button>
+      </div>
+          <div id="module-list" style="max-height:400px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;padding:4px">
+      <label class="mod-select-item" data-module="360 Reviews"><input type="checkbox" class="mod-cb" data-module="360 Reviews" onchange="onModuleToggle()"><span class="mod-select-name">360 Reviews <span style="color:var(--critical);font-size:10px">⚠2</span></span><span class="mod-select-count">7</span></label>
+      <label class="mod-select-item" data-module="Analytics"><input type="checkbox" class="mod-cb" data-module="Analytics" onchange="onModuleToggle()"><span class="mod-select-name">Analytics</span><span class="mod-select-count">1</span></label>
+      <label class="mod-select-item" data-module="Applicant Management"><input type="checkbox" class="mod-cb" data-module="Applicant Management" onchange="onModuleToggle()"><span class="mod-select-name">Applicant Management</span><span class="mod-select-count">7</span></label>
+      <label class="mod-select-item" data-module="Calibration"><input type="checkbox" class="mod-cb" data-module="Calibration" onchange="onModuleToggle()"><span class="mod-select-name">Calibration <span style="color:var(--critical);font-size:10px">⚠2</span></span><span class="mod-select-count">10</span></label>
+      <label class="mod-select-item" data-module="Candidate Experience"><input type="checkbox" class="mod-cb" data-module="Candidate Experience" onchange="onModuleToggle()"><span class="mod-select-name">Candidate Experience <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">8</span></label>
+      <label class="mod-select-item" data-module="Career Development"><input type="checkbox" class="mod-cb" data-module="Career Development" onchange="onModuleToggle()"><span class="mod-select-name">Career Development <span style="color:var(--critical);font-size:10px">⚠5</span></span><span class="mod-select-count">25</span></label>
+      <label class="mod-select-item" data-module="Company Organization"><input type="checkbox" class="mod-cb" data-module="Company Organization" onchange="onModuleToggle()"><span class="mod-select-name">Company Organization <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">4</span></label>
+      <label class="mod-select-item" data-module="Compensation"><input type="checkbox" class="mod-cb" data-module="Compensation" onchange="onModuleToggle()"><span class="mod-select-name">Compensation <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">12</span></label>
+      <label class="mod-select-item" data-module="Content Access"><input type="checkbox" class="mod-cb" data-module="Content Access" onchange="onModuleToggle()"><span class="mod-select-name">Content Access <span style="color:var(--critical);font-size:10px">⚠2</span></span><span class="mod-select-count">7</span></label>
+      <label class="mod-select-item" data-module="Content Delivery"><input type="checkbox" class="mod-cb" data-module="Content Delivery" onchange="onModuleToggle()"><span class="mod-select-name">Content Delivery <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">1</span></label>
+      <label class="mod-select-item" data-module="Content Discovery"><input type="checkbox" class="mod-cb" data-module="Content Discovery" onchange="onModuleToggle()"><span class="mod-select-name">Content Discovery <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">2</span></label>
+      <label class="mod-select-item" data-module="Content Management"><input type="checkbox" class="mod-cb" data-module="Content Management" onchange="onModuleToggle()"><span class="mod-select-name">Content Management <span style="color:var(--critical);font-size:10px">⚠2</span></span><span class="mod-select-count">10</span></label>
+      <label class="mod-select-item" data-module="Contingent Workforce"><input type="checkbox" class="mod-cb" data-module="Contingent Workforce" onchange="onModuleToggle()"><span class="mod-select-name">Contingent Workforce</span><span class="mod-select-count">3</span></label>
+      <label class="mod-select-item" data-module="Continuous Performance Management"><input type="checkbox" class="mod-cb" data-module="Continuous Performance Management" onchange="onModuleToggle()"><span class="mod-select-name">Continuous Performance Management <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">11</span></label>
+      <label class="mod-select-item" data-module="Documents and Storage"><input type="checkbox" class="mod-cb" data-module="Documents and Storage" onchange="onModuleToggle()"><span class="mod-select-name">Documents and Storage <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">8</span></label>
+      <label class="mod-select-item" data-module="Employee Data"><input type="checkbox" class="mod-cb" data-module="Employee Data" onchange="onModuleToggle()"><span class="mod-select-name">Employee Data <span style="color:var(--critical);font-size:10px">⚠22</span></span><span class="mod-select-count">47</span></label>
+      <label class="mod-select-item" data-module="Foundation Management"><input type="checkbox" class="mod-cb" data-module="Foundation Management" onchange="onModuleToggle()"><span class="mod-select-name">Foundation Management</span><span class="mod-select-count">8</span></label>
+      <label class="mod-select-item" data-module="Global Benefits"><input type="checkbox" class="mod-cb" data-module="Global Benefits" onchange="onModuleToggle()"><span class="mod-select-name">Global Benefits <span style="color:var(--critical);font-size:10px">⚠4</span></span><span class="mod-select-count">12</span></label>
+      <label class="mod-select-item" data-module="Goal Management"><input type="checkbox" class="mod-cb" data-module="Goal Management" onchange="onModuleToggle()"><span class="mod-select-name">Goal Management</span><span class="mod-select-count">2</span></label>
+      <label class="mod-select-item" data-module="Identity and Access Management"><input type="checkbox" class="mod-cb" data-module="Identity and Access Management" onchange="onModuleToggle()"><span class="mod-select-name">Identity and Access Management <span style="color:var(--critical);font-size:10px">⚠11</span></span><span class="mod-select-count">26</span></label>
+      <label class="mod-select-item" data-module="Integration and Extension"><input type="checkbox" class="mod-cb" data-module="Integration and Extension" onchange="onModuleToggle()"><span class="mod-select-name">Integration and Extension <span style="color:var(--critical);font-size:10px">⚠20</span></span><span class="mod-select-count">50</span></label>
+      <label class="mod-select-item" data-module="Job Requisition"><input type="checkbox" class="mod-cb" data-module="Job Requisition" onchange="onModuleToggle()"><span class="mod-select-name">Job Requisition</span><span class="mod-select-count">1</span></label>
+      <label class="mod-select-item" data-module="Localization"><input type="checkbox" class="mod-cb" data-module="Localization" onchange="onModuleToggle()"><span class="mod-select-name">Localization <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">15</span></label>
+      <label class="mod-select-item" data-module="Mobile Applications"><input type="checkbox" class="mod-cb" data-module="Mobile Applications" onchange="onModuleToggle()"><span class="mod-select-name">Mobile Applications <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">22</span></label>
+      <label class="mod-select-item" data-module="Not applicable"><input type="checkbox" class="mod-cb" data-module="Not applicable" onchange="onModuleToggle()"><span class="mod-select-name">Not applicable <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">1</span></label>
+      <label class="mod-select-item" data-module="Onboarding"><input type="checkbox" class="mod-cb" data-module="Onboarding" onchange="onModuleToggle()"><span class="mod-select-name">Onboarding <span style="color:var(--critical);font-size:10px">⚠10</span></span><span class="mod-select-count">27</span></label>
+      <label class="mod-select-item" data-module="Opportunity Marketplace"><input type="checkbox" class="mod-cb" data-module="Opportunity Marketplace" onchange="onModuleToggle()"><span class="mod-select-name">Opportunity Marketplace</span><span class="mod-select-count">12</span></label>
+      <label class="mod-select-item" data-module="Payroll"><input type="checkbox" class="mod-cb" data-module="Payroll" onchange="onModuleToggle()"><span class="mod-select-name">Payroll <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">13</span></label>
+      <label class="mod-select-item" data-module="Performance Management"><input type="checkbox" class="mod-cb" data-module="Performance Management" onchange="onModuleToggle()"><span class="mod-select-name">Performance Management <span style="color:var(--critical);font-size:10px">⚠4</span></span><span class="mod-select-count">15</span></label>
+      <label class="mod-select-item" data-module="Presentations"><input type="checkbox" class="mod-cb" data-module="Presentations" onchange="onModuleToggle()"><span class="mod-select-name">Presentations</span><span class="mod-select-count">1</span></label>
+      <label class="mod-select-item" data-module="Process Automation"><input type="checkbox" class="mod-cb" data-module="Process Automation" onchange="onModuleToggle()"><span class="mod-select-name">Process Automation <span style="color:var(--critical);font-size:10px">⚠5</span></span><span class="mod-select-count">7</span></label>
+      <label class="mod-select-item" data-module="Public Sector Management"><input type="checkbox" class="mod-cb" data-module="Public Sector Management" onchange="onModuleToggle()"><span class="mod-select-name">Public Sector Management</span><span class="mod-select-count">1</span></label>
+      <label class="mod-select-item" data-module="Reporting"><input type="checkbox" class="mod-cb" data-module="Reporting" onchange="onModuleToggle()"><span class="mod-select-name">Reporting <span style="color:var(--critical);font-size:10px">⚠5</span></span><span class="mod-select-count">20</span></label>
+      <label class="mod-select-item" data-module="Rewards and Recognition"><input type="checkbox" class="mod-cb" data-module="Rewards and Recognition" onchange="onModuleToggle()"><span class="mod-select-name">Rewards and Recognition <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">1</span></label>
+      <label class="mod-select-item" data-module="SAP Business AI"><input type="checkbox" class="mod-cb" data-module="SAP Business AI" onchange="onModuleToggle()"><span class="mod-select-name">SAP Business AI <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">5</span></label>
+      <label class="mod-select-item" data-module="Security and Compliance"><input type="checkbox" class="mod-cb" data-module="Security and Compliance" onchange="onModuleToggle()"><span class="mod-select-name">Security and Compliance <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">9</span></label>
+      <label class="mod-select-item" data-module="Succession Planning"><input type="checkbox" class="mod-cb" data-module="Succession Planning" onchange="onModuleToggle()"><span class="mod-select-name">Succession Planning</span><span class="mod-select-count">3</span></label>
+      <label class="mod-select-item" data-module="System Management"><input type="checkbox" class="mod-cb" data-module="System Management" onchange="onModuleToggle()"><span class="mod-select-name">System Management <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">9</span></label>
+      <label class="mod-select-item" data-module="Talent Intelligence Hub"><input type="checkbox" class="mod-cb" data-module="Talent Intelligence Hub" onchange="onModuleToggle()"><span class="mod-select-name">Talent Intelligence Hub <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">9</span></label>
+      <label class="mod-select-item" data-module="Time Management"><input type="checkbox" class="mod-cb" data-module="Time Management" onchange="onModuleToggle()"><span class="mod-select-name">Time Management <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">28</span></label>
+      <label class="mod-select-item" data-module="User Experience"><input type="checkbox" class="mod-cb" data-module="User Experience" onchange="onModuleToggle()"><span class="mod-select-name">User Experience <span style="color:var(--critical);font-size:10px">⚠6</span></span><span class="mod-select-count">27</span></label>
+      <label class="mod-select-item" data-module="Variable Pay"><input type="checkbox" class="mod-cb" data-module="Variable Pay" onchange="onModuleToggle()"><span class="mod-select-name">Variable Pay <span style="color:var(--critical);font-size:10px">⚠4</span></span><span class="mod-select-count">5</span></label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+          <button class="btn-primary" id="generate-btn" onclick="generateChecklist()" disabled>
+            Generate Checklist (select modules first)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checklist View -->
+    <div class="checklist-view" id="checklist-view">
+      <div class="checklist-header">
+        <button class="back-btn" onclick="closeChecklist()">← Back to Updates</button>
+        <h2>Release Readiness Checklist</h2>
+        <button class="back-btn" onclick="openChecklistSetup()">✏️ Edit Modules</button>
+      </div>
+
+      <div class="progress-section">
+        <div class="progress-bar-outer">
+          <div class="progress-bar-inner" id="cl-progress-bar" style="width:0%"></div>
+        </div>
+        <div class="progress-text">
+          <span><strong id="cl-done-count">0</strong> of <strong id="cl-total-count">0</strong> completed</span>
+          <span id="cl-pct">0%</span>
+        </div>
+      </div>
+
+      <div id="checklist-content"></div>
+
+      <div class="export-row">
+        <button class="export-btn" onclick="window.print()">🖨️ Print Checklist</button>
+        <button class="export-btn" onclick="exportChecklist('json')">💾 Export JSON</button>
+        <button class="export-btn" onclick="resetChecklist()">🗑️ Reset Progress</button>
+      </div>
+    </div>
   </main>
 </div>
 
@@ -821,6 +1099,221 @@ document.getElementById('version-switcher').addEventListener('click', (e) => {
 
 // ── Init ──
 loadData();
+
+// ====== Checklist System ======
+let selectedModules = JSON.parse(localStorage.getItem('sf-checklist-modules') || '[]');
+let checklistDone = JSON.parse(localStorage.getItem('sf-checklist-done') || '{}');
+
+function openChecklistSetup() {
+  const modal = document.getElementById('setup-modal');
+  modal.style.display = 'flex';
+  document.querySelectorAll('.mod-cb').forEach(function(cb) {
+    cb.checked = selectedModules.indexOf(cb.dataset.module) !== -1;
+  });
+  onModuleToggle();
+}
+
+function closeModal() {
+  document.getElementById('setup-modal').style.display = 'none';
+}
+
+function quickSelect(mode) {
+  var modules = [];
+  if (mode === 'all') {
+    modules = ["Variable Pay", "Employee Data", "Integration and Extension", "Localization", "Payroll", "Public Sector Management", "Onboarding", "360 Reviews", "SAP Business AI", "Foundation Management", "Identity and Access Management", "Reporting", "System Management", "User Experience", "Calibration", "Compensation", "Process Automation", "Performance Management", "Documents and Storage", "Security and Compliance", "Career Development", "Continuous Performance Management", "Candidate Experience", "Applicant Management", "Content Access", "Time Management", "Mobile Applications", "Talent Intelligence Hub", "Global Benefits", "Opportunity Marketplace", "Presentations", "Succession Planning", "Rewards and Recognition", "Contingent Workforce", "Company Organization", "Content Discovery", "Content Management", "Goal Management", "Analytics", "Job Requisition", "Not applicable", "Content Delivery"];
+  } else if (mode === 'none') {
+    modules = [];
+  } else if (mode === 'action_required') {
+    modules = ["360 Reviews", "Calibration", "Candidate Experience", "Career Development", "Company Organization", "Compensation", "Content Access", "Content Delivery", "Content Discovery", "Content Management", "Continuous Performance Management", "Documents and Storage", "Employee Data", "Global Benefits", "Identity and Access Management", "Integration and Extension", "Localization", "Mobile Applications", "Not applicable", "Onboarding", "Payroll", "Performance Management", "Process Automation", "Reporting", "Rewards and Recognition", "SAP Business AI", "Security and Compliance", "System Management", "Talent Intelligence Hub", "Time Management", "User Experience", "Variable Pay"];
+  } else if (mode === 'high_impact') {
+    modules = ["Candidate Experience", "Career Development", "Compensation", "Continuous Performance Management", "Documents and Storage", "Employee Data", "Global Benefits", "Identity and Access Management", "Integration and Extension", "Localization", "Mobile Applications", "Onboarding", "Performance Management", "Process Automation", "Reporting", "SAP Business AI", "Talent Intelligence Hub", "Time Management", "User Experience", "Variable Pay"];
+  }
+  document.querySelectorAll('.mod-cb').forEach(function(cb) {
+    cb.checked = modules.indexOf(cb.dataset.module) !== -1;
+  });
+  onModuleToggle();
+}
+
+function onModuleToggle() {
+  var checked = document.querySelectorAll('.mod-cb:checked');
+  var count = checked.length;
+  var btn = document.getElementById('generate-btn');
+  btn.disabled = count === 0;
+  btn.textContent = count === 0 ? 'Generate Checklist (select modules first)' : 'Generate Checklist (' + count + ' modules)';
+}
+
+function generateChecklist() {
+  selectedModules = [];
+  document.querySelectorAll('.mod-cb:checked').forEach(function(cb) {
+    selectedModules.push(cb.dataset.module);
+  });
+  localStorage.setItem('sf-checklist-modules', JSON.stringify(selectedModules));
+  closeModal();
+  renderChecklist();
+  document.getElementById('checklist-view').classList.add('active');
+  updateChecklistBadge();
+}
+
+function closeChecklist() {
+  document.getElementById('checklist-view').classList.remove('active');
+}
+
+function renderChecklist() {
+  var relevant = items.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
+  var categorized = { action_required: [], review_test: [], informational: [] };
+  for (var i = 0; i < relevant.length; i++) {
+    var cat = classifyItem(relevant[i]);
+    categorized[cat].push(relevant[i]);
+  }
+  var total = relevant.length;
+  var doneCount = Object.keys(checklistDone).filter(function(k) { return checklistDone[k]; }).length;
+  var pct = total > 0 ? Math.round(doneCount / total * 100) : 0;
+  document.getElementById('cl-done-count').textContent = doneCount;
+  document.getElementById('cl-total-count').textContent = total;
+  document.getElementById('cl-pct').textContent = pct + '%';
+  document.getElementById('cl-progress-bar').style.width = pct + '%';
+
+  var categories = [
+    { key: 'action_required', icon: '\uD83D\uDD34', title: 'Action Required', desc: 'Deprecated, deleted, or auto-enabled changes \u2014 must be addressed', expand: true },
+    { key: 'review_test', icon: '\uD83D\uDFE1', title: 'Review & Test', desc: 'New features and minor changes \u2014 evaluate before enabling', expand: false },
+    { key: 'informational', icon: '\uD83D\uDFE2', title: 'Informational', desc: 'Updates that require no action', expand: false }
+  ];
+
+  var html = '';
+  for (var c = 0; c < categories.length; c++) {
+    var cat = categories[c];
+    var catItems = categorized[cat.key];
+    if (!catItems.length) continue;
+    var catDone = catItems.filter(function(i) { return checklistDone[itemKey(i)]; }).length;
+    var catPct = catItems.length > 0 ? Math.round(catDone / catItems.length * 100) : 0;
+    var displayStyle = cat.expand ? 'block' : 'none';
+    var chevronClass = cat.expand ? ' open' : '';
+
+    html += '<div class="checklist-category">';
+    html += '  <div class="checklist-category-header" onclick="toggleCat(this)">';
+    html += '    <span class="cat-icon">' + cat.icon + '</span>';
+    html += '    <span class="cat-title">' + cat.title + '</span>';
+    html += '    <span class="cat-count">' + catDone + '/' + catItems.length + ' (' + catPct + '%)</span>';
+    html += '    <span class="cat-chevron' + chevronClass + '">\u25B8</span>';
+    html += '  </div>';
+    html += '  <div class="checklist-items" style="display:' + displayStyle + '">';
+    html += '    <p style="font-size:11px;color:var(--text3);padding:4px 16px 8px;margin:0">' + cat.desc + '</p>';
+
+    for (var j = 0; j < catItems.length; j++) {
+      var item = catItems[j];
+      var key = itemKey(item);
+      var done = checklistDone[key] ? 'checked' : '';
+      var doneClass = done ? ' done' : '';
+      var act = (item.action || '').toLowerCase();
+      var actionClass = act === 'new' ? 'cl-new-tag' : (act === 'deprecated' || act === 'deleted') ? 'cl-action-tag' : 'cl-changed-tag';
+      var impColor = 'var(--' + item.impact.level + ')';
+      var desc = item.plainEnglish || escHtml((item.description || '').replace(/See More.*$/i, ''));
+
+      html += '<div class="checklist-item' + doneClass + '">';
+      html += '  <input type="checkbox" class="cl-checkbox" ' + done + ' onchange="toggleItem(this, \'' + key + '\')">';
+      html += '  <div class="cl-content">';
+      html += '    <div class="cl-title">' + escHtml(item.title) + '</div>';
+      html += '    <div class="cl-meta">';
+      html += '      <span class="cl-meta-tag ' + actionClass + '">' + escHtml(item.action) + '</span>';
+      html += '      <span class="cl-meta-tag cl-enablement-tag">' + escHtml(item.enablement || '\u2014') + '</span>';
+      html += '      <span class="cl-meta-tag cl-enablement-tag" style="color:' + impColor + '">' + item.impact.label + '</span>';
+      html += '    </div>';
+      html += '    <div class="cl-desc">' + desc + '</div>';
+      if (item.sapLink) {
+        html += '    <a href="' + escHtml(fixSapLink(item.sapLink)) + '" target="_blank" rel="noopener" class="cl-sap-link">View on SAP \u2192</a>';
+      }
+      html += '  </div>';
+      html += '</div>';
+    }
+
+    html += '  </div>';
+    html += '</div>';
+  }
+
+  if (!total) {
+    html = '<div style="text-align:center;padding:60px;color:var(--text3)"><div style="font-size:48px;margin-bottom:16px">\uD83D\uDCCB</div><div style="font-size:16px">No updates for your selected modules</div></div>';
+  }
+
+  document.getElementById('checklist-content').innerHTML = html;
+}
+
+function itemKey(item) {
+  return (item.refNumber || item.title).replace(/[^a-zA-Z0-9]/g, '-').substring(0, 60);
+}
+
+function classifyItem(item) {
+  var action = (item.action || '').toLowerCase();
+  var enablement = (item.enablement || '').toLowerCase();
+  var ref = (item.refNumber || '').toLowerCase();
+  var isDep = action === 'deprecated' || action === 'deleted' || ref === 'deprecated';
+  if (isDep) return 'action_required';
+  if (action === 'changed' && ['major', 'required', 'automatically on', ''].indexOf(enablement) !== -1) return 'action_required';
+  if (action === 'new' && ['major', 'required'].indexOf(enablement) !== -1) return 'review_test';
+  if (action === 'changed' && ['minor', 'customer configured'].indexOf(enablement) !== -1) return 'review_test';
+  return 'informational';
+}
+
+function toggleItem(checkbox, key) {
+  checklistDone[key] = checkbox.checked;
+  localStorage.setItem('sf-checklist-done', JSON.stringify(checklistDone));
+  var el = checkbox.closest('.checklist-item');
+  if (el) el.classList.toggle('done', checkbox.checked);
+  renderChecklist();
+}
+
+function toggleCat(header) {
+  var items = header.nextElementSibling;
+  var chevron = header.querySelector('.cat-chevron');
+  var isOpen = items.style.display === 'block';
+  items.style.display = isOpen ? 'none' : 'block';
+  chevron.classList.toggle('open', !isOpen);
+}
+
+function updateChecklistBadge() {
+  var relevant = items.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
+  var actionRequired = relevant.filter(function(i) { return classifyItem(i) === 'action_required'; }).length;
+  var badge = document.getElementById('checklist-badge');
+  if (badge) badge.textContent = actionRequired > 0 ? actionRequired : '0';
+}
+
+function resetChecklist() {
+  if (confirm('Reset all checklist progress? This cannot be undone.')) {
+    checklistDone = {};
+    localStorage.setItem('sf-checklist-done', '{}');
+    renderChecklist();
+  }
+}
+
+function exportChecklist(format) {
+  if (format === 'json') {
+    var relevant = items.filter(function(i) { return selectedModules.indexOf(i.module) !== -1; });
+    var exportData = {
+      generatedAt: new Date().toISOString(),
+      modules: selectedModules,
+      totalItems: relevant.length,
+      items: relevant.map(function(i) {
+        return {
+          title: i.title, action: i.action, enablement: i.enablement,
+          impact: i.impact.label, module: i.module, category: classifyItem(i),
+          done: checklistDone[itemKey(i)] || false, sapLink: i.sapLink,
+          plainEnglish: i.plainEnglish
+        };
+      }),
+      progress: checklistDone
+    };
+    var blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'sf-release-checklist-' + new Date().toISOString().substring(0, 10) + '.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+}
+
+// Update badge on initial load
+setTimeout(updateChecklistBadge, 500);
+
 </script>
 </body>
 </html>
