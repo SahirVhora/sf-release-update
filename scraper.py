@@ -532,11 +532,13 @@ def main():
         print("ERROR: No items extracted. Check the SAP page structure.")
         sys.exit(1)
     
-    # Deduplicate by title + refNumber + releaseVersion (same item can appear in multiple versions)
+    # Deduplicate by title + refNumber across all versions.
+    # When the same deprecation/change appears in both 1H and 2H, keep only the
+    # first occurrence (earliest version, since we scrape 1H before 2H).
     seen = set()
     unique = []
     for item in items:
-        key = (item["title"], item.get("refNumber", ""), item.get("releaseVersion", ""))
+        key = (item["title"], item.get("refNumber", ""))
         if key not in seen:
             seen.add(key)
             unique.append(item)
