@@ -464,17 +464,10 @@ a:hover{text-decoration:underline}
     <span>📋</span> My Checklist <span class="badge" id="checklist-badge">0</span>
   </button>
     <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle light/dark theme" aria-label="Toggle theme">☀</button>
-    <div class="version-switcher" id="version-switcher">
-      <button class="ver-btn active" data-ver="all">All</button>
-      <button class="ver-btn" data-ver="1H 2026">1H 2026</button>
-      <button class="ver-btn upcoming" data-ver="2H 2026 (Preview)">2H 2026 ▸</button>
-    </div>
+    <div class="version-switcher" id="version-switcher"></div>
   </div>
 </header>
-<div class="release-timeline" id="release-timeline">
-  <div class="phase"><span class="dot preview"></span> <strong>1H 2026</strong> Preview: April 2026 · Production: May 15, 2026</div>
-  <div class="phase"><span class="dot preview"></span> <strong>2H 2026</strong> Preview: Oct 2026 (est.) · Production: Nov 2026 (est.)</div>
-</div>
+<div class="release-timeline" id="release-timeline"></div>
 
 <div class="app">
   <nav class="sidebar" id="sidebar"></nav>
@@ -523,48 +516,7 @@ a:hover{text-decoration:underline}
         <button class="qs-btn" onclick="quickSelect('none')">⬜ Clear All</button>
       </div>
           <div id="module-list" style="max-height:400px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;padding:4px">
-      <label class="mod-select-item" data-module="360 Reviews"><input type="checkbox" class="mod-cb" data-module="360 Reviews" onchange="onModuleToggle()"><span class="mod-select-name">360 Reviews <span style="color:var(--critical);font-size:10px">⚠2</span></span><span class="mod-select-count">7</span></label>
-      <label class="mod-select-item" data-module="Analytics"><input type="checkbox" class="mod-cb" data-module="Analytics" onchange="onModuleToggle()"><span class="mod-select-name">Analytics</span><span class="mod-select-count">1</span></label>
-      <label class="mod-select-item" data-module="Applicant Management"><input type="checkbox" class="mod-cb" data-module="Applicant Management" onchange="onModuleToggle()"><span class="mod-select-name">Applicant Management</span><span class="mod-select-count">7</span></label>
-      <label class="mod-select-item" data-module="Calibration"><input type="checkbox" class="mod-cb" data-module="Calibration" onchange="onModuleToggle()"><span class="mod-select-name">Calibration <span style="color:var(--critical);font-size:10px">⚠2</span></span><span class="mod-select-count">10</span></label>
-      <label class="mod-select-item" data-module="Candidate Experience"><input type="checkbox" class="mod-cb" data-module="Candidate Experience" onchange="onModuleToggle()"><span class="mod-select-name">Candidate Experience <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">8</span></label>
-      <label class="mod-select-item" data-module="Career Development"><input type="checkbox" class="mod-cb" data-module="Career Development" onchange="onModuleToggle()"><span class="mod-select-name">Career Development <span style="color:var(--critical);font-size:10px">⚠5</span></span><span class="mod-select-count">25</span></label>
-      <label class="mod-select-item" data-module="Company Organization"><input type="checkbox" class="mod-cb" data-module="Company Organization" onchange="onModuleToggle()"><span class="mod-select-name">Company Organization <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">4</span></label>
-      <label class="mod-select-item" data-module="Compensation"><input type="checkbox" class="mod-cb" data-module="Compensation" onchange="onModuleToggle()"><span class="mod-select-name">Compensation <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">12</span></label>
-      <label class="mod-select-item" data-module="Content Access"><input type="checkbox" class="mod-cb" data-module="Content Access" onchange="onModuleToggle()"><span class="mod-select-name">Content Access <span style="color:var(--critical);font-size:10px">⚠2</span></span><span class="mod-select-count">7</span></label>
-      <label class="mod-select-item" data-module="Content Delivery"><input type="checkbox" class="mod-cb" data-module="Content Delivery" onchange="onModuleToggle()"><span class="mod-select-name">Content Delivery <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">1</span></label>
-      <label class="mod-select-item" data-module="Content Discovery"><input type="checkbox" class="mod-cb" data-module="Content Discovery" onchange="onModuleToggle()"><span class="mod-select-name">Content Discovery <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">2</span></label>
-      <label class="mod-select-item" data-module="Content Management"><input type="checkbox" class="mod-cb" data-module="Content Management" onchange="onModuleToggle()"><span class="mod-select-name">Content Management <span style="color:var(--critical);font-size:10px">⚠2</span></span><span class="mod-select-count">10</span></label>
-      <label class="mod-select-item" data-module="Contingent Workforce"><input type="checkbox" class="mod-cb" data-module="Contingent Workforce" onchange="onModuleToggle()"><span class="mod-select-name">Contingent Workforce</span><span class="mod-select-count">3</span></label>
-      <label class="mod-select-item" data-module="Continuous Performance Management"><input type="checkbox" class="mod-cb" data-module="Continuous Performance Management" onchange="onModuleToggle()"><span class="mod-select-name">Continuous Performance Management <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">11</span></label>
-      <label class="mod-select-item" data-module="Documents and Storage"><input type="checkbox" class="mod-cb" data-module="Documents and Storage" onchange="onModuleToggle()"><span class="mod-select-name">Documents and Storage <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">8</span></label>
-      <label class="mod-select-item" data-module="Employee Data"><input type="checkbox" class="mod-cb" data-module="Employee Data" onchange="onModuleToggle()"><span class="mod-select-name">Employee Data <span style="color:var(--critical);font-size:10px">⚠22</span></span><span class="mod-select-count">47</span></label>
-      <label class="mod-select-item" data-module="Foundation Management"><input type="checkbox" class="mod-cb" data-module="Foundation Management" onchange="onModuleToggle()"><span class="mod-select-name">Foundation Management</span><span class="mod-select-count">8</span></label>
-      <label class="mod-select-item" data-module="Global Benefits"><input type="checkbox" class="mod-cb" data-module="Global Benefits" onchange="onModuleToggle()"><span class="mod-select-name">Global Benefits <span style="color:var(--critical);font-size:10px">⚠4</span></span><span class="mod-select-count">12</span></label>
-      <label class="mod-select-item" data-module="Goal Management"><input type="checkbox" class="mod-cb" data-module="Goal Management" onchange="onModuleToggle()"><span class="mod-select-name">Goal Management</span><span class="mod-select-count">2</span></label>
-      <label class="mod-select-item" data-module="Identity and Access Management"><input type="checkbox" class="mod-cb" data-module="Identity and Access Management" onchange="onModuleToggle()"><span class="mod-select-name">Identity and Access Management <span style="color:var(--critical);font-size:10px">⚠11</span></span><span class="mod-select-count">26</span></label>
-      <label class="mod-select-item" data-module="Integration and Extension"><input type="checkbox" class="mod-cb" data-module="Integration and Extension" onchange="onModuleToggle()"><span class="mod-select-name">Integration and Extension <span style="color:var(--critical);font-size:10px">⚠20</span></span><span class="mod-select-count">50</span></label>
-      <label class="mod-select-item" data-module="Job Requisition"><input type="checkbox" class="mod-cb" data-module="Job Requisition" onchange="onModuleToggle()"><span class="mod-select-name">Job Requisition</span><span class="mod-select-count">1</span></label>
-      <label class="mod-select-item" data-module="Localization"><input type="checkbox" class="mod-cb" data-module="Localization" onchange="onModuleToggle()"><span class="mod-select-name">Localization <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">15</span></label>
-      <label class="mod-select-item" data-module="Mobile Applications"><input type="checkbox" class="mod-cb" data-module="Mobile Applications" onchange="onModuleToggle()"><span class="mod-select-name">Mobile Applications <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">22</span></label>
-      <label class="mod-select-item" data-module="Not applicable"><input type="checkbox" class="mod-cb" data-module="Not applicable" onchange="onModuleToggle()"><span class="mod-select-name">Not applicable <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">1</span></label>
-      <label class="mod-select-item" data-module="Onboarding"><input type="checkbox" class="mod-cb" data-module="Onboarding" onchange="onModuleToggle()"><span class="mod-select-name">Onboarding <span style="color:var(--critical);font-size:10px">⚠10</span></span><span class="mod-select-count">27</span></label>
-      <label class="mod-select-item" data-module="Opportunity Marketplace"><input type="checkbox" class="mod-cb" data-module="Opportunity Marketplace" onchange="onModuleToggle()"><span class="mod-select-name">Opportunity Marketplace</span><span class="mod-select-count">12</span></label>
-      <label class="mod-select-item" data-module="Payroll"><input type="checkbox" class="mod-cb" data-module="Payroll" onchange="onModuleToggle()"><span class="mod-select-name">Payroll <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">13</span></label>
-      <label class="mod-select-item" data-module="Performance Management"><input type="checkbox" class="mod-cb" data-module="Performance Management" onchange="onModuleToggle()"><span class="mod-select-name">Performance Management <span style="color:var(--critical);font-size:10px">⚠4</span></span><span class="mod-select-count">15</span></label>
-      <label class="mod-select-item" data-module="Presentations"><input type="checkbox" class="mod-cb" data-module="Presentations" onchange="onModuleToggle()"><span class="mod-select-name">Presentations</span><span class="mod-select-count">1</span></label>
-      <label class="mod-select-item" data-module="Process Automation"><input type="checkbox" class="mod-cb" data-module="Process Automation" onchange="onModuleToggle()"><span class="mod-select-name">Process Automation <span style="color:var(--critical);font-size:10px">⚠5</span></span><span class="mod-select-count">7</span></label>
-      <label class="mod-select-item" data-module="Public Sector Management"><input type="checkbox" class="mod-cb" data-module="Public Sector Management" onchange="onModuleToggle()"><span class="mod-select-name">Public Sector Management</span><span class="mod-select-count">1</span></label>
-      <label class="mod-select-item" data-module="Reporting"><input type="checkbox" class="mod-cb" data-module="Reporting" onchange="onModuleToggle()"><span class="mod-select-name">Reporting <span style="color:var(--critical);font-size:10px">⚠5</span></span><span class="mod-select-count">20</span></label>
-      <label class="mod-select-item" data-module="Rewards and Recognition"><input type="checkbox" class="mod-cb" data-module="Rewards and Recognition" onchange="onModuleToggle()"><span class="mod-select-name">Rewards and Recognition <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">1</span></label>
-      <label class="mod-select-item" data-module="SAP Business AI"><input type="checkbox" class="mod-cb" data-module="SAP Business AI" onchange="onModuleToggle()"><span class="mod-select-name">SAP Business AI <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">5</span></label>
-      <label class="mod-select-item" data-module="Security and Compliance"><input type="checkbox" class="mod-cb" data-module="Security and Compliance" onchange="onModuleToggle()"><span class="mod-select-name">Security and Compliance <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">9</span></label>
-      <label class="mod-select-item" data-module="Succession Planning"><input type="checkbox" class="mod-cb" data-module="Succession Planning" onchange="onModuleToggle()"><span class="mod-select-name">Succession Planning</span><span class="mod-select-count">3</span></label>
-      <label class="mod-select-item" data-module="System Management"><input type="checkbox" class="mod-cb" data-module="System Management" onchange="onModuleToggle()"><span class="mod-select-name">System Management <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">9</span></label>
-      <label class="mod-select-item" data-module="Talent Intelligence Hub"><input type="checkbox" class="mod-cb" data-module="Talent Intelligence Hub" onchange="onModuleToggle()"><span class="mod-select-name">Talent Intelligence Hub <span style="color:var(--critical);font-size:10px">⚠3</span></span><span class="mod-select-count">9</span></label>
-      <label class="mod-select-item" data-module="Time Management"><input type="checkbox" class="mod-cb" data-module="Time Management" onchange="onModuleToggle()"><span class="mod-select-name">Time Management <span style="color:var(--critical);font-size:10px">⚠1</span></span><span class="mod-select-count">28</span></label>
-      <label class="mod-select-item" data-module="User Experience"><input type="checkbox" class="mod-cb" data-module="User Experience" onchange="onModuleToggle()"><span class="mod-select-name">User Experience <span style="color:var(--critical);font-size:10px">⚠6</span></span><span class="mod-select-count">27</span></label>
-      <label class="mod-select-item" data-module="Variable Pay"><input type="checkbox" class="mod-cb" data-module="Variable Pay" onchange="onModuleToggle()"><span class="mod-select-name">Variable Pay <span style="color:var(--critical);font-size:10px">⚠4</span></span><span class="mod-select-count">5</span></label>
+            <!-- Generated dynamically from data -->
           </div>
         </div>
         <div class="modal-footer">
@@ -641,10 +593,17 @@ async function loadData() {
     if (!resp.ok) throw new Error('Data file not found');
     const data = await resp.json();
     allItems = data.items || [];
+    const metadata = data.metadata || {};
+    renderVersionSwitcher(metadata);
+    renderReleaseTimeline(metadata);
+    renderModuleSelector();
     render();
   } catch(e) {
     // Use embedded sample data for demo
     allItems = getSampleData();
+    renderVersionSwitcher({availableVersions: ['1H 2026', '2H 2026 (Preview)']});
+    renderReleaseTimeline({releaseDates: {'1H 2026': {preview:'April 2026', production:'May 15, 2026'}, '2H 2026': {preview:'October 2026 (est.)', production:'November 2026 (est.)'}}});
+    renderModuleSelector();
     render();
   }
 }
@@ -991,12 +950,63 @@ function fixSapLink(link) {
   return link;
 }
 
+// ── Dynamically render the version switcher buttons from metadata ──
+function renderVersionSwitcher(metadata) {
+  const container = document.getElementById('version-switcher');
+  if (!container) return;
+  const versions = metadata.availableVersions || [];
+  let html = '<button class="ver-btn active" data-ver="all">All</button>';
+  for (const version of versions) {
+    const isUpcoming = version.toLowerCase().includes('preview');
+    html += `<button class="ver-btn${isUpcoming ? ' upcoming' : ''}" data-ver="${escAttr(version)}">${escHtml(version)}</button>`;
+  }
+  container.innerHTML = html;
+}
+
+// ── Dynamically render the release timeline from metadata ──
+function renderReleaseTimeline(metadata) {
+  const container = document.getElementById('release-timeline');
+  if (!container) return;
+  const releaseDates = metadata.releaseDates || {};
+  let html = '';
+  for (const [version, dates] of Object.entries(releaseDates)) {
+    const isPreview = (dates.preview || '').includes('(est.)') || (dates.production || '').includes('(est.)');
+    html += `<div class="phase"><span class="dot ${isPreview ? 'preview' : 'production'}"></span> <strong>${escHtml(version)}</strong> Preview: ${escHtml(dates.preview)} · Production: ${escHtml(dates.production)}</div>`;
+  }
+  container.innerHTML = html;
+}
+
+// ── Dynamically render the module selector list from data ──
+function renderModuleSelector() {
+  const container = document.getElementById('module-list');
+  if (!container || !allItems.length) return;
+  const modules = {};
+  for (const item of allItems) {
+    const mod = item.module || 'Other';
+    if (!modules[mod]) modules[mod] = { total: 0, critical: 0 };
+    modules[mod].total++;
+    if (item.impact && item.impact.level === 'critical') modules[mod].critical++;
+  }
+  const sorted = Object.entries(modules).sort((a, b) => a[0].localeCompare(b[0]));
+  let html = '';
+  for (const [mod, stats] of sorted) {
+    const critBadge = stats.critical > 0 ? `<span style="color:var(--critical);font-size:10px">⚠${stats.critical}</span>` : '';
+    html += `<label class="mod-select-item" data-module="${escAttr(mod)}"><input type="checkbox" class="mod-cb" data-module="${escAttr(mod)}" onchange="onModuleToggle()"><span class="mod-select-name">${escHtml(mod)} ${critBadge}</span><span class="mod-select-count">${stats.total}</span></label>`;
+  }
+  container.innerHTML = html;
+}
+
 // ── Utilities ──
 function escHtml(s) {
   if (!s) return '';
   const div = document.createElement('div');
   div.textContent = s;
   return div.innerHTML;
+}
+
+function escAttr(s) {
+  if (!s) return '';
+  return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/'/g, '&#39;');
 }
 
 // ── Sample data (used when data/updates.json is unavailable) ──
@@ -1114,6 +1124,7 @@ let checklistDone = JSON.parse(localStorage.getItem('sf-checklist-done') || '{}'
 function openChecklistSetup() {
   const modal = document.getElementById('setup-modal');
   modal.style.display = 'flex';
+  renderModuleSelector();  // Refresh module list from latest data
   document.querySelectorAll('.mod-cb').forEach(function(cb) {
     cb.checked = selectedModules.indexOf(cb.dataset.module) !== -1;
   });
@@ -1125,19 +1136,29 @@ function closeModal() {
 }
 
 function quickSelect(mode) {
-  var modules = [];
+  var cbs = document.querySelectorAll('.mod-cb');
   if (mode === 'all') {
-    modules = ["Variable Pay", "Employee Data", "Integration and Extension", "Localization", "Payroll", "Public Sector Management", "Onboarding", "360 Reviews", "SAP Business AI", "Foundation Management", "Identity and Access Management", "Reporting", "System Management", "User Experience", "Calibration", "Compensation", "Process Automation", "Performance Management", "Documents and Storage", "Security and Compliance", "Career Development", "Continuous Performance Management", "Candidate Experience", "Applicant Management", "Content Access", "Time Management", "Mobile Applications", "Talent Intelligence Hub", "Global Benefits", "Opportunity Marketplace", "Presentations", "Succession Planning", "Rewards and Recognition", "Contingent Workforce", "Company Organization", "Content Discovery", "Content Management", "Goal Management", "Analytics", "Job Requisition", "Not applicable", "Content Delivery"];
+    cbs.forEach(function(cb) { cb.checked = true; });
   } else if (mode === 'none') {
-    modules = [];
-  } else if (mode === 'action_required') {
-    modules = ["360 Reviews", "Calibration", "Candidate Experience", "Career Development", "Company Organization", "Compensation", "Content Access", "Content Delivery", "Content Discovery", "Content Management", "Continuous Performance Management", "Documents and Storage", "Employee Data", "Global Benefits", "Identity and Access Management", "Integration and Extension", "Localization", "Mobile Applications", "Not applicable", "Onboarding", "Payroll", "Performance Management", "Process Automation", "Reporting", "Rewards and Recognition", "SAP Business AI", "Security and Compliance", "System Management", "Talent Intelligence Hub", "Time Management", "User Experience", "Variable Pay"];
-  } else if (mode === 'high_impact') {
-    modules = ["Candidate Experience", "Career Development", "Compensation", "Continuous Performance Management", "Documents and Storage", "Employee Data", "Global Benefits", "Identity and Access Management", "Integration and Extension", "Localization", "Mobile Applications", "Onboarding", "Performance Management", "Process Automation", "Reporting", "SAP Business AI", "Talent Intelligence Hub", "Time Management", "User Experience", "Variable Pay"];
+    cbs.forEach(function(cb) { cb.checked = false; });
+  } else {
+    // Compute dynamically from data - which modules have action-required or high-impact items
+    var modStats = {};
+    for (var i = 0; i < allItems.length; i++) {
+      var item = allItems[i];
+      var mod = item.module || 'Other';
+      if (!modStats[mod]) modStats[mod] = { hasActionRequired: false, hasHighImpact: false };
+      if (classifyItem(item) === 'action_required') modStats[mod].hasActionRequired = true;
+      if (item.impact && (item.impact.level === 'critical' || item.impact.level === 'high')) modStats[mod].hasHighImpact = true;
+    }
+    cbs.forEach(function(cb) {
+      var mod = cb.dataset.module;
+      var stats = modStats[mod];
+      if (!stats) { cb.checked = false; return; }
+      if (mode === 'action_required') cb.checked = stats.hasActionRequired;
+      else if (mode === 'high_impact') cb.checked = stats.hasHighImpact;
+    });
   }
-  document.querySelectorAll('.mod-cb').forEach(function(cb) {
-    cb.checked = modules.indexOf(cb.dataset.module) !== -1;
-  });
   onModuleToggle();
 }
 

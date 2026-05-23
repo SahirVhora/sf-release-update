@@ -172,85 +172,137 @@ def scrape_with_playwright():
         
         # --- Discover available versions ---
         available_versions = []
+        current_year = datetime.now().year
+        
+        # Strategy 1: Look for the version filter button's current display text
         try:
-            # Click the Software Version filter dropdown
             ver_btn = page.query_selector('button:has-text("Software Version")')
             if ver_btn:
+                btn_text = ver_btn.inner_text().strip()
+                print(f"  Version button text: '{btn_text}'")
                 ver_btn.click()
-                page.wait_for_timeout(2000)
-                # Get all version option elements
-                options = page.query_selector_all('[role="option"], .sapMSelectListItem, li[data-version]')
-                if not options:
-                    # Try finding checkboxes or list items in the dropdown
-                    options = page.query_selector_all('input[type="checkbox"]')
-                    # Get parent labels
-                    labels = page.query_selector_all('label')
-                    for label in labels:
-                        text = label.inner_text().strip()
-                        if text and 'H 20' in text:  # Matches "1H 2026", "2H 2026", etc.
-                            available_versions.append(text)
+                page.wait_for_timeout(2500)
                 
-                if not available_versions:
-                    # Fallback: look for any version-like text in the dropdown area
-                    all_texts = page.evaluate("""
-                        () => {
-                            const dropdowns = document.querySelectorAll('[role="listbox"], .sapMPopup, .sapMMenu');
-                            if (!dropdowns.length) return [];
-                            const items = [];
-                            dropdowns.forEach(d => {
-                                d.querySelectorAll('[role="option"], li, .sapMText').forEach(el => {
-                                    const t = el.textContent.trim();
-                                    if (t && /\\d[Hh]\\s*20\\d\\d/.test(t)) items.push(t);
-                                });
+                # The SAP UI5 dialog with version checkboxes should now be open.
+                # Strategy 2a: Look for SAP UI5 list items with version patterns
+                raw_candidates = page.evaluate("""
+                    () => {
+                        const results = [];
+                        // Target SAP UI5 dialog/popover specifically
+                        const popups = document.querySelectorAll('.sapMDialog, .sapMPopover, [role="dialog"], .sapUiRespGrid');
+                        const containers = popups.length > 0 ? popups : [document];
+                        containers.forEach(container => {
+                            // SAP UI5 checkboxes with labels
+                            container.querySelectorAll('.sapMCb').forEach(cb => {
+                                const label = cb.querySelector('.sapMCbLabel');
+                                if (label) {
+                                    const t = label.textContent.trim();
+                                    if (/^[12]H\\s+20\\d\\d/.test(t)) results.push(t);
+                                }
                             });
-                            return items;
-                        }
-                    """)
-                    available_versions = all_texts
+                            // Also check regular labels near checkboxes
+                            container.querySelectorAll('label').forEach(lbl => {
+                                const t = lbl.textContent.trim();
+                                // Only match clean version strings: "1H 2026", "2H 2026", "2H 2026 (Preview)"
+                                if (/^[12]H\\s+20\\d\\d(\\s*\\(Preview\\))?$/.test(t) && !results.includes(t)) {
+                                    results.push(t);
+                                }
+                            });
+                            // Check list items
+                            container.querySelectorAll('li, [role="option"]').forEach(li => {
+                                const t = li.textContent.trim();
+                                if (/^[12]H\\s+20\\d\\d/.test(t) && t.length < 30 && !results.includes(t)) {
+                                    results.push(t);
+                                }
+                            });
+                        });
+                        return results;
+                    }
+                """)
+                print(f"  Raw version candidates: {raw_candidates}")
                 
-                # Close dropdown by clicking elsewhere
-                page.click("body", position={"x": 0, "y": 0})
+                # Filter: only keep versions from current year and next year
+                for v in raw_candidates:
+                    v = v.strip()
+                    match = re.match(r'[12]H\s+(\d{4})', v)
+                    if match:
+                        year = int(match.group(1))
+                        if year >= current_year and year <= current_year + 1:
+                            available_versions.append(v)
+                
+                # Close dropdown by pressing Escape (more reliable than clicking body)
+                page.keyboard.press("Escape")
                 page.wait_for_timeout(1000)
         except Exception as e:
-            print(f"Could not discover versions: {e}")
+            print(f"  Version discovery error: {e}")
         
-        # Always include the default version (what's currently showing)
+        # Strategy 3: Fallback - scrape default view + infer versions from current year
         if not available_versions:
-            available_versions = ["1H 2026"]  # default
-        else:
-            # Ensure we have clean version strings
-            available_versions = [v.strip() for v in available_versions if v.strip()]
+            print("  No versions found via dropdown. Using current-year defaults.")
+            available_versions = [f"1H {current_year}", f"2H {current_year} (Preview)"]
         
-        print(f"Available versions: {available_versions}")
+        # Deduplicate and sort (1H before 2H). Prefer "(Preview)" variants when duplicates exist.
+        seen_ver = {}
+        for v in available_versions:
+            v = v.strip()
+            key = re.sub(r'\s*\(Preview\)\s*', '', v).strip()
+            # Keep the variant with "(Preview)" if both exist
+            if key not in seen_ver or ('(Preview)' in v and '(Preview)' not in seen_ver[key]):
+                seen_ver[key] = v
+        deduped = list(seen_ver.values())
+        available_versions = sorted(deduped, key=lambda x: (re.search(r'\d{4}', x).group() if re.search(r'\d{4}', x) else '0') + ('0' if '1H' in x else '1'))
+        
+        # Append "(Preview)" to 2H versions whose production date is still in the future
+        final_versions = []
+        for v in available_versions:
+            match = re.match(r'2H\s+(\d{4})', v)
+            if match:
+                year = int(match.group(1))
+                prod_date = datetime(year, 11, 15)
+                if prod_date > datetime.now() and '(Preview)' not in v:
+                    v = v + ' (Preview)'
+            final_versions.append(v)
+        available_versions = final_versions
+        
+        print(f"Selected versions: {available_versions}")
         
         # --- Scrape each version ---
+        prev_first_title = None  # Track first item of previous version to detect failed switches
         for ver_idx, version_name in enumerate(available_versions):
             print(f"\n--- Scraping version: {version_name} ---")
             
             if ver_idx > 0:
                 # Switch to this version
                 try:
+                    # Strip "(Preview)" for lookup since SAP's dropdown uses plain version names
+                    lookup_name = re.sub(r'\s*\(Preview\)\s*', '', version_name).strip()
                     ver_btn = page.query_selector('button:has-text("Software Version")')
                     if ver_btn:
                         ver_btn.click()
                         page.wait_for_timeout(1500)
-                        # Find and click the option
-                        option = page.query_selector(f'text="{version_name}"')
+                        # Find and click the option - try exact text match first
+                        option = page.query_selector(f'text="{lookup_name}"')
                         if not option:
-                            option = page.query_selector(f'[title="{version_name}"]')
+                            option = page.query_selector(f'[title="{lookup_name}"]')
                         if not option:
-                            # Try checkbox label
-                            labels = page.query_selector_all('label')
+                            # Try SAP UI5 checkbox label
+                            labels = page.query_selector_all('.sapMCbLabel, label')
                             for lbl in labels:
-                                if lbl.inner_text().strip() == version_name:
+                                if lbl.inner_text().strip() == lookup_name:
                                     option = lbl
                                     break
                         if option:
                             option.click()
                             page.wait_for_timeout(3000)  # Wait for data reload
                         else:
-                            print(f"  Could not find option for {version_name}, skipping.")
+                            print(f"  Could not find option for {lookup_name}, skipping.")
+                            # Close dropdown and continue
+                            page.keyboard.press("Escape")
+                            page.wait_for_timeout(500)
                             continue
+                        # Close dropdown after selection
+                        page.keyboard.press("Escape")
+                        page.wait_for_timeout(500)
                 except Exception as e:
                     print(f"  Failed to switch version: {e}")
                     continue
@@ -263,6 +315,24 @@ def scrape_with_playwright():
                 if not rows:
                     print(f"  No rows on page {page_num}. Done with {version_name}.")
                     break
+                
+                # --- Guards against failed version switches ---
+                # Guard 1: if the first page yields 0 valid rows, the version has no data
+                valid_row_count = sum(1 for row in rows if len(row.query_selector_all("td")) >= 8)
+                if page_num == 1 and valid_row_count == 0:
+                    print(f"  ⚠ Version {version_name} returned 0 items — skipping (no data published yet).")
+                    break
+                
+                # Guard 2: if first item matches previous version's first item, the switch likely failed
+                if ver_idx > 0 and page_num == 1 and prev_first_title:
+                    first_cell = rows[0].query_selector("td")
+                    if first_cell:
+                        current_first_title = (first_cell.inner_text() or "").strip().removeprefix("Preview ")
+                        if current_first_title == prev_first_title:
+                            print(f"  ⚠ Version switch to {version_name} appears to have failed — first item matches {prev_first_title[:60]}...")
+                            print(f"  Skipping {version_name} (data unchanged from previous version).")
+                            break
+                # --- End guards ---
                 
                 for row in rows:
                     cells = row.query_selector_all("td")
@@ -315,6 +385,12 @@ def scrape_with_playwright():
                         "releaseVersion": version_name
                     })
                     version_items += 1
+                
+                # After first page of a successful scrape, snapshot the first item for next version's guard
+                if page_num == 1 and version_items > 0:
+                    first_cell = rows[0].query_selector("td")
+                    if first_cell:
+                        prev_first_title = (first_cell.inner_text() or "").strip().removeprefix("Preview ")
                 
                 print(f"  Page {page_num}: {len(rows)} rows (total for {version_name}: {version_items})")
                 
@@ -388,6 +464,60 @@ def scrape_via_csv_download():
     return items
 
 
+def calculate_release_dates(available_versions, scraped_at=None):
+    """
+    Calculate estimated release dates based on SAP's typical biannual schedule.
+
+    SAP SuccessFactors releases follow this pattern:
+    - 1H YYYY: Preview in April, Production in mid-May
+    - 2H YYYY: Preview in October, Production in mid-November
+
+    Dates are marked as estimates if the production date is in the future
+    relative to scraped_at. Called dynamically so new versions are handled
+    automatically — no hardcoded year/month values needed.
+    """
+    if scraped_at is None:
+        scraped_at = datetime.now()
+
+    release_dates = {}
+
+    for version in available_versions:
+        # Normalize: strip " (Preview)" suffix for key lookup
+        clean_version = re.sub(r'\s*\(Preview\)\s*', '', version).strip()
+
+        # Parse version like "1H 2026" or "2H 2026"
+        match = re.match(r'(\d)H\s+(\d{4})', clean_version)
+        if not match:
+            print(f"  [WARN] Could not parse version: '{version}', skipping release dates.")
+            continue
+
+        half = int(match.group(1))
+        year = int(match.group(2))
+
+        if half == 1:
+            preview_str = f"April {year}"
+            production_str = f"May 15, {year}"
+        else:  # 2H
+            preview_str = f"October {year}"
+            production_str = f"November 15, {year}"
+
+        # Check if production is in the future → mark as estimate
+        try:
+            prod_dt = datetime.strptime(production_str, "%B %d, %Y")
+            if prod_dt > scraped_at:
+                preview_str += " (est.)"
+                production_str += " (est.)"
+        except ValueError:
+            pass
+
+        release_dates[clean_version] = {
+            "preview": preview_str,
+            "production": production_str
+        }
+
+    return release_dates
+
+
 def main():
     print("=" * 60)
     print("SAP SF Release Updates - Scraper")
@@ -402,11 +532,11 @@ def main():
         print("ERROR: No items extracted. Check the SAP page structure.")
         sys.exit(1)
     
-    # Deduplicate by title + refNumber
+    # Deduplicate by title + refNumber + releaseVersion (same item can appear in multiple versions)
     seen = set()
     unique = []
     for item in items:
-        key = (item["title"], item.get("refNumber", ""))
+        key = (item["title"], item.get("refNumber", ""), item.get("releaseVersion", ""))
         if key not in seen:
             seen.add(key)
             unique.append(item)
@@ -437,18 +567,17 @@ def main():
     
     # Build output
     available_versions = sorted(set(item.get("releaseVersion", "Unknown") for item in unique))
+    scraped_at = datetime.now()
+    release_dates = calculate_release_dates(available_versions, scraped_at)
     output = {
         "metadata": {
             "source": BASE_URL,
-            "scrapedAt": datetime.now().isoformat(),
+            "scrapedAt": scraped_at.isoformat(),
             "totalItems": len(unique),
-            "lastScraped": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+            "lastScraped": scraped_at.strftime("%Y-%m-%d %H:%M UTC"),
             "availableVersions": available_versions,
             "versionCounts": version_counts,
-            "releaseDates": {
-                "1H 2026": {"preview": "April 2026", "production": "May 15, 2026"},
-                "2H 2026": {"preview": "October 2026 (est.)", "production": "November 2026 (est.)"}
-            }
+            "releaseDates": release_dates
         },
         "items": unique
     }
