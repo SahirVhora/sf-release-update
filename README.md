@@ -8,7 +8,7 @@ Live tracker for SAP SuccessFactors release updates. Pulls the latest changes fr
 
 - **Multi-version support** - toggle between 1H 2026, 2H 2026 (preview), or all releases. The scraper auto-discovers available versions from SAP.
 - **Release timeline** - preview and production dates for each release so teams know when changes hit their stack.
-- **Weekly auto-refresh** - cron job scrapes the SAP What's New Viewer every Sunday, discovers new versions automatically.
+- **Weekly auto-refresh** - GitHub Actions scrapes the SAP What's New Viewer every Monday, discovers new versions automatically.
 - **SF Compass-style accordion sidebar** - modules expand to show New/Changed/Deprecated/Deleted counts. Click a module header to filter the right panel; click a sub-item to narrow further.
 - **Dark/Light theme toggle** - navy + gold dark theme (matches SF Compass), warm parchment light theme. Persisted to localStorage.
 - **Impact classification** - Critical / High / Medium / Low derived from SAP's Action + Enablement + Reference Number columns.
@@ -32,8 +32,8 @@ weekly cron -> scraper.py -> data/updates.json -> index.html -> GitHub Pages
 ## Setup
 
 ```bash
-# Install Playwright
-pip install playwright
+# Install dependencies
+pip install -r requirements.txt
 playwright install chromium
 
 # Run scraper (auto-discovers available versions)
@@ -44,16 +44,15 @@ python3 -m http.server 8765
 # Open http://localhost:8765
 ```
 
-## Cron Job
+## Automation
 
-Runs weekly via Hermes cron (job ID: `3869df8f4724`):
+The scraper runs automatically every **Monday at 06:00 UTC** via a GitHub Actions workflow (`.github/workflows/scrape.yml`). The workflow:
 
-```
-hermes cron create \
-  --name "SAP SF Release Updates" \
-  --schedule "0 9 * * 0" \
-  --prompt "Run scraper.py in ~/projects/sapsf/sf-release-update, commit and push data/updates.json"
-```
+1. Checks out the repo
+2. Sets up Python 3.11 with Playwright
+3. Runs `run_scraper.sh`, which executes `scraper.py` and commits/pushes any new data
+
+You can also trigger a scrape manually from the **Actions** tab → "Weekly SAP SF Release Scrape" → "Run workflow".
 
 The scraper auto-discovers available versions from SAP, so when 2H 2026 data is published (~September), it will be picked up automatically.
 

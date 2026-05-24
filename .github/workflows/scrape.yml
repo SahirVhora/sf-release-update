@@ -44,4 +44,6 @@ jobs:
         env:
           GIT_USER_NAME: "SAP Release Bot"
           GIT_USER_EMAIL: "release-bot@sf-release-update.github"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: bash run_scraper.sh
