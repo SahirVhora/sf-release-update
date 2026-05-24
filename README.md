@@ -73,3 +73,19 @@ git push
 - **Multi-line modules**: Some SAP items span multiple modules. The scraper takes the first (primary) module.
 - **Preview items**: Future-release items appear in the current release view with "Preview" prefix. These are tagged as the upcoming release version.
 - **Relative links**: SAP provides relative URLs; the scraper prepends `https://help.sap.com` and the viewer has a client-side fallback.
+
+## Related SAP SuccessFactors tools
+
+This project is part of a wider SAP SuccessFactors supplementary tools suite.
+
+Start with SF Compass for the full hub: https://sahirvhora.github.io/sf-compass/
+
+| Tool | Purpose |
+|---|---|
+| SF Compass | Feasibility answers, implementation guidance, and links to the full tool suite |
+| SF Release Update | Release impact tracking and testing focus |
+| SF Pay Transparency | EU Pay Transparency readiness and evidence workflow framing |
+| SF Value Navigator | Value realisation and sponsor-facing consulting framework |
+| SF Position Integrity Checker | Position hierarchy, incumbency, and EC data-quality validation |
+| SAPSF ObjectSync | Controlled foundation-object synchronisation between SF environments |
+
