@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="SAP SF Release Updates">
-<meta property="og:description" content="Every SAP SuccessFactors release update — scraped, classified by impact, and summarised in plain English. 492 updates across 1H 2026 and 2H 2026 preview.">
+<meta property="og:description" content="Every SAP SuccessFactors release update - scraped, classified by impact, and summarised in plain English. 492 updates across 1H 2026 and 2H 2026 preview.">
 <meta property="og:image" content="https://sahirvhora.github.io/sf-release-update/preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://sahirvhora.github.io/sf-release-update/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sahirvhora.github.io/sf-release-update/preview.png">
-<meta name="description" content="Every SAP SuccessFactors release update — scraped, classified by impact, and summarised in plain English. 492 updates, updated weekly.">
+<meta name="description" content="Every SAP SuccessFactors release update - scraped, classified by impact, and summarised in plain English. 492 updates, updated weekly.">
 <title>SAP SF Release Updates - SAP SuccessFactors Release Tracker</title>
 <style>
 /* =========== RESET & BASE =========== */
@@ -439,6 +439,34 @@ a:hover{text-decoration:underline}
 }
 .export-btn:hover{background:var(--bg4);color:var(--text)}
 
+/* Release Impact Radar */
+.radar-dashboard{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-bottom:20px}
+.radar-panel{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px}
+.radar-panel h3{font-size:16px;margin-bottom:6px;color:var(--text)}
+.radar-panel p{font-size:12px;color:var(--text3);margin-bottom:12px}
+.heatmap-table{display:grid;gap:6px}
+.heatmap-row{display:grid;grid-template-columns:minmax(140px,1.4fr) repeat(4,.7fr);gap:6px;align-items:center;font-size:11px}
+.heatmap-head{color:var(--text3);font-weight:700}
+.heatmap-module{color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat-cell{height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);background:var(--bg3);color:var(--text2)}
+.heat-cell.critical{background:rgba(224,81,81,.22);color:#ffb1b1}
+.heat-cell.high{background:rgba(224,123,60,.22);color:#ffc39f}
+.heat-cell.medium{background:rgba(212,164,52,.22);color:#f6dd8d}
+.heat-cell.low{background:rgba(63,185,107,.18);color:#99e6b1}
+.top-action-list{display:grid;gap:8px}
+.top-action{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--bg3)}
+.top-action-score{font-family:var(--mono);font-weight:800;color:var(--accent2)}
+.top-action-title{font-size:12px;color:var(--text);line-height:1.35}
+.top-action-meta{font-size:11px;color:var(--text3);margin-top:3px}
+.role-pill{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--border);background:var(--bg2);color:var(--text2);border-radius:999px;padding:6px 11px;font-size:12px;cursor:pointer}
+.role-pill.active,.role-pill:hover{background:var(--accent);border-color:var(--accent);color:#111}
+.radar-guidance{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.guidance-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:9px;font-size:12px;color:var(--text2)}
+.guidance-box strong{display:block;color:var(--accent2);font-size:11px;margin-bottom:3px}
+.score-badge{font-family:var(--mono);font-size:11px;border:1px solid rgba(200,168,78,.28);background:rgba(200,168,78,.08);color:var(--accent2);border-radius:999px;padding:3px 7px}
+.export-radar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+@media(max-width:900px){.radar-dashboard{grid-template-columns:1fr}.radar-guidance{grid-template-columns:1fr}.heatmap-row{grid-template-columns:1fr repeat(4,.7fr)}}
+
 /* Print styles */
 @media print{
   .header,.sidebar,.toolbar,.stats-bar,.checklist-btn,.back-btn,.modal-overlay,
@@ -475,7 +503,7 @@ a:hover{text-decoration:underline}
   <main class="main">
     <div class="original-view">
     <div class="toolbar">
-      <input type="text" class="search-box" id="search" placeholder="Search updates, modules, features…" autofocus>
+      <input type="text" class="search-box" id="search" placeholder="Search updates, modules, features..." autofocus>
       <div class="filter-group" id="impact-filters">
         <button class="filter-btn active" data-impact="all">All</button>
         <button class="filter-btn critical" data-impact="critical">Critical</button>
@@ -490,8 +518,17 @@ a:hover{text-decoration:underline}
         <button class="filter-btn" data-action="deprecated">Deprecated</button>
         <button class="filter-btn" data-action="deleted">Deleted</button>
       </div>
+      <div class="filter-group" id="role-filters">
+        <button class="role-pill active" data-role="all">All Roles</button>
+        <button class="role-pill" data-role="consultant">Consultant</button>
+        <button class="role-pill" data-role="test">Test Lead</button>
+        <button class="role-pill" data-role="product">Product Owner</button>
+        <button class="role-pill" data-role="support">Support</button>
+        <button class="role-pill" data-role="architect">Architect</button>
+      </div>
     </div>
 
+    <div class="radar-dashboard" id="radar-dashboard"></div>
     <div class="stats-bar" id="stats-bar"></div>
     <div id="content"></div>
     </div>
@@ -585,6 +622,7 @@ let activeImpacts = new Set(['all']);
 let activeActions = new Set(['all']);
 let searchQuery = '';
 let activeVersion = 'all';
+let activeRole = 'all';
 
 // ── Load data ──
 async function loadData() {
@@ -627,6 +665,8 @@ function getFilteredItems() {
     if (activeModule && item.module !== activeModule) return false;
     // Version filter
     if (activeVersion !== 'all' && item.releaseVersion !== activeVersion) return false;
+    // Role filter
+    if (activeRole !== 'all' && !rolesForItem(item).includes(activeRole)) return false;
     return true;
   });
 }
@@ -645,7 +685,9 @@ function groupByModule(items) {
 
 // ── Render ──
 function render() {
+  enrichItems();
   renderSidebar();
+  renderRadarDashboard();
   renderStats();
   renderContent();
 }
@@ -791,6 +833,124 @@ function selectSidebarModule(moduleName, actionName, el) {
   render();
 }
 
+
+function enrichItems() {
+  for (const item of allItems) {
+    if (item._radarReady) continue;
+    item.impactScore = impactScore(item);
+    item.radarFlags = radarFlags(item);
+    item.testGuidance = testGuidance(item);
+    item.recommendedAction = recommendedAction(item);
+    item.audience = rolesForItem(item);
+    item._radarReady = true;
+  }
+}
+
+function impactScore(item) {
+  const action = (item.action || '').toLowerCase();
+  const enablement = (item.enablement || '').toLowerCase();
+  const text = [item.title,item.description,item.lifecycle,item.feature,item.refNumber].join(' ').toLowerCase();
+  let score = 0;
+  if (action.includes('deleted') || text.includes('will be deleted')) score += 45;
+  if (action.includes('deprecated') || text.includes('deprecated')) score += 38;
+  if (enablement.includes('required')) score += 30;
+  if (enablement.includes('automatically')) score += 25;
+  if (enablement.includes('major')) score += 20;
+  if (action.includes('changed')) score += 12;
+  if (action.includes('new')) score += 6;
+  if (/api|integration|permission|role|security|odata|identity|platform/.test(text)) score += 15;
+  if (/employee central|job information|position|workflow|business rule/.test(text)) score += 12;
+  if (/may 2027|november|production|preview|end of maintenance/.test(text)) score += 8;
+  return Math.min(score, 100);
+}
+
+function radarFlags(item) {
+  const text = [item.title,item.description,item.enablement,item.lifecycle,item.feature].join(' ').toLowerCase();
+  const flags = [];
+  if (/deprecated|deleted|end of maintenance/.test(text)) flags.push('Deprecation risk');
+  if (/required|automatically on/.test(text)) flags.push('Action required');
+  if (/api|integration|odata|replication|compound employee/.test(text)) flags.push('Integration impact');
+  if (/permission|role|security|identity|authentication/.test(text)) flags.push('Security/admin impact');
+  if (/job information|position|employee data|foundation object|workflow|business rule/.test(text)) flags.push('Data model impact');
+  if (!flags.length) flags.push('Review in preview');
+  return flags;
+}
+
+function rolesForItem(item) {
+  const text = [item.title,item.description,item.module,item.lifecycle,item.feature,item.enablement].join(' ').toLowerCase();
+  const roles = ['consultant'];
+  if (/test|changed|required|automatically|major|deprecated|deleted/.test(text)) roles.push('test');
+  if (/deprecated|deleted|required|automatically|major|business|experience|workflow/.test(text)) roles.push('product');
+  if (/support|permission|role|error|admin|automatically|changed/.test(text)) roles.push('support');
+  if (/api|odata|integration|platform|security|identity|replication|metadata/.test(text)) roles.push('architect');
+  return Array.from(new Set(roles));
+}
+
+function testGuidance(item) {
+  const text = [item.module,item.lifecycle,item.feature,item.title].join(' ').toLowerCase();
+  if (/position/.test(text)) return 'Validate position create/update, incumbent changes, hierarchy, workflow, and permissions.';
+  if (/job information|employee data|hire|termination|rehire/.test(text)) return 'Test hire, rehire, job change, termination, workflow triggers, and reporting outputs.';
+  if (/api|odata|integration|replication/.test(text)) return 'Run integration smoke tests, API field mapping checks, delta detection, and downstream reconciliation.';
+  if (/compensation|variable pay|reward/.test(text)) return 'Validate compensation form launch, eligibility, worksheet data, import jobs, and statement outputs.';
+  if (/time|absence|timesheet/.test(text)) return 'Test absence request, time sheet submission, recalculation, approvals, and payroll handoff.';
+  if (/permission|role|security|identity/.test(text)) return 'Validate permission roles, proxy/security scenarios, admin access, and audit logging.';
+  return 'Review configuration, run preview regression, and confirm business process ownership.';
+}
+
+function recommendedAction(item) {
+  const action = (item.action || '').toLowerCase();
+  const enablement = (item.enablement || '').toLowerCase();
+  const text = [item.title,item.description].join(' ').toLowerCase();
+  if (action.includes('deprecated') || text.includes('deprecated') || text.includes('deleted')) return 'Add to deprecation watchlist and confirm replacement path before production.';
+  if (enablement.includes('required')) return 'Schedule configuration review and owner sign-off during preview.';
+  if (enablement.includes('automatically')) return 'Regression test in preview because behaviour may change without enablement.';
+  if (enablement.includes('major')) return 'Assess adoption value, dependencies, and test scope before enabling.';
+  return 'Review in preview and document whether it applies to your landscape.';
+}
+
+function renderRadarDashboard() {
+  const container = document.getElementById('radar-dashboard');
+  if (!container) return;
+  const filtered = getFilteredItems().slice().sort((a,b) => (b.impactScore || 0) - (a.impactScore || 0));
+  const base = activeVersion === 'all' ? allItems : allItems.filter(i => i.releaseVersion === activeVersion);
+  const moduleStats = {};
+  for (const item of base) {
+    const mod = item.module || 'Other';
+    if (!moduleStats[mod]) moduleStats[mod] = {critical:0,high:0,medium:0,low:0,total:0};
+    const level = item.impact?.level || 'low';
+    moduleStats[mod][level] = (moduleStats[mod][level] || 0) + 1;
+    moduleStats[mod].total++;
+  }
+  const heatRows = Object.entries(moduleStats)
+    .sort((a,b) => (b[1].critical*10 + b[1].high*3 + b[1].total/100) - (a[1].critical*10 + a[1].high*3 + a[1].total/100))
+    .slice(0,8);
+  const heatHtml = `<div class="heatmap-table"><div class="heatmap-row heatmap-head"><span>Module</span><span>Crit</span><span>High</span><span>Med</span><span>Low</span></div>${heatRows.map(([mod,s]) => `<div class="heatmap-row"><span class="heatmap-module" title="${escAttr(mod)}">${escHtml(mod)}</span><span class="heat-cell critical">${s.critical||0}</span><span class="heat-cell high">${s.high||0}</span><span class="heat-cell medium">${s.medium||0}</span><span class="heat-cell low">${s.low||0}</span></div>`).join('')}</div>`;
+  const actionHtml = filtered.slice(0,5).map(item => `<div class="top-action"><div class="top-action-score">${item.impactScore || 0}</div><div><div class="top-action-title">${escHtml(item.title)}</div><div class="top-action-meta">${escHtml(item.module || 'Other')} - ${escHtml((item.radarFlags || []).slice(0,2).join(', '))}</div></div></div>`).join('') || '<p>No action items match current filters.</p>';
+  container.innerHTML = `<div class="radar-panel"><h3>Module heatmap</h3><p>Critical and high impact concentration by module for the selected release.</p>${heatHtml}</div><div class="radar-panel"><h3>Top actions</h3><p>Highest-scoring updates after your filters. Use this as the first preview testing queue.</p><div class="top-action-list">${actionHtml}</div><div class="export-radar"><button class="export-btn" onclick="exportRadarBrief()">Copy client brief</button><button class="export-btn" onclick="exportTestPack()">Copy test pack</button></div></div>`;
+}
+
+function exportRadarBrief() {
+  const items = getFilteredItems().slice().sort((a,b)=>(b.impactScore||0)-(a.impactScore||0)).slice(0,12);
+  const lines = ['SAP SuccessFactors Release Impact Brief','',`Release: ${activeVersion === 'all' ? 'All' : activeVersion}`,`Role: ${activeRole === 'all' ? 'All roles' : activeRole}`,'','Top actions:'];
+  items.forEach((item,i) => lines.push(`${i+1}. [${item.impactScore}] ${item.title} - ${item.recommendedAction}`));
+  navigator.clipboard?.writeText(lines.join('\n'));
+  alert('Client brief copied to clipboard.');
+}
+
+function exportTestPack() {
+  const items = getFilteredItems().slice().sort((a,b)=>(b.impactScore||0)-(a.impactScore||0)).slice(0,20);
+  const lines = ['SAP SuccessFactors Preview Test Pack',''];
+  const byModule = {};
+  items.forEach(item => { const mod = item.module || 'Other'; if (!byModule[mod]) byModule[mod] = []; byModule[mod].push(item); });
+  for (const [mod, arr] of Object.entries(byModule)) {
+    lines.push(`## ${mod}`);
+    arr.forEach(item => lines.push(`- ${item.title}: ${item.testGuidance}`));
+    lines.push('');
+  }
+  navigator.clipboard?.writeText(lines.join('\n'));
+  alert('Test pack copied to clipboard.');
+}
+
 function renderStats() {
   const filtered = getFilteredItems();
   const crit = filtered.filter(i => i.impact.level === 'critical').length;
@@ -858,6 +1018,7 @@ function renderContent() {
           ${item.product ? `<span class="meta-tag">${escHtml(item.product)}</span>` : ''}
           ${item.lifecycle ? `<span class="meta-tag">${escHtml(item.lifecycle)}</span>` : ''}
           ${item.version ? `<span class="meta-tag">${escHtml(item.version)}</span>` : ''}
+          <span class="score-badge">Score ${item.impactScore || impactScore(item)}</span>
         </div>
         <div class="card-desc">${item.description.replace(/See More.*$/i, '')}</div>
         ${item.plainEnglish ? `
@@ -865,6 +1026,11 @@ function renderContent() {
           <div class="plain-english-label">💡 What this means for you</div>
           ${escHtml(item.plainEnglish)}
         </div>` : ''}
+        <div class="radar-guidance">
+          <div class="guidance-box"><strong>Recommended action</strong>${escHtml(item.recommendedAction || recommendedAction(item))}</div>
+          <div class="guidance-box"><strong>Test focus</strong>${escHtml(item.testGuidance || testGuidance(item))}</div>
+          <div class="guidance-box"><strong>Impact flags</strong>${escHtml((item.radarFlags || radarFlags(item)).join(', '))}</div>
+        </div>
         <div class="card-footer">
           <span>${item.refNumber ? 'Ref: ' + escHtml(item.refNumber) : ''}</span>
           ${item.sapLink ? `<a href="${escHtml(fixSapLink(item.sapLink))}" target="_blank" rel="noopener" class="sap-link">View on SAP →</a>` : ''}
@@ -918,6 +1084,16 @@ document.getElementById('impact-filters').addEventListener('click', (e) => {
     btn.classList.toggle('active', activeImpacts.has(btn.dataset.impact));
   });
   
+  render();
+});
+
+
+document.getElementById('role-filters').addEventListener('click', (e) => {
+  if (!e.target.dataset.role) return;
+  activeRole = e.target.dataset.role;
+  document.querySelectorAll('#role-filters .role-pill').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.role === activeRole);
+  });
   render();
 });
 
