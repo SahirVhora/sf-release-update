@@ -464,7 +464,7 @@ a:hover{text-decoration:underline}
 .guidance-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:9px;font-size:12px;color:var(--text2)}
 .guidance-box strong{display:block;color:var(--accent2);font-size:11px;margin-bottom:3px}
 .score-badge{font-family:var(--mono);font-size:11px;border:1px solid rgba(200,168,78,.28);background:rgba(200,168,78,.08);color:var(--accent2);border-radius:999px;padding:3px 7px}
-.export-radar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.export-radar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.export-output{display:none;margin:0 0 20px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:14px}.export-output.active{display:block}.export-output textarea{width:100%;min-height:220px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:12px;font-family:var(--mono);font-size:12px;line-height:1.5;resize:vertical}.export-output-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px}.export-output-head h3{font-size:15px}.export-output-actions{display:flex;gap:8px;flex-wrap:wrap}
 @media(max-width:900px){.radar-dashboard{grid-template-columns:1fr}.radar-guidance{grid-template-columns:1fr}.heatmap-row{grid-template-columns:1fr repeat(4,.7fr)}}
 
 /* Print styles */
@@ -529,6 +529,10 @@ a:hover{text-decoration:underline}
     </div>
 
     <div class="radar-dashboard" id="radar-dashboard"></div>
+    <div class="export-output" id="export-output">
+      <div class="export-output-head"><h3 id="export-title">Export</h3><div class="export-output-actions"><button class="export-btn" onclick="copyExportText()">Copy again</button><button class="export-btn" onclick="downloadExportText()">Download .md</button><button class="export-btn" onclick="closeExportOutput()">Close</button></div></div>
+      <textarea id="export-text" readonly></textarea>
+    </div>
     <div class="stats-bar" id="stats-bar"></div>
     <div id="content"></div>
     </div>
@@ -568,7 +572,7 @@ a:hover{text-decoration:underline}
     <!-- Checklist View -->
     <div class="checklist-view" id="checklist-view">
       <div class="checklist-header">
-        <button class="back-btn" onclick="closeChecklist()">← Back to Updates</button>
+        <button class="back-btn" onclick="closeChecklist()">Back to Updates</button>
         <h2>Release Readiness Checklist</h2>
         <button class="back-btn" onclick="openChecklistSetup()">✏️ Edit Modules</button>
       </div>
@@ -595,7 +599,7 @@ a:hover{text-decoration:underline}
 </div>
 
 <script>
-// ── Theme ──
+// -- Theme --
 (function initTheme() {
   const saved = localStorage.getItem('sf-release-update-theme');
   if (saved) document.documentElement.setAttribute('data-theme', saved);
@@ -615,7 +619,7 @@ function updateThemeIcon() {
   if (btn) btn.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '☾' : '☀';
 }
 
-// ── Data layer ──
+// -- Data layer --
 let allItems = [];
 let activeModule = null;
 let activeImpacts = new Set(['all']);
@@ -623,8 +627,10 @@ let activeActions = new Set(['all']);
 let searchQuery = '';
 let activeVersion = 'all';
 let activeRole = 'all';
+let lastExportText = '';
+let lastExportTitle = 'release-impact-export';
 
-// ── Load data ──
+// -- Load data --
 async function loadData() {
   try {
     const resp = await fetch('data/updates.json');
@@ -635,6 +641,7 @@ async function loadData() {
     renderVersionSwitcher(metadata);
     renderReleaseTimeline(metadata);
     renderModuleSelector();
+    applyUrlState();
     render();
   } catch(e) {
     // Use embedded sample data for demo
@@ -642,11 +649,12 @@ async function loadData() {
     renderVersionSwitcher({availableVersions: ['1H 2026', '2H 2026 (Preview)']});
     renderReleaseTimeline({releaseDates: {'1H 2026': {preview:'April 2026', production:'May 15, 2026'}, '2H 2026': {preview:'October 2026 (est.)', production:'November 2026 (est.)'}}});
     renderModuleSelector();
+    applyUrlState();
     render();
   }
 }
 
-// ── Filtering ──
+// -- Filtering --
 function getFilteredItems() {
   return allItems.filter(item => {
     // Impact filter (pill buttons)
@@ -671,7 +679,7 @@ function getFilteredItems() {
   });
 }
 
-// ── Group by module ──
+// -- Group by module --
 function groupByModule(items) {
   const groups = {};
   for (const item of items) {
@@ -683,16 +691,17 @@ function groupByModule(items) {
   return Object.entries(groups).sort((a, b) => a[0].localeCompare(b[0]));
 }
 
-// ── Render ──
+// -- Render --
 function render() {
   enrichItems();
+  syncUrlState();
   renderSidebar();
   renderRadarDashboard();
   renderStats();
   renderContent();
 }
 
-// ── Sidebar state ──
+// -- Sidebar state --
 let activeAction = null;  // 'new', 'changed', 'deprecated', 'deleted', or null
 
 function renderSidebar() {
@@ -926,29 +935,125 @@ function renderRadarDashboard() {
     .slice(0,8);
   const heatHtml = `<div class="heatmap-table"><div class="heatmap-row heatmap-head"><span>Module</span><span>Crit</span><span>High</span><span>Med</span><span>Low</span></div>${heatRows.map(([mod,s]) => `<div class="heatmap-row"><span class="heatmap-module" title="${escAttr(mod)}">${escHtml(mod)}</span><span class="heat-cell critical">${s.critical||0}</span><span class="heat-cell high">${s.high||0}</span><span class="heat-cell medium">${s.medium||0}</span><span class="heat-cell low">${s.low||0}</span></div>`).join('')}</div>`;
   const actionHtml = filtered.slice(0,5).map(item => `<div class="top-action"><div class="top-action-score">${item.impactScore || 0}</div><div><div class="top-action-title">${escHtml(item.title)}</div><div class="top-action-meta">${escHtml(item.module || 'Other')} - ${escHtml((item.radarFlags || []).slice(0,2).join(', '))}</div></div></div>`).join('') || '<p>No action items match current filters.</p>';
-  container.innerHTML = `<div class="radar-panel"><h3>Module heatmap</h3><p>Critical and high impact concentration by module for the selected release.</p>${heatHtml}</div><div class="radar-panel"><h3>Top actions</h3><p>Highest-scoring updates after your filters. Use this as the first preview testing queue.</p><div class="top-action-list">${actionHtml}</div><div class="export-radar"><button class="export-btn" onclick="exportRadarBrief()">Copy client brief</button><button class="export-btn" onclick="exportTestPack()">Copy test pack</button></div></div>`;
+  container.innerHTML = `<div class="radar-panel"><h3>Module heatmap</h3><p>Critical and high impact concentration by module for the selected release.</p>${heatHtml}</div><div class="radar-panel"><h3>Top actions</h3><p>Highest-scoring updates after your filters. Use this as the first preview testing queue.</p><div class="top-action-list">${actionHtml}</div><div class="export-radar"><button class="export-btn" onclick="exportRadarBrief()">Client brief</button><button class="export-btn" onclick="exportTestPack()">Test pack</button><button class="export-btn" onclick="exportDeprecationWatch()">Deprecation watch</button></div></div>`;
+}
+
+function filteredSorted(limit) {
+  return getFilteredItems().slice().sort((a,b)=>(b.impactScore||0)-(a.impactScore||0)).slice(0, limit);
+}
+
+function activeFilterLabel() {
+  const parts = [];
+  parts.push(`Release: ${activeVersion === 'all' ? 'All' : activeVersion}`);
+  parts.push(`Role: ${activeRole === 'all' ? 'All roles' : roleLabel(activeRole)}`);
+  if (activeModule) parts.push(`Module: ${activeModule}`);
+  if (searchQuery) parts.push(`Search: ${searchQuery}`);
+  return parts.join(' | ');
+}
+
+function roleLabel(role) {
+  return {consultant:'Consultant',test:'Test Lead',product:'Product Owner',support:'Support',architect:'Architect'}[role] || role;
 }
 
 function exportRadarBrief() {
-  const items = getFilteredItems().slice().sort((a,b)=>(b.impactScore||0)-(a.impactScore||0)).slice(0,12);
-  const lines = ['SAP SuccessFactors Release Impact Brief','',`Release: ${activeVersion === 'all' ? 'All' : activeVersion}`,`Role: ${activeRole === 'all' ? 'All roles' : activeRole}`,'','Top actions:'];
-  items.forEach((item,i) => lines.push(`${i+1}. [${item.impactScore}] ${item.title} - ${item.recommendedAction}`));
-  navigator.clipboard?.writeText(lines.join('\n'));
-  alert('Client brief copied to clipboard.');
+  const items = filteredSorted(12);
+  const lines = ['# SAP SuccessFactors Release Impact Brief','',activeFilterLabel(),'','## Top actions'];
+  items.forEach((item,i) => lines.push(`${i+1}. [Score ${item.impactScore}] ${item.title} - ${item.recommendedAction}`));
+  lines.push('','## Notes','- Validate in preview before production.','- Confirm owner for each required or automatically-on change.','- Source links remain SAP-owned references.');
+  showExportOutput('Client brief', lines.join('\n'));
 }
 
 function exportTestPack() {
-  const items = getFilteredItems().slice().sort((a,b)=>(b.impactScore||0)-(a.impactScore||0)).slice(0,20);
-  const lines = ['SAP SuccessFactors Preview Test Pack',''];
+  const items = filteredSorted(20);
+  const lines = ['# SAP SuccessFactors Preview Test Pack','',activeFilterLabel(),''];
   const byModule = {};
   items.forEach(item => { const mod = item.module || 'Other'; if (!byModule[mod]) byModule[mod] = []; byModule[mod].push(item); });
   for (const [mod, arr] of Object.entries(byModule)) {
     lines.push(`## ${mod}`);
-    arr.forEach(item => lines.push(`- ${item.title}: ${item.testGuidance}`));
+    arr.forEach(item => lines.push(`- [ ] ${item.title}: ${item.testGuidance}`));
     lines.push('');
   }
-  navigator.clipboard?.writeText(lines.join('\n'));
-  alert('Test pack copied to clipboard.');
+  showExportOutput('Test pack', lines.join('\n'));
+}
+
+function exportDeprecationWatch() {
+  const items = getFilteredItems().filter(item => {
+    const text = [item.action,item.title,item.description,item.lifecycle,item.refNumber].join(' ').toLowerCase();
+    return /deprecated|deleted|end of maintenance|will be deleted|deprecation/.test(text);
+  }).sort((a,b)=>(b.impactScore||0)-(a.impactScore||0)).slice(0,25);
+  const lines = ['# SAP SuccessFactors Deprecation Watchlist','',activeFilterLabel(),''];
+  if (!items.length) lines.push('No deprecation or deletion items match the current filters.');
+  items.forEach((item,i) => {
+    lines.push(`## ${i+1}. ${item.title}`);
+    lines.push(`- Score: ${item.impactScore}`);
+    lines.push(`- Module: ${item.module || 'Other'}`);
+    lines.push(`- Action: ${item.action || 'Review'}`);
+    lines.push(`- Recommended action: ${item.recommendedAction}`);
+    if (item.sapLink) lines.push(`- SAP source: ${fixSapLink(item.sapLink)}`);
+    lines.push('');
+  });
+  showExportOutput('Deprecation watchlist', lines.join('\n'));
+}
+
+async function showExportOutput(title, text) {
+  lastExportTitle = title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'release-impact-export';
+  lastExportText = text;
+  document.getElementById('export-title').textContent = title;
+  document.getElementById('export-text').value = text;
+  document.getElementById('export-output').classList.add('active');
+  try {
+    await navigator.clipboard?.writeText(text);
+  } catch(e) {
+    // Textarea fallback is visible for browsers that block Clipboard API.
+  }
+}
+
+async function copyExportText() {
+  const text = document.getElementById('export-text').value || lastExportText;
+  try { await navigator.clipboard?.writeText(text); } catch(e) {}
+}
+
+function downloadExportText() {
+  const text = document.getElementById('export-text').value || lastExportText;
+  const blob = new Blob([text], {type:'text/markdown'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${lastExportTitle || 'release-impact-export'}.md`;
+  document.body.appendChild(a);
+  a.click();
+  URL.revokeObjectURL(a.href);
+  a.remove();
+}
+
+function closeExportOutput() {
+  document.getElementById('export-output').classList.remove('active');
+}
+
+function syncUrlState() {
+  const params = new URLSearchParams();
+  if (activeVersion !== 'all') params.set('release', activeVersion);
+  if (activeRole !== 'all') params.set('role', activeRole);
+  if (activeModule) params.set('module', activeModule);
+  if (activeAction) params.set('action', activeAction);
+  if (searchQuery) params.set('q', searchQuery);
+  const qs = params.toString();
+  const next = qs ? `${location.pathname}?${qs}${location.hash}` : `${location.pathname}${location.hash}`;
+  if (location.search !== (qs ? '?' + qs : '')) history.replaceState(null, '', next);
+}
+
+function applyUrlState() {
+  const params = new URLSearchParams(location.search);
+  if (params.get('release')) activeVersion = params.get('release');
+  if (params.get('role')) activeRole = params.get('role');
+  if (params.get('module')) activeModule = params.get('module');
+  if (params.get('action')) activeAction = params.get('action');
+  if (params.get('q')) {
+    searchQuery = params.get('q');
+    const search = document.getElementById('search');
+    if (search) search.value = searchQuery;
+  }
+  document.querySelectorAll('#role-filters .role-pill').forEach(btn => btn.classList.toggle('active', btn.dataset.role === activeRole));
+  document.querySelectorAll('#version-switcher .ver-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.ver === activeVersion));
 }
 
 function renderStats() {
@@ -1033,7 +1138,7 @@ function renderContent() {
         </div>
         <div class="card-footer">
           <span>${item.refNumber ? 'Ref: ' + escHtml(item.refNumber) : ''}</span>
-          ${item.sapLink ? `<a href="${escHtml(fixSapLink(item.sapLink))}" target="_blank" rel="noopener" class="sap-link">View on SAP →</a>` : ''}
+          ${item.sapLink ? `<a href="${escHtml(fixSapLink(item.sapLink))}" target="_blank" rel="noopener" class="sap-link">View on SAP</a>` : ''}
         </div>
       </div>`;
     }
@@ -1057,7 +1162,7 @@ function renderContent() {
   });
 }
 
-// ── Event listeners ──
+// -- Event listeners --
 document.getElementById('search').addEventListener('input', (e) => {
   searchQuery = e.target.value;
   render();
@@ -1126,7 +1231,7 @@ function fixSapLink(link) {
   return link;
 }
 
-// ── Dynamically render the version switcher buttons from metadata ──
+// -- Dynamically render the version switcher buttons from metadata --
 function renderVersionSwitcher(metadata) {
   const container = document.getElementById('version-switcher');
   if (!container) return;
@@ -1139,7 +1244,7 @@ function renderVersionSwitcher(metadata) {
   container.innerHTML = html;
 }
 
-// ── Dynamically render the release timeline from metadata ──
+// -- Dynamically render the release timeline from metadata --
 function renderReleaseTimeline(metadata) {
   const container = document.getElementById('release-timeline');
   if (!container) return;
@@ -1152,7 +1257,7 @@ function renderReleaseTimeline(metadata) {
   container.innerHTML = html;
 }
 
-// ── Dynamically render the module selector list from data ──
+// -- Dynamically render the module selector list from data --
 function renderModuleSelector() {
   const container = document.getElementById('module-list');
   if (!container || !allItems.length) return;
@@ -1172,7 +1277,7 @@ function renderModuleSelector() {
   container.innerHTML = html;
 }
 
-// ── Utilities ──
+// -- Utilities --
 function escHtml(s) {
   if (!s) return '';
   const div = document.createElement('div');
@@ -1185,7 +1290,7 @@ function escAttr(s) {
   return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/'/g, '&#39;');
 }
 
-// ── Sample data (used when data/updates.json is unavailable) ──
+// -- Sample data (used when data/updates.json is unavailable) --
 function getSampleData() {
   return [
     {
@@ -1281,7 +1386,7 @@ function getSampleData() {
   ];
 }
 
-// ── Version switcher ──
+// -- Version switcher --
 document.getElementById('version-switcher').addEventListener('click', (e) => {
   if (!e.target.dataset.ver) return;
   activeVersion = e.target.dataset.ver;
@@ -1290,7 +1395,9 @@ document.getElementById('version-switcher').addEventListener('click', (e) => {
   render();
 });
 
-// ── Init ──
+window.addEventListener('popstate', () => { applyUrlState(); render(); });
+
+// -- Init --
 loadData();
 
 // ====== Checklist System ======
@@ -1380,8 +1487,8 @@ function renderChecklist() {
   document.getElementById('cl-progress-bar').style.width = pct + '%';
 
   var categories = [
-    { key: 'action_required', icon: '\uD83D\uDD34', title: 'Action Required', desc: 'Deprecated, deleted, or auto-enabled changes \u2014 must be addressed', expand: true },
-    { key: 'review_test', icon: '\uD83D\uDFE1', title: 'Review & Test', desc: 'New features and minor changes \u2014 evaluate before enabling', expand: false },
+    { key: 'action_required', icon: '\uD83D\uDD34', title: 'Action Required', desc: 'Deprecated, deleted, or auto-enabled changes - must be addressed', expand: true },
+    { key: 'review_test', icon: '\uD83D\uDFE1', title: 'Review & Test', desc: 'New features and minor changes - evaluate before enabling', expand: false },
     { key: 'informational', icon: '\uD83D\uDFE2', title: 'Informational', desc: 'Updates that require no action', expand: false }
   ];
 
@@ -1421,12 +1528,12 @@ function renderChecklist() {
       html += '    <div class="cl-title">' + escHtml(item.title) + '</div>';
       html += '    <div class="cl-meta">';
       html += '      <span class="cl-meta-tag ' + actionClass + '">' + escHtml(item.action) + '</span>';
-      html += '      <span class="cl-meta-tag cl-enablement-tag">' + escHtml(item.enablement || '\u2014') + '</span>';
+      html += '      <span class="cl-meta-tag cl-enablement-tag">' + escHtml(item.enablement || '-') + '</span>';
       html += '      <span class="cl-meta-tag cl-enablement-tag" style="color:' + impColor + '">' + item.impact.label + '</span>';
       html += '    </div>';
       html += '    <div class="cl-desc">' + desc + '</div>';
       if (item.sapLink) {
-        html += '    <a href="' + escHtml(fixSapLink(item.sapLink)) + '" target="_blank" rel="noopener" class="cl-sap-link">View on SAP \u2192</a>';
+        html += '    <a href="' + escHtml(fixSapLink(item.sapLink)) + '" target="_blank" rel="noopener" class="cl-sap-link">View on SAP</a>';
       }
       html += '  </div>';
       html += '</div>';
