@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="SAP SF Release Updates">
-<meta property="og:description" content="Every SAP SuccessFactors release update - scraped, classified by impact, and summarised in plain English. 492 updates across 1H 2026 and 2H 2026 preview.">
+<meta property="og:title" content="SAP SF Release Updates - 492 SuccessFactors updates">
+<meta property="og:description" content="492 SAP SuccessFactors release updates across 1H 2026, classified by impact and summarised in plain English. 58 critical and 161 high impact items. Last refreshed 2026-06-01 11:33 UTC.">
 <meta property="og:image" content="https://sahirvhora.github.io/sf-release-update/preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sahirvhora.github.io/sf-release-update/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SAP SF Release Updates - 492 SuccessFactors updates">
+<meta name="twitter:description" content="492 SAP SuccessFactors release updates across 1H 2026, classified by impact and summarised in plain English. 58 critical and 161 high impact items. Last refreshed 2026-06-01 11:33 UTC.">
 <meta name="twitter:image" content="https://sahirvhora.github.io/sf-release-update/preview.png">
-<meta name="description" content="Every SAP SuccessFactors release update - scraped, classified by impact, and summarised in plain English. 492 updates, updated weekly.">
-<title>SAP SF Release Updates - SAP SuccessFactors Release Tracker</title>
+<meta name="description" content="492 SAP SuccessFactors release updates across 1H 2026, classified by impact and summarised in plain English. 58 critical and 161 high impact items. Last refreshed 2026-06-01 11:33 UTC.">
+<title>SAP SF Release Updates - 492 SuccessFactors updates</title>
 <style>
 /* =========== RESET & BASE =========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -630,6 +632,40 @@ let activeRole = 'all';
 let lastExportText = '';
 let lastExportTitle = 'release-impact-export';
 
+function setMetaContent(selector, value) {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute('content', value);
+}
+
+function buildMetaSummary(metadata, items) {
+  const total = metadata.totalItems || items.length || 0;
+  const versionCounts = metadata.versionCounts || {};
+  const versions = Object.keys(versionCounts).length ? Object.keys(versionCounts) : (metadata.availableVersions || []);
+  const versionText = versions.length ? versions.join(', ') : 'the latest releases';
+  const impactCounts = items.reduce((acc, item) => {
+    const level = item.impact?.level || 'low';
+    acc[level] = (acc[level] || 0) + 1;
+    return acc;
+  }, {});
+  const impactText = impactCounts.critical || impactCounts.high
+    ? ` ${impactCounts.critical || 0} critical and ${impactCounts.high || 0} high impact items.`
+    : '';
+  const refreshed = metadata.lastScraped ? ` Last refreshed ${metadata.lastScraped}.` : '';
+  return `${total} SAP SuccessFactors release updates across ${versionText}, classified by impact and summarised in plain English.${impactText}${refreshed}`;
+}
+
+function updateDocumentMetadata(metadata, items) {
+  const total = metadata.totalItems || items.length || 0;
+  const title = `SAP SF Release Updates - ${total} SuccessFactors updates`;
+  const description = buildMetaSummary(metadata, items);
+  document.title = title;
+  setMetaContent('meta[name="description"]', description);
+  setMetaContent('meta[property="og:title"]', title);
+  setMetaContent('meta[property="og:description"]', description);
+  setMetaContent('meta[name="twitter:title"]', title);
+  setMetaContent('meta[name="twitter:description"]', description);
+}
+
 // -- Load data --
 async function loadData() {
   try {
@@ -638,6 +674,7 @@ async function loadData() {
     const data = await resp.json();
     allItems = data.items || [];
     const metadata = data.metadata || {};
+    updateDocumentMetadata(metadata, allItems);
     renderVersionSwitcher(metadata);
     renderReleaseTimeline(metadata);
     renderModuleSelector();
@@ -646,8 +683,10 @@ async function loadData() {
   } catch(e) {
     // Use embedded sample data for demo
     allItems = getSampleData();
-    renderVersionSwitcher({availableVersions: ['1H 2026', '2H 2026 (Preview)']});
-    renderReleaseTimeline({releaseDates: {'1H 2026': {preview:'April 2026', production:'May 15, 2026'}, '2H 2026': {preview:'October 2026 (est.)', production:'November 2026 (est.)'}}});
+    const sampleMetadata = {availableVersions: ['1H 2026', '2H 2026 (Preview)'], totalItems: allItems.length, releaseDates: {'1H 2026': {preview:'April 2026', production:'May 15, 2026'}, '2H 2026': {preview:'October 2026 (est.)', production:'November 2026 (est.)'}}};
+    updateDocumentMetadata(sampleMetadata, allItems);
+    renderVersionSwitcher(sampleMetadata);
+    renderReleaseTimeline(sampleMetadata);
     renderModuleSelector();
     applyUrlState();
     render();
