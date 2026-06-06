@@ -65,8 +65,8 @@ python3 scraper.py
 trap - EXIT
 
 # Check if the data file changed
-if git diff --quiet data/updates.json; then
-    echo "No changes to updates.json — nothing to commit."
+if git diff --quiet data/updates.json index.html; then
+    echo "No changes to updates.json or index.html — nothing to commit."
 
     # Send an info notification on Mondays so we know the cron is alive.
     # Avoid spamming every day — only notify if it's a Monday (UTC).
@@ -88,7 +88,7 @@ git config user.name  "${GIT_USER_NAME:-SAP Release Bot}"
 git config user.email "${GIT_USER_EMAIL:-release-bot@sf-release-update.github}"
 
 # Stage and commit
-git add data/updates.json
+git add data/updates.json index.html
 
 COMMIT_MSG="chore: auto-update release data ($(date -u +'%Y-%m-%d'))"
 git commit -m "$COMMIT_MSG"

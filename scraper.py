@@ -6,7 +6,7 @@ Run: python3 scraper.py
 Output: data/updates.json
 """
 
-import json, os, re, sys, time
+import html, json, os, re, sys, time
 from datetime import datetime
 from pathlib import Path
 
@@ -14,6 +14,7 @@ from pathlib import Path
 BASE_URL = "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885"
 OUTPUT_DIR = Path(__file__).parent / "data"
 OUTPUT_FILE = OUTPUT_DIR / "updates.json"
+INDEX_FILE = Path(__file__).parent / "index.html"
 # How many pages to fetch (25 items per page). Set high, script stops when no more data.
 MAX_PAGES = 50
 
@@ -518,6 +519,58 @@ def calculate_release_dates(available_versions, scraped_at=None):
     return release_dates
 
 
+def build_meta_summary(metadata: dict, items: list[dict]) -> tuple[str, str]:
+    """Build title/description strings for HTML, Open Graph, and Twitter tags."""
+    total = metadata.get("totalItems") or len(items)
+    version_counts = metadata.get("versionCounts") or {}
+    versions = list(version_counts.keys()) or metadata.get("availableVersions") or []
+    version_text = ", ".join(versions) if versions else "the latest releases"
+    impacts = {}
+    for item in items:
+        level = (item.get("impact") or {}).get("level", "low")
+        impacts[level] = impacts.get(level, 0) + 1
+    impact_text = ""
+    if impacts.get("critical") or impacts.get("high"):
+        impact_text = f" {impacts.get('critical', 0)} critical and {impacts.get('high', 0)} high impact items."
+    refreshed = f" Last refreshed {metadata['lastScraped']}." if metadata.get("lastScraped") else ""
+    title = f"SAP SF Release Updates - {total} SuccessFactors updates"
+    description = (
+        f"{total} SAP SuccessFactors release updates across {version_text}, "
+        f"classified by impact and summarised in plain English."
+        f"{impact_text}{refreshed}"
+    )
+    return title, description
+
+
+def replace_meta_content(markup: str, selector_type: str, selector_value: str, content: str) -> str:
+    escaped = html.escape(content, quote=True)
+    pattern = rf'(<meta\s+{selector_type}="{re.escape(selector_value)}"\s+content=")[^"]*(">)'
+    replacement = rf"\g<1>{escaped}\2"
+    updated, count = re.subn(pattern, replacement, markup, count=1)
+    if count:
+        return updated
+    insert_after = '<meta name="twitter:card" content="summary_large_image">' if selector_type == "name" and selector_value.startswith("twitter:") else '<meta property="og:url" content="https://sahirvhora.github.io/sf-release-update/">'
+    tag = f'<meta {selector_type}="{selector_value}" content="{escaped}">'
+    return updated.replace(insert_after, insert_after + "\n" + tag, 1)
+
+
+def update_index_metadata(output: dict) -> None:
+    if not INDEX_FILE.exists():
+        print("[WARN] index.html missing; skipping static meta update.")
+        return
+    title, description = build_meta_summary(output["metadata"], output["items"])
+    markup = INDEX_FILE.read_text(encoding="utf-8")
+    markup = replace_meta_content(markup, "property", "og:title", title)
+    markup = replace_meta_content(markup, "property", "og:description", description)
+    markup = replace_meta_content(markup, "name", "twitter:title", title)
+    markup = replace_meta_content(markup, "name", "twitter:description", description)
+    markup = replace_meta_content(markup, "name", "description", description)
+    title_escaped = html.escape(title, quote=False)
+    markup = re.sub(r"<title>.*?</title>", f"<title>{title_escaped}</title>", markup, count=1, flags=re.DOTALL)
+    INDEX_FILE.write_text(markup, encoding="utf-8")
+    print(f"Updated static index.html metadata: {title}")
+
+
 def main():
     print("=" * 60)
     print("SAP SF Release Updates - Scraper")
@@ -587,6 +640,7 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
+    update_index_metadata(output)
     
     print(f"\nSaved {len(unique)} items to {OUTPUT_FILE}")
     print("Done!")
