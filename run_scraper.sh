@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# run_scraper.sh — Run the SAP SF release scraper and commit any changes.
+# run_scraper.sh - Run the SAP SF release scraper and commit any changes.
 # Designed to be called from GitHub Actions on a cron schedule.
 # Sends Telegram alerts on failure or when new data is found.
 set -euo pipefail
@@ -15,7 +15,7 @@ send_telegram() {
     local chat_id="${TELEGRAM_CHAT_ID:-}"
 
     if [[ -z "$token" || -z "$chat_id" ]]; then
-        echo "[telegram] Skipping — TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set."
+        echo "[telegram] Skipping - TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set."
         return 0
     fi
 
@@ -66,13 +66,13 @@ trap - EXIT
 
 # Check if the data file changed
 if git diff --quiet data/updates.json index.html; then
-    echo "No changes to updates.json or index.html — nothing to commit."
+    echo "No changes to updates.json or index.html - nothing to commit."
 
     # Send an info notification on Mondays so we know the cron is alive.
-    # Avoid spamming every day — only notify if it's a Monday (UTC).
+    # Avoid spamming every day - only notify if it's a Monday (UTC).
     if [[ "$(date -u +%u)" == "1" ]]; then
         RUN_URL=$(ci_run_url)
-        MSG="🟢 SAP SF scraper ran successfully — no new updates this week."
+        MSG="🟢 SAP SF scraper ran successfully - no new updates this week."
         if [[ -n "$RUN_URL" ]]; then
             MSG="$MSG"$'\n'"$RUN_URL"
         fi

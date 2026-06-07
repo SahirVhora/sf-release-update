@@ -1,0 +1,89 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".github/dependabot.yml",
+      "language": "yaml",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".github/workflows/scrape.yml",
+      "language": "yaml",
+      "sizeLines": 49,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "data/updates.json",
+      "language": "json",
+      "sizeLines": 11337,
+      "fileCategory": "config"
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "sizeLines": 1672,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "requirements.txt",
+      "language": "txt",
+      "sizeLines": 1,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "run_scraper.sh",
+      "language": "shell",
+      "sizeLines": 130,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scraper.py",
+      "language": "python",
+      "sizeLines": 650,
+      "fileCategory": "code"
+    },
+    {
+      "path": "SECURITY.md",
+      "language": "markdown",
+      "sizeLines": 15,
+      "fileCategory": "docs"
+    }
+  ],
+  "totalFiles": 10,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "stats": {
+    "filesScanned": 10,
+    "byCategory": {
+      "config": 2,
+      "infra": 1,
+      "code": 2,
+      "markup": 1,
+      "docs": 3,
+      "script": 1
+    },
+    "byLanguage": {
+      "yaml": 2,
+      "unknown": 1,
+      "json": 1,
+      "html": 1,
+      "markdown": 2,
+      "txt": 1,
+      "shell": 1,
+      "python": 1
+    }
+  }
+}
