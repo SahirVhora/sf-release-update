@@ -83,6 +83,7 @@ Start with SF Compass for the full hub: https://sahirvhora.github.io/sf-compass/
 |---|---|
 | SF Compass | Feasibility answers, implementation guidance, and links to the full tool suite |
 | SF Release Update | Release impact tracking and testing focus |
+| **SF Impact Brief** | **Personalised release briefs from this data — select modules, get a tiered action plan** |
 | SF Pay Transparency | EU Pay Transparency readiness and evidence workflow framing |
 | SF Value Navigator | Value realisation and sponsor-facing consulting framework |
 | SF Position Integrity Checker | Position hierarchy, incumbency, and EC data-quality validation |
