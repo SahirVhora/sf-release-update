@@ -36,7 +36,7 @@
 
   <!-- Description -->
   <text x="60" y="240" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" fill="#c5c9d4">
-    Every SAP SuccessFactors release update — scraped, classified by
+    Every SAP SuccessFactors release update - scraped, classified by
   </text>
   <text x="60" y="268" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" fill="#c5c9d4">
     impact, and summarised in plain English. Updated weekly.
