@@ -94,3 +94,15 @@ This project is part of a wider SAP SuccessFactors tool suite. Start with [SF Co
 ## License
 
 MIT
+
+---
+
+## Part of the SF Compass Suite
+
+One of 10 free, open tools for SAP SuccessFactors consultants. Explore the full suite at [SF Compass](https://sahirvhora.github.io/sf-compass/).
+
+Related tools:
+
+- [Impact Brief](https://github.com/SahirVhora/sf-impact-brief) - Personalised release impact briefs
+- [Agent Skills](https://github.com/SahirVhora/sf-agent-skills) - AI skills for SF consultants
+- [Config Debt Radar](https://github.com/SahirVhora/sf-config-debt-radar) - Scan EC configuration debt - CLI, dashboard, MCP server
