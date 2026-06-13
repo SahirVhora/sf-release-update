@@ -445,7 +445,7 @@ a:hover{text-decoration:underline}
 .export-btn:hover{background:var(--bg4);color:var(--text)}
 
 /* Release Impact Radar */
-.radar-dashboard{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-bottom:20px}
+.radar-dashboard{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:20px}
 .radar-panel{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px}
 .radar-panel h3{font-size:16px;margin-bottom:6px;color:var(--text)}
 .radar-panel p{font-size:12px;color:var(--text3);margin-bottom:12px}
@@ -1113,8 +1113,7 @@ function renderRadarDashboard() {
     .sort((a,b) => (b[1].critical*10 + b[1].high*3 + b[1].total/100) - (a[1].critical*10 + a[1].high*3 + a[1].total/100))
     .slice(0,8);
   const heatHtml = `<div class="heatmap-table"><div class="heatmap-row heatmap-head"><span>Module</span><span>Crit</span><span>High</span><span>Med</span><span>Low</span></div>${heatRows.map(([mod,s]) => `<div class="heatmap-row"><span class="heatmap-module" title="${escAttr(mod)}">${escHtml(mod)}</span><span class="heat-cell critical">${s.critical||0}</span><span class="heat-cell high">${s.high||0}</span><span class="heat-cell medium">${s.medium||0}</span><span class="heat-cell low">${s.low||0}</span></div>`).join('')}</div>`;
-  const actionHtml = filtered.slice(0,5).map(item => `<div class="top-action"><div class="top-action-score">${item.impactScore || 0}</div><div><div class="top-action-title">${escHtml(item.title)}</div><div class="top-action-meta">${escHtml(item.module || 'Other')} - ${escHtml((item.radarFlags || []).slice(0,2).join(', '))}</div></div></div>`).join('') || '<p>No action items match current filters.</p>';
-  container.innerHTML = `<div class="radar-panel"><h3>Module heatmap</h3><p>Critical and high impact concentration by module for the selected release.</p>${heatHtml}</div><div class="radar-panel"><h3>Top actions</h3><p>Highest-scoring updates after your filters. Use this as the first preview testing queue.</p><div class="top-action-list">${actionHtml}</div><div class="export-radar"><button class="export-btn" onclick="exportRadarBrief()">Client brief</button><button class="export-btn" onclick="exportTestPack()">Test pack</button><button class="export-btn" onclick="exportDeprecationWatch()">Deprecation watch</button></div></div>`;
+  container.innerHTML = `<div class="radar-panel"><h3>Module heatmap</h3><p>Critical and high impact concentration by module for the selected release.</p>${heatHtml}</div>`;
 }
 
 function filteredSorted(limit) {
