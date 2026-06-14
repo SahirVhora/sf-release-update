@@ -152,22 +152,22 @@ def scrape_with_playwright():
                 print("Dismissing cookie consent banner...")
                 consent_btn.click()
                 page.wait_for_timeout(2000)
-        except:
-            print("No cookie consent banner found (or already accepted).")
+        except Exception as exc:
+            print(f"No cookie consent banner found (or already accepted): {exc}")
         
         try:
             page.evaluate("""
                 const banners = document.querySelectorAll('#truste-consent-track, .trustarc-banner, [id*="consent_blackbar"]');
                 banners.forEach(b => b.style.display = 'none');
             """)
-        except:
+        except Exception:
             pass
         
         print("Waiting for page to render...")
         try:
             page.wait_for_selector("table tbody tr, button:has-text('Product')", timeout=45000)
-        except:
-            print("WARNING: Selectors not found. Page might not have loaded fully.")
+        except Exception as exc:
+            print(f"WARNING: Selectors not found. Page might not have loaded fully: {exc}")
         
         page.wait_for_timeout(5000)
         
@@ -423,46 +423,6 @@ def scrape_with_playwright():
     return all_items
 
 
-def scrape_via_csv_download():
-    """
-    Alternative approach: try to download the CSV directly.
-    The What's New Viewer has a Download Data button that can export all data.
-    """
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        return None
-    
-    items = []
-    
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(accept_downloads=True)
-        page = context.new_page()
-        
-        page.goto(BASE_URL, wait_until="networkidle", timeout=60000)
-        time.sleep(3)
-        
-        # Try to find and click the Download button
-        download_btn = page.query_selector('button:has-text("Download")')
-        if download_btn:
-            download_btn.click()
-            time.sleep(1)
-            
-            # Look for XLSX or CSV option
-            csv_btn = page.query_selector('text="XLSX"') or page.query_selector('text="CSV"')
-            if csv_btn:
-                # Set up download handler
-                with page.expect_download() as download_info:
-                    csv_btn.click()
-                download = download_info.value
-                path = download.path()
-                print(f"Downloaded to: {path}")
-                # Parse the file...
-        
-        browser.close()
-    
-    return items
 
 
 def calculate_release_dates(available_versions, scraped_at=None):
