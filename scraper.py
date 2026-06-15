@@ -41,11 +41,12 @@ def default_published_version(now: datetime) -> str:
     return f"2H {now.year - 1}"
 
 
-def latest_published_versions(candidates: list[str], now: datetime) -> list[str]:
-    """Keep only the latest SAP SF release whose preview has started.
+def planning_window_versions(candidates: list[str], now: datetime) -> list[str]:
+    """Keep current release plus near-future planning releases.
 
-    This prevents future dropdown placeholders like 2H 2026 or 1H 2027 from being
-    scraped and mislabelled before SAP has actually published their preview data.
+    SAP exposes placeholders many years ahead. For planning, keep the latest
+    release whose preview has started plus the rest of that year and next year.
+    On 2026-06-15 this means 1H 2026, 2H 2026, 1H 2027, and 2H 2027.
     """
     parsed = []
     for version in candidates:
@@ -53,13 +54,26 @@ def latest_published_versions(candidates: list[str], now: datetime) -> list[str]
         if not parsed_version:
             continue
         year, half = parsed_version
-        if preview_start_for(year, half) <= now:
-            parsed.append((year, half, version.strip()))
+        parsed.append((year, half, version.strip()))
     if not parsed:
         return [default_published_version(now)]
-    latest_year, latest_half = max((year, half) for year, half, _ in parsed)
-    latest = [version for year, half, version in parsed if year == latest_year and half == latest_half]
-    return latest
+
+    published = [(year, half) for year, half, _ in parsed if preview_start_for(year, half) <= now]
+    if published:
+        start_year, start_half = max(published)
+    else:
+        fallback = default_published_version(now)
+        parsed_fallback = parse_release_version(fallback)
+        start_year, start_half = parsed_fallback if parsed_fallback else (now.year, 1)
+
+    end_year = start_year + 1
+    planned = [
+        (year, half, version)
+        for year, half, version in parsed
+        if (year, half) >= (start_year, start_half) and year <= end_year
+    ]
+    planned.sort(key=lambda row: (row[0], row[1]))
+    return [version for _, _, version in planned]
 
 
 # --- Impact Classification ---
@@ -265,8 +279,8 @@ def scrape_with_playwright():
                 """)
                 print(f"  Raw version candidates: {raw_candidates}")
                 
-                # Keep only published releases. SAP exposes future placeholder
-                # versions in the dropdown before their preview data is live.
+                # Keep versions in the planning window. SAP exposes placeholders
+                # many years ahead, but current + next year is useful for planning.
                 for v in raw_candidates:
                     v = v.strip()
                     if parse_release_version(v):
@@ -293,7 +307,7 @@ def scrape_with_playwright():
                 seen_ver[key] = v
         deduped = list(seen_ver.values())
         available_versions = sorted(deduped, key=lambda x: (re.search(r'\d{4}', x).group() if re.search(r'\d{4}', x) else '0') + ('0' if '1H' in x else '1'))
-        available_versions = latest_published_versions(available_versions, datetime.now())
+        available_versions = planning_window_versions(available_versions, datetime.now())
         
         # Append "(Preview)" to 2H versions whose production date is still in the future
         final_versions = []
@@ -587,13 +601,13 @@ def main():
         print("ERROR: No items extracted. Check the SAP page structure.")
         sys.exit(1)
     
-    # Deduplicate by title + refNumber across all versions.
-    # When the same deprecation/change appears in both 1H and 2H, keep only the
-    # first occurrence (earliest version, since we scrape 1H before 2H).
+    # Deduplicate within each release only. The same title can legitimately appear
+    # in current and future planning releases, and the version switcher needs to
+    # show the count/details for each release independently.
     seen = set()
     unique = []
     for item in items:
-        key = (item["title"], item.get("refNumber", ""))
+        key = (item.get("releaseVersion", ""), item["title"], item.get("refNumber", ""))
         if key not in seen:
             seen.add(key)
             unique.append(item)

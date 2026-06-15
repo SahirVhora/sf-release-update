@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="SAP SF Release Updates - 500 SuccessFactors updates">
-<meta property="og:description" content="500 SAP SuccessFactors release updates across 1H 2026, classified by impact and summarised in plain English. 57 critical and 165 high impact items. Last refreshed 2026-06-15 14:03 UTC.">
+<meta property="og:title" content="SAP SF Release Updates - 525 SuccessFactors updates">
+<meta property="og:description" content="525 SAP SuccessFactors release updates across 1H 2026, 2H 2026 (Preview), classified by impact and summarised in plain English. 75 critical and 168 high impact items. Last refreshed 2026-06-15 14:23 UTC.">
 <meta property="og:image" content="https://sahirvhora.github.io/sf-release-update/preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -13,11 +13,11 @@
 <link rel="canonical" href="https://sahirvhora.github.io/sf-release-update/">
 <meta name="robots" content="index, follow">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SAP SF Release Updates - 500 SuccessFactors updates">
-<meta name="twitter:description" content="500 SAP SuccessFactors release updates across 1H 2026, classified by impact and summarised in plain English. 57 critical and 165 high impact items. Last refreshed 2026-06-15 14:03 UTC.">
+<meta name="twitter:title" content="SAP SF Release Updates - 525 SuccessFactors updates">
+<meta name="twitter:description" content="525 SAP SuccessFactors release updates across 1H 2026, 2H 2026 (Preview), classified by impact and summarised in plain English. 75 critical and 168 high impact items. Last refreshed 2026-06-15 14:23 UTC.">
 <meta name="twitter:image" content="https://sahirvhora.github.io/sf-release-update/preview.png">
-<meta name="description" content="500 SAP SuccessFactors release updates across 1H 2026, classified by impact and summarised in plain English. 57 critical and 165 high impact items. Last refreshed 2026-06-15 14:03 UTC.">
-<title>SAP SF Release Updates - 500 SuccessFactors updates</title>
+<meta name="description" content="525 SAP SuccessFactors release updates across 1H 2026, 2H 2026 (Preview), classified by impact and summarised in plain English. 75 critical and 168 high impact items. Last refreshed 2026-06-15 14:23 UTC.">
+<title>SAP SF Release Updates - 525 SuccessFactors updates</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
 /* =========== RESET & BASE =========== */
@@ -86,6 +86,7 @@ a:hover{text-decoration:underline}
 }
 .ver-btn:hover{color:var(--text);background:var(--bg4)}
 .ver-btn.active{background:var(--accent);color:#fff;font-weight:600}
+.ver-btn span{margin-left:4px;font-family:var(--mono);opacity:.8}
 .ver-btn.upcoming{position:relative}
 .ver-btn.upcoming::after{
   content:'preview';position:absolute;top:-6px;right:-4px;
@@ -1421,15 +1422,35 @@ function fixSapLink(link) {
   return link;
 }
 
+function parseVersionLabel(version) {
+  const match = String(version || '').match(/([12])H\s+(\d{4})/);
+  return match ? {half:Number(match[1]), year:Number(match[2])} : null;
+}
+
+function isFutureRelease(version, metadata) {
+  if (String(version || '').toLowerCase().includes('preview')) return true;
+  const parsed = parseVersionLabel(version);
+  if (!parsed) return false;
+  const dates = metadata?.releaseDates?.[String(version).replace(/\s*\(Preview\)\s*/,'').trim()];
+  if (dates && String(dates.production || '').includes('(est.)')) return true;
+  const now = new Date();
+  const productionMonth = parsed.half === 1 ? 4 : 10;
+  const productionDate = new Date(Date.UTC(parsed.year, productionMonth, 15));
+  return productionDate > now;
+}
+
 // -- Dynamically render the version switcher buttons from metadata --
 function renderVersionSwitcher(metadata) {
   const container = document.getElementById('version-switcher');
   if (!container) return;
   const versions = metadata.availableVersions || [];
-  let html = '<button class="ver-btn active" data-ver="all">All</button>';
+  const counts = metadata.versionCounts || {};
+  const total = metadata.totalItems || allItems.length || 0;
+  let html = `<button class="ver-btn active" data-ver="all">All <span>${total}</span></button>`;
   for (const version of versions) {
-    const isUpcoming = version.toLowerCase().includes('preview');
-    html += `<button class="ver-btn${isUpcoming ? ' upcoming' : ''}" data-ver="${escAttr(version)}">${escHtml(version)}</button>`;
+    const isUpcoming = isFutureRelease(version, metadata);
+    const count = counts[version] || 0;
+    html += `<button class="ver-btn${isUpcoming ? ' upcoming' : ''}" data-ver="${escAttr(version)}">${escHtml(version)} <span>${count}</span></button>`;
   }
   container.innerHTML = html;
 }
