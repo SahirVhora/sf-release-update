@@ -18,6 +18,50 @@ INDEX_FILE = Path(__file__).parent / "index.html"
 # How many pages to fetch (25 items per page). Set high, script stops when no more data.
 MAX_PAGES = 50
 
+def parse_release_version(version: str):
+    """Return (year, half) for labels like '1H 2026' or '2H 2026 (Preview)'."""
+    match = re.match(r'([12])H\s+(\d{4})', (version or '').strip())
+    if not match:
+        return None
+    return int(match.group(2)), int(match.group(1))
+
+
+def preview_start_for(year: int, half: int) -> datetime:
+    """SAP SF preview windows generally start in April for 1H and October for 2H."""
+    month = 4 if half == 1 else 10
+    return datetime(year, month, 1)
+
+
+def default_published_version(now: datetime) -> str:
+    """Fallback to the latest release whose preview window has started."""
+    if now.month >= 10:
+        return f"2H {now.year} (Preview)" if datetime(now.year, 11, 15) > now else f"2H {now.year}"
+    if now.month >= 4:
+        return f"1H {now.year}"
+    return f"2H {now.year - 1}"
+
+
+def latest_published_versions(candidates: list[str], now: datetime) -> list[str]:
+    """Keep only the latest SAP SF release whose preview has started.
+
+    This prevents future dropdown placeholders like 2H 2026 or 1H 2027 from being
+    scraped and mislabelled before SAP has actually published their preview data.
+    """
+    parsed = []
+    for version in candidates:
+        parsed_version = parse_release_version(version)
+        if not parsed_version:
+            continue
+        year, half = parsed_version
+        if preview_start_for(year, half) <= now:
+            parsed.append((year, half, version.strip()))
+    if not parsed:
+        return [default_published_version(now)]
+    latest_year, latest_half = max((year, half) for year, half, _ in parsed)
+    latest = [version for year, half, version in parsed if year == latest_year and half == latest_half]
+    return latest
+
+
 # --- Impact Classification ---
 # Impact = f(Action, Enablement)
 def classify_impact(action: str, enablement: str, ref_number: str = "") -> dict:
@@ -173,7 +217,6 @@ def scrape_with_playwright():
         
         # --- Discover available versions ---
         available_versions = []
-        current_year = datetime.now().year
         
         # Strategy 1: Look for the version filter button's current display text
         try:
@@ -222,14 +265,12 @@ def scrape_with_playwright():
                 """)
                 print(f"  Raw version candidates: {raw_candidates}")
                 
-                # Filter: only keep versions from current year and next year
+                # Keep only published releases. SAP exposes future placeholder
+                # versions in the dropdown before their preview data is live.
                 for v in raw_candidates:
                     v = v.strip()
-                    match = re.match(r'[12]H\s+(\d{4})', v)
-                    if match:
-                        year = int(match.group(1))
-                        if year >= current_year and year <= current_year + 1:
-                            available_versions.append(v)
+                    if parse_release_version(v):
+                        available_versions.append(v)
                 
                 # Close dropdown by pressing Escape (more reliable than clicking body)
                 page.keyboard.press("Escape")
@@ -237,10 +278,10 @@ def scrape_with_playwright():
         except Exception as e:
             print(f"  Version discovery error: {e}")
         
-        # Strategy 3: Fallback - scrape default view + infer versions from current year
+        # Strategy 3: Fallback to latest release whose preview has started.
         if not available_versions:
-            print("  No versions found via dropdown. Using current-year defaults.")
-            available_versions = [f"1H {current_year}", f"2H {current_year} (Preview)"]
+            print("  No versions found via dropdown. Using latest published release fallback.")
+            available_versions = [default_published_version(datetime.now())]
         
         # Deduplicate and sort (1H before 2H). Prefer "(Preview)" variants when duplicates exist.
         seen_ver = {}
@@ -252,6 +293,7 @@ def scrape_with_playwright():
                 seen_ver[key] = v
         deduped = list(seen_ver.values())
         available_versions = sorted(deduped, key=lambda x: (re.search(r'\d{4}', x).group() if re.search(r'\d{4}', x) else '0') + ('0' if '1H' in x else '1'))
+        available_versions = latest_published_versions(available_versions, datetime.now())
         
         # Append "(Preview)" to 2H versions whose production date is still in the future
         final_versions = []
