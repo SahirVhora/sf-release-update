@@ -255,6 +255,9 @@ a:hover{text-decoration:underline}
 .meta-tag.action-deleted{background:#7f1d1d;color:#fca5a5}
 
 .update-card .card-desc{color:var(--text2);font-size:13px;line-height:1.5;margin-bottom:10px}
+.card-source-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px;margin:8px 0 10px;padding:8px 10px;border:1px solid var(--border);border-radius:8px;background:rgba(255,255,255,0.02);font-size:11px;color:var(--text3)}
+.card-source-fields span{min-width:0;overflow-wrap:anywhere}
+.card-source-fields strong{display:block;color:var(--text2);font-size:10px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
 
 /* Plain English section */
 .update-card .plain-english{
@@ -1288,22 +1291,31 @@ function renderContent() {
       <div class="module-group-body open" id="${id}">`;
 
     for (const item of items) {
-      const actionClass = 'action-' + item.action.toLowerCase();
+      const actionClass = 'action-' + (item.action || '').toLowerCase();
+      const sourceFields = [
+        ['Feature', item.feature],
+        ['Demo', item.demo],
+        ['Valid as of', item.validAsOf],
+        ['Latest revision', item.latestRevision],
+        ['Release', item.releaseVersion]
+      ].filter(([, value]) => value);
+      const sourceHtml = sourceFields.length ? `<div class="card-source-fields">${sourceFields.map(([label, value]) => `<span><strong>${escHtml(label)}</strong>${escHtml(value)}</span>`).join('')}</div>` : '';
       html += `
-      <div class="update-card ${item.impact.level}">
+      <div class="update-card ${escHtml(item.impact.level)}">
         <div class="card-header">
           <span class="card-title">${escHtml(item.title)}</span>
-          <span class="impact-badge ${item.impact.level}">${item.impact.label}</span>
+          <span class="impact-badge ${escHtml(item.impact.level)}">${escHtml(item.impact.label)}</span>
         </div>
         <div class="card-meta">
-          <span class="meta-tag ${actionClass}">${item.action}</span>
-          <span class="meta-tag">${escHtml(item.enablement)}</span>
+          <span class="meta-tag ${escHtml(actionClass)}">${escHtml(item.action)}</span>
+          ${item.enablement ? `<span class="meta-tag">${escHtml(item.enablement)}</span>` : ''}
           ${item.product ? `<span class="meta-tag">${escHtml(item.product)}</span>` : ''}
           ${item.lifecycle ? `<span class="meta-tag">${escHtml(item.lifecycle)}</span>` : ''}
           ${item.version ? `<span class="meta-tag">${escHtml(item.version)}</span>` : ''}
           <span class="score-badge">Score ${item.impactScore || impactScore(item)}</span>
         </div>
-        <div class="card-desc">${item.description.replace(/See More.*$/i, '')}</div>
+        <div class="card-desc">${escHtml((item.description || '').replace(/See More.*$/i, ''))}</div>
+        ${sourceHtml}
         ${item.plainEnglish ? `
         <div class="plain-english">
           <div class="plain-english-label">💡 What this means for you</div>
@@ -1316,7 +1328,7 @@ function renderContent() {
         </div>
         <div class="card-footer">
           <span>${item.refNumber ? 'Ref: ' + escHtml(item.refNumber) : ''}</span>
-          ${item.sapLink ? `<a href="${escHtml(fixSapLink(item.sapLink))}" target="_blank" rel="noopener" class="sap-link">View on SAP</a>` : ''}
+          ${item.sapLink ? `<a href="${escAttr(fixSapLink(item.sapLink))}" target="_blank" rel="noopener" class="sap-link">View on SAP</a>` : ''}
         </div>
       </div>`;
     }
