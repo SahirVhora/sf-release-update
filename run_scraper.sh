@@ -88,7 +88,8 @@ git config user.name  "${GIT_USER_NAME:-SAP Release Bot}"
 git config user.email "${GIT_USER_EMAIL:-release-bot@sf-release-update.github}"
 
 # Stage and commit
-git add data/updates.json index.html
+# data/ is ignored for local scratch files, so force-add the tracked release JSON.
+git add -f data/updates.json index.html
 
 COMMIT_MSG="chore: auto-update release data ($(date -u +'%Y-%m-%d'))"
 git commit -m "$COMMIT_MSG"
