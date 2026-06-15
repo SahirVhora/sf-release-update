@@ -1,14 +1,14 @@
 {
   "metadata": {
     "source": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
-    "scrapedAt": "2026-06-01T11:33:58.115478",
-    "totalItems": 492,
-    "lastScraped": "2026-06-01 11:33 UTC",
+    "scrapedAt": "2026-06-15T12:48:54.782235",
+    "totalItems": 500,
+    "lastScraped": "2026-06-15 12:48 UTC",
     "availableVersions": [
       "1H 2026"
     ],
     "versionCounts": {
-      "1H 2026": 492
+      "1H 2026": 500
     },
     "releaseDates": {
       "1H 2026": {
@@ -18,6 +18,558 @@
     }
   },
   "items": [
+    {
+      "title": "Minor Visual Changes in 1H 2026",
+      "description": "SAP SuccessFactors made numerous minor visual enhancements in 1H 2026. The following enhancements are of particular note, although many less-visible enhancements have been made.",
+      "product": "Career and Talent Development\nEmployee Central\nLearning\nOnboarding\nOpportunity Marketplace\nPerformance & Goals\nPlatform\nSuccession & Development",
+      "module": "Calibration",
+      "feature": "Not Applicable",
+      "lifecycle": "Applicable to All",
+      "action": "Changed",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Automatically on",
+      "validAsOf": "KM-22133",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/3922f18e1f8645d6b91a23f527725aa9.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Minor update - configure if useful. SAP SuccessFactors made numerous minor visual enhancements in 1H 2026",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Enhancements to Payment Information in Full Profile",
+      "description": "We've redesigned the data viewing, the History UI, Editing UI, and metadata rules for Payment Information in the latest People Profile.",
+      "product": "Employee Central",
+      "module": "Localization",
+      "feature": "Not Applicable",
+      "lifecycle": "Country/Region Specifics\nPayment Information\nPeople Profile",
+      "action": "Changed",
+      "enablement": "Major",
+      "refNumber": "General Availability",
+      "demo": "Required",
+      "version": "Customer configured",
+      "validAsOf": "ECT-260057",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/ed05c0e0cb15486e8e5e925b7e0c41e8.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant update. We've redesigned the data viewing, the History UI, Editing UI, and metadata rules for Payment Information in the latest People Profile Plan configuration changes and communicate to users.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Integration of Position Budgeting Control with the SAP SA/4HANA Private Cloud Solution",
+      "description": "The integration of Position Budgeting Control with the SAP S/4HANA Private Cloud solution enables you to initialize reservations and control budgets for employment for fiscal years and budget periods. Business processes are directly managed in SAP SuccessFactors Employee Central.",
+      "product": "Employee Central",
+      "module": "Payroll",
+      "feature": "Not Applicable",
+      "lifecycle": "Public Sector Management",
+      "action": "New",
+      "enablement": "Major",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Contact Enablement Partner",
+      "validAsOf": "ECT-257054",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/84610b388b1143c6ac17ceace738e97c.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. The integration of Position Budgeting Control with the SAP S/4HANA Private Cloud solution enables you to initialize reservations and control budgets for employment for fiscal years and budget periods Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Replication of Start and End Times in Time Valuation Results to Employee Remuneration Info (2010) Infotype",
+      "description": "Start and end times in time valuation results are now replicated to the Employee Remuneration Info (2010) infotype in an SAP payroll system, helping ensure accurate payroll processing and regulatory compliance.",
+      "product": "Employee Central Payroll",
+      "module": "Payroll",
+      "feature": "Hire to Retire",
+      "lifecycle": "Time Data Replication",
+      "action": "New",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Customer configured",
+      "validAsOf": "PAY-32154",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/3917c4c3851f46c9ba3525d4ee5c5401.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Available when you're ready. Start and end times in time valuation results are now replicated to the Employee Remuneration Info (2010) infotype in an SAP payroll system, helping ensure accurate payroll processing and regulator... Test in non-production before enabling broadly.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Replication of Public Sector Cost Objects in Time Sheet to Employee Remuneration Info (2010) Infotype",
+      "description": "SAP SuccessFactors Time Tracking now enhances Time Pay Components with cost object information received from the S/4HANA Consolidated Time Recording (CTR) to support payroll processing. This additional cost data is also replicated to infotype 2010 in an SAP Payroll system for further processing.",
+      "product": "Employee Central Payroll\nTime Tracking",
+      "module": "Payroll",
+      "feature": "Hire to Retire",
+      "lifecycle": "Public Sector Management\nTime Data Replication\nTime Sheet",
+      "action": "New",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Customer configured",
+      "validAsOf": "PAY-32685",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/4ccd4ac7ec5c41e6b0b2de38500a4934.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Available when you're ready. SAP SuccessFactors Time Tracking now enhances Time Pay Components with cost object information received from the S/4HANA Consolidated Time Recording (CTR) to support payroll processing Test in non-production before enabling broadly.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Enhanced Hiring Status Indicator on Latest People Profile",
+      "description": "As an administrator, you can now identify and manage the profiles of the new hires with the introduction of the hiring status indicator on their profile.",
+      "product": "Employee Central\nOnboarding",
+      "module": "Onboarding",
+      "feature": "Hire to Retire",
+      "lifecycle": "Onboarding\nPeople Profile",
+      "action": "New",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Automatically on",
+      "validAsOf": "OBX-40237",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/08fc791539b04e3d9e59cde5d0895553.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Available when you're ready. As an administrator, you can now identify and manage the profiles of the new hires with the introduction of the hiring status indicator on their profile Test in non-production before enabling broadly.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Deprecation of Employee Central SFAPIs Except CompoundEmployee API",
+      "description": "The SOAP-based SFAPIs for Employee Central, except the CompoundEmployee API, reached end of maintenance on May 17, 2024 and will be deleted on May 14, 2027.",
+      "product": "Employee Central\nPlatform",
+      "module": "Employee Data",
+      "feature": "Hire to Retire",
+      "lifecycle": "API",
+      "action": "Changed",
+      "enablement": "",
+      "refNumber": "Deprecated",
+      "demo": "Required",
+      "version": "Automatically on",
+      "validAsOf": "ECT-205994",
+      "latestRevision": "Not Applicable",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/9813356f633b458d85d3d548a18550d2.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details - this affects your system automatically.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Consolidated Time Recording for Public Sector",
+      "description": "You can now use a consolidated timesheet in the cloud that integrates SAP S/4HANA MyTimesheet with SAP SuccessFactors Time Tracking for regulated industries.",
+      "product": "Employee Central\nTime Tracking",
+      "module": "Payroll",
+      "feature": "Not Applicable",
+      "lifecycle": "Public Sector Management",
+      "action": "New",
+      "enablement": "Major",
+      "refNumber": "General Availability",
+      "demo": "Recommended",
+      "version": "Customer configured",
+      "validAsOf": "ECT-229764",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/bd6740d5a95a472f8c9c475139f7cd34.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. You can now use a consolidated timesheet in the cloud that integrates SAP S/4HANA MyTimesheet with SAP SuccessFactors Time Tracking for regulated industries Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Deprecation of SuccessFactors Learning Token Server",
+      "description": "The SuccessFactors Learning token server will reach End of Maintenance on November 17, 2023 and will be Deleted on November 12, 2027.",
+      "product": "Learning",
+      "module": "Integration and Extension",
+      "feature": "Not Applicable",
+      "lifecycle": "API",
+      "action": "Changed",
+      "enablement": "Major",
+      "refNumber": "Deprecated",
+      "demo": "Required",
+      "version": "Automatically on",
+      "validAsOf": "LRN-99952",
+      "latestRevision": "Not Applicable",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/527174fdddc64102910258133d32b2ae.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details - this affects your system automatically.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Upgrade for Data Services Encrypted Extracts",
+      "description": "As part of a security infrastructure upgrade, GnuPG (gpg2) is being upgraded from version 2.2 to 2.4 with the 1H 2026 production release. As an administrator, you must ensure your decryption systems support AEAD mode or provide an updated PGP public key without AEAD preferences before September 30, 2026, to maintain compatibility with encrypted Data Services extracts. If your PGP public key includes AEAD preferences, files encrypted after the upgrade will use AEAD mode. This may cause interoperability issues if your decryption systems run older versions of GnuPG or don't support AEAD mode, even though your public key advertises these preferences.",
+      "product": "Learning",
+      "module": "Integration and Extension",
+      "feature": "Not Applicable",
+      "lifecycle": "Data Models",
+      "action": "New",
+      "enablement": "Major",
+      "refNumber": "General Availability",
+      "demo": "Recommended",
+      "version": "Automatically on",
+      "validAsOf": "KM-22820",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/6608c9243bab4b959448d4b226ec82af.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. As part of a security infrastructure upgrade, GnuPG (gpg2) is being upgraded from version 2 Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Configuration to Enforce Domain Restrictions for Marking Attendance",
+      "description": "A new configuration enforces security domain restrictions for marking class attendance.",
+      "product": "Learning",
+      "module": "System Management",
+      "feature": "Not Applicable",
+      "lifecycle": "Learning Completions",
+      "action": "New",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Customer configured",
+      "validAsOf": "LRN-211271",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/b374524ef0464b8f92218d1f075ed882.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Available when you're ready. A new configuration enforces security domain restrictions for marking class attendance Test in non-production before enabling broadly.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Cancel Form I-9 Process from the New Hire Details page",
+      "description": "Hiring managers and onboarding participants can now cancel the Form I-9 process using the Compliance Processes Details button on the New Hire Details page.",
+      "product": "Onboarding",
+      "module": "Onboarding",
+      "feature": "Not Applicable",
+      "lifecycle": "Onboarding Dashboards",
+      "action": "New",
+      "enablement": "Major",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Automatically on",
+      "validAsOf": "OBX-27738",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/54877f3bb9ce4a8cb0a5b9da51cf371f.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. Hiring managers and onboarding participants can now cancel the Form I-9 process using the Compliance Processes Details button on the New Hire Details page Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Initiate the U.S Form I-9 Correction or Reverification Processes from the New Hire Details Page",
+      "description": "Human Resources administrators, managers, and onboarding participants, can now initiate the Correct I-9 Section 1 or Correct I-9 Section 2 processes, and the Start Reverification process from the Action menu of the New Hire Details page. The Complete Form I-9 Section 3 task is now available in the Form I-9 and E-Verify tab on the Onboarding Dashboard.",
+      "product": "Onboarding",
+      "module": "Onboarding",
+      "feature": "Not Applicable",
+      "lifecycle": "Onboarding Dashboards",
+      "action": "Changed",
+      "enablement": "Major",
+      "refNumber": "General Availability",
+      "demo": "Required",
+      "version": "Customer configured",
+      "validAsOf": "OBX-39846",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/af0c163454be44ec94ce8af6455a1c1e.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant update. Human Resources administrators, managers, and onboarding participants, can now initiate the Correct I-9 Section 1 or Correct I-9 Section 2 processes, and the Start Reverification process from the A... Plan configuration changes and communicate to users.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Replacement of Onboarding 1.0 with Onboarding",
+      "description": "SAP SuccessFactors Onboarding 1.0 will reach the end of maintenance and full deprecation with the first half 2026 release, on May 14, 2026. Customers must complete their migration to the new Onboarding solution before this date. To avoid any undue disruption, Onboarding 1.0 remains temporarily accessible even after May 14, 2026.",
+      "product": "Onboarding 1.0",
+      "module": "Onboarding",
+      "feature": "Not Applicable",
+      "lifecycle": "Onboarding",
+      "action": "Changed",
+      "enablement": "",
+      "refNumber": "Deprecated",
+      "demo": "Required",
+      "version": "Automatically on",
+      "validAsOf": "KM-15679",
+      "latestRevision": "Not Applicable",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/fb1d272c50c6425a9698da64b9fce1d9.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2026. Review the details - this affects your system automatically.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Additional Set of Insights and Data Products Available for People Intelligence",
+      "description": "With this release, People Intelligence delivers intelligent content and data products from SAP SuccessFactors product areas like Compensation, Rewards and Recognition, and Employee Central Benefits.",
+      "product": "People Intelligence",
+      "module": "Analytics",
+      "feature": "Not Applicable",
+      "lifecycle": "Not Applicable",
+      "action": "New",
+      "enablement": "Major",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Customer configured",
+      "validAsOf": "PIN-2031",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/71628ca452a74e7085adda796bea922f.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. With this release, People Intelligence delivers intelligent content and data products from SAP SuccessFactors product areas like Compensation, Rewards and Recognition, and Employee Central Benefits Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Deletion of Microsoft Outlook Add-in for Providing Continuous Feedback",
+      "description": "The Outlook add-in for users to provide continuous feedback will be fully removed on November 13, 2026.",
+      "product": "Performance & Goals",
+      "module": "Continuous Performance Management",
+      "feature": "Not Applicable",
+      "lifecycle": "Continuous Feedback",
+      "action": "Changed",
+      "enablement": "",
+      "refNumber": "Deleted",
+      "demo": "Required",
+      "version": "Automatically on",
+      "validAsOf": "SFSL-15142",
+      "latestRevision": "Not Applicable",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/7e89b6cda646498b91d407b657cb9bb4.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Important change you need to act on. Timeline: November 13, 2026. Review the details - this affects your system automatically.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Deprecation of Basic Authentication for APIs",
+      "description": "Access to APIs based on HTTP Basic Authentication will reach end of maintenance on June 2, 2023 and will be deleted on November 12, 2027.",
+      "product": "Platform",
+      "module": "Integration and Extension",
+      "feature": "Not Applicable",
+      "lifecycle": "API",
+      "action": "Changed",
+      "enablement": "",
+      "refNumber": "Deprecated",
+      "demo": "Required",
+      "version": "Automatically on",
+      "validAsOf": "API-14291",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/fcc05a902b4140e585d968c2fe4a96bc.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details - this affects your system automatically.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Deprecation of SAP SuccessFactors - WorkForce Software Integration Package",
+      "description": "The SAP SuccessFactors package that supports integration of SAP SuccessFactors Employee Central with Time and Attendance Management by WorkForce Software will reach End of Development on May 15, 2026.",
+      "product": "Platform",
+      "module": "Integration and Extension",
+      "feature": "Not Applicable",
+      "lifecycle": "Integration Packages",
+      "action": "Changed",
+      "enablement": "",
+      "refNumber": "Deprecated",
+      "demo": "Required",
+      "version": "Automatically on",
+      "validAsOf": "SFINT-21067",
+      "latestRevision": "Not Applicable",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/958c59fa6bee4062a2faf86ec4cb3bac.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Change Audit for Basic Authentication Configuration",
+      "description": "As an administrator, you can now track configuration changes made to the OData API Basic Authentication Configuration page through the change audit log. This enhancement provides visibility into modifications of IP allowlist changes for accessing OData APIs through basic authentication.",
+      "product": "Platform",
+      "module": "Integration and Extension",
+      "feature": "Not Applicable",
+      "lifecycle": "API\nAudit Trail",
+      "action": "New",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Automatically on",
+      "validAsOf": "SFAPI-35576",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/256826e8fe234973b7814f805cd8d1b5.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Available when you're ready. As an administrator, you can now track configuration changes made to the OData API Basic Authentication Configuration page through the change audit log Test in non-production before enabling broadly.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Full Profile Deep Link Support in the SAP SuccessFactors Mobile App",
+      "description": "You can now configure deep links that take users directly to a Full Profile category or to the details page of a specific card in the SAP SuccessFactors Mobile app, from entry points such as the home page.",
+      "product": "Platform",
+      "module": "Mobile Applications",
+      "feature": "Not Applicable",
+      "lifecycle": "People Profile",
+      "action": "New",
+      "enablement": "Major",
+      "refNumber": "General Availability",
+      "demo": "Recommended",
+      "version": "Customer configured",
+      "validAsOf": "MOB-113924",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/3cab25e0bb50401ca5cde504a2f86d23.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. You can now configure deep links that take users directly to a Full Profile category or to the details page of a specific card in the SAP SuccessFactors Mobile app, from entry points such as the ho... Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "SAP User Experience Updates Now Available in All Systems",
+      "description": "SAP user experience updates are now available in Production systems. Previously, they were only available in Preview systems.",
+      "product": "Platform",
+      "module": "User Experience",
+      "feature": "Not Applicable",
+      "lifecycle": "Not Applicable",
+      "action": "Changed",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Customer configured",
+      "validAsOf": "WEF-168972",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/458a7525490f4848a71f9ee562ecefcd.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Minor update - configure if useful. SAP user experience updates are now available in Production systems",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Enhancements to Employment Switcher in SAP SuccessFactors Work Zone",
+      "description": "We've enhanced the employment switcher in SAP SuccessFactors Work Zone by aligning its entry location and employment indicators with SAP SuccessFactors.",
+      "product": "SAP SuccessFactors Work Zone",
+      "module": "Integration and Extension",
+      "feature": "Not Applicable",
+      "lifecycle": "Work Zone Content",
+      "action": "Changed",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Automatically on",
+      "validAsOf": "SFSWZ-9149",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/06a867924d164c359e3186c1eed13ceb.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Minor update - configure if useful. We've enhanced the employment switcher in SAP SuccessFactors Work Zone by aligning its entry location and employment indicators with SAP SuccessFactors",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Deprecation of Manual Data Synchronization in SAP SuccessFactors Work Zone",
+      "description": "Manual data synchronization from SAP SuccessFactors to SAP SuccessFactors Work Zone will reach end of maintenance on September 21, 2026 and will be deleted on November 20, 2026.",
+      "product": "SAP SuccessFactors Work Zone",
+      "module": "Integration and Extension",
+      "feature": "Not Applicable",
+      "lifecycle": "Work Zone Content",
+      "action": "Changed",
+      "enablement": "",
+      "refNumber": "Deprecated",
+      "demo": "Required",
+      "version": "Automatically on",
+      "validAsOf": "SFSWZ-8772",
+      "latestRevision": "Not Applicable",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/edd349d49fad45bdaf1f03ddcbb46fd9.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Important change you need to act on. Timeline: September 21, 2026. Review the details - this affects your system automatically.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Enhancements to SmartRecruiters Integration (June 2026)",
+      "description": "We've made some enhancements to the integration with SmartRecruiters.",
+      "product": "SmartRecruiters",
+      "module": "Integration and Extension",
+      "feature": "Not Applicable",
+      "lifecycle": "Not Applicable",
+      "action": "Changed",
+      "enablement": "Minor",
+      "refNumber": "General Availability",
+      "demo": "Info only",
+      "version": "Customer configured",
+      "validAsOf": "SMR-811",
+      "latestRevision": "",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/d564c326f1b842a6a897ae3d949fa62a.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Minor update - configure if useful. We've made some enhancements to the integration with SmartRecruiters",
+      "releaseVersion": "1H 2026"
+    },
     {
       "title": "Deprecation of People Profile in the Employee Central Employee History Field Mapping Tool",
       "description": "The capability to map from People Profile as an Employee Central Category when using the Employee Central Employee History Field Mapping tool will reach the end of maintenance on May 15, 2026 and will be deleted on May 14, 2027.",
@@ -203,52 +755,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "Replication of Public Sector Cost Objects in Time Sheet to Employee Remuneration Info (2010) Infotype",
-      "description": "SAP SuccessFactors Time Tracking now enhances Time Pay Components with cost object information received from the S/4HANA Consolidated Time Recording (CTR) to support payroll processing. This additional cost data is also replicated to infotype 2010 in an SAP Payroll system for further processing.",
-      "product": "Employee Central Payroll\nTime Tracking",
-      "module": "Payroll",
-      "feature": "Hire to Retire",
-      "lifecycle": "Public Sector Management\nTime Data Replication\nTime Sheet",
-      "action": "New",
-      "enablement": "Minor",
-      "refNumber": "General Availability",
-      "demo": "Info only",
-      "version": "Customer configured",
-      "validAsOf": "PAY-32685",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/4ccd4ac7ec5c41e6b0b2de38500a4934.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "low",
-        "label": "Low",
-        "color": "#22c55e"
-      },
-      "plainEnglish": "Available when you're ready. SAP SuccessFactors Time Tracking now enhances Time Pay Components with cost object information received from the S/4HANA Consolidated Time Recording (CTR) to support payroll processing Test in non-production before enabling broadly.",
-      "releaseVersion": "1H 2026"
-    },
-    {
-      "title": "Consolidated Time Recording for Public Sector",
-      "description": "You can now use a consolidated timesheet in the cloud that integrates SAP S/4HANA MyTimesheet with SAP SuccessFactors Time Tracking for regulated industries.",
-      "product": "Employee Central\nTime Tracking",
-      "module": "Public Sector Management",
-      "feature": "Not Applicable",
-      "lifecycle": "Public Sector Management",
-      "action": "New",
-      "enablement": "Major",
-      "refNumber": "General Availability",
-      "demo": "Recommended",
-      "version": "Customer configured",
-      "validAsOf": "ECT-229764",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/bd6740d5a95a472f8c9c475139f7cd34.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "Significant new capability - could change how you work. You can now use a consolidated timesheet in the cloud that integrates SAP S/4HANA MyTimesheet with SAP SuccessFactors Time Tracking for regulated industries Review config steps and test in sandbox first.",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Enhancements to Business Process Engine",
       "description": "Two configurations for Business Process Engine are now available in Admin Center and all business process to-do tasks now appear in the For You Today section on the latest home page.",
       "product": "Onboarding\nPlatform",
@@ -364,29 +870,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "Deprecation of SAP SuccessFactors - WorkForce Software Integration Package",
-      "description": "The integration package that supports integration of SAP SuccessFactors Employee Central with Time and Attendance Management by WorkForce Software will reach End of Development on May 15, 2026.",
-      "product": "Platform",
-      "module": "Integration and Extension",
-      "feature": "Not Applicable",
-      "lifecycle": "Integration Packages",
-      "action": "Changed",
-      "enablement": "",
-      "refNumber": "Deprecated",
-      "demo": "Required",
-      "version": "Automatically on",
-      "validAsOf": "SFINT-21067",
-      "latestRevision": "Not Applicable",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/958c59fa6bee4062a2faf86ec4cb3bac.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "critical",
-        "label": "Critical",
-        "color": "#ef4444"
-      },
-      "plainEnglish": "Important change you need to act on. Timeline: May 15, 2026. Review the details - this affects your system automatically.",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Data Export in View Mode for Story Reports",
       "description": "This feature is no longer available for 1H 2026. Users with view-only access to a story can now export data from Story page directly in view mode.",
       "product": "Platform",
@@ -499,29 +982,6 @@
         "color": "#f97316"
       },
       "plainEnglish": "Significant update. The redesigned data viewing experience of Full Profile is now universally available for all customers Plan configuration changes and communicate to users.",
-      "releaseVersion": "1H 2026"
-    },
-    {
-      "title": "Minor Visual Changes in 1H 2026",
-      "description": "SAP SuccessFactors made numerous minor visual enhancements in 1H 2026. The following enhancements are of particular note, although many less-visible enhancements have been made.",
-      "product": "Career and Talent Development\nEmployee Central\nLearning\nOnboarding\nOpportunity Marketplace\nPerformance & Goals\nPlatform\nSuccession & Development",
-      "module": "Calibration",
-      "feature": "Not Applicable",
-      "lifecycle": "Applicable to All",
-      "action": "Changed",
-      "enablement": "Minor",
-      "refNumber": "General Availability",
-      "demo": "Info only",
-      "version": "Automatically on",
-      "validAsOf": "KM-22133",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/3922f18e1f8645d6b91a23f527725aa9.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Minor update - configure if useful. SAP SuccessFactors made numerous minor visual enhancements in 1H 2026",
       "releaseVersion": "1H 2026"
     },
     {
@@ -847,29 +1307,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "Upgrade for Data Services Encrypted Extracts",
-      "description": "As part of a security infrastructure upgrade, GnuPG (gpg2) is being upgraded from version 2.2 to 2.4 with the 1H 2026 production release. As an administrator, you must ensure your decryption systems support AEAD mode or provide an updated PGP public key without AEAD preferences before September 30, 2026, to maintain compatibility with encrypted Data Services extracts. If your PGP public key includes AEAD preferences, files encrypted after the upgrade will use AEAD mode. This may cause interoperability issues if your decryption systems run older versions of GnuPG or don't support AEAD mode, even though your public key advertises these preferences.",
-      "product": "Learning",
-      "module": "Integration and Extension",
-      "feature": "Not Applicable",
-      "lifecycle": "Data Models",
-      "action": "New",
-      "enablement": "Major",
-      "refNumber": "General Availability",
-      "demo": "Recommended",
-      "version": "Automatically on",
-      "validAsOf": "KM-22820",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/6608c9243bab4b959448d4b226ec82af.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "Significant new capability - could change how you work. As part of a security infrastructure upgrade, GnuPG (gpg2) is being upgraded from version 2 Review config steps and test in sandbox first.",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Enhanced Continuous Feedback Experience",
       "description": "The feedback dialogs on the Continuous Feedback, Continuous Performance, and Home Page pages now provide an improved user experience through several enhancements.",
       "product": "Performance & Goals\nPlatform",
@@ -1054,29 +1491,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "Enhanced Hiring Status Indicator on Latest People Profile",
-      "description": "As an administrator, you can now identify and manage the profiles of the new hires with the introduction of the hiring status indicator on their profile.",
-      "product": "Employee Central\nOnboarding",
-      "module": "Onboarding",
-      "feature": "Hire to Retire",
-      "lifecycle": "Onboarding\nPeople Profile",
-      "action": "New",
-      "enablement": "Minor",
-      "refNumber": "General Availability",
-      "demo": "Info only",
-      "version": "Automatically on",
-      "validAsOf": "OBX-40237",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/08fc791539b04e3d9e59cde5d0895553.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "low",
-        "label": "Low",
-        "color": "#22c55e"
-      },
-      "plainEnglish": "Available when you're ready. As an administrator, you can now identify and manage the profiles of the new hires with the introduction of the hiring status indicator on their profile Test in non-production before enabling broadly.",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Quick Access to Learning Details on the Learning Home Page",
       "description": "Learners can view additional learning details for courses, programs, classes, and curricula directly on the Learning home page without navigating to the details page.",
       "product": "Learning",
@@ -1120,52 +1534,6 @@
         "color": "#eab308"
       },
       "plainEnglish": "Minor update - configure if useful. Learners can securely reset their e-signature PIN using Forgot My PIN from the Learning home page when needed",
-      "releaseVersion": "1H 2026"
-    },
-    {
-      "title": "Cancel Form I-9 Process from the New Hire Details page",
-      "description": "Hiring managers and onboarding participants can now cancel the Form I-9 process using the Compliance Processes Details button on the New Hire Details page.",
-      "product": "Onboarding",
-      "module": "Onboarding",
-      "feature": "Not Applicable",
-      "lifecycle": "Onboarding Dashboards",
-      "action": "New",
-      "enablement": "Major",
-      "refNumber": "General Availability",
-      "demo": "Info only",
-      "version": "Automatically on",
-      "validAsOf": "OBX-27738",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/54877f3bb9ce4a8cb0a5b9da51cf371f.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "Significant new capability - could change how you work. Hiring managers and onboarding participants can now cancel the Form I-9 process using the Compliance Processes Details button on the New Hire Details page Review config steps and test in sandbox first.",
-      "releaseVersion": "1H 2026"
-    },
-    {
-      "title": "Initiate the U.S Form I-9 Correction or Reverification Processes from the New Hire Details Page",
-      "description": "Human Resources administrators, managers, and onboarding participants, can now initiate the Correct I-9 Section 1 or Correct I-9 Section 2 processes, and the Start Reverification process from the Action menu of the New Hire Details page. The Complete Form I-9 Section 3 task is now available in the Form I-9 and E-Verify tab on the Onboarding Dashboard.",
-      "product": "Onboarding",
-      "module": "Onboarding",
-      "feature": "Not Applicable",
-      "lifecycle": "Onboarding Dashboards",
-      "action": "Changed",
-      "enablement": "Major",
-      "refNumber": "General Availability",
-      "demo": "Required",
-      "version": "Customer configured",
-      "validAsOf": "OBX-39846",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/af0c163454be44ec94ce8af6455a1c1e.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "Significant update. Human Resources administrators, managers, and onboarding participants, can now initiate the Correct I-9 Section 1 or Correct I-9 Section 2 processes, and the Start Reverification process from the A... Plan configuration changes and communicate to users.",
       "releaseVersion": "1H 2026"
     },
     {
@@ -4366,29 +4734,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "Enhancements to Payment Information in Full Profile",
-      "description": "We've redesigned the data viewing, the History UI, Editing UI, and metadata rules for Payment Information in the latest People Profile.",
-      "product": "Employee Central",
-      "module": "Localization",
-      "feature": "Not Applicable",
-      "lifecycle": "Country/Region Specifics\nPayment Information\nPeople Profile",
-      "action": "Changed",
-      "enablement": "Major",
-      "refNumber": "General Availability",
-      "demo": "Required",
-      "version": "Customer configured",
-      "validAsOf": "ECT-260057",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/ed05c0e0cb15486e8e5e925b7e0c41e8.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "Significant update. We've redesigned the data viewing, the History UI, Editing UI, and metadata rules for Payment Information in the latest People Profile Plan configuration changes and communicate to users.",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Enhanced Mass Data Management for Job Relationships",
       "description": "You can now use Mass Data Management to add and delete Job Relationships, along with the existing bulk-edit functionality to manage multiple organizational changes in a single request.",
       "product": "Employee Central",
@@ -4984,29 +5329,6 @@
         "color": "#f97316"
       },
       "plainEnglish": "Significant update. We enhanced the Payroll Control Center: Manage Payroll Activities solution with the archiving function, the new Activity Audit Trail app, and synchronous update of employees selected in the payroll... Plan configuration changes and communicate to users.",
-      "releaseVersion": "1H 2026"
-    },
-    {
-      "title": "Replication of Start and End Times in Time Valuation Results to Employee Remuneration Info (2010) Infotype",
-      "description": "Start and end times in time valuation results are now replicated to the Employee Remuneration Info (2010) infotype in an SAP payroll system, helping ensure accurate payroll processing and regulatory compliance.",
-      "product": "Employee Central Payroll",
-      "module": "Payroll",
-      "feature": "Hire to Retire",
-      "lifecycle": "Time Data Replication",
-      "action": "New",
-      "enablement": "Minor",
-      "refNumber": "General Availability",
-      "demo": "Info only",
-      "version": "Customer configured",
-      "validAsOf": "PAY-32154",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/3917c4c3851f46c9ba3525d4ee5c5401.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "low",
-        "label": "Low",
-        "color": "#22c55e"
-      },
-      "plainEnglish": "Available when you're ready. Start and end times in time valuation results are now replicated to the Employee Remuneration Info (2010) infotype in an SAP payroll system, helping ensure accurate payroll processing and regulator... Test in non-production before enabling broadly.",
       "releaseVersion": "1H 2026"
     },
     {
@@ -5996,29 +6318,6 @@
         "color": "#f97316"
       },
       "plainEnglish": "Significant new capability - could change how you work. Learning administrators can now manage assignments, completions, history, and employment data at the person level for learners with multiple employments in Employee Central Review config steps and test in sandbox first.",
-      "releaseVersion": "1H 2026"
-    },
-    {
-      "title": "Deprecation of SuccessFactors Learning Token Server",
-      "description": "The SuccessFactors Learning token server will reach End of Maintenance on November 17, 2023 and will be Deleted on November 20, 2026.",
-      "product": "Learning",
-      "module": "Integration and Extension",
-      "feature": "Not Applicable",
-      "lifecycle": "API",
-      "action": "Changed",
-      "enablement": "",
-      "refNumber": "Deprecated",
-      "demo": "Required",
-      "version": "Automatically on",
-      "validAsOf": "LRN-99952",
-      "latestRevision": "Not Applicable",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/527174fdddc64102910258133d32b2ae.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "critical",
-        "label": "Critical",
-        "color": "#ef4444"
-      },
-      "plainEnglish": "Important change you need to act on. Timeline: November 17, 2023. Review the details - this affects your system automatically.",
       "releaseVersion": "1H 2026"
     },
     {
@@ -9288,29 +9587,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "SAP User Experience Updates Now Available in All Systems",
-      "description": "SAP user experience updates are now available in Production systems. Previously, they were only available in Preview systems.",
-      "product": "Platform",
-      "module": "User Experience",
-      "feature": "Not Applicable",
-      "lifecycle": "Not Applicable",
-      "action": "Changed",
-      "enablement": "Minor",
-      "refNumber": "General Availability",
-      "demo": "Info only",
-      "version": "Customer configured",
-      "validAsOf": "WEF-168972",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/458a7525490f4848a71f9ee562ecefcd.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Minor update - configure if useful. SAP user experience updates are now available in Production systems",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Translation Hints for Predefined Category Names in People Profile Admin Tool",
       "description": "When you edit names for predefined categories in the Configure Latest People Profile tool, the translations popup now shows SAP-delivered localized titles as read-only hints for each language available in your system.",
       "product": "Platform",
@@ -10116,29 +10392,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "Replacement of Onboarding 1.0 with Onboarding",
-      "description": "SAP SuccessFactors Onboarding 1.0 will reach the end of maintenance and full deprecation with the first half 2026 release, on May 14, 2026. Customers must complete their migration to the new Onboarding solution before this date. After May 14, 2026, Onboarding 1.0 is permanently inaccessible, and will be deleted on November 13, 2026.",
-      "product": "Onboarding 1.0",
-      "module": "Onboarding",
-      "feature": "Not Applicable",
-      "lifecycle": "Onboarding",
-      "action": "Changed",
-      "enablement": "",
-      "refNumber": "Deprecated",
-      "demo": "Required",
-      "version": "Automatically on",
-      "validAsOf": "KM-15679",
-      "latestRevision": "Not Applicable",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/fb1d272c50c6425a9698da64b9fce1d9.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "critical",
-        "label": "Critical",
-        "color": "#ef4444"
-      },
-      "plainEnglish": "Important change you need to act on. Timeline: May 14, 2026. Review the details - this affects your system automatically.",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Accessing Audit Logs Through SAP Audit Log Service",
       "description": "Administrators can now access audit logs through the Viewer for SAP Audit Log service and Audit Log Search API.",
       "product": "Platform",
@@ -10645,29 +10898,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "Deprecation of Microsoft Outlook Add-in for Providing Continuous Feedback",
-      "description": "The Outlook add-in for users to provide continuous feedback reached end of development and maintenance on May 16, 2025, and will be deleted on November 13, 2026.",
-      "product": "Performance & Goals",
-      "module": "Continuous Performance Management",
-      "feature": "Not Applicable",
-      "lifecycle": "Continuous Feedback",
-      "action": "Changed",
-      "enablement": "",
-      "refNumber": "Deprecated",
-      "demo": "Required",
-      "version": "Automatically on",
-      "validAsOf": "SFSL-15142",
-      "latestRevision": "Not Applicable",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/7e89b6cda646498b91d407b657cb9bb4.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "critical",
-        "label": "Critical",
-        "color": "#ef4444"
-      },
-      "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details - this affects your system automatically.",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Goal Alignment Section Enhanced and Available on the Latest Performance Management Form",
       "description": "On the goal details page, the Goal Alignment section now displays the parent goal name, including a link to its details. Additionally, goal alignment information is now available in the latest experience of Performance Management forms, with the same layout and functionality as seen on the goal details page.",
       "product": "Performance & Goals",
@@ -11151,29 +11381,6 @@
       "releaseVersion": "1H 2026"
     },
     {
-      "title": "Deprecation of Basic Authentication for APIs",
-      "description": "Access to APIs based on HTTP Basic Authentication will reach end of maintenance on June 2, 2023 and will be deleted on November 20, 2026.",
-      "product": "Platform",
-      "module": "Integration and Extension",
-      "feature": "Not Applicable",
-      "lifecycle": "API",
-      "action": "Changed",
-      "enablement": "",
-      "refNumber": "Deprecated",
-      "demo": "Required",
-      "version": "Automatically on",
-      "validAsOf": "API-14291",
-      "latestRevision": "",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/fcc05a902b4140e585d968c2fe4a96bc.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "critical",
-        "label": "Critical",
-        "color": "#ef4444"
-      },
-      "plainEnglish": "Important change you need to act on. Timeline: June 2, 2023. Review the details - this affects your system automatically.",
-      "releaseVersion": "1H 2026"
-    },
-    {
       "title": "Deprecation of Old MIME Type and Adoption of Mozilla/IANA MIME Type Standard in Document Management",
       "description": "The old MIME type standard used in SAP SuccessFactors will be replaced with the new Mozilla/IANA MIME type standard on November 14, 2025, with full deprecation and removal planned for November 2026.",
       "product": "Platform",
@@ -11263,29 +11470,6 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Important change you need to act on. Timeline: May 16, 2025. Review the details - this affects your system automatically.",
-      "releaseVersion": "1H 2026"
-    },
-    {
-      "title": "Deprecation of Employee Central SFAPIs Except CompoundEmployee API",
-      "description": "The SOAP-based SFAPIs for Employee Central, except the CompoundEmployee API, will reach end of maintenance on May 17, 2024 and will be deleted on November 20, 2026.",
-      "product": "Employee Central\nPlatform",
-      "module": "Employee Data",
-      "feature": "Hire to Retire",
-      "lifecycle": "API",
-      "action": "Changed",
-      "enablement": "",
-      "refNumber": "Deprecated",
-      "demo": "Required",
-      "version": "Automatically on",
-      "validAsOf": "ECT-205994",
-      "latestRevision": "Not Applicable",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/9813356f633b458d85d3d548a18550d2.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "critical",
-        "label": "Critical",
-        "color": "#ef4444"
-      },
-      "plainEnglish": "Important change you need to act on. Timeline: May 17, 2024. Review the details - this affects your system automatically.",
       "releaseVersion": "1H 2026"
     },
     {
