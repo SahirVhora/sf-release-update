@@ -6,7 +6,10 @@ Run: python3 scraper.py
 Output: data/updates.json
 """
 
-import html, json, os, re, sys, time
+import html
+import json
+import re
+import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -364,6 +367,31 @@ def scrape_with_playwright():
                     print(f"  Failed to switch version: {e}")
                     continue
             
+            # Detect column order from <th> headers in the table thead (auto-adapts
+            # if SAP reorders or renames columns). Falls back to legacy positional
+            # indices when the header row is missing.
+            column_index: dict[str, int] = {}
+            try:
+                header_cells = page.query_selector_all("table thead th")
+                for idx, th in enumerate(header_cells):
+                    label = (th.inner_text() or "").strip()
+                    if label:
+                        column_index[label] = idx
+                if column_index:
+                    print(f"  Detected table columns: {list(column_index.keys())}")
+            except Exception as e:
+                print(f"  Column header detection failed: {e}")
+
+            def _cell(cells, field: str, fallback: int) -> str:
+                """Read a cell by header name when available, else by fallback index."""
+                if field in column_index:
+                    idx = column_index[field]
+                    if idx < len(cells):
+                        return (cells[idx].inner_text() or "").strip()
+                if fallback < len(cells):
+                    return (cells[fallback].inner_text() or "").strip()
+                return ""
+
             # Extract all pages for this version
             page_num = 1
             version_items = 0
@@ -395,7 +423,7 @@ def scrape_with_playwright():
                     cells = row.query_selector_all("td")
                     if len(cells) < 8:
                         continue
-                    
+
                     title = (cells[0].inner_text() or "").strip().removeprefix("Preview ")
                     description = (cells[1].inner_text() or "").strip().removesuffix("See More").strip()
                     product = (cells[2].inner_text() or "").strip()
@@ -405,11 +433,33 @@ def scrape_with_playwright():
                     lifecycle = (cells[5].inner_text() or "").strip()
                     action = (cells[6].inner_text() or "").strip()
                     enablement = (cells[7].inner_text() or "").strip()
-                    ref_number = (cells[8].inner_text() or "").strip() if len(cells) > 8 else ""
-                    demo = (cells[9].inner_text() or "").strip() if len(cells) > 9 else ""
-                    version_field = (cells[10].inner_text() or "").strip() if len(cells) > 10 else ""
-                    valid_as_of = (cells[11].inner_text() or "").strip() if len(cells) > 11 else ""
-                    latest_revision = (cells[12].inner_text() or "").strip() if len(cells) > 12 else ""
+                    # Header-aware extraction. Falls back to legacy indices (8-12)
+                    # when <th> detection failed. Note: SAP has historically exposed
+                    # the refNumber under varying labels ("Reference Number",
+                    # "Component / Reference Number", etc.) - try common variants.
+                    ref_number = (
+                        _cell(cells, "Reference Number", 8)
+                        or _cell(cells, "Component / Reference Number", 8)
+                        or _cell(cells, "Ref. Number", 8)
+                        or _cell(cells, "Reference", 8)
+                    )
+                    demo = (
+                        _cell(cells, "Demo", 9)
+                        or _cell(cells, "Demo Available", 9)
+                    )
+                    version_field = (
+                        _cell(cells, "Version", 10)
+                        or _cell(cells, "Software Version", 10)
+                    )
+                    valid_as_of = (
+                        _cell(cells, "Valid As Of", 11)
+                        or _cell(cells, "Valid as of", 11)
+                        or _cell(cells, "Valid as Of", 11)
+                    )
+                    latest_revision = (
+                        _cell(cells, "Latest Revision", 12)
+                        or _cell(cells, "Latest revision", 12)
+                    )
                     
                     see_more_link = ""
                     see_more_el = cells[1].query_selector("a")
@@ -451,14 +501,27 @@ def scrape_with_playwright():
                 
                 print(f"  Page {page_num}: {len(rows)} rows (total for {version_name}: {version_items})")
                 
-                # Next page
-                next_btn = page.query_selector('button[title="Next page"]') or \
-                           page.query_selector('button:has-text("")')
+                # Next page - try multiple selectors. The SAP UI5 icon glyph can
+                # change between releases; keep several fallbacks so a glyph swap
+                # doesn't silently stop pagination.
+                next_btn = (
+                    page.query_selector('button[title="Next page"]')
+                    or page.query_selector('button[aria-label="Next page"]')
+                    or page.query_selector('button[aria-label*="next" i]')
+                    or page.query_selector('button:has-text("\u2424")')
+                )
                 if not next_btn:
                     all_btns = page.query_selector_all("button")
                     for btn in all_btns:
-                        text = btn.inner_text()
-                        if text == "" or "next" in text.lower():
+                        text = (btn.inner_text() or "").strip()
+                        title_attr = (btn.get_attribute("title") or "").lower()
+                        aria_attr = (btn.get_attribute("aria-label") or "").lower()
+                        if (
+                            text == "\u2424"
+                            or "next" in text.lower()
+                            or "next" in title_attr
+                            or "next" in aria_attr
+                        ):
                             next_btn = btn
                             break
                 
