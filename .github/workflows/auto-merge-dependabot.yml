@@ -1,4 +1,18 @@
 name: Dependabot auto-approve and auto-merge
+
+# Security model: this workflow triggers on `pull_request_target` which
+# runs in the base repo context with elevated permissions. The risk is
+# bounded by two gates:
+#   1. `if: github.actor == 'dependabot[bot]'` ensures only Dependabot
+#      PRs run this workflow.
+#   2. The job body only runs `gh pr review/merge` against the PR URL
+#      - it does NOT execute any code from the PR, install dependencies
+#      from the PR branch, or check out the PR's commit.
+# A compromised Dependabot PR would therefore be limited to being
+# approved/merged; it cannot run arbitrary code with write access.
+# If the threat model ever changes (e.g. Dependabot config expands to
+# allow arbitrary pip sources), prefer switching to `pull_request`
+# trigger and a separate `workflow_run` for the merge step.
 on: pull_request_target
 
 permissions:

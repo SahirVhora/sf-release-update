@@ -89,6 +89,9 @@ git config user.email "${GIT_USER_EMAIL:-release-bot@sf-release-update.github}"
 
 # Stage and commit
 # data/ is ignored for local scratch files, so force-add the tracked release JSON.
+# This is intentional: the .gitignore line for data/ is there to keep
+# ad-hoc scratch files (e.g. data/test.json) out of git, but the
+# canonical updates.json is a tracked file that must be committed.
 git add -f data/updates.json index.html
 
 COMMIT_MSG="chore: auto-update release data ($(date -u +'%Y-%m-%d'))"
