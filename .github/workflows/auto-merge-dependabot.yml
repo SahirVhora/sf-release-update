@@ -1,18 +1,18 @@
-name: Dependabot auto-approve and auto-merge
+name: Dependabot auto-merge
 
 # Security model: this workflow triggers on `pull_request_target` which
 # runs in the base repo context with elevated permissions. The risk is
 # bounded by two gates:
 #   1. `if: github.actor == 'dependabot[bot]'` ensures only Dependabot
 #      PRs run this workflow.
-#   2. The job body only runs `gh pr review/merge` against the PR URL
-#      - it does NOT execute any code from the PR, install dependencies
-#      from the PR branch, or check out the PR's commit.
-# A compromised Dependabot PR would therefore be limited to being
-# approved/merged; it cannot run arbitrary code with write access.
-# If the threat model ever changes (e.g. Dependabot config expands to
-# allow arbitrary pip sources), prefer switching to `pull_request`
-# trigger and a separate `workflow_run` for the merge step.
+#   2. The job body only asks GitHub to enable auto-merge for the PR URL.
+#      It does NOT execute code from the PR, install dependencies from the
+#      PR branch, or check out the PR's commit.
+#
+# GitHub Actions' GITHUB_TOKEN is not allowed to approve pull requests, so
+# this workflow intentionally does not call `gh pr review --approve`. If
+# branch protection requires approval, Dependabot PRs will wait for a human
+# review instead of turning this workflow red.
 on: pull_request_target
 
 permissions:
@@ -29,12 +29,6 @@ jobs:
         uses: dependabot/fetch-metadata@v3
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-
-      - name: Approve the PR
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Enable auto-merge (squash)
         run: gh pr merge --auto --squash "$PR_URL"
