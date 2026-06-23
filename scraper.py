@@ -383,10 +383,16 @@ def scrape_with_playwright():
                 print(f"  Column header detection failed: {e}")
 
             def _cell(cells, field: str, fallback: int) -> str:
-                """Read a cell by header name when available, else by fallback index."""
+                """Read a cell by header name when available, else by fallback index.
+                Tries exact match first, then case-insensitive match, then fallback index."""
                 if field in column_index:
                     idx = column_index[field]
                     if idx < len(cells):
+                        return (cells[idx].inner_text() or "").strip()
+                # Case-insensitive fallback for headers like "Valid as Of" vs "Valid As Of"
+                field_lower = field.lower()
+                for name, idx in column_index.items():
+                    if name.lower() == field_lower and idx < len(cells):
                         return (cells[idx].inner_text() or "").strip()
                 if fallback < len(cells):
                     return (cells[fallback].inner_text() or "").strip()
@@ -429,14 +435,16 @@ def scrape_with_playwright():
                     product = (cells[2].inner_text() or "").strip()
                     module_raw = (cells[3].inner_text() or "").strip()
                     module = module_raw.split("\n")[0].strip()
-                    feature = (cells[4].inner_text() or "").strip()
-                    lifecycle = (cells[5].inner_text() or "").strip()
-                    action = (cells[6].inner_text() or "").strip()
-                    enablement = (cells[7].inner_text() or "").strip()
-                    # Header-aware extraction. Falls back to legacy indices (8-12)
-                    # when <th> detection failed. Note: SAP has historically exposed
-                    # the refNumber under varying labels ("Reference Number",
-                    # "Component / Reference Number", etc.) - try common variants.
+                    feature = _cell(cells, "Feature", 5)
+                    lifecycle = _cell(cells, "Lifecycle", 8)
+                    action = _cell(cells, "Action", 9)
+                    enablement = _cell(cells, "Enablement", 10)
+                    # Header-aware extraction. New SAP column layout (as of June 2026):
+                    # Title, Description, Product, Module, Business Process Variant,
+                    # Feature, Type, Major or Minor, Lifecycle, Action, Enablement,
+                    # Reference Number, Demo, Software Version, Valid as Of,
+                    # Latest Revision, Document ID.
+                    # Fallback indices updated for the new layout (13-15).
                     ref_number = (
                         _cell(cells, "Reference Number", 8)
                         or _cell(cells, "Component / Reference Number", 8)
@@ -448,17 +456,19 @@ def scrape_with_playwright():
                         or _cell(cells, "Demo Available", 9)
                     )
                     version_field = (
-                        _cell(cells, "Version", 10)
+                        _cell(cells, "Software Version", 13)
+                        or _cell(cells, "Version", 13)
                         or _cell(cells, "Software Version", 10)
                     )
                     valid_as_of = (
-                        _cell(cells, "Valid As Of", 11)
-                        or _cell(cells, "Valid as of", 11)
-                        or _cell(cells, "Valid as Of", 11)
+                        _cell(cells, "Valid as Of", 14)
+                        or _cell(cells, "Valid As Of", 14)
+                        or _cell(cells, "Valid as of", 14)
+                        or _cell(cells, "Valid as Of", 14)
                     )
                     latest_revision = (
-                        _cell(cells, "Latest Revision", 12)
-                        or _cell(cells, "Latest revision", 12)
+                        _cell(cells, "Latest Revision", 15)
+                        or _cell(cells, "Latest revision", 15)
                     )
                     
                     see_more_link = ""
@@ -501,27 +511,17 @@ def scrape_with_playwright():
                 
                 print(f"  Page {page_num}: {len(rows)} rows (total for {version_name}: {version_items})")
                 
-                # Next page - try multiple selectors. The SAP UI5 icon glyph can
-                # change between releases; keep several fallbacks so a glyph swap
-                # doesn't silently stop pagination.
-                next_btn = (
-                    page.query_selector('button[title="Next page"]')
-                    or page.query_selector('button[aria-label="Next page"]')
-                    or page.query_selector('button[aria-label*="next" i]')
-                    or page.query_selector('button:has-text("\u2424")')
-                )
+                # Next page — click the page-number button matching page_num + 1.
+                # SAP redesigned their UI to use numbered pagination buttons instead
+                # of a "Next page" button. Each button has class "pagination".
+                next_page_num = page_num + 1
+                next_btn = page.query_selector(f'button.pagination:not([disabled])[title="{next_page_num}"]')
                 if not next_btn:
-                    all_btns = page.query_selector_all("button")
-                    for btn in all_btns:
-                        text = (btn.inner_text() or "").strip()
-                        title_attr = (btn.get_attribute("title") or "").lower()
-                        aria_attr = (btn.get_attribute("aria-label") or "").lower()
-                        if (
-                            text == "\u2424"
-                            or "next" in text.lower()
-                            or "next" in title_attr
-                            or "next" in aria_attr
-                        ):
+                    # Try matching by exact text content instead of title
+                    all_page_btns = page.query_selector_all("button.pagination:not([disabled])")
+                    for btn in all_page_btns:
+                        txt = (btn.inner_text() or "").strip()
+                        if txt == str(next_page_num):
                             next_btn = btn
                             break
                 
