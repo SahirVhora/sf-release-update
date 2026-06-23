@@ -30,8 +30,21 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Enable auto-merge (squash)
-        run: gh pr merge --auto --squash "$PR_URL"
+      - name: Enable auto-merge (squash) with retry
+        run: |
+          # The pull_request_target workflow is itself a pending check, which
+          # makes GitHub reject auto-merge enablement if we call it immediately.
+          # Retry with backoff until the API accepts it or we time out.
+          for i in 1 2 3 4 5; do
+            if gh pr merge --auto --squash "$PR_URL" 2>/dev/null; then
+              echo "Auto-merge enabled successfully."
+              exit 0
+            fi
+            echo "Attempt $i failed. Retrying in $((i * 10)) seconds..."
+            sleep $((i * 10))
+          done
+          echo "Failed to enable auto-merge after 5 attempts."
+          exit 1
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
