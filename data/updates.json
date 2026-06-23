@@ -1,9 +1,9 @@
 {
   "metadata": {
     "source": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
-    "scrapedAt": "2026-06-23T22:54:21.228078",
+    "scrapedAt": "2026-06-23T23:09:53.300756",
     "totalItems": 525,
-    "lastScraped": "2026-06-23 22:54 UTC",
+    "lastScraped": "2026-06-23 23:09 UTC",
     "availableVersions": [
       "1H 2026",
       "2H 2026 (Preview)"
@@ -10970,7 +10970,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. The getSFIDPCertType, updateSFIDPCertType and getSSLCertificate APIs have reached end of maintenance and support and will be deleted on May 15, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "New Enhancements from SAP Analytics Cloud for Story Reports - January 2026",
@@ -10993,7 +10996,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. SAP Analytics Cloud has introduced new enhancements for Story reports",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Improved Data Export with Dynamic Date Range Filter Support in Query Designer",
@@ -11016,7 +11022,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. You can now use export data with dynamic date range filters applied directly in your query using Query Designer",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Skills Unification for Job Requisition and Interview Central",
@@ -11039,7 +11048,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. Recruiters can now add AI-extracted skills and skills from Talent Intelligence Hub to the job requisition, job profile, and in interview central using a unified skills picker",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "New Use Case and Enhancements Available in Joule - December 2025",
@@ -11062,7 +11074,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. A new use case and several enhancements to existing use cases are now available in Joule",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Basic Authentication for Point-to-Point Employee Central Payroll",
@@ -11085,7 +11100,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Basic Authentication for point-to-point Employee Central Payroll replication reached end of maintenance on June 2, 2023 and will be deleted on November 20, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Legacy Offboarding Dashboard",
@@ -11108,7 +11126,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The legacy Offboarding Dashboard in SAP SuccessFactors Onboarding will reach End of Development and Maintenance on May 15, 2026 and will be deleted on November 14, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "WalkMe Solutions Gallery Contains Prebuilt Content",
@@ -11131,7 +11152,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. SAP SuccessFactors prebuilt content is now available in the WalkMe Solutions Gallery",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of To-Do Panel",
@@ -11154,7 +11178,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The To-Do Panel will reach End of Development on May 16, 2025 and will be Deleted on May 14, 2027",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Additional Prebuilt Walkthroughs and Shoutouts",
@@ -11177,7 +11204,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. WalkMe prebuilt walkthroughs and shoutouts provide structured, step-by-step assistance for employees, managers, and administrators to complete common tasks",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Rehire Inactive Employee",
@@ -11200,7 +11230,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The Rehire Inactive Employee page will reach End of Maintenance on May 16, 2025, and will be deleted on May 14, 2027",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Deduction MDF Objects for Employee Central Compensation",
@@ -11223,7 +11256,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The One Time Deduction User and the One Time Deduction Item MDF Objects will reach End of Maintenance on November 14, 2025 and will be Deleted on May 14, 2027",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Editing UI of Legacy People Profile",
@@ -11246,7 +11282,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The feature of editing data in the legacy People Profile will reach End of Maintenance on November 15, 2027 and be deleted on November 15, 2027",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of History UI of Legacy People Profile",
@@ -11269,7 +11308,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The feature of viewing and editing history records of effective-dated entities in the legacy People Profile will reach End of Maintenance on November 15, 2027 and be deleted on November 15, 2027",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Legacy Learning Search",
@@ -11292,7 +11334,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The legacy Learning search experience will reach End of Maintenance on November 14, 2025 and will be Deleted on May 14, 2027",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Manage Asserting Parties Page",
@@ -11315,7 +11360,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The Manage Asserting Parties page in SAP SuccessFactors will reach end of maintenance on May 14, 2026 and be deleted on November 20, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of OAuth IdP API /oauth/idp",
@@ -11338,7 +11386,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The OAuth IdP API /oauth/idp will reach end of development on December 9, 2022 and will be deleted on May 14, 2027",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Employee Central Service Center",
@@ -11361,7 +11412,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. SAP SuccessFactors Employee Central Service Center has reached End of Development on Dec 31, 2024 and will be Deleted on December 31 2028",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Basic Authentication and Third-Party Corporate Identity Provider (IdP) Direct Integration with SAP SuccessFactors",
@@ -11384,7 +11438,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Basic Authentication and third-party direct integration with SAP SuccessFactors HCM suite will reach end of maintenance and support on June 2, 2025 and be deleted on November 13, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Old MIME Type and Adoption of Mozilla/IANA MIME Type Standard in Document Management",
@@ -11407,7 +11464,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The old MIME type standard used in SAP SuccessFactors will be replaced with the new Mozilla/IANA MIME type standard on November 14, 2025, with full deprecation and removal planned for November 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Help and Tutorials, Handout Builder, and Admin Resources",
@@ -11430,7 +11490,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Three related, legacy features– Help and Tutorials, Handout Builder, and Admin Resources– all reach End of Maintenance on May 20, 2022 and will be deleted on November 14, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Support for Webex Training Center",
@@ -11453,7 +11516,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Support for Webex Training Center as a VLS vendor in SAP SuccessFactors Learning will reach End of Maintenance on November 14, 2025",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Is Position Below User's Position In Hierarchy (Old Version)",
@@ -11476,7 +11542,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The Position Below User's Position In Hierarchy rule function (old version) will reach End of Development on May 16, 2025 and will be Deleted on May 15, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Legacy Goal Management",
@@ -11499,7 +11568,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The legacy version of Goal Management will reach End of Maintenance on May 17, 2024 and will be Deleted on December 31, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of Partial Organization SSO in SAP SuccessFactors HCM suite",
@@ -11522,7 +11594,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Partial Organization SSO in SAP SuccessFactors will reach end of maintenance on May 16, 2025 and be deleted on November 13, 2026",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Deprecation of getSFIDPCertType, updateSFIDPCertType, and getSSLCertificate APIs",
@@ -11545,7 +11620,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. The getSFIDPCertType, updateSFIDPCertType and getSSLCertificate APIs have reached end of maintenance and support and will be deleted on May 15, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "New Enhancements from SAP Analytics Cloud for Story Reports - January 2026",
@@ -11568,7 +11646,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. SAP Analytics Cloud has introduced new enhancements for Story reports",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Improved Data Export with Dynamic Date Range Filter Support in Query Designer",
@@ -11591,7 +11672,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. You can now use export data with dynamic date range filters applied directly in your query using Query Designer",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Skills Unification for Job Requisition and Interview Central",
@@ -11614,7 +11698,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. Recruiters can now add AI-extracted skills and skills from Talent Intelligence Hub to the job requisition, job profile, and in interview central using a unified skills picker",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "New Use Case and Enhancements Available in Joule - December 2025",
@@ -11637,7 +11724,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. A new use case and several enhancements to existing use cases are now available in Joule",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Basic Authentication for Point-to-Point Employee Central Payroll",
@@ -11660,7 +11750,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Basic Authentication for point-to-point Employee Central Payroll replication reached end of maintenance on June 2, 2023 and will be deleted on November 20, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Legacy Offboarding Dashboard",
@@ -11683,7 +11776,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The legacy Offboarding Dashboard in SAP SuccessFactors Onboarding will reach End of Development and Maintenance on May 15, 2026 and will be deleted on November 14, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "WalkMe Solutions Gallery Contains Prebuilt Content",
@@ -11706,7 +11802,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. SAP SuccessFactors prebuilt content is now available in the WalkMe Solutions Gallery",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of To-Do Panel",
@@ -11729,7 +11828,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The To-Do Panel will reach End of Development on May 16, 2025 and will be Deleted on May 14, 2027",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Additional Prebuilt Walkthroughs and Shoutouts",
@@ -11752,7 +11854,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. WalkMe prebuilt walkthroughs and shoutouts provide structured, step-by-step assistance for employees, managers, and administrators to complete common tasks",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Rehire Inactive Employee",
@@ -11775,7 +11880,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The Rehire Inactive Employee page will reach End of Maintenance on May 16, 2025, and will be deleted on May 14, 2027",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Deduction MDF Objects for Employee Central Compensation",
@@ -11798,7 +11906,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The One Time Deduction User and the One Time Deduction Item MDF Objects will reach End of Maintenance on November 14, 2025 and will be Deleted on May 14, 2027",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Editing UI of Legacy People Profile",
@@ -11821,7 +11932,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The feature of editing data in the legacy People Profile will reach End of Maintenance on November 15, 2027 and be deleted on November 15, 2027",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of History UI of Legacy People Profile",
@@ -11844,7 +11958,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The feature of viewing and editing history records of effective-dated entities in the legacy People Profile will reach End of Maintenance on November 15, 2027 and be deleted on November 15, 2027",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Legacy Learning Search",
@@ -11867,7 +11984,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The legacy Learning search experience will reach End of Maintenance on November 14, 2025 and will be Deleted on May 14, 2027",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Manage Asserting Parties Page",
@@ -11890,7 +12010,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The Manage Asserting Parties page in SAP SuccessFactors will reach end of maintenance on May 14, 2026 and be deleted on November 20, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of OAuth IdP API /oauth/idp",
@@ -11913,7 +12036,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The OAuth IdP API /oauth/idp will reach end of development on December 9, 2022 and will be deleted on May 14, 2027",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Employee Central Service Center",
@@ -11936,7 +12062,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. SAP SuccessFactors Employee Central Service Center has reached End of Development on Dec 31, 2024 and will be Deleted on December 31 2028",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Basic Authentication and Third-Party Corporate Identity Provider (IdP) Direct Integration with SAP SuccessFactors",
@@ -11959,7 +12088,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Basic Authentication and third-party direct integration with SAP SuccessFactors HCM suite will reach end of maintenance and support on June 2, 2025 and be deleted on November 13, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Old MIME Type and Adoption of Mozilla/IANA MIME Type Standard in Document Management",
@@ -11982,7 +12114,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The old MIME type standard used in SAP SuccessFactors will be replaced with the new Mozilla/IANA MIME type standard on November 14, 2025, with full deprecation and removal planned for November 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Help and Tutorials, Handout Builder, and Admin Resources",
@@ -12005,7 +12140,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Three related, legacy features– Help and Tutorials, Handout Builder, and Admin Resources– all reach End of Maintenance on May 20, 2022 and will be deleted on November 14, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Support for Webex Training Center",
@@ -12028,7 +12166,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Support for Webex Training Center as a VLS vendor in SAP SuccessFactors Learning will reach End of Maintenance on November 14, 2025",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Is Position Below User's Position In Hierarchy (Old Version)",
@@ -12051,7 +12192,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The Position Below User's Position In Hierarchy rule function (old version) will reach End of Development on May 16, 2025 and will be Deleted on May 15, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Legacy Goal Management",
@@ -12074,7 +12218,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. The legacy version of Goal Management will reach End of Maintenance on May 17, 2024 and will be Deleted on December 31, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     },
     {
       "title": "Deprecation of Partial Organization SSO in SAP SuccessFactors HCM suite",
@@ -12097,7 +12244,10 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Review this change. Partial Organization SSO in SAP SuccessFactors will reach end of maintenance on May 16, 2025 and be deleted on November 13, 2026",
-      "releaseVersion": "2H 2026 (Preview)"
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
     }
   ]
 }

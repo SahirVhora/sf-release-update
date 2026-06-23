@@ -675,8 +675,24 @@ def main():
             seen.add(key)
             unique.append(item)
     
-    print(f"\nTotal extracted: {len(items)}")
+    print(f"\\nTotal extracted: {len(items)}")
     print(f"After dedup: {len(unique)}")
+    
+    # Annotate cross-version duplicates: items with identical (title, refNumber)
+    # that appear in multiple releases get an `alsoInVersion` list so the
+    # frontend can display a note (e.g. "Also appears in 1H 2026").
+    title_ref_map: dict[tuple[str, str], list[dict]] = {}
+    for item in unique:
+        key = (item["title"], item.get("refNumber", ""))
+        title_ref_map.setdefault(key, []).append(item)
+    for key, matches in title_ref_map.items():
+        versions = list({m["releaseVersion"] for m in matches})
+        if len(versions) > 1:
+            for item in matches:
+                item["alsoInVersion"] = [v for v in versions if v != item["releaseVersion"]]
+    cross_count = sum(1 for item in unique if "alsoInVersion" in item)
+    if cross_count:
+        print(f"Cross-version duplicates annotated: {cross_count} items")
     
     # Count by impact
     impact_counts = {}
