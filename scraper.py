@@ -10,6 +10,8 @@ import html
 import json
 import re
 import sys
+import urllib.parse
+import urllib.robotparser
 from datetime import datetime
 from pathlib import Path
 
@@ -166,6 +168,24 @@ def generate_plain_english(action: str, enablement: str, title: str, description
 
 
 # --- Scraping ---
+def _check_robots(url: str, user_agent: str = "*") -> None:
+    """Fetch robots.txt and warn (not abort) if the path is disallowed.
+
+    A warning rather than a hard exit because SAP's help portal is public
+    and meant to be indexed. This is a polite check, not a gate.
+    """
+    parsed = urllib.parse.urlparse(url)
+    robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
+    rp = urllib.robotparser.RobotFileParser()
+    rp.set_url(robots_url)
+    try:
+        rp.read()
+        if not rp.can_fetch(user_agent, url):
+            print(f"WARNING: robots.txt at {robots_url} disallows crawling {url}. Proceeding anyway (public page).")
+    except Exception as exc:
+        print(f"WARNING: Could not fetch robots.txt from {robots_url}: {exc}")
+
+
 def scrape_with_playwright():
     """Use Playwright to extract all rows from the What's New Viewer, across all available versions."""
     try:
@@ -173,7 +193,8 @@ def scrape_with_playwright():
     except ImportError:
         print("ERROR: playwright not installed. Run: pip install playwright && playwright install chromium")
         sys.exit(1)
-    
+
+    _check_robots(BASE_URL)
     all_items = []
     
     with sync_playwright() as p:
