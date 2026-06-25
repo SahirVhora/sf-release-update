@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sf-release-update"
+version = "0.1.0"
+description = "Scraper and static dashboard for SAP SuccessFactors release notes"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright>=1.60.0",
+]
+
+[project.scripts]
+sf-release-scraper = "scraper:main"
+
+[tool.setuptools]
+py-modules = ["scraper"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
