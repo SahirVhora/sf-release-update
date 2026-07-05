@@ -21,7 +21,7 @@ Live tracker for SAP SuccessFactors release updates. Pulls the latest changes fr
 - **Release Readiness Checklist** - select your managed modules, generate a personalised checklist with Action Required / Review & Test / Informational categories, track progress with checkboxes (persisted in localStorage), export to JSON, and print.
 - **Direct SAP links** - every update links to the official SAP Help Portal documentation.
 - **Single-file HTML** - no dependencies, works offline with bundled data, deployed via GitHub Pages.
-- **42 SF modules** tracked across Employee Central, Compensation, Recruiting, Platform, and more.
+- **41 SF modules** tracked across Employee Central, Compensation, Recruiting, Platform, and more.
 
 ## Architecture
 
@@ -30,7 +30,7 @@ weekly cron -> scraper.py -> data/updates.json -> index.html -> GitHub Pages
 ```
 
 - `scraper.py` - Playwright-based scraper. Discovers available versions from SAP's filter, iterates through each, extracts all pages, classifies impact, generates plain-English summaries, and outputs structured JSON.
-- `data/updates.json` - structured JSON (~600KB) with 492 items across 1H 2026 and 2H 2026 preview. Each item has impact classification, plain-English summary, release version tag, and absolute SAP links.
+- `data/updates.json` - structured JSON (~680KB) with 525 items across 1H 2026 and 2H 2026 preview. Each item has impact classification, plain-English summary, release version tag, and absolute SAP links.
 - `index.html` - single-file viewer with dark/light theme, version switcher, accordion sidebar, search, and filters. Reads `data/updates.json`.
 
 ## Setup
