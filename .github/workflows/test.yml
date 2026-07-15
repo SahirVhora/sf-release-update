@@ -2,9 +2,9 @@ name: Scraper unit tests
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
   schedule:
     # Mondays at 07:00 UTC - one hour after the live scrape at 06:00.
     # Catches scraper regressions even when the data is unchanged.
