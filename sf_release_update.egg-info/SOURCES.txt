@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+scraper.py
+sf_release_update.egg-info/PKG-INFO
+sf_release_update.egg-info/SOURCES.txt
+sf_release_update.egg-info/dependency_links.txt
+sf_release_update.egg-info/entry_points.txt
+sf_release_update.egg-info/requires.txt
+sf_release_update.egg-info/top_level.txt
+tests/test_scraper.py
