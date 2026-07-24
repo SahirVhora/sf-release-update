@@ -29,22 +29,15 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt ruff
+        run: pip install -r requirements.txt
 
       - name: Run scraper unit tests
         working-directory: ${{ github.workspace }}
         run: |
           PYTHONPATH=. python3 tests/test_scraper.py
 
-      - name: Collect ruff diagnostics
-        run: ruff check . --output-format json > ruff-report.json || true
-
-      - name: Upload ruff diagnostics
-        uses: actions/upload-artifact@v4
-        with:
-          name: ruff-report
-          path: ruff-report.json
-          if-no-files-found: error
-
       - name: Run ruff lint
-        run: ruff check .
+        uses: astral-sh/ruff-action@v3
+        with:
+          version: "0.15.22"
+          args: "check ."
