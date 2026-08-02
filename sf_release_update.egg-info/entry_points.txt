@@ -1,0 +1,2 @@
+[console_scripts]
+sf-release-scraper = scraper:main
