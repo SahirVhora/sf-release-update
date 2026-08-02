@@ -56,6 +56,14 @@ class TestReadTableCell(unittest.TestCase):
 
         self.assertEqual(result, "REF-123")
 
+    def test_duplicate_header_sets_keep_first_table_indices(self):
+        headers = [self.Cell("Title"), self.Cell("Reference Number")]
+        headers += [self.Cell("Title"), self.Cell("Reference Number")]
+
+        result = scraper.build_column_index(headers)
+
+        self.assertEqual(result, {"Title": 0, "Reference Number": 1})
+
 
 class TestParseReleaseVersion(unittest.TestCase):
     def test_1h_2026(self):

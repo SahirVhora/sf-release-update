@@ -186,6 +186,16 @@ def _check_robots(url: str, user_agent: str = "*") -> None:
         print(f"WARNING: Could not fetch robots.txt from {robots_url}: {exc}")
 
 
+def build_column_index(header_cells) -> dict[str, int]:
+    """Map each header to its first table index, ignoring duplicate table copies."""
+    column_index = {}
+    for index, header in enumerate(header_cells):
+        label = (header.inner_text() or "").strip()
+        if label:
+            column_index.setdefault(label, index)
+    return column_index
+
+
 def read_table_cell(cells, column_index: dict[str, int], field: str, fallback: int) -> str:
     """Read a table cell by header, using position only when no headers exist."""
     field_lower = field.lower()
@@ -414,10 +424,7 @@ def scrape_with_playwright():
             column_index: dict[str, int] = {}
             try:
                 header_cells = page.query_selector_all("table thead th")
-                for idx, th in enumerate(header_cells):
-                    label = (th.inner_text() or "").strip()
-                    if label:
-                        column_index[label] = idx
+                column_index = build_column_index(header_cells)
                 if column_index:
                     print(f"  Detected table columns: {list(column_index.keys())}")
             except Exception as e:
