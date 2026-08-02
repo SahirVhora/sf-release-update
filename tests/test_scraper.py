@@ -24,6 +24,39 @@ sys.path.insert(0, str(PROJECT_ROOT))
 import scraper  # noqa: E402
 
 
+class TestReadTableCell(unittest.TestCase):
+    class Cell:
+        def __init__(self, text):
+            self.text = text
+
+        def inner_text(self):
+            return self.text
+
+    def test_does_not_use_positional_fallback_when_headers_are_available(self):
+        cells = [self.Cell("Title"), self.Cell("Lifecycle value")]
+
+        result = scraper.read_table_cell(
+            cells,
+            {"Title": 0, "Lifecycle": 1},
+            "Reference Number",
+            1,
+        )
+
+        self.assertEqual(result, "")
+
+    def test_aliases_use_new_layout_position_when_headers_are_unavailable(self):
+        cells = [self.Cell(f"cell-{index}") for index in range(17)]
+        cells[11] = self.Cell("REF-123")
+
+        result = scraper.read_table_alias(
+            cells,
+            {},
+            (("Reference Number", 11), ("Legacy Reference", 8)),
+        )
+
+        self.assertEqual(result, "REF-123")
+
+
 class TestParseReleaseVersion(unittest.TestCase):
     def test_1h_2026(self):
         self.assertEqual(scraper.parse_release_version("1H 2026"), (2026, 1))

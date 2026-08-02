@@ -186,6 +186,26 @@ def _check_robots(url: str, user_agent: str = "*") -> None:
         print(f"WARNING: Could not fetch robots.txt from {robots_url}: {exc}")
 
 
+def read_table_cell(cells, column_index: dict[str, int], field: str, fallback: int) -> str:
+    """Read a table cell by header, using position only when no headers exist."""
+    field_lower = field.lower()
+    for name, index in column_index.items():
+        if name.lower() == field_lower and index < len(cells):
+            return (cells[index].inner_text() or "").strip()
+    if not column_index and fallback < len(cells):
+        return (cells[fallback].inner_text() or "").strip()
+    return ""
+
+
+def read_table_alias(cells, column_index: dict[str, int], aliases) -> str:
+    """Return the first non-empty header alias or layout fallback."""
+    for field, fallback in aliases:
+        value = read_table_cell(cells, column_index, field, fallback)
+        if value:
+            return value
+    return ""
+
+
 def scrape_with_playwright():
     """Use Playwright to extract all rows from the What's New Viewer, across all available versions."""
     try:
@@ -404,20 +424,7 @@ def scrape_with_playwright():
                 print(f"  Column header detection failed: {e}")
 
             def _cell(cells, field: str, fallback: int) -> str:
-                """Read a cell by header name when available, else by fallback index.
-                Tries exact match first, then case-insensitive match, then fallback index."""
-                if field in column_index:
-                    idx = column_index[field]
-                    if idx < len(cells):
-                        return (cells[idx].inner_text() or "").strip()
-                # Case-insensitive fallback for headers like "Valid as Of" vs "Valid As Of"
-                field_lower = field.lower()
-                for name, idx in column_index.items():
-                    if name.lower() == field_lower and idx < len(cells):
-                        return (cells[idx].inner_text() or "").strip()
-                if fallback < len(cells):
-                    return (cells[fallback].inner_text() or "").strip()
-                return ""
+                return read_table_cell(cells, column_index, field, fallback)
 
             # Extract all pages for this version
             page_num = 1
@@ -465,16 +472,27 @@ def scrape_with_playwright():
                     # Feature, Type, Major or Minor, Lifecycle, Action, Enablement,
                     # Reference Number, Demo, Software Version, Valid as Of,
                     # Latest Revision, Document ID.
-                    # Fallback indices updated for the new layout (13-15).
-                    ref_number = (
-                        _cell(cells, "Reference Number", 8)
-                        or _cell(cells, "Component / Reference Number", 8)
-                        or _cell(cells, "Ref. Number", 8)
-                        or _cell(cells, "Reference", 8)
+                    # Positional fallbacks prefer the current 17-column layout,
+                    # then the legacy layout only when the current index is absent.
+                    ref_number = read_table_alias(
+                        cells,
+                        column_index,
+                        (
+                            ("Reference Number", 11),
+                            ("Component / Reference Number", 11),
+                            ("Ref. Number", 11),
+                            ("Reference", 11),
+                            ("Legacy Reference Number", 8),
+                        ),
                     )
-                    demo = (
-                        _cell(cells, "Demo", 9)
-                        or _cell(cells, "Demo Available", 9)
+                    demo = read_table_alias(
+                        cells,
+                        column_index,
+                        (
+                            ("Demo", 12),
+                            ("Demo Available", 12),
+                            ("Legacy Demo", 9),
+                        ),
                     )
                     version_field = (
                         _cell(cells, "Software Version", 13)
