@@ -32,6 +32,14 @@ jobs:
 
       - name: Enable auto-merge (squash) with retry
         run: |
+          # GitHub auto-merge requires branch protection or a ruleset. Without
+          # one, `gh pr merge --auto` can never succeed and should not turn the
+          # Dependabot PR red.
+          if ! gh api "repos/$GITHUB_REPOSITORY/branches/$BASE_REF/protection" >/dev/null 2>&1; then
+            echo "::notice::Base branch is unprotected; skipping auto-merge enablement."
+            exit 0
+          fi
+
           # The pull_request_target workflow is itself a pending check, which
           # makes GitHub reject auto-merge enablement if we call it immediately.
           # Retry with backoff until the API accepts it or we time out.
@@ -47,4 +55,5 @@ jobs:
           exit 1
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
