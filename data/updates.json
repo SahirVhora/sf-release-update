@@ -1,16 +1,16 @@
 {
   "metadata": {
     "source": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
-    "scrapedAt": "2026-08-03T09:43:20.521830",
-    "totalItems": 540,
-    "lastScraped": "2026-08-03 09:43 UTC",
+    "scrapedAt": "2026-08-10T07:40:09.848712",
+    "totalItems": 544,
+    "lastScraped": "2026-08-10 07:40 UTC",
     "availableVersions": [
       "1H 2026",
       "2H 2026 (Preview)"
     ],
     "versionCounts": {
-      "1H 2026": 520,
-      "2H 2026 (Preview)": 20
+      "1H 2026": 522,
+      "2H 2026 (Preview)": 22
     },
     "releaseDates": {
       "1H 2026": {
@@ -24,6 +24,52 @@
     }
   },
   "items": [
+    {
+      "title": "HR Knowledge Assistant and HR Knowledge Orchestration Agent: Restricted Availability Release - July 2026",
+      "description": "You can now use the HR Knowledge Assistant in Joule to access HR research, industry insights, and best practices enriched with guidance from Galileo by The Josh Bersin Company. The assistant includes the HR Knowledge Orchestration Agent, which retrieves research-backed HR insights from trusted knowledge providers directly within Joule.",
+      "product": "Platform",
+      "module": "SAP Business AI",
+      "feature": "Joule",
+      "lifecycle": "Restricted Availability",
+      "action": "Info only",
+      "enablement": "Contact Customer Engagement Executive or Account Manager",
+      "refNumber": "SFGAI-6782",
+      "demo": "",
+      "version": "1H 2026\n2H 2026",
+      "validAsOf": "Jul 31, 2026",
+      "latestRevision": "Aug 4, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/e9989dc2e5b046ec929e2ad5e8305d24/fc92f2e777c948c0be1684de1c5537ec.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Review this change. You can now use the HR Knowledge Assistant in Joule to access HR research, industry insights, and best practices enriched with guidance from Galileo by The Josh Bersin Company",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Document Grounding for SAP SuccessFactors Joule Agents in Restricted Availability - July 2026",
+      "description": "You can connect your Microsoft SharePoint document sources and add metadata to documents on the Manage Document Grounding page, enabling supported Joule agents to deliver more contextualized responses using user attributes, such as legal entity and country/region.",
+      "product": "Platform",
+      "module": "SAP Business AI",
+      "feature": "Joule",
+      "lifecycle": "Restricted Availability",
+      "action": "Info only",
+      "enablement": "Contact Customer Engagement Executive or Account Manager",
+      "refNumber": "WEF-169678",
+      "demo": "",
+      "version": "1H 2026\n2H 2026",
+      "validAsOf": "Jul 31, 2026",
+      "latestRevision": "Aug 4, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/e9989dc2e5b046ec929e2ad5e8305d24/6ec6111afeb343f5a9b8100dd0ecd062.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Review this change. You can connect your Microsoft SharePoint document sources and add metadata to documents on the Manage Document Grounding page, enabling supported Joule agents to deliver more contextualized respon...",
+      "releaseVersion": "1H 2026"
+    },
     {
       "title": "Upsert APIs for One-Time Deductions and Recurring Deductions",
       "description": "Employee Central Compensation now supports upsert OData APIs for the One-Time Deductions, Recurring Deductions.",
@@ -11499,7 +11545,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. You can now use export data with dynamic date range filters applied directly in your query using Query Designer",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "Skills Unification for Job Requisition and Interview Central",
@@ -11522,7 +11571,10 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Review this change. Recruiters can now add AI-extracted skills and skills from Talent Intelligence Hub to the job requisition, job profile, and in interview central using a unified skills picker",
-      "releaseVersion": "1H 2026"
+      "releaseVersion": "1H 2026",
+      "alsoInVersion": [
+        "2H 2026 (Preview)"
+      ]
     },
     {
       "title": "New Use Case and Enhancements Available in Joule - December 2025",
@@ -12042,6 +12094,58 @@
       "releaseVersion": "1H 2026",
       "alsoInVersion": [
         "2H 2026 (Preview)"
+      ]
+    },
+    {
+      "title": "Improved Data Export with Dynamic Date Range Filter Support in Query Designer",
+      "description": "You can now use export data with dynamic date range filters applied directly in your query using Query Designer.",
+      "product": "Platform",
+      "module": "Reporting",
+      "feature": "Story Reports",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "AYT-59448",
+      "demo": "",
+      "version": "1H 2026\n2H 2025",
+      "validAsOf": "Jan 27, 2026",
+      "latestRevision": "Jan 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/c066b0086d79476a8ee92e9cc0a9df16.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885%3FVersion%3D2H%2B2026%3B1H%252B2026&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Review this change. You can now use export data with dynamic date range filters applied directly in your query using Query Designer",
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
+      ]
+    },
+    {
+      "title": "Skills Unification for Job Requisition and Interview Central",
+      "description": "Recruiters can now add AI-extracted skills and skills from Talent Intelligence Hub to the job requisition, job profile, and in interview central using a unified skills picker.",
+      "product": "Recruiting",
+      "module": "Applicant Management",
+      "feature": "Applicant Management\nJob Requisitions",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "RCM-148019",
+      "demo": "",
+      "version": "1H 2026\n2H 2025",
+      "validAsOf": "Dec 12, 2025",
+      "latestRevision": "Jan 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/c4a15500ddd548d898f91ee5175f91ac.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885%3FVersion%3D2H%2B2026%3B1H%252B2026&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Review this change. Recruiters can now add AI-extracted skills and skills from Talent Intelligence Hub to the job requisition, job profile, and in interview central using a unified skills picker",
+      "releaseVersion": "2H 2026 (Preview)",
+      "alsoInVersion": [
+        "1H 2026"
       ]
     },
     {
