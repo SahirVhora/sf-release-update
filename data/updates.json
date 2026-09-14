@@ -1,14 +1,14 @@
 {
   "metadata": {
     "source": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
-    "scrapedAt": "2026-09-07T11:38:43.795215",
-    "totalItems": 537,
-    "lastScraped": "2026-09-07 11:38 UTC",
+    "scrapedAt": "2026-09-14T11:52:42.356620",
+    "totalItems": 538,
+    "lastScraped": "2026-09-14 11:52 UTC",
     "availableVersions": [
       "1H 2026"
     ],
     "versionCounts": {
-      "1H 2026": 537
+      "1H 2026": 538
     },
     "releaseDates": {
       "1H 2026": {
@@ -18,6 +18,31 @@
     }
   },
   "items": [
+    {
+      "title": "Joule Assistants and Agents in Restricted Availability - September 2026",
+      "description": "We're introducing more AI assistants and agents in restricted availability as part of the September 2026 release.",
+      "product": "Learning\nPlatform",
+      "module": "SAP Business AI",
+      "feature": "Joule",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "Restricted Availability",
+      "action": "Info only",
+      "enablement": "Contact Customer Engagement Executive or Account Manager",
+      "refNumber": "KM-23793",
+      "demo": "",
+      "version": "1H 2026\n2H 2026",
+      "validAsOf": "Sep 9, 2026",
+      "latestRevision": "Sep 9, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/e9989dc2e5b046ec929e2ad5e8305d24/0268788e5118435a9cbffdc032608d65.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. We're introducing more AI assistants and agents in restricted availability as part of the September 2026 release. Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
     {
       "title": "Automatic Cancellation of Repeatedly Failing Scheduled Jobs",
       "description": "Scheduled job requests that repeatedly fail to execute successfully (including failed, skipped, and interrupted) are now automatically cancelled when they reach a configurable failure threshold. You receive an email notification at each stage, including a warning before cancellation and a confirmation when cancellation occurs.",
