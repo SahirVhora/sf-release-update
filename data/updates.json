@@ -1,14 +1,14 @@
 {
   "metadata": {
     "source": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
-    "scrapedAt": "2026-09-21T12:04:24.651518",
-    "totalItems": 544,
-    "lastScraped": "2026-09-21 12:04 UTC",
+    "scrapedAt": "2026-09-28T12:59:19.426155",
+    "totalItems": 546,
+    "lastScraped": "2026-09-28 12:59 UTC",
     "availableVersions": [
       "1H 2026"
     ],
     "versionCounts": {
-      "1H 2026": 544
+      "1H 2026": 546
     },
     "releaseDates": {
       "1H 2026": {
@@ -18,6 +18,56 @@
     }
   },
   "items": [
+    {
+      "title": "Joule Assistants and Agents in Restricted Availability - September 25, 2026",
+      "description": "We're introducing more AI assistants and agents in restricted availability as part of the September 2026 release.",
+      "product": "Payroll\nPlatform",
+      "module": "Payroll",
+      "feature": "Joule",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "Restricted Availability",
+      "action": "Info only",
+      "enablement": "Contact Customer Engagement Executive or Account Manager",
+      "refNumber": "KM-23880",
+      "demo": "",
+      "version": "1H 2026\n2H 2026",
+      "validAsOf": "Sep 25, 2026",
+      "latestRevision": "Sep 25, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/e9989dc2e5b046ec929e2ad5e8305d24/4a45546d175843449e9f6f83ea641a7e.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. We're introducing more AI assistants and agents in restricted availability as part of the September 2026 release. Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
+    {
+      "title": "Joule Assistants and Agents in Restricted Availability - September 24, 2026",
+      "description": "We're introducing more AI assistants and agents in restricted availability as part of the September 2026 release.",
+      "product": "Career and Talent Development\nPlatform",
+      "module": "Career Development",
+      "feature": "Joule",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "Restricted Availability",
+      "action": "Info only",
+      "enablement": "Contact Customer Engagement Executive or Account Manager",
+      "refNumber": "KM-23878",
+      "demo": "Refer to the Demo column in the List of AI Agents table above.",
+      "version": "1H 2026\n2H 2026",
+      "validAsOf": "Sep 24, 2026",
+      "latestRevision": "Sep 24, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/e9989dc2e5b046ec929e2ad5e8305d24/b9e73a2864f4430eb5b6ea578b2f0c07.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. We're introducing more AI assistants and agents in restricted availability as part of the September 2026 release. Review config steps and test in sandbox first.",
+      "releaseVersion": "1H 2026"
+    },
     {
       "title": "Joule Assistants and Agents in Restricted Availability - September 19, 2026",
       "description": "We're introducing more AI assistants and agents in restricted availability as part of the September 2026 release.",
