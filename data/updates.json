@@ -1,14 +1,14 @@
 {
   "metadata": {
     "source": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
-    "scrapedAt": "2026-10-12T14:29:25.900601",
-    "totalItems": 411,
-    "lastScraped": "2026-10-12 14:29 UTC",
+    "scrapedAt": "2026-10-19T12:12:08.985270",
+    "totalItems": 415,
+    "lastScraped": "2026-10-19 12:12 UTC",
     "availableVersions": [
       "2H 2026 (Preview)"
     ],
     "versionCounts": {
-      "2H 2026 (Preview)": 411
+      "2H 2026 (Preview)": 415
     },
     "releaseDates": {
       "2H 2026": {
@@ -18,6 +18,181 @@
     }
   },
   "items": [
+    {
+      "title": "Replacement and Removal of Provisioning Settings with Admin Center Settings: 1H 2027 Batch",
+      "description": "The 1H 2027 batch of provisioning settings will be deleted from provisioning on May 14, 2027. Some settings are completely removed because they're no longer relevant. For those that are still relevant, you can find them in the Admin Center starting six months earlier in 2H 2026.",
+      "product": "Career and Talent Development\nEmployee Central\nPerformance & Goals\nPlatform\nRecruiting\nTime Tracking",
+      "module": "System Management",
+      "feature": "Not Applicable",
+      "changeType": "Changed",
+      "majorOrMinor": "",
+      "lifecycle": "Deprecated",
+      "action": "Required",
+      "enablement": "Automatically on",
+      "refNumber": "TLS-35579",
+      "demo": "Not Applicable",
+      "version": "1H 2027\n2H 2026",
+      "validAsOf": "May 14, 2027",
+      "latestRevision": "Oct 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/9eccf2cfa4d242eaa39bf22a08a6c15e.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Will stop working - you need a replacement. Timeline: May 14, 2027. Check the linked SAP Note for migration steps.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Deprecation of the Older Work Schedule Tab on the Time Workbench Page",
+      "description": "The Work Schedule tab that currently exists on the Time Workbench page had reached End of Development on June 02, 2023 and will be Deleted on May 14, 2027.",
+      "product": "Employee Central",
+      "module": "Time Management",
+      "feature": "Time Off",
+      "changeType": "Changed",
+      "majorOrMinor": "",
+      "lifecycle": "Deprecated",
+      "action": "Required",
+      "enablement": "Automatically on",
+      "refNumber": "TIM-59785",
+      "demo": "Not Applicable",
+      "version": "1H 2027\n2H 2026",
+      "validAsOf": "May 14, 2027",
+      "latestRevision": "Oct 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/8e3c384a2c9043d3bc2e75921a5b0c67.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Will stop working - you need a replacement. Timeline: June 02, 2023. Check the linked SAP Note for migration steps.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "REST API for Start Date Changes",
+      "description": "You can now change the start date for new hire onboarding journeys using the existing REST API for mass onboarding operations.",
+      "product": "Onboarding",
+      "module": "Integration and Extension",
+      "feature": "API\nOnboarding",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "OBX-43745",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/2409ae7e999546c8a5d25c425ed67251.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Updated automatically. You can now change the start date for new hire onboarding journeys using the existing REST API for mass onboarding operations.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Deletion of Performance Preparation Agent - September 30, 2026",
+      "description": "The Performance Preparation Agent reached end of availability on September 30, 2026.",
+      "product": "Performance & Goals\nPlatform",
+      "module": "SAP Business AI",
+      "feature": "Joule",
+      "changeType": "Changed",
+      "majorOrMinor": "",
+      "lifecycle": "Deleted",
+      "action": "Required",
+      "enablement": "Automatically on",
+      "refNumber": "KM-23939",
+      "demo": "Not Applicable",
+      "version": "1H 2026\n2H 2026",
+      "validAsOf": "Sep 30, 2026",
+      "latestRevision": "Oct 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/e9989dc2e5b046ec929e2ad5e8305d24/83db63c2d4954e9faeeaa259c46851f1.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Already removed. If you relied on this, switch to the alternative immediately. Timeline: September 30, 2026.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Custom Document Category Translation Support in Manage Documents",
+      "description": "Custom document category names now display in the user's login language on the Documents tab in Manage Documents, ensuring consistent localized name support across all relevant pages.",
+      "product": "Platform",
+      "module": "Documents and Storage",
+      "feature": "Document Management",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "PTCH-51332",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/ada8b4f9969c47cba3efc6727b1a9b4c.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Updated automatically. Custom document category names now display in the user's login language on the Documents tab in Manage Documents, ensuring consistent localized name support across all relevant pages.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Changes to the Greeting Banner on the Latest Home Page",
+      "description": "We've made some design changes to the greeting banner on the latest home page.",
+      "product": "Platform",
+      "module": "User Experience",
+      "feature": "Home Page",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "WEF-169891",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/21d964599596489395c079e059c7fe5a.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Updated automatically. We've made some design changes to the greeting banner on the latest home page.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Enhancements to SmartRecruiters (October 2026)",
+      "description": "Here's are the enhancements to SmartRecruiters in October 2026.",
+      "product": "SmartRecruiters",
+      "module": "Applicant Management",
+      "feature": "Not Applicable",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "SMR-896",
+      "demo": "",
+      "version": "1H 2026\n2H 2026",
+      "validAsOf": "Oct 12, 2026",
+      "latestRevision": "Oct 16, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/75daba65b6164a64ba0e06a2ad35e770.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Minor update - configure if useful. Here's are the enhancements to SmartRecruiters in October 2026.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
     {
       "title": "Recommendation Reason for Opportunities",
       "description": "Administrators can now enable the display of recommendation reasons on the opportunity cards, so that users know why opportunities are recommended to them in Opportunity Marketplace and in opportunity recommendation sections in the redesigned Growth Portfolio, Latest Career Worksheet, and Development Goals.",
@@ -369,31 +544,6 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
-      "title": "Deletion of Performance Preparation Agent - September 30",
-      "description": "The Performance Preparation Agent is deleted and superseded by other performance agents and assistants.",
-      "product": "Performance & Goals",
-      "module": "SAP Business AI",
-      "feature": "Not Applicable",
-      "changeType": "Changed",
-      "majorOrMinor": "",
-      "lifecycle": "Deleted",
-      "action": "Required",
-      "enablement": "Automatically on",
-      "refNumber": "KM-23939",
-      "demo": "Not Applicable",
-      "version": "1H 2026\n2H 2026",
-      "validAsOf": "Sep 30, 2026",
-      "latestRevision": "Oct 9, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/e9989dc2e5b046ec929e2ad5e8305d24/83db63c2d4954e9faeeaa259c46851f1.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "critical",
-        "label": "Critical",
-        "color": "#ef4444"
-      },
-      "plainEnglish": "Already removed. If you relied on this, switch to the alternative immediately.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
       "title": "Enhancements to Business Rules in Performance Management",
       "description": "Performance Management rule scenarios now support more configurations, including Subject User fields, the Section Comments field, and the Length attribute.",
       "product": "Performance & Goals\nPlatform",
@@ -616,31 +766,6 @@
         "color": "#eab308"
       },
       "plainEnglish": "Updated automatically. SAP SuccessFactors made numerous minor visual enhancements in 2H 2026.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
-      "title": "Replacement and Removal of Provisioning Settings with Admin Center Settings: 1H 2027 Batch",
-      "description": "The 1H 2027 batch of provisioning settings will be deleted from provisioning on May 14, 2027. Some settings are completely removed because they're no longer relevant. For those that are still relevant, you can find them in the Admin Center starting six months earlier in 2H 2026.",
-      "product": "Career and Talent Development\nEmployee Central\nPerformance & Goals\nPlatform\nRecruiting\nTime Tracking",
-      "module": "System Management",
-      "feature": "Not Applicable",
-      "changeType": "Changed",
-      "majorOrMinor": "",
-      "lifecycle": "Deprecated",
-      "action": "Required",
-      "enablement": "Automatically on",
-      "refNumber": "TLS-35579",
-      "demo": "Not Applicable",
-      "version": "1H 2027\n2H 2026",
-      "validAsOf": "May 14, 2027",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/9eccf2cfa4d242eaa39bf22a08a6c15e.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "critical",
-        "label": "Critical",
-        "color": "#ef4444"
-      },
-      "plainEnglish": "Will stop working - you need a replacement. Timeline: May 14, 2027. Check the linked SAP Note for migration steps.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -1416,6 +1541,31 @@
         "color": "#eab308"
       },
       "plainEnglish": "Important change to review. For Japanese locale users, now the last name fields are automatically displayed before first name fields on specific UIs.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "AI-Generated Compensation Insights Available in Mobile Apps",
+      "description": "Managers can now generate AI-powered insights into an employee's compensation directly from the SAP SuccessFactors Mobile app. The insights show compensation history, job progression, and pay band position, along with suggested talking points to guide discussions.",
+      "product": "Employee Central",
+      "module": "Employee Data",
+      "feature": "Employee Central Compensation\nGenerative AI",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Contact Customer Engagement Executive or Account Manager",
+      "refNumber": "MOB-95087",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/5fc55ee585e5475b81b60276267f5518.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. Managers can now generate AI-powered insights into an employee's compensation directly from the SAP SuccessFactors Mobile app. Review config steps and test in sandbox first.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -3791,31 +3941,6 @@
         "color": "#f97316"
       },
       "plainEnglish": "Significant update. As a Role-Based Permissions administrator, you can now assign Learning administrator roles directly through Role-Based Permissions (RBP) in Admin Center in addition to the existing standalone Learn... Plan configuration changes and communicate to users.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
-      "title": "REST API for Start Date Changes",
-      "description": "You can now change the start date for new hire onboarding journeys using the existing REST API for mass onboarding operations.",
-      "product": "Onboarding",
-      "module": "Integration and Extension",
-      "feature": "API\nOnboarding",
-      "changeType": "Changed",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Contact Enablement Partner",
-      "refNumber": "OBX-43745",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/2409ae7e999546c8a5d25c425ed67251.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "low",
-        "label": "Low",
-        "color": "#22c55e"
-      },
-      "plainEnglish": "Updated automatically. You can now change the start date for new hire onboarding journeys using the existing REST API for mass onboarding operations.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -7491,31 +7616,6 @@
         "color": "#eab308"
       },
       "plainEnglish": "Updated automatically. We've made some enhancements to the Manage Home Page administration tool.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
-      "title": "Changes to the Greeting Banner on the Latest Home Page",
-      "description": "We've made some design changes to the greeting banner on the latest home page.",
-      "product": "Platform",
-      "module": "User Experience",
-      "feature": "Home Page",
-      "changeType": "Changed",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Automatically on",
-      "refNumber": "WEF-169891",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/21d964599596489395c079e059c7fe5a.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Updated automatically. We've made some design changes to the greeting banner on the latest home page.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
