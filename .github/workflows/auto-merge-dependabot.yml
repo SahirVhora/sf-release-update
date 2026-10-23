@@ -5,7 +5,11 @@ name: Dependabot auto-merge
 # bounded by two gates:
 #   1. `if: github.actor == 'dependabot[bot]'` ensures only Dependabot
 #      PRs run this workflow.
-#   2. The job body only asks GitHub to enable auto-merge for the PR URL.
+#   2. Only patch-level updates are auto-merged. Minor and major updates
+#      wait for a human review. Dependabot also holds new releases for 7 days
+#      (cooldown in dependabot.yml) so tampered versions are usually caught
+#      before they are proposed.
+#   3. The job body only asks GitHub to enable auto-merge for the PR URL.
 #      It does NOT execute code from the PR, install dependencies from the
 #      PR branch, or check out the PR's commit.
 #
@@ -30,7 +34,12 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
+      - name: Skip anything that is not a patch update
+        if: steps.metadata.outputs.update-type != 'version-update:semver-patch'
+        run: echo "::notice::${{ steps.metadata.outputs.update-type }} update needs a manual review; auto-merge not enabled."
+
       - name: Enable auto-merge (squash) with retry
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
         run: |
           # GitHub auto-merge requires branch protection or a ruleset. Without
           # one, `gh pr merge --auto` can never succeed and should not turn the
