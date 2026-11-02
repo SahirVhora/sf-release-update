@@ -1,14 +1,14 @@
 {
   "metadata": {
     "source": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
-    "scrapedAt": "2026-10-26T12:18:43.152277",
-    "totalItems": 417,
-    "lastScraped": "2026-10-26 12:18 UTC",
+    "scrapedAt": "2026-11-02T14:49:43.102232",
+    "totalItems": 427,
+    "lastScraped": "2026-11-02 14:49 UTC",
     "availableVersions": [
       "2H 2026 (Preview)"
     ],
     "versionCounts": {
-      "2H 2026 (Preview)": 417
+      "2H 2026 (Preview)": 427
     },
     "releaseDates": {
       "2H 2026": {
@@ -18,6 +18,356 @@
     }
   },
   "items": [
+    {
+      "title": "Deprecation of Is Position Below User's Position In Hierarchy (Old Version)",
+      "description": "The Position Below User's Position In Hierarchy rule function (old version) will reach End of Development on May 16, 2025 and will be Deleted on November 19, 2027.",
+      "product": "Employee Central",
+      "module": "Company Organization",
+      "feature": "Organizational Management",
+      "changeType": "Changed",
+      "majorOrMinor": "",
+      "lifecycle": "Deprecated",
+      "action": "Required",
+      "enablement": "Automatically on",
+      "refNumber": "ECT-248547",
+      "demo": "Not Applicable",
+      "version": "1H 2025\n1H 2026\n1H 2027\n2H 2025\n2H 2026\n2H 2027",
+      "validAsOf": "Nov 19, 2027",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/f7766090836d4fb0b7af00cb5a8db468.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "critical",
+        "label": "Critical",
+        "color": "#ef4444"
+      },
+      "plainEnglish": "Will stop working - you need a replacement. Timeline: May 16, 2025. Check the linked SAP Note for migration steps.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Enhanced Concurrent Employment Handling in Termination and Rehire Imports",
+      "description": "As an HR administrator, when you import for employees with concurrent employment either Termination Details or Job Information in the incremental load mode for rehiring, the system now validates the import and updates the Secondary Assignments object. Termination Details imports that terminate a primary employment without a value for newMainEmploymentId where multiple secondary employments remain active are blocked by a validation error.",
+      "product": "Employee Central",
+      "module": "Employee Data",
+      "feature": "Concurrent Employment\nHire, Rehire, and Termination",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Required",
+      "enablement": "Automatically on",
+      "refNumber": "ECT-269843",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/395682e4595e404dbf40b67367941b1f.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Action required. As an HR administrator, when you import for employees with concurrent employment either Termination Details or Job Information in the incremental load mode for rehiring, the system now validates th... Assign an owner and validate the change before production.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Pay Range Added to Job Information",
+      "description": "Pay range values are now stored directly in Job Information records. Pay range is calculated once when a Job Information record is saved and retained as a fixed attribute of that record.",
+      "product": "Employee Central",
+      "module": "Employee Data",
+      "feature": "Employee Central Compensation",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Required",
+      "enablement": "Customer configured",
+      "refNumber": "ECT-276827",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/bac088c1319f4e30b7ff20b39403cea0.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "New capability requiring action. Pay range values are now stored directly in Job Information records. Review the SAP steps and test before production.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Enhanced Support for Parent Position in Mass Data Management",
+      "description": "You can now use Mass Data Management to filter and update the Parent Position field for multiple positions in a single mass change request, enabling efficient updates to position hierarchies.",
+      "product": "Employee Central",
+      "module": "Process Automation",
+      "feature": "Mass Changes",
+      "changeType": "New",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "ECT-238954",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/79a89c9da1cb439cbae420c5aab86075.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Active automatically - no setup needed. You can now use Mass Data Management to filter and update the Parent Position field for multiple positions in a single mass change request, enabling efficient updates to position hierarchies.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Configurable Validations for Higher Duty or Temporary Assignment",
+      "description": "This feature is no longer available for 2H 2026.",
+      "product": "Employee Central",
+      "module": "Public Sector Management",
+      "feature": "Public Sector Management",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "ECT-267999",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/649025ad92a4487c88e11a641bede000.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Important change to review. This feature is no longer available for 2H 2026.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Compliance e-Signature Gating for Ready to Hire Status and Manage Pending Hires",
+      "description": "As an administrator, you can prevent new hires from reaching the Ready to Hire status or appearing in Manage Pending Hires by using the new country compliance e-Signature gating.",
+      "product": "Onboarding",
+      "module": "Onboarding",
+      "feature": "Compliance Forms",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "OBX-36250",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/aedf18731b44494ab6065aa6a45d6c84.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Minor update - configure if useful. As an administrator, you can prevent new hires from reaching the Ready to Hire status or appearing in Manage Pending Hires by using the new country compliance e-Signature gating.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Enhanced Personal Data Collection Experience for Internal Hires",
+      "description": "Internal hires can now provide a broader set of personal data during the Provide Personal Data (Personal Data Collection) step of the internal hire process, through an enhanced and guided user interface.",
+      "product": "Onboarding",
+      "module": "Onboarding",
+      "feature": "Onboarding",
+      "changeType": "New",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "OBX-30305",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/dc91d030a6d449a9831d5e71115fe9d1.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Available when you're ready. Internal hires can now provide a broader set of personal data during the Provide Personal Data (Personal Data Collection) step of the internal hire process, through an enhanced and guided user inte... Test in non-production before enabling broadly.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Rehire on New Employment with Future Termination",
+      "description": "Administrators can now rehire employees with a future termination date through Rehire with New Employment.",
+      "product": "Onboarding",
+      "module": "Onboarding",
+      "feature": "Onboarding",
+      "changeType": "New",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "OBX-37336",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/ee4e04fda1874f3da0033591f701f14b.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Available when you're ready. Administrators can now rehire employees with a future termination date through Rehire with New Employment. Test in non-production before enabling broadly.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Highlights on the iOS and Android Mobile Apps",
+      "description": "The iOS and Android mobile apps now include a Highlights section on the home screen that displays information about your most regularly visited areas.",
+      "product": "Platform",
+      "module": "Mobile Applications",
+      "feature": "Home Page",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "MOB-121616",
+      "demo": "",
+      "version": "1H 2026\n2H 2026",
+      "validAsOf": "Nov 17, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/3cad3646e8d74c2bbe8e382fd98cad06.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. The iOS and Android mobile apps now include a Highlights section on the home screen that displays information about your most regularly visited areas. Review config steps and test in sandbox first.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Role-Based Skill Classification in Job Profile",
+      "description": "As an administrator, you can now configure skills that are mandatory for a job role.",
+      "product": "Platform",
+      "module": "Talent Intelligence Hub",
+      "feature": "Job Profile Builder",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "WSM-35765",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/75fe36a27d7548eebbadb5907175f4fd.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now configure skills that are mandatory for a job role. Review config steps and test in sandbox first.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "New Switch to Include Inactive Users in Global Header Search Results",
+      "description": "Users can now control whether inactive users appear in global header search results by enabling a new switch in their personal settings.",
+      "product": "Platform",
+      "module": "User Experience",
+      "feature": "People Search",
+      "changeType": "New",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "WEF-169005",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/799148df2f5c46fe9e6278acca72ac2a.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Available when you're ready. Users can now control whether inactive users appear in global header search results by enabling a new switch in their personal settings. Test in non-production before enabling broadly.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Enhancements to Recruiting",
+      "description": "We made several enhancements to SAP SuccessFactors Recruiting.",
+      "product": "Recruiting",
+      "module": "System Management",
+      "feature": "Not Applicable",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "RCM-162946",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/5c2f288400534160a696e3d427f5cedc.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Updated automatically. We made several enhancements to SAP SuccessFactors Recruiting.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Enhancements to Business Rules in Time Valuation",
+      "description": "As an administrator, you can now use additional standard and custom fields from Job Information, along with additional rule functions, in decision and calculation rules within Time Valuation. This enhancement also increases the number of allowed business rule time valuations in a Time Recording Profile.",
+      "product": "Time Tracking",
+      "module": "Time Management",
+      "feature": "Time Sheet",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "TIM-58100",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 30, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/f6c1e1e7826743029f2e386254282859.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now use additional standard and custom fields from Job Information, along with additional rule functions, in decision and calculation rules within Time Valuation. Review config steps and test in sandbox first.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Joule Assistants and Agents in Phased Rollout - October 27, 2026",
+      "description": "A batch of Autonomous HCM AI assistants and agents started phased rollout.",
+      "product": "Platform",
+      "module": "SAP Business AI",
+      "feature": "Joule",
+      "changeType": "New",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability in a Phased Approach",
+      "action": "Info only",
+      "enablement": "Contact Customer Engagement Executive or Account Manager",
+      "refNumber": "KM-23912",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Oct 27, 2026",
+      "latestRevision": "Oct 27, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/e9989dc2e5b046ec929e2ad5e8305d24/5486d5cca092499881643b2f87ecc5e6.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "low",
+        "label": "Low",
+        "color": "#22c55e"
+      },
+      "plainEnglish": "Active automatically - no setup needed. A batch of Autonomous HCM AI assistants and agents started phased rollout.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
     {
       "title": "Minor Visual Changes in 2H 2026",
       "description": "SAP SuccessFactors made numerous minor visual enhancements in 2H 2026. The following enhancements are of particular note, although many less-visible enhancements have been made.",
@@ -91,31 +441,6 @@
         "color": "#eab308"
       },
       "plainEnglish": "Available when you're ready. In Position Management, there is a new setting to trigger reclassification when a manager is changed and the current position is moved. Test in non-production before enabling broadly.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
-      "title": "Configurable Validations for Higher Duty or Temporary Assignment",
-      "description": "This feature is no longer available for 2H 2026.",
-      "product": "Employee Central",
-      "module": "Public Sector Management",
-      "feature": "Public Sector Management",
-      "changeType": "Changed",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Customer configured",
-      "refNumber": "ECT-267999",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 23, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/649025ad92a4487c88e11a641bede000.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Important change to review. This feature is no longer available for 2H 2026.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -545,7 +870,7 @@
     },
     {
       "title": "Enhancements to SmartRecruiters (October 2026)",
-      "description": "Here's are the enhancements to SmartRecruiters in October 2026.",
+      "description": "Here are the enhancements to SmartRecruiters in October 2026.",
       "product": "SmartRecruiters",
       "module": "Applicant Management",
       "feature": "Not Applicable",
@@ -565,7 +890,7 @@
         "label": "Medium",
         "color": "#eab308"
       },
-      "plainEnglish": "Minor update - configure if useful. Here's are the enhancements to SmartRecruiters in October 2026.",
+      "plainEnglish": "Minor update - configure if useful. Here are the enhancements to SmartRecruiters in October 2026.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -1269,6 +1594,156 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
+      "title": "New Scheduled Job to Update Successor Nominations for Positions Where Successors Becomes Incumbents",
+      "description": "As an administrator, you can now use the new scheduled job Update Successor Nominations for Positions Where Successors Become Incumbents to automatically update the successor nominations for positions if they have successor-to-incumbent changes on the job execution date.",
+      "product": "Career and Talent Development\nPlatform",
+      "module": "Succession Planning",
+      "feature": "Scheduled Jobs\nSuccession Nomination",
+      "changeType": "New",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "SCM-21839",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/ef5452faa8454c39add15b3accd59177.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Available when you're ready. As an administrator, you can now use the new scheduled job Update Successor Nominations for Positions Where Successors Become Incumbents to automatically update the successor nominations for positi... Test in non-production before enabling broadly.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Multiple PM Rating and Comp Rating Fields in Compensation Templates",
+      "description": "We've enhanced compensation plan templates with additional rating fields for the salary and stock plan tabs, giving you more flexibility in how you structure your compensation planning calculations.",
+      "product": "Compensation",
+      "module": "Compensation",
+      "feature": "Compensation Calculations\nCompensation Plan Templates\nCompensation Rating",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "SFCMP-7483",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/78b44210e4c34abab6b1e6e6a4a5c411.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. We've enhanced compensation plan templates with additional rating fields for the salary and stock plan tabs, giving you more flexibility in how you structure your compensation planning calculations. Review config steps and test in sandbox first.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Simultaneous Executive Review Exports in XLSX Format",
+      "description": "You can now run multiple Executive Review exports in XLSX format at the same time without the export jobs failing.",
+      "product": "Compensation",
+      "module": "Compensation",
+      "feature": "Executive Review",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "SFCMP-236587",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/0998cba5e4d247ea8d042d244df5a29e.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Updated automatically. You can now run multiple Executive Review exports in XLSX format at the same time without the export jobs failing.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Compensation Statement Acknowledgment",
+      "description": "You can now require employees to acknowledge receipt of compensation statements. Employees can acknowledge a statement one time, after which the acknowledgment button is replaced with a confirmation banner.",
+      "product": "Compensation",
+      "module": "Compensation",
+      "feature": "Rewards Statement",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Customer configured",
+      "refNumber": "VRP-16061",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/7c901b9686d0483db37071b1940df49f.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. You can now require employees to acknowledge receipt of compensation statements. Review config steps and test in sandbox first.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Support Onboardee User Type for People Search in Apprentice Management",
+      "description": "Now employees onboarded using SAP SuccessFactors Onboarding appear in the search results of Apprentice Management, even before their employment start date.",
+      "product": "Employee Central",
+      "module": "Apprentice Management",
+      "feature": "Apprentice Management",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "ECT-268750",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/df421f62371342c18f0e4a81ba8a90c1.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Updated automatically. Now employees onboarded using SAP SuccessFactors Onboarding appear in the search results of Apprentice Management, even before their employment start date.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Regular Employment Restricted When Rehiring Contingent Worker on New Employment",
+      "description": "As an HR administrator, if the New Work Order Requires New Employment setting is disabled, you can no longer select an inactive regular employment when rehiring an inactive contingent worker with a new employment if the person already has a contingent worker employment.",
+      "product": "Employee Central",
+      "module": "Contingent Workforce",
+      "feature": "Contingent Workforce",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Recommended",
+      "enablement": "Automatically on",
+      "refNumber": "ECT-273470",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/b6cef504619046a1aea16743a6d2b559.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Minor update - configure if useful. As an HR administrator, if the New Work Order Requires New Employment setting is disabled, you can no longer select an inactive regular employment when rehiring an inactive contingent worker with a...",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
       "title": "Document Generation Usage Record in Employee Central",
       "description": "You can now track all successful document generation activities in Employee Central through the Document Generation Usage Records MDF Object.",
       "product": "Employee Central",
@@ -1491,31 +1966,6 @@
         "color": "#eab308"
       },
       "plainEnglish": "Updated automatically. We've enhanced the Succession Data Model (SDM) import process by introducing version validation.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
-      "title": "Pay Range Added to Job Information",
-      "description": "Pay range values are now stored directly in Job Information records. Pay range is calculated once when a Job Information record is saved and retained as a fixed attribute of that record.",
-      "product": "Employee Central",
-      "module": "Employee Data",
-      "feature": "Employee Central Compensation",
-      "changeType": "New",
-      "majorOrMinor": "Major",
-      "lifecycle": "General Availability",
-      "action": "Required",
-      "enablement": "Automatically on",
-      "refNumber": "ECT-276827",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/bac088c1319f4e30b7ff20b39403cea0.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "New capability requiring action. Pay range values are now stored directly in Job Information records. Review the SAP steps and test before production.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -4094,31 +4544,6 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
-      "title": "Compliance e-Signature Gating for Ready to Hire Status and Manage Pending Hires",
-      "description": "As an administrator, you can prevent new hires from reaching the Ready to Hire status or appearing in Manage Pending Hires by using the new country compliance e-Signature gating.",
-      "product": "Onboarding",
-      "module": "Onboarding",
-      "feature": "Compliance Forms",
-      "changeType": "Changed",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Customer configured",
-      "refNumber": "OBX-36250",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/aedf18731b44494ab6065aa6a45d6c84.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Minor update - configure if useful. As an administrator, you can prevent new hires from reaching the Ready to Hire status or appearing in Manage Pending Hires by using the new country compliance e-Signature gating.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
       "title": "Prevent Onboarding Restart with Active E-Verify Cases",
       "description": "As an administrator, you can prevent restarting an onboarding process when an active E-Verify case exists and view the latest active or closed E-Verify case from the E-Verify Case Details link.",
       "product": "Onboarding",
@@ -4244,31 +4669,6 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
-      "title": "Enhanced Personal Data Collection Experience for Internal Hires",
-      "description": "Internal hires can now provide a broader set of personal data during the Provide Personal Data (Personal Data Collection) step of the internal hire process, through an enhanced and guided user interface.",
-      "product": "Onboarding",
-      "module": "Onboarding",
-      "feature": "Onboarding",
-      "changeType": "New",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Customer configured",
-      "refNumber": "OBX-30305",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/dc91d030a6d449a9831d5e71115fe9d1.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Available when you're ready. Internal hires can now provide a broader set of personal data during the Provide Personal Data (Personal Data Collection) step of the internal hire process, through an enhanced and guided user inte... Test in non-production before enabling broadly.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
       "title": "Enhancements in Configuration of Compliance Forms",
       "description": "We've added new the configuration settings for country/region-specific compliance form categories.",
       "product": "Onboarding",
@@ -4391,31 +4791,6 @@
         "color": "#22c55e"
       },
       "plainEnglish": "Active automatically - no setup needed. As an administrator, you can now identify and rehire a contingent worker using the Rehire with New Employment option.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
-      "title": "Rehire on New Employment with Future Termination",
-      "description": "Administrators can now rehire employees with a future termination date through Rehire with New Employment.",
-      "product": "Onboarding",
-      "module": "Onboarding",
-      "feature": "Onboarding",
-      "changeType": "New",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Customer configured",
-      "refNumber": "OBX-37336",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/ee4e04fda1874f3da0033591f701f14b.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Available when you're ready. Administrators can now rehire employees with a future termination date through Rehire with New Employment. Test in non-production before enabling broadly.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -5319,31 +5694,6 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
-      "title": "Automated Storage Space Recalculation Jobs for Document Management",
-      "description": "SAP SuccessFactors Document Management System (DMS) now includes automated background jobs that recalculate storage space consumption at both the company level and user level. The user-level recalculation jobs are new in this release.",
-      "product": "Platform",
-      "module": "Documents and Storage",
-      "feature": "Document Management",
-      "changeType": "Changed",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Automatically on",
-      "refNumber": "PLT-88944",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/556e9585928e40188b01036076a2ba9b.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Updated automatically. SAP SuccessFactors Document Management System (DMS) now includes automated background jobs that recalculate storage space consumption at both the company level and user level.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
       "title": "Document Preview with Media Service Integration",
       "description": "The Document View widget provides secure document preview without downloading and viewing the document locally.",
       "product": "Platform",
@@ -5419,31 +5769,6 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
-      "title": "Unified Document Management Experience",
-      "description": "As an administrator, you can now manage all company documents from the Manage Documents page in Admin Center. We've consolidated document management, category management, and storage monitoring into one unified workspace.",
-      "product": "Platform",
-      "module": "Documents and Storage",
-      "feature": "Document Management",
-      "changeType": "Changed",
-      "majorOrMinor": "Major",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Automatically on",
-      "refNumber": "SFPLU-11163",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/79bf98d0826b4b0c823882560ae66c19.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "Significant update. As an administrator, you can now manage all company documents from the Manage Documents page in Admin Center. Plan configuration changes and communicate to users.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
       "title": "Virus Scan for Uploaded E-mails with Included Attachments",
       "description": "The virus scan for e-mail uploads to the Document Management System (DMS) now includes e-mail attachments.",
       "product": "Platform",
@@ -5491,6 +5816,56 @@
         "color": "#ef4444"
       },
       "plainEnglish": "Will stop working - you need a replacement. Timeline: May 14, 2026. Check the linked SAP Note for migration steps.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Automated Storage Space Recalculation Jobs for Document Management",
+      "description": "SAP SuccessFactors Document Management System (DMS) now includes automated background jobs that recalculate storage space consumption at both the company level and user level. The user-level recalculation jobs are new in this release.",
+      "product": "Platform",
+      "module": "Documents and Storage",
+      "feature": "Document Management",
+      "changeType": "Changed",
+      "majorOrMinor": "Minor",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "PLT-88944",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/556e9585928e40188b01036076a2ba9b.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "medium",
+        "label": "Medium",
+        "color": "#eab308"
+      },
+      "plainEnglish": "Updated automatically. SAP SuccessFactors Document Management System (DMS) now includes automated background jobs that recalculate storage space consumption at both the company level and user level.",
+      "releaseVersion": "2H 2026 (Preview)"
+    },
+    {
+      "title": "Unified Document Management Experience",
+      "description": "As an administrator, you can now manage all company documents from the Manage Documents page in Admin Center. We've consolidated document management, category management, and storage monitoring into one unified workspace.",
+      "product": "Platform",
+      "module": "Documents and Storage",
+      "feature": "Document Management",
+      "changeType": "Changed",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "SFPLU-11163",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 13, 2026",
+      "latestRevision": "Oct 2, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/79bf98d0826b4b0c823882560ae66c19.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant update. As an administrator, you can now manage all company documents from the Manage Documents page in Admin Center. Plan configuration changes and communicate to users.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -6844,31 +7219,6 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
-      "title": "Highlights on the iOS and Android Mobile Apps",
-      "description": "The iOS and Android mobile apps now include a Highlights section on the home screen that displays information about your most regularly visited areas.",
-      "product": "Platform",
-      "module": "Mobile Applications",
-      "feature": "Home Page",
-      "changeType": "New",
-      "majorOrMinor": "Major",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Automatically on",
-      "refNumber": "MOB-121616",
-      "demo": "",
-      "version": "1H 2026\n2H 2026",
-      "validAsOf": "Sep 22, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/3cad3646e8d74c2bbe8e382fd98cad06.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "Significant new capability - could change how you work. The iOS and Android mobile apps now include a Highlights section on the home screen that displays information about your most regularly visited areas. Review config steps and test in sandbox first.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
       "title": "Dark Mode Automatically Available for iOS and Android Mobile Apps",
       "description": "By default, the iOS and Android Mobile apps are now automatically displayed in Light Mode or Dark Mode, based on the mobile device’s appearance settings. If you don't want to use Dark Mode in your organization, you can disable it.",
       "product": "Platform",
@@ -7544,31 +7894,6 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
-      "title": "Role-Based Skill Classification in Job Profile",
-      "description": "As an administrator, you can now configure skills that are mandatory for a job role.",
-      "product": "Platform",
-      "module": "Talent Intelligence Hub",
-      "feature": "Job Profile Builder",
-      "changeType": "New",
-      "majorOrMinor": "Major",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Automatically on",
-      "refNumber": "WSM-35765",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/75fe36a27d7548eebbadb5907175f4fd.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "high",
-        "label": "High",
-        "color": "#f97316"
-      },
-      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now configure skills that are mandatory for a job role. Review config steps and test in sandbox first.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
       "title": "Support for Mapping Certificates with Job Roles",
       "description": "You can now map certificates created in Talent Intelligence Hub with job roles in Job Profile Builder.",
       "product": "Platform",
@@ -7694,31 +8019,6 @@
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
-      "title": "New Switch to Include Inactive Users in Global Header Search Results",
-      "description": "Users can now control whether inactive users appear in global header search results by enabling a new switch in their personal settings.",
-      "product": "Platform",
-      "module": "User Experience",
-      "feature": "People Search",
-      "changeType": "New",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Customer configured",
-      "refNumber": "WEF-169005",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/799148df2f5c46fe9e6278acca72ac2a.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Available when you're ready. Users can now control whether inactive users appear in global header search results by enabling a new switch in their personal settings. Test in non-production before enabling broadly.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
       "title": "Import Themes from UI Theme Designer for SAP BTP",
       "description": "You can now import themes created in the UI theme designer for SAP Business Technology Platform (BTP), providing more theming capabilities and a more consistent visual brand experience across your SAP landscape.",
       "product": "Platform",
@@ -7791,31 +8091,6 @@
         "color": "#f97316"
       },
       "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now quickly export your geofences from one instance and import them into another instance using a GeoJSON template from the Manage Geofences page. Review config steps and test in sandbox first.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
-      "title": "Enhancements to Recruiting",
-      "description": "We made several enhancements to SAP SuccessFactors Recruiting.",
-      "product": "Recruiting",
-      "module": "System Management",
-      "feature": "Not Applicable",
-      "changeType": "Changed",
-      "majorOrMinor": "Minor",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Automatically on",
-      "refNumber": "RCM-162946",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/5c2f288400534160a696e3d427f5cedc.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Updated automatically. We made several enhancements to SAP SuccessFactors Recruiting.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
@@ -7991,31 +8266,6 @@
         "color": "#eab308"
       },
       "plainEnglish": "Available when you're ready. As an administrator, you can now use the Create Time Record and Filter Single Records from Input Groups valuation types in Time Recording Profiles with the Time Recording Variant Duration. Test in non-production before enabling broadly.",
-      "releaseVersion": "2H 2026 (Preview)"
-    },
-    {
-      "title": "Enhancements to Business Rules in Time Valuation",
-      "description": "As an administrator, you can now use additional standard and custom fields from Job Information, along with additional rule functions, in decision and calculation rules within Time Valuation. This enhancement also increases the number of allowed business rule time valuations in a Time Recording Profile.",
-      "product": "Time Tracking",
-      "module": "Time Management",
-      "feature": "Time Sheet",
-      "changeType": "New",
-      "majorOrMinor": "Major",
-      "lifecycle": "General Availability",
-      "action": "Info only",
-      "enablement": "Customer configured",
-      "refNumber": "TIM-58100",
-      "demo": "",
-      "version": "2H 2026",
-      "validAsOf": "Nov 13, 2026",
-      "latestRevision": "Oct 2, 2026",
-      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/f6c1e1e7826743029f2e386254282859.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20What's%20New",
-      "impact": {
-        "level": "medium",
-        "label": "Medium",
-        "color": "#eab308"
-      },
-      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now use additional standard and custom fields from Job Information, along with additional rule functions, in decision and calculation rules within Time Valuation. Review config steps and test in sandbox first.",
       "releaseVersion": "2H 2026 (Preview)"
     },
     {
