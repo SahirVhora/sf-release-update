@@ -1,2 +1,3 @@
+-c security-constraints.txt
 playwright>=1.60.0
 requests>=2.31
