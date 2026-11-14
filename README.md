@@ -88,8 +88,8 @@ This project is part of a wider SAP SuccessFactors tool suite. Start with [SF Co
 | [SF Impact Brief](https://sahirvhora.github.io/sf-impact-brief/) | Personalised release briefs from this data - select modules, get a tiered action plan |
 | [SF Pay Transparency](https://sahirvhora.github.io/sf-pay-transparency/) | EU Pay Transparency readiness and evidence workflow framing |
 | [SF Value Navigator](https://sahirvhora.github.io/sf-value-navigator/) | Value realisation and sponsor-facing consulting framework |
-| [SF Position Integrity Checker](https://sahirvhora.github.io/sf-position-integrity/) | Position hierarchy, incumbency, and EC data-quality validation |
-| [SAPSF ObjectSync](https://github.com/SahirVhora/sapsf-objectsync) | Controlled foundation-object synchronisation between SF environments |
+| [SF Position Integrity Checker](https://sahirvhora.github.io/sf-position-integrity-checker/) | Position hierarchy, incumbency, and EC data-quality validation |
+| [SAPSF ObjectSync](https://github.com/SahirVhora/sf-object-sync) | Controlled foundation-object synchronisation between SF environments |
 
 ## License
 
