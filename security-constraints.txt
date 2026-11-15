@@ -2,7 +2,7 @@
 aiohttp>=3.14.4,<4
 anyio>=4.14.2,<5
 certifi>=2026.10.19
-cryptography>=50,<51
+cryptography>=50.0.2,<51
 fastapi>=0.143.2,<1
 filelock>=4.2.1,<5
 GitPython>=3.2.1,<4
