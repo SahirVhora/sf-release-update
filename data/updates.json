@@ -1,14 +1,14 @@
 {
   "metadata": {
     "source": "https://help.sap.com/whats-new/8fcf4960eea24f78b1d7613da406a885",
-    "scrapedAt": "2026-11-16T14:51:08.968260",
-    "totalItems": 444,
-    "lastScraped": "2026-11-16 14:51 UTC",
+    "scrapedAt": "2026-11-23T17:27:24.913496",
+    "totalItems": 445,
+    "lastScraped": "2026-11-23 17:27 UTC",
     "availableVersions": [
       "2H 2026"
     ],
     "versionCounts": {
-      "2H 2026": 444
+      "2H 2026": 445
     },
     "releaseDates": {
       "2H 2026": {
@@ -644,10 +644,35 @@
       "releaseVersion": "2H 2026"
     },
     {
-      "title": "Enhancements to Compensation Planning Executive Review Export",
-      "description": "The export now includes the Form Name field, making it easier to identify planners directly from the exported data. Also, the Mass Publish Data job notification e-mail now lists only skipped users within the planner's target population.",
-      "product": "Compensation",
-      "module": "Analytics",
+      "title": "Aggregation Calculations for Story Report Data Export",
+      "description": "As an administrator, you can now define aggregation calculation columns in the Query Designer export settings of Story reports, allowing you to enrich exported story data with business-relevant aggregated values.",
+      "product": "Platform",
+      "module": "Reporting",
+      "feature": "Story Reports",
+      "changeType": "New",
+      "majorOrMinor": "Major",
+      "lifecycle": "General Availability",
+      "action": "Info only",
+      "enablement": "Automatically on",
+      "refNumber": "AYT-60650",
+      "demo": "",
+      "version": "2H 2026",
+      "validAsOf": "Nov 20, 2026",
+      "latestRevision": "Nov 13, 2026",
+      "sapLink": "https://help.sap.com/docs/PRODUCTS/8e0d540f96474717bbf18df51e54e522/366074f81d8d481f9436ced9f7149da7.html?version=cloud&locale=en-US&parentHref=https%3A%2F%2Fhelp.sap.com%2Fwhats-new%2F8fcf4960eea24f78b1d7613da406a885&parentName=SAP%20SuccessFactors%20Commercial%20What's%20New",
+      "impact": {
+        "level": "high",
+        "label": "High",
+        "color": "#f97316"
+      },
+      "plainEnglish": "Significant new capability - could change how you work. As an administrator, you can now define aggregation calculation columns in the Query Designer export settings of Story reports, allowing you to enrich exported story data with business-relevant agg... Review config steps and test in sandbox first.",
+      "releaseVersion": "2H 2026"
+    },
+    {
+      "title": "New Enhancements from SAP Analytics Cloud for Story Reports - October 2026",
+      "description": "SAP Analytics Cloud has introduced new enhancements for Story reports.",
+      "product": "Platform",
+      "module": "Reporting",
       "feature": "Story Reports",
       "changeType": "New",
       "majorOrMinor": "Major",
@@ -665,7 +690,7 @@
         "label": "High",
         "color": "#f97316"
       },
-      "plainEnglish": "Significant new capability - could change how you work. The export now includes the Form Name field, making it easier to identify planners directly from the exported data. Review config steps and test in sandbox first.",
+      "plainEnglish": "Significant new capability - could change how you work. SAP Analytics Cloud has introduced new enhancements for Story reports. Review config steps and test in sandbox first.",
       "releaseVersion": "2H 2026"
     },
     {
